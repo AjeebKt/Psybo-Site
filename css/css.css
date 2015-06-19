@@ -25,13 +25,12 @@ nav{
 	text-align: center;
 	padding: 10px;
 	border-left: solid 1px #fff;
+	-webkit-transition: background-color 0.6s ease;
+	-o-transition: background-color 0.6s ease;
+	transition: background-color 0.6s ease;
 
 }
 .navigation-links li:hover{
 	color: #fff;
-	-webkit-transition: 1s;
-	-o-transition: 1s;
-	transition: 1s;
 	background-color: #049372;
-	cursor: pointer;
 }
