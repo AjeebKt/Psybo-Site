@@ -2,6 +2,7 @@ header{
 	width: 100%;
 	float: left;
 	background-color: #fff;
+	border-bottom: 2px solid #000;
 }
 .container{
 	width: 85%;
@@ -9,9 +10,12 @@ header{
 	margin-right: auto;
 	background-color: #ddd;
 }
+.logo{
+	float: left;
+	width: 120px;
+}
 nav{
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: 18px;
 	background-color: #fff;
 	float: right;
 }
