@@ -54,11 +54,16 @@ footer p{
 	list-style: none;
 	float: right;
 	margin-top: 140px;
+
 }
 .social-links li{
 	float: left;
 	margin-left: 5px;
 	cursor: pointer;
+}
+.social-links li:hover{
+	background-color: #fff;
+	/*border-bottom: 3px solid #000;*/
 }
 .content{
 	height: 250px;
