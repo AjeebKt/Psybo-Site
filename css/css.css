@@ -60,9 +60,12 @@ footer p{
 	float: left;
 	margin-left: 5px;
 	cursor: pointer;
+	transition: opacity 0.2s linear;
+	opacity: 0.6;
 }
 .social-links li:hover{
-	background-color: #fff;
+	opacity: 1;
+	/*background-color: #fff;*/
 	/*border-bottom: 3px solid #000;*/
 }
 .content{
