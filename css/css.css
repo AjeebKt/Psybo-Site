@@ -1,8 +1,8 @@
 header{
 	width: 100%;
-	float: left;
 	background-color: #fff;
 	border-bottom: 2px solid #000;
+	position: fixed;
 }
 .container{
 	width: 85%;
@@ -65,10 +65,8 @@ footer p{
 }
 .social-links li:hover{
 	opacity: 1;
-	/*background-color: #fff;*/
-	/*border-bottom: 3px solid #000;*/
 }
 .content{
-	height: 250px;
+	height: 950px;
 	background-color: #fff;
 }
