@@ -13,8 +13,6 @@ header
 	position: relative;
 	left: 100px;
 	float: left;
-	border-right: 2px solid #333;
-	border-left: 2px solid #fff;
 }
 .logo
 {
@@ -53,7 +51,6 @@ nav
 .content
 {
 	width: 100%;
-	height: 950px;
 	top: 75px;
 	position: relative;
 	float: left;
@@ -64,22 +61,30 @@ nav
 	float: left;
 	background-color: #049372;
 }
-	.indroduction h1
-	{
-		color: #fff;
-		font-weight: normal;
-		text-align: center;
-		font-size: 55pt;
-		margin: 20px 10px 10px 10px;
-	}
-	.indroduction h2
-	{
-		color: #fff;
-		font-weight: lighter;
-		text-align: center;
-		font-size: 45pt;
-		margin: 10px 10px 10px 10px;
-	}
+.about
+{
+	width: 100%;
+	background-color: #fff;
+	float: left;
+}
+.team
+{
+	width: 100%;
+	background-color: #ececec;
+	float: left;
+}
+.portfolio
+{
+	width: 100%;
+	background-color: #049372;
+	float: left;
+}
+.contact
+{
+	width: 100%;
+	background-color: #fff;
+	float: left;
+}
 footer
 {
 	width: 100%;
@@ -107,9 +112,44 @@ footer p
 	margin-left: 5px;
 	cursor: pointer;
 	transition: opacity 0.2s linear;
-	opacity: 0.6;
+	opacity: 0.4;
 }
 .social-links li:hover
 {
 	opacity: 1;
+}
+/*.social-links li a.facebook
+{
+	background-image: url(../img/facebook2.png);
+	
+}
+.social-links li img
+{
+	height: 50px;
+	width: 50px;
+	display: block;
+	background-color: #bbb;
+	transition: all 0.5s ease;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+*/
+
+h1
+{
+	color: #fff;
+	font-weight: normal;
+	font-size: 23pt;
+	margin-top: 22px;
+	border-left: 3px solid #aaa;
+	padding-left: 15px;
+}
+h2
+	{
+	color: #000;
+	font-weight: normal;
+	font-size: 23pt;
+	margin-top: 22px;
+	border-left: 3px solid #aaa;
+	padding-left: 15px;
 }
