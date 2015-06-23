@@ -73,6 +73,16 @@ nav
 	background-color: #ececec;
 	float: left;
 }
+	.team ul
+	{
+		list-style: none;
+	}
+	.team li
+	{
+		float: left;
+		margin-left: 15px;
+		margin-bottom: 20px;
+	}
 .portfolio
 {
 	width: 100%;
