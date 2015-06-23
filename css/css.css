@@ -30,24 +30,24 @@ nav
 	margin: 0;
 	padding: 0;
 }
-.navigation-links li
-{
-	display: inline-block;
-	color: #000;
-	text-align: center;
-	padding: 10px;
-	border-left: solid 1px #fff;
-	-webkit-transition: background-color 0.5s ease;
-	-o-transition: background-color 0.5s ease;
-	transition: background-color 0.5s ease;
+	.navigation-links li
+	{
+		display: inline-block;
+		color: #000;
+		text-align: center;
+		padding: 10px;
+		border-left: solid 1px #fff;
+		-webkit-transition: background-color 0.5s ease;
+		-o-transition: background-color 0.5s ease;
+		transition: background-color 0.5s ease;
 
-}
-.navigation-links li:hover
-{
-	color: #fff;
-	background-color: #049372;
+	}
+	.navigation-links li:hover
+	{
+		color: #fff;
+		background-color: #049372;
 
-}
+	}
 .content
 {
 	width: 100%;
@@ -73,15 +73,33 @@ nav
 	background-color: #ececec;
 	float: left;
 }
-	.team ul
-	{
-		list-style: none;
-	}
-	.team li
+.team-member
+{
+	list-style: none;
+	float: left;
+}
+	.team-member > li
 	{
 		float: left;
 		margin-left: 15px;
 		margin-bottom: 20px;
+	}
+		.team-member > li img
+		{
+			transition: opacity 0.4s ease;
+		}
+		.team-member > li img:hover
+		{
+			opacity: 0.5;
+		}
+.personal-links
+{
+	list-style: none;
+}
+	.personal-links li
+	{
+		float: left;
+		margin-left: 10px;
 	}
 .portfolio
 {
@@ -103,31 +121,31 @@ footer
 	background-color: #6C7A89;
 	border-top: 2px solid #000;
 }
-footer p
-{
-	float: left;
-	margin-top: 140px;
-}
+	footer p
+	{
+		float: left;
+		margin-top: 140px;
+	}
 .social-links
 {
 	display: inline-block;
 	list-style: none;
 	float: right;
 	margin-top: 140px;
+}
+	.social-links li
+	{
+		float: left;
+		margin-left: 5px;
+		cursor: pointer;
+		transition: opacity 0.2s linear;
+		opacity: 0.4;
+	}
+	.social-links li:hover
+	{
+		opacity: 1;
 
-}
-.social-links li
-{
-	float: left;
-	margin-left: 5px;
-	cursor: pointer;
-	transition: opacity 0.2s linear;
-	opacity: 0.4;
-}
-.social-links li:hover
-{
-	opacity: 1;
-}
+	}
 /*.social-links li a.facebook
 {
 	background-image: url(../img/facebook2.png);
