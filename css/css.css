@@ -1,3 +1,4 @@
+
 header
 {
 	width: 100%;
@@ -100,8 +101,41 @@ nav
 	.personal-links li
 	{
 		float: left;
-		margin-left: 10px;
 	}
+		.personal-links li a
+		{
+			display: block;
+			width: 36px;
+			height: 36px;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			opacity: 0.3;
+			transition: opacity 0.5s linear;
+		}
+		.personal-links li a:hover
+		{
+			opacity: 1;
+		}
+			.personal-links li a.facebook
+			{
+				background-image: url(../img/f-Black.png);			
+			}
+			.personal-links li a.twitter
+			{
+				background-image: url(../img/t-Black.png);			
+			}
+			.personal-links li a.linkedin
+			{
+				background-image: url(../img/L-black.png);			
+			}
+			.personal-links li a.gplus
+			{
+				background-image: url(../img/G-black.png);			
+			}
+
+
 .portfolio
 {
 	width: 100%;
