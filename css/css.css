@@ -1,12 +1,21 @@
+@font-face
+{
+	font-family: aspace;
+	src: url('../fonts/aspace_demo.otf');
+}
+@font-face
+{
+	font-family: DilleniaUPC;
+	src: url('../fonts/DilleniaUPC.ttf');
+}
 body
 {
-	padding-top: 75px;
+	padding-top: 5%;
 }
 header
 {
 	width: 100%;
-	background-color: #fff;
-	border-bottom: 2px solid #000;
+	background-color: #ccc;
 	position: fixed;
 	float: left;
 	top: 0;
@@ -27,13 +36,13 @@ header
 nav
 {
 	margin-top: 18px;
-	background-color: #fff;
 	float: right;
 }
 .navigation-links
 {
 	margin: 0;
 	padding: 0;
+	background-color: transparent;
 }
 	.navigation-links li
 	{
@@ -45,6 +54,9 @@ nav
 	}
 	.navigation-links li a
 	{
+		font-family: aspace;
+		font-size: 10pt;
+		font-weight: bold;
 		-webkit-transition: color 0.5s ease;
 		-o-transition: color 0.5s ease;
 		transition: color 0.5s ease;
@@ -67,8 +79,15 @@ nav
 .indroduction
 {
 	width: 100%;
-	height: 687px;
+	height: 658px;
 	float: left;
+	background-image: url(../img/dark-web.jpg);
+	background-attachment: fixed;
+	background-clip: border-box;
+	background-position: center center;
+	background-origin: padding-box;
+	-webkit-background-size: cover;
+	background-size: cover;
 	background-color: #049372;
 }
 .about
@@ -158,6 +177,7 @@ nav
 	width: 100%;
 	background-color: #fff;
 	float: left;
+	font-family: DilleniaUPC;
 }
 footer
 {
@@ -165,7 +185,6 @@ footer
 	height: 300px;
 	float: left;
 	background-color: #6C7A89;
-	border-top: 2px solid #000;
 }
 	footer p
 	{
@@ -211,12 +230,16 @@ footer
 
 h1
 {
+	text-align: center;
+	text-shadow: 1px 2px 4px #000;
+	font-family: aspace;
 	color: #fff;
 	font-weight: normal;
-	font-size: 23pt;
-	margin-top: 22px;
-	border-left: 3px solid #aaa;
-	padding-left: 15px;
+	font-size: 42pt;
+	margin-top: 2%;
+	opacity: 0.4;
+	line-height: 50px;
+	padding: 15% 0px 20px; 
 }
 h2
 	{
