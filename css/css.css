@@ -243,11 +243,11 @@ h1
 	padding: 15% 0px 20px; 
 }
 h2
-	{
+{
+	font-family: aspace;
 	color: #000;
 	font-weight: normal;
-	font-size: 23pt;
-	margin-top: 22px;
-	border-left: 3px solid #aaa;
+	font-size: 36pt;
+	margin-top: 2%;
 	padding-left: 15px;
 }
