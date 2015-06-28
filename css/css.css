@@ -190,7 +190,7 @@ nav
 .portfolio
 {
 	width: 100%;
-	background-color: #008a67;
+	/*background-color: #008a67;*/
 	float: left;
 	top: 100px;
 }
@@ -221,21 +221,26 @@ nav
 footer
 {
 	width: 100%;
-	height: 250px;
+	/*height: 250px;*/
 	float: left;
 	background-color: #008a67;
 }
 	footer p
 	{
 		float: left;
-		margin-top: 100px;
+		font-size: 16pt;
+		text-align: center;
+		margin: 0;
+		margin-top: 12%;
 	}
 .social-links
 {
 	display: inline-block;
 	list-style: none;
-	float: right;
-	margin-top: 140px;
+	margin-left: auto;
+	margin-right: auto;
+	/*float: right;*/
+	margin-top: 10%;
 }
 	.social-links li
 	{
@@ -249,16 +254,15 @@ footer
 			display: block;
 			width: 36px;
 			height: 36px;
-			opacity: 0.4;
 			background-position: center;
 			background-repeat: no-repeat;
 			-webkit-background-size: 100%;
 			background-size: 100%;
-			transition: opacity 0.5s linear;
+			transition: opacity 0.5s ease-in-out;
 		}
 		.social-links li:hover a
 		{
-			opacity: 1;
+			opacity: 0.6;
 		}
 		.social-links li a.facebook
 		{
@@ -276,6 +280,13 @@ footer
 		{
 			background-image: url(../img/google2.png);			
 		}
+.site-details
+{
+	width: 400px;
+	background-color: #88f;
+	margin-top: 15px;
+	border-top: 1px solid #fff;
+}
 /*.social-links li a.facebook
 {
 	background-image: url(../img/facebook2.png);
