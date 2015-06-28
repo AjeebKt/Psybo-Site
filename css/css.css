@@ -11,6 +11,7 @@
 body
 {
 	top: 0;
+	padding-top: 3%;
 }
 header
 {
@@ -20,6 +21,11 @@ header
 	float: left;
 	top: 0;
 	z-index: 999;
+}
+section
+{
+	width: 100%;
+	float: left;
 }
 .container
 {
@@ -76,12 +82,15 @@ nav
 .content
 {
 	width: 100%;
+	position: relative;
+	
 }
 .indroduction
 {
 	width: 100%;
-	height: 658px;
+	height: 768px;
 	float: left;
+	position: relative;
 	background-image: url(../img/dark-web.jpg);
 	background-attachment: fixed;
 	background-clip: border-box;
@@ -94,9 +103,20 @@ nav
 .about
 {
 	width: 100%;
-	background-color: #fff;
 	float: left;
 }
+	.about-content
+	{
+		width: 60%;
+		background-color: #bbb;
+		float: left;
+	}
+	.about-img
+	{
+		width: 40%;
+		background-color: #f99;
+		float: left;
+	}
 .team
 {
 	width: 100%;
@@ -174,6 +194,23 @@ nav
 	float: left;
 	top: 100px;
 }
+.service
+{
+	width: 100%;
+/*	background-image: url(../img/img-in.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 0px;
+	background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	background-origin: padding-box;
+	-webkit-background-size: cover;
+	background-size: cover;
+*/	display: block;
+	height: 470px;
+	left: 0;
+	margin: 0;
+}
 .contact
 {
 	width: 100%;
@@ -206,13 +243,39 @@ footer
 		margin-left: 5px;
 		cursor: pointer;
 		transition: opacity 0.2s linear;
-		opacity: 0.4;
 	}
-	.social-links li:hover
-	{
-		opacity: 1;
-
-	}
+		.social-links li a
+		{
+			display: block;
+			width: 36px;
+			height: 36px;
+			opacity: 0.4;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			transition: opacity 0.5s linear;
+		}
+		.social-links li:hover a
+		{
+			opacity: 1;
+		}
+		.social-links li a.facebook
+		{
+			background-image: url(../img/facebook2.png);
+		}
+		.social-links li a.twitter
+		{
+			background-image: url(../img/twitter2.png);
+		}
+		.social-links li a.linkedin
+		{
+			background-image: url(../img/linkedin2.png);			
+		}
+		.social-links li a.gplus
+		{
+			background-image: url(../img/google2.png);			
+		}
 /*.social-links li a.facebook
 {
 	background-image: url(../img/facebook2.png);
@@ -255,4 +318,5 @@ h2
 p
 {
 	font-family: DilleniaUPC;
+	font-size: 22pt;
 }
