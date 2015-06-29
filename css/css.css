@@ -21,6 +21,7 @@ header
 	float: left;
 	top: 0;
 	z-index: 999;
+	border-bottom: 1px solid;
 }
 section
 {
@@ -84,12 +85,12 @@ nav
 }*/
 .indroduction
 {
-	border: 2px solid #f00;
 	width: 100%;
+	overflow: hidden;
 }
 .bg-img
 {
-	width: 93%;
+	width: 100%;
 	height: 768px;
 	float: left;
 	position: relative;
@@ -102,13 +103,13 @@ nav
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: #008a67;
-	transform: translateZ(-1px) scale(1.15);
+	transform: scale(1.15);
 }
 .about
 {
 	width: 100%;
 	float: left;
-	border: 2px solid #0f0;
+	margin-bottom: 5%;
 }
 	.about-content
 	{
@@ -200,10 +201,10 @@ nav
 }
 .service
 {
-	text-align: center;
 	width: 100%;
 	display: block;
-	border: 2px solid #000;
+	background-color: #ccc;
+	margin-bottom: 5%;
 	/*float: left;*/
 	/*left: 0;
 	margin: 0;*/
@@ -223,6 +224,7 @@ nav
 {
 	width: 100%;
 	list-style: none;
+	text-align: center;
 	float: left;
 	margin: 0 auto;
 	margin-bottom: 10%;
@@ -234,6 +236,11 @@ nav
 	display: inline-block;
 	margin: 15px 20px;
 	position: relative;
+	border: 2px solid #008a67;
+	border-top: 10px solid #008a67;
+	border-radius: 25px;
+	padding: 5px;
+	box-sizing: border-box;
 }
 	.we-do li img
 	{
@@ -249,9 +256,61 @@ nav
 {
 	width: 100%;
 	background-color: #fff;
+	margin-bottom: 5%;
 	float: left;
 	font-family: DilleniaUPC;
-	border: 2px solid #00f;
+}
+.map
+{
+	width: 100%;
+	height: 400px;
+	background-color: #88f;
+}
+.message
+{
+	width: 50%;
+	position: relative;
+	top: -50%;
+	margin: 0 auto;
+	transition: all 0.4s ease;
+	/*background-color: #f99;*/
+	text-align: center;
+}
+.message input.name
+{
+	width: 80%;
+	padding-left: 10px;
+	height: 30px;
+	background-color: #fff;
+	font-size: 24pt;
+	border-radius: 10px;
+	border: 0;
+	border-bottom: 2px solid #008a67;
+	margin-top: 2%;
+}
+.message input.mail
+{
+	width: 80%;
+	padding-left: 10px;
+	height: 30px;
+	background-color: #fff;
+	font-size: 24pt;
+	border-radius: 10px;
+	border: 0;
+	border-bottom: 2px solid #008a67;
+	margin-top: 2%;
+}
+.message input.msg
+{
+	width: 80%;
+	padding-left: 10px;
+	height: 160px;
+	background-color: #fff;
+	font-size: 24pt;
+	border-radius: 10px;
+	border: 0;
+	border-bottom: 2px solid #008a67;
+	margin-top: 2%;
 }
 footer
 {
@@ -364,7 +423,7 @@ h2
 	font-weight: normal;
 	font-size: 36pt;
 	margin-top: 2%;
-	padding: 8% 0 0 20%;
+	padding: 0;
 }
 p
 {
