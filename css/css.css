@@ -228,19 +228,21 @@ nav
 	float: left;
 	margin: 0 auto;
 	margin-bottom: 10%;
+	padding: 0;
+	box-sizing: border-box;
 }
 .we-do li
 {
-	width: 27%;
+	width: 30%;
 	float: left;
 	display: inline-block;
-	margin: 15px 20px;
+	margin: 2% 1%;
 	position: relative;
 	border: 2px solid #008a67;
 	border-top: 10px solid #008a67;
-	border-radius: 25px;
+	border-radius: 10px;
 	padding: 5px;
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 }
 	.we-do li img
 	{
@@ -273,7 +275,7 @@ nav
 	top: -50%;
 	margin: 0 auto;
 	transition: all 0.4s ease;
-	/*background-color: #f99;*/
+	background-color: #f99;
 	text-align: center;
 }
 .message input.name
@@ -300,13 +302,13 @@ nav
 	border-bottom: 2px solid #008a67;
 	margin-top: 2%;
 }
-.message input.msg
+.message textarea.msg
 {
 	width: 80%;
 	padding-left: 10px;
 	height: 160px;
 	background-color: #fff;
-	font-size: 24pt;
+	font-size: 20pt;
 	border-radius: 10px;
 	border: 0;
 	border-bottom: 2px solid #008a67;
@@ -352,7 +354,7 @@ footer
 		float: left;
 		padding: 0;
 		margin-left: 5px;
-		cursor: pointer;
+		cursor: pointer;q
 	}
 		.social-links li a
 		{
@@ -424,6 +426,10 @@ h2
 	font-size: 36pt;
 	margin-top: 2%;
 	padding: 0;
+}
+h3
+{
+	font-family: aspace;
 }
 p
 {
