@@ -14,9 +14,9 @@
 			</div>
 			<nav>
 				<ul class="navigation-links">
-					<li><a href="index.html">HOME</a></li>
-					<li><a class="active" href="portfolio.html">PORTFOLIO</a></li>
-					<li><a href="team.html">TEAM</a></li>
+					<li><a href="index.php">HOME</a></li>
+					<li><a class="active" href="portfolio.php">PORTFOLIO</a></li>
+					<li><a href="team.php">TEAM</a></li>
 				</ul>
 			</nav>
 		</div>			

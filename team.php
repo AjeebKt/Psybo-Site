@@ -14,16 +14,17 @@
 			</div>
 			<nav>
 				<ul class="navigation-links">
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="portfolio.html">PORTFOLIO</a></li>
-					<li><a class="active" href="team.html">TEAM</a></li>
+					<li><a href="index.php">HOME</a></li>
+					<li><a href="portfolio.php">PORTFOLIO</a></li>
+					<li><a class="active" href="team.php">TEAM</a></li>
 				</ul>
 			</nav>
 		</div>			
 	</header>
 	<section class="team">
+		<h2>TEAM PSYBO</h2>
 		<div class="container">
-			<h2>TEAM PSYBO</h2>
+			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita porro iste qui aliquam odio, enim repellat sint fugit rem incidunt repellendus mollitia dolore explicabo quae voluptate eveniet, architecto et sapiente!</p> -->
 			<ul class="team-member">
 				<li>
 					<img src="" alt="">
