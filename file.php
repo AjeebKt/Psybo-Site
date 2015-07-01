@@ -1,5 +1,5 @@
 <?php 
-	class file
+	class File
 	{
 		public function list_files($directory)//its return the result an array.
 		{
@@ -68,8 +68,23 @@
 			}
 			else
 				return false;
+		}
 
+		public function view_image($actdir)
+		{
+
+			// $actdir="/upload-image/";
+
+			$dir=getcwd().$actdir;
 			
+			$images=glob($dir."*.jpg");
+			foreach($images as $image) 
+			{	
+				$image=$actdir.(basename($image));
+				// var_dump($image);
+				// echo '<img src="'.$image.'" /><br />';
+				return $image;
+			}
 		}
 	}
 	// $obj1=new file();
