@@ -14,15 +14,16 @@ html
 }
 body
 {
-	top: 0;
-	padding-top: 8%;
+	position: relative;
+	/*top: 8%;*/
+	padding-top: 80px;
 }
 header
 {
 	width: 100%;
+	height: 80px;
 	background-color: #ccc;
 	position: fixed;
-	float: left;
 	top: 0;
 	z-index: 999;
 	border-bottom: 1px solid;
@@ -40,6 +41,8 @@ section
 }
 .logo
 {
+	position: relative;
+	top: 5px;
 	float: left;
 	width: 120px;
 }
@@ -254,26 +257,47 @@ nav
 	}
 .skill-meter
 {
+	padding: 0;
 	width: 100%;
 	float: left;
 	list-style: none;
 }
-	.skill-meter li.words
-	{
-		width: 40%;
-		float: left;
-		background-color: #f00;
-	}
-	.skill-meter li.meter
-	{
-		width: 60%;
-		float: left;
-		background-color: #00f;
-	}
-
+.words
+{
+	width: 40%;
+	float: left;
+}
+.meter
+{
+	width: 60%;
+	float: left;
+}
+.meter label
+{
+	float: right;
+	margin-top: 3%;
+}
+.progress
+{
+	float: right;
+	width: 60%;
+	margin: 2%;
+	height: 30px;
+	border: 1px solid #aaa;
+	border-radius: 13px;
+	padding: 2px;
+}
+.percent
+{
+	background: none repeat scroll 0 0 #008a67;
+	border-radius: 10px;
+	display: block;
+	height: 100%;
+}
 .contact
 {
 	width: 100%;
+	height: 500px;
 	position: relative;
 	background-color: #transparent;
 	float: left;
@@ -281,15 +305,14 @@ nav
 }
 .map
 {
-	width: 100%;
-	/*background-color: #88f;*/
-	float: left;
-}
-.map iframe
-{
+	/*-------complete this----*/
 	width: 100%;
 	height: 500px;
-	frameborder: 0;
+	/*float: left;*/
+	background-image: url(../img/map.png);
+	/*background-position: 100%;*/
+	/*overflow: hidden;*/
+	
 }
 .message
 {
