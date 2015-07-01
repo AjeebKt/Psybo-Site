@@ -1,6 +1,6 @@
 
 <?php 
-class db
+class Database
 {              
 	private $host='';
 	private $user='';
@@ -99,7 +99,7 @@ class db
 		$alter="ALTER TABLE ".$table_name;
 		if ($add_colomn!=null) 
 		{
-			$alter.=" ADD COLUMN ".$add_colomn;
+			$alter.=" ADD ".$add_colomn[0]." ".$add_colomn[1];
 		}
 		elseif ($modify!=NULL) 
 		{
@@ -109,7 +109,7 @@ class db
 		{
 			$alter.=" DROP COLUMN ".$delete_colomn;
 		}
-		var_dump($alter);
+		// var_dump($alter);
 		$query=mysqli_query($this->condb,$alter);
 		if ($query==FALSE) 
 		{
@@ -158,8 +158,11 @@ class db
 		$stmt->execute();
 		if ($stmt===FALSE)	
 		 {
-			echo "error";
+			trigger_error("error");
 		 }
+		 else
+		 	return true;
+
 		 
 
 	}
@@ -181,7 +184,7 @@ class db
 		
 		if($where != null)
 		{
-			$select.=" WHERE ".$where[0]." = ";
+			$select.=" WHERE ".$where[0]." = ".$where[1];
 			if (is_string($where[1]))
 			{
 			 $select.="'".$where[1]."'";
@@ -199,13 +202,28 @@ class db
 
 		while ($rec=mysqli_fetch_array($query))
 			array_push($recset, $rec);
-
-		
-
 		return $recset;
 	}
 
+
+
+	public function select_row()
+	{
+		$select="SELECT address.id,address.name,employee.designation,address.mobile,files.file_name FROM employee JOIN address ON employee.id=address.id join files ON files.id=employee.id";
+		var_dump($select);
+		$query=mysqli_query($this->condb,$select);
+		if ($query==FALSE) 
+		{
+			return trigger_error($this->condb->error);
+		}
+		$recset=array();
+		while ($rec=mysqli_fetch_array($query))
+			// var_dump($rec);
+		return $rec;
+			
+	}
 	
+
 	//delete the data
 
 	public function delete($table,$fields)
@@ -223,7 +241,7 @@ class db
 		{
 			$update="UPDATE ".$table." SET ";
 			$count=count($fields);
-			for ($i=0; $i < $count; $i++) 
+//			for ($i=0; $i < $count; $i++)
 			{ 
 				
 				$update.=$fields[$i]." = ?";
@@ -232,7 +250,7 @@ class db
 			}
 			
 			$update.=" WHERE id=".$where;
-			$where=117;
+//			$where=117;
 			$type_value=str_repeat("s",count($fields));
 			$stmt=$this->condb->prepare($update);
 			if($stmt===FALSE)
@@ -259,10 +277,12 @@ class db
 			}			
 		}
 	}
+
+
 }
 
 
-$obj= new db('localhost','root','asd','test');
+// $obj= new Database('localhost','root','asd','test');
 
 // $name="thengakola";
 // $obj->createdb($name);
