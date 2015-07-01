@@ -149,6 +149,12 @@ nav
 		float: left;
 		margin: 10px 15px;
 	}
+.display-img
+{
+	min-height: 260px;
+	max-width: 260px;
+	max-height: 320px;
+}
 .personal-links
 {
 	list-style: none;
@@ -199,6 +205,14 @@ nav
 	float: left;
 	top: 100px;
 }
+.folios
+{
+	list-style: none;
+}
+	.folios li
+	{
+		float: left;
+	}
 .service
 {
 	width: 100%;
