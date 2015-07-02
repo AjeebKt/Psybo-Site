@@ -208,10 +208,10 @@ class Database
 
 
 
-	public function select_row_emp($id)
+	public function select_row_emp($id)	
 	{	
 		
-		$select="SELECT address.name,address.fb,address.linkedin,files.file_name,files.type FROM employee JOIN address ON employee.id=address.id join files ON files.id=employee.id where employee.id=".$id;
+		$select="SELECT address.name,address.fb,address.linkedin,address.address,address.email,files.file_name,files.type FROM employee JOIN address ON employee.address_id = address.id join files ON files.id=employee.files_id where employee.id=".$id;
 		// var_dump($select);
 		$query=mysqli_query($this->condb,$select);
 		if ($query==FALSE) 
@@ -293,10 +293,13 @@ class Database
 
 	public function num_row()
 	{
-		$count="SELECT * FROM employee";
+		$count="SELECT id FROM employee";
 		$query=mysqli_query($this->condb,$count);
-		$count=mysqli_num_rows($query);
-		return $count;
+		// $count=mysqli_num_rows($query);
+		$recset=array();
+		while($arr=mysqli_fetch_array($query))
+			array_push($recset,$arr);	
+		return $recset;
 	}
 
 

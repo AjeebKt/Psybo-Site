@@ -8,7 +8,7 @@
     $objfile=new File();
    
     $count=$objdb->num_row();
-    
+    var_dump($count);
  	$actdir="/upload-image/";
  	$image=$objfile->view_image($actdir);
  	$cmp_details=$objdb->select_row_cmp();
@@ -31,7 +31,7 @@
 				<ul class="navigation-links">
 					<li><a href="index.html">HOME</a></li>
 					<li><a href="portfolio.html">PORTFOLIO</a></li>
-					<li><a class="active" href="team.html">TEAM</a></li>
+					<li><a class="active" href="empoyee.php">TEAM</a></li>
 				</ul>
 			</nav>
 		</div>			
