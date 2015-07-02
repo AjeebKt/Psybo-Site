@@ -32,6 +32,7 @@ section
 {
 	width: 100%;
 	float: left;
+	border-bottom: 1px solid #aaa;
 }
 .container
 {
@@ -117,7 +118,7 @@ nav
 {
 	width: 100%;
 	float: left;
-	margin-bottom: 5%;
+	padding-bottom: 2%;
 }
 	.about-content
 	{
@@ -149,6 +150,12 @@ nav
 		float: left;
 		margin: 10px 15px;
 	}
+.display-img
+{
+	min-height: 260px;
+	max-width: 260px;
+	max-height: 320px;
+}
 .personal-links
 {
 	list-style: none;
@@ -199,6 +206,14 @@ nav
 	float: left;
 	top: 100px;
 }
+.folios
+{
+	list-style: none;
+}
+	.folios li
+	{
+		float: left;
+	}
 .service
 {
 	width: 100%;
@@ -257,8 +272,9 @@ nav
 	}
 .skill-meter
 {
-	padding: 0;
 	width: 100%;
+	margin: 0;
+	padding: 0;
 	float: left;
 	list-style: none;
 }
@@ -271,26 +287,27 @@ nav
 {
 	width: 60%;
 	float: left;
+	margin: 3% 0;
 }
 .meter label
 {
-	float: right;
+	float: left;
+	margin-left: 10%;
 	margin-top: 3%;
 }
 .progress
 {
-	float: right;
 	width: 60%;
+	float: left;
 	margin: 2%;
 	height: 30px;
 	border: 1px solid #aaa;
-	border-radius: 13px;
 	padding: 2px;
+	float: right;
 }
 .percent
 {
 	background: none repeat scroll 0 0 #008a67;
-	border-radius: 10px;
 	display: block;
 	height: 100%;
 }
@@ -339,7 +356,6 @@ nav
 		height: 35px;
 		background-color: #fff;
 		font-size: 20pt;
-		border-radius: 5px;
 		border: 0;
 		margin-bottom: 4%;
 		background-color: #ccc;
@@ -352,7 +368,6 @@ nav
 		height: 35px;
 		background-color: #fff;
 		font-size: 20pt;
-		border-radius: 5px;
 		border: 0;
 		margin-bottom: 4%;
 		background-color: #ccc;
@@ -364,7 +379,6 @@ nav
 		padding: 5px 10px;
 		height: 200px;
 		font-size: 18pt;
-		border-radius: 5px;
 		border: 0;
 		background-color: #ccc;
 		box-sizing: border-box;
@@ -377,7 +391,6 @@ nav
 		float: right;
 		margin-top: 4%;
 		border: 0;
-		border-radius: 5px;
 		font-size: 20pt;
 		background-color: #008a67;
 		transition: all 0.5s ease;

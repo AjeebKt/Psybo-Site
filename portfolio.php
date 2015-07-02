@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/css.css">
-	<title>About PSYBO</title>
+	<title>Our PORTFOLIO</title>
 </head>
 <body>
 	<header>
@@ -24,7 +24,12 @@
 	<div class="content">
 		<div class="portfolio">
 			<div class="container">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptas labore deleniti iure, nemo atque dicta odit id ducimus. Eius sequi dolore a, earum in molestias sunt modi repellat minima.</p>
+				<ul class="folios">
+					<li><img src="img/image.jpeg" alt=""></li>
+					<li><img src="img/image.jpeg" alt=""></li>
+					<li><img src="img/image.jpeg" alt=""></li>
+					<li><img src="img/image.jpeg" alt=""></li>
+				</ul>
 			</div>
 		</div>		
 	</div>

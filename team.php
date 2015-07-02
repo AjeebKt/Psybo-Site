@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/css.css">
-	<title>About PSYBO</title>
+	<title>Team PSYBO</title>
 </head>
 <body>
 	<header>
@@ -27,8 +27,13 @@
 			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita porro iste qui aliquam odio, enim repellat sint fugit rem incidunt repellendus mollitia dolore explicabo quae voluptate eveniet, architecto et sapiente!</p> -->
 			<ul class="team-member">
 				<li>
+<<<<<<< HEAD
+					<img src="img/image.jpeg" class="display-img" alt="">
+=======
 					<img src="" alt="">
+>>>>>>> 4d154cdeebf818488c48974b0a05e3b53582db6f
 					<h4>Name</h4>
+					<h4>Position</h4>
 					<ul class="personal-links">
 						<li>
 							<a class="facebook" target="_blank" href="https://facebook.com"></a>
@@ -45,8 +50,9 @@
 					</ul>
 				</li>
 				<li>
-					<img src="img/image.jpeg" alt="">
+					<img src="img/img-tech.jpg" class="display-img" alt="">
 					<h4>Name</h4>
+					<h4>Position</h4>
 					<ul class="personal-links">
 						<li>
 							<a class="facebook" target="_blank" href="https://facebook.com"></a>
@@ -63,8 +69,9 @@
 					</ul>
 				</li>
 				<li>
-					<img src="img/image.jpeg" alt="">
+					<img src="img/image.jpeg" class="display-img" alt="">
 					<h4>Name</h4>
+					<h4>Position</h4>
 					<ul class="personal-links">
 						<li>
 							<a class="facebook" target="_blank" href="https://facebook.com"></a>
@@ -81,8 +88,9 @@
 					</ul>
 				</li>
 				<li>
-					<img src="img/image.jpeg" alt="">
+					<img src="img/img-tech.jpg" class="display-img" alt="">
 					<h4>Name</h4>
+					<h4>Position</h4>
 					<ul class="personal-links">
 						<li>
 							<a class="facebook" target="_blank" href="https://facebook.com"></a>
@@ -99,8 +107,9 @@
 					</ul>
 				</li>
 				<li>
-					<img src="img/image.jpeg" alt="">
+					<img src="img/img-tech.jpg" class="display-img" alt="">
 					<h4>Name</h4>
+					<h4>Position</h4>
 					<ul class="personal-links">
 						<li>
 							<a class="facebook" target="_blank" href="https://facebook.com"></a>
@@ -117,8 +126,9 @@
 					</ul>
 				</li>
 				<li>
-					<img src="img/image.jpeg" alt="">
+					<img src="img/image.jpeg" class="display-img" alt="">
 					<h4>Name</h4>
+					<h4>Position</h4>
 					<ul class="personal-links">
 						<li>
 							<a class="facebook" target="_blank" href="https://facebook.com"></a>
