@@ -4,7 +4,7 @@
 	
 	// use app\Database;
 
-    $objdb=new Database('localhost','root','1234','psybo-db');
+    $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
    
     $emp_id=$objdb->num_row();
