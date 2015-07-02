@@ -285,26 +285,27 @@ nav
 {
 	width: 60%;
 	float: left;
+	margin-top: 3%;
 }
 .meter label
 {
-	float: right;
+	float: left;
+	margin-left: 10%;
 	margin-top: 3%;
 }
 .progress
 {
-	float: right;
 	width: 60%;
+	float: left;
 	margin: 2%;
 	height: 30px;
 	border: 1px solid #aaa;
-	border-radius: 13px;
 	padding: 2px;
+	float: right;
 }
 .percent
 {
 	background: none repeat scroll 0 0 #008a67;
-	border-radius: 10px;
 	display: block;
 	height: 100%;
 }
@@ -353,7 +354,6 @@ nav
 		height: 35px;
 		background-color: #fff;
 		font-size: 20pt;
-		border-radius: 5px;
 		border: 0;
 		margin-bottom: 4%;
 		background-color: #ccc;
@@ -366,7 +366,6 @@ nav
 		height: 35px;
 		background-color: #fff;
 		font-size: 20pt;
-		border-radius: 5px;
 		border: 0;
 		margin-bottom: 4%;
 		background-color: #ccc;
@@ -378,7 +377,6 @@ nav
 		padding: 5px 10px;
 		height: 200px;
 		font-size: 18pt;
-		border-radius: 5px;
 		border: 0;
 		background-color: #ccc;
 		box-sizing: border-box;
@@ -391,7 +389,6 @@ nav
 		float: right;
 		margin-top: 4%;
 		border: 0;
-		border-radius: 5px;
 		font-size: 20pt;
 		background-color: #008a67;
 		transition: all 0.5s ease;

@@ -207,20 +207,33 @@ class Database
 
 
 
-	public function select_row()
-	{
-		$select="SELECT address.id,address.name,employee.designation,address.mobile,files.file_name FROM employee JOIN address ON employee.id=address.id join files ON files.id=employee.id";
-		var_dump($select);
+
+	public function select_row_emp($id)
+	{	
+		
+		$select="SELECT address.name,address.fb,address.linkedin,files.file_name,files.type FROM employee JOIN address ON employee.id=address.id join files ON files.id=employee.id where employee.id=".$id;
+		// var_dump($select);
 		$query=mysqli_query($this->condb,$select);
 		if ($query==FALSE) 
-		{
+		
 			return trigger_error($this->condb->error);
-		}
+		
 		$recset=array();
 		while ($rec=mysqli_fetch_array($query))
-			// var_dump($rec);
-		return $rec;
+			return $rec;
 			
+	}
+
+	public function select_row_cmp()
+	{
+		$select="SELECT company_details.no_holidays,company_details.open_time,company_details.close_time,address.name,address.address,address.email,address.telephone,address.mobile,address.website,address.linkedin,address.fb,address.twiter,address.google_plus FROM company_details join address ON company_details.id=address.id";
+		// var_dump($select);
+		$query=mysqli_query($this->condb,$select);
+		if ($query==FALSE) 
+			return trigger_error($this->condb->error);
+		$recset=array();
+		while ($rec=mysqli_fetch_array($query)) 
+			return $rec;
 	}
 	
 
@@ -240,10 +253,10 @@ class Database
 		if (count($fields)==count($new_values)) 
 		{
 			$update="UPDATE ".$table." SET ";
-			$count=count($fields);
-//			for ($i=0; $i < $count; $i++)
-			{ 
-				
+			// $count=count($fields);
+			// for ($i=0; $i < $count; $i++)
+			foreach ($fields as $value) 
+			{				
 				$update.=$fields[$i]." = ?";
 				if($i != $count -1)
 					$update.=' , ';
@@ -276,6 +289,14 @@ class Database
 				return(FALSE);		
 			}			
 		}
+	}
+
+	public function num_row()
+	{
+		$count="SELECT * FROM employee";
+		$query=mysqli_query($this->condb,$count);
+		$count=mysqli_num_rows($query);
+		return $count;
 	}
 
 
