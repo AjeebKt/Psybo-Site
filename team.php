@@ -24,14 +24,10 @@
 	<section class="team">
 		<h2>TEAM PSYBO</h2>
 		<div class="container">
-			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita porro iste qui aliquam odio, enim repellat sint fugit rem incidunt repellendus mollitia dolore explicabo quae voluptate eveniet, architecto et sapiente!</p> -->
 			<ul class="team-member">
 				<li>
-<<<<<<< HEAD
 					<img src="img/image.jpeg" class="display-img" alt="">
-=======
 					<img src="" alt="">
->>>>>>> 4d154cdeebf818488c48974b0a05e3b53582db6f
 					<h4>Name</h4>
 					<h4>Position</h4>
 					<ul class="personal-links">
