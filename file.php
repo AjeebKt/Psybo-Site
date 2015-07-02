@@ -78,13 +78,15 @@
 			$dir=getcwd().$actdir;
 			
 			$images=glob($dir."*.jpg");
+			// var_dump($dir);
+			$arr_image=array();
 			foreach($images as $image) 
 			{	
 				$image=$actdir.(basename($image));
-				// var_dump($image);
-				// echo '<img src="'.$image.'" /><br />';
-				return $image;
+				array_push($arr_image,$image);
 			}
+				// var_dump($arr_image);
+			return $arr_image;
 		}
 	}
 	// $obj1=new file();

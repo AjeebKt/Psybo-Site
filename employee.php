@@ -7,10 +7,13 @@
     $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
    
-    $count=$objdb->num_row();
-    var_dump($count);
+    $emp_id=$objdb->num_row();
+    // var_dump($emp_id);
+    $count_emp=count($emp_id);
+    // var_dump($count_emp);
  	$actdir="/upload-image/";
  	$image=$objfile->view_image($actdir);
+ 	// var_dump($image);
  	$cmp_details=$objdb->select_row_cmp();
  ?>
  <!DOCTYPE html>
@@ -40,18 +43,16 @@
 		<div class="container">
 			<h2>TEAM PSYBO</h2>
 			<ul class="team-member">
-			<?php for ($i=1; $i <= $count; $i++)
-			{ $result=$objdb->select_row_emp($i);?>
+			<?php for ($j=0; $j<$count_emp ;$j++)
+			{ $result=$objdb->select_row_emp($emp_id[$j][0]);?>
 				<li>
-					<img width="145px" hight="194px"<?php foreach ($result as $key => $value) {
-								if (is_string($key) and $key=="file_name") {
-									// var_dump($value);
-									// var_dump(basename($image));
-									if ($value == basename($image)) 
-									echo("<img src=\"".$image."\"");
-								}
-							}
-					 	?> alt="">
+<!-- 					<img src="img/img-tech.jpg" class="display-img" alt=""> -->
+					<img src=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key=="file_name") {
+							// var_dump($actdir.$value);
+							echo "\"".$actdir.$value."\"";
+						}
+					}; ?> class="display-img" alt="">
 					<h4><?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {
 							echo $value;
