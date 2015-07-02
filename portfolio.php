@@ -22,16 +22,44 @@
 		</div>			
 	</header>
 	<div class="content">
-		<div class="portfolio">
+		<section class="portfolio">
 			<div class="container">
-				<ul class="folios">
-					<li><img src="img/image.jpeg" alt=""></li>
-					<li><img src="img/image.jpeg" alt=""></li>
-					<li><img src="img/image.jpeg" alt=""></li>
-					<li><img src="img/image.jpeg" alt=""></li>
-				</ul>
+				<figure>
+					<a target="_blank" href="#">
+						<img src="img/img-tech.jpg" alt="">
+						<figcaption>
+							jabajaba
+						</figcaption>
+					</a>
+				</figure>
+				<figure>
+					<a target="_blank" href="#">
+						<img src="img/image.jpeg" alt="">
+						<figcaption>
+							jabajaba
+						</figcaption>
+					</a>
+				</figure>
+				<!-- <figure>
+					<img src="img/image.jpeg" alt="">
+					<figcaption>
+						jabajaba
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="img/image.jpeg" alt="">
+					<figcaption>
+						jabajaba
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="img/image.jpeg" alt="">
+					<figcaption>
+						jabajaba
+					</figcaption>
+				</figure> -->
 			</div>
-		</div>		
+		</section>		
 	</div>
 	<footer>
 		<div class="container">
