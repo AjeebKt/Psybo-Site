@@ -32,7 +32,7 @@ section
 {
 	width: 100%;
 	float: left;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid #ccc;
 }
 .container
 {
@@ -122,16 +122,30 @@ nav
 }
 	.about-content
 	{
-		width: 60%;
-		background-color: #bbb;
+		width: 50%;
 		float: left;
+		margin-right: 3%;
 	}
 	.about-img
 	{
 		width: 40%;
-		background-color: #f99;
 		float: left;
+		margin-left: 3%;
 	}
+	.about-img img
+	{
+		max-width: 100%;
+	}
+.about-us
+{
+	width: 100%;
+	float: left;
+}
+.about-skill
+{
+	width: 100%;
+	float: left;
+}
 .team
 {
 	width: 100%;
@@ -239,12 +253,11 @@ nav
 		bottom: 0;
 		opacity: 1;
 	}
-.service
+.we-do
 {
 	width: 100%;
 	display: block;
-	background-color: #ccc;
-	margin-bottom: 5%;
+	background-color: #eee;
 	/*float: left;*/
 	/*left: 0;
 	margin: 0;*/
@@ -260,7 +273,7 @@ nav
 	transform: translateZ(-1px) scale(1.1);*/
   	/*z-index:-1;*/
 }
-.we-do
+.service
 {
 	width: 100%;
 	list-style: none;
@@ -271,24 +284,24 @@ nav
 	padding: 0;
 	box-sizing: border-box;
 }
-.we-do li
+.service li
 {
 	width: 30%;
 	float: left;
 	display: inline-block;
 	margin: 2% 1%;
 	position: relative;
-	border: 1px solid #008a67;
+	/*border: 1px solid #008a67;
 	border-top: 10px solid #008a67;
-	border-radius: 10px;
+	border-radius: 10px;*/
 	padding: 5px;
 	/*box-sizing: border-box;*/
 }
-	.we-do li img
+	.service li img
 	{
 		max-width: 100px;
 	}
-	.we-do li p
+	.service li p
 	{
 		float: left;
 		font-size: 18pt;
@@ -298,10 +311,8 @@ nav
 .skill-meter
 {
 	width: 100%;
-	margin: 0;
-	padding: 0;
 	float: left;
-	list-style: none;
+	margin: 0 0 4%;
 }
 .words
 {
@@ -312,28 +323,38 @@ nav
 {
 	width: 60%;
 	float: left;
-	margin: 3% 0;
+	margin: 1% 0;
 }
 .meter label
 {
 	float: left;
-	margin-left: 10%;
-	margin-top: 3%;
+	margin: 1% 2% 0 0;
 }
 .progress
 {
-	width: 60%;
+	width: 70%;
 	float: left;
-	margin: 2%;
-	height: 30px;
-	border: 1px solid #aaa;
-	padding: 2px;
+	/*margin: 1%;*/
+	height: 20px;
+	/*border: 1px solid #aaa;*/
+	background-color: #ddd;
+	/*padding: 2px;*/
+	float: left;
+}
+.span
+{
 	float: right;
 }
 .percent
 {
 	background: none repeat scroll 0 0 #008a67;
 	display: block;
+	height: 100%;
+	/*position: absolute;*/
+	top: 0px;
+	left: 0px;
+	display: block;
+	overflow: hidden;
 	height: 100%;
 }
 .contact
@@ -537,7 +558,6 @@ h2
 	font-weight: normal;
 	font-size: 36pt;
 	margin-top: 2%;
-	margin-left: 5%;
 	padding: 0;
 }
 h3
@@ -546,7 +566,6 @@ h3
 	font-size: 20pt;
 	margin: 10px 0;
 	padding: 0;
-	margin-left: 5%;
 }
 h4
 {

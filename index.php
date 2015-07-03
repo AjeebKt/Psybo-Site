@@ -32,20 +32,60 @@
 			</div>
 		</section>
 		<section class="about">
-			<h2>ABOUT US</h2>
 			<div class="container">
-				<div class="about-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas pariatur sit, consequuntur reiciendis necessitatibus. Quod et unde doloremque praesentium incidunt suscipit sunt totam earum officiis! Deserunt consequatur ipsam iure.</p>
+				<div class="about-us">
+					<h2>ABOUT US</h2>
+					<div class="about-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas pariatur sit, consequuntur reiciendis necessitatibus. Quod et unde doloremque praesentium incidunt suscipit sunt totam earum officiis! Deserunt consequatur ipsam iure.</p>
+					</div>
+					<div class="about-img">
+						<img src="img/design.png" alt="">
+					</div>
 				</div>
-				<div class="about-img">
-					<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio debitis eligendi, numquam facilis. Sunt quae, ipsa quo dicta omnis tenetur aut, voluptatem aliquam, ab, ea accusantium accusamus! Distinctio, laboriosam amet!</p>
+				<div class="about-skill">
+					<h2>Skills</h2>
+					<div class="skill-meter">
+						<div class="words">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum mollitia quod dolorem! Dolores recusandae nam cumque error, ipsa corrupti, cum et, reiciendis amet molestias sunt nobis eum laborum! Tempora, laborum?</p>
+						</div>
+						<div class="meter">
+							<label for="">PHP</label>
+							<div class="about-skill">
+								<div class="progress">
+									<span class="percent" style="width: 88%;"></span>
+									<span class="span">100%</span>
+								</div>
+							</div>
+							<label for="">WEB</label>
+							<div class="about-skill">
+								<div class="progress">
+									<span class="percent" style="width: 90%;"></span>
+									<span class="span">100%</span>
+								</div>
+							</div>
+							<label for="">NET</label>
+							<div class="about-skill">
+								<div class="progress">
+									<span class="percent" style="width: 93%;"></span>
+									<span >100%</span>
+								</div>
+							</div>
+							<label for="">APP</label>
+							<div class="about-skill">
+								<div class="progress">
+									<span class="percent" style="width: 90%;"></span>
+									<span class="span">100%</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="service">
-			<h2>WE DO</h2>
+		<section class="we-do">
 			<div class="container">
-				<ul class="we-do">
+				<h2>WE DO</h2>
+				<ul class="service">
 					<li>
 						<img src="img/plugin.png" alt="">
 						<h4>SOFTWARE DEVELOPMENT</h4>
@@ -79,32 +119,12 @@
 				</ul>
 			</div>
 		</section>
-		<section>
-			<div class="container">
-				<ul class="skill-meter">
-					<li class="words"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti necessitatibus, dolore consequuntur sit vel beatae voluptates facilis voluptatibus nesciunt perferendis maiores assumenda inventore at cum tenetur quia accusantium aperiam. Nesciunt.</p></li>
-					<li class="meter">
-						<div class="progress"><span class="percent"></span></div>
-						<label for="">PHP</label>
-						<div class="progress"><span class="percent"></span></div>
-						<label for="">WEB</label>
-						<div class="progress"><span class="percent"></span></div>
-						<label for="">NET</label>
-						<div class="progress"><span class="percent"></span></div>
-						<label for="">APP</label>
-					</li>
-				</ul>
-			</div>
-		</section>
 		<section class="contact">
-			<!-- <h2>CONTACT</h2> -->
-			<div class="map">as
-				<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.9079803456025!2d76.12036799999998!3d11.120230999999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6366ff7f89c8f%3A0x11041c463115229a!2sPsybo+Technologies!5e0!3m2!1sen!2sin!4v1431757472195"> -->
-			<!-- </iframe> -->
+			<div class="map">
 			</div>
 			<div class="message">
-				<h3>CONTACT</h3>
 				<div class="container">
+					<h3>CONTACT</h3>
 					<form id="message-form" class="msg-form" action="post">Name
 						<input type="text" class="name">Email
 						<input type="text" class="mail">Comments
