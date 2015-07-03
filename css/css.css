@@ -9,6 +9,11 @@ html
 }
 @font-face
 {
+	font-family: Raleway;
+	src: url('../fonts/Raleway-Regular.ttf');
+}
+@font-face
+{
 	font-family: DilleniaUPC;
 	src: url('../fonts/DilleniaUPC.ttf');
 }
@@ -307,6 +312,7 @@ nav
 	.service li img
 	{
 		max-width: 100px;
+		opacity: 0.6;
 	}
 	.service li p
 	{
@@ -451,8 +457,7 @@ nav
 	}
 	.message button.button:hover
 	{
-		background-color: #00B895;
-		color: #000;
+		background-color: #073838;
 	}
 footer
 {
