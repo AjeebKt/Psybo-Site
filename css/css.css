@@ -120,15 +120,22 @@ nav
 	float: left;
 	padding-bottom: 2%;
 }
+.about p
+{
+	margin: 8% 0 0 0;
+}
 	.about-content
 	{
+		/*margin: 1% 5% 3%;*/
 		width: 50%;
 		float: left;
-		margin-right: 3%;
+		text-align: justify;
+		/*margin-right: 3%;*/
 	}
 	.about-img
 	{
-		width: 40%;
+		margin: 1% 5% 3%;
+		width: 30%;
 		float: left;
 		margin-left: 3%;
 	}
@@ -578,4 +585,22 @@ p
 {
 	font-family: DilleniaUPC;
 	font-size: 22pt;
+}
+.parallax 
+{
+  height: 100%;
+}
+.parallax-layer 
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax-layer-base 
+{
+  transform: translateZ(1.5px);
+  overflow-x: hidden;
+  overflow-y: auto;
 }

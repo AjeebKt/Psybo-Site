@@ -36,10 +36,18 @@
 				<div class="about-us">
 					<h2>ABOUT US</h2>
 					<div class="about-content">
+						<h3>Responsive Design</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas pariatur sit, consequuntur reiciendis necessitatibus. Quod et unde doloremque praesentium incidunt suscipit sunt totam earum officiis! Deserunt consequatur ipsam iure.</p>
 					</div>
 					<div class="about-img">
 						<img src="img/design.png" alt="">
+					</div>
+					<div class="about-img">
+						<img src="img/design.png" alt="">
+					</div>
+					<div class="about-content">
+						<h3>Responsive Design</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas pariatur sit, consequuntur reiciendis necessitatibus. Quod et unde doloremque praesentium incidunt suscipit sunt totam earum officiis! Deserunt consequatur ipsam iure.</p>
 					</div>
 				</div>
 				<div class="about-skill">
@@ -52,29 +60,29 @@
 							<label for="">PHP</label>
 							<div class="about-skill">
 								<div class="progress">
-									<span class="percent" style="width: 88%;"></span>
 									<span class="span">100%</span>
+									<span class="percent" style="width: 88%;"></span>
 								</div>
 							</div>
 							<label for="">WEB</label>
 							<div class="about-skill">
 								<div class="progress">
-									<span class="percent" style="width: 90%;"></span>
 									<span class="span">100%</span>
+									<span class="percent" style="width: 90%;"></span>
 								</div>
 							</div>
-							<label for="">NET</label>
+							<label for="">WEB</label>
 							<div class="about-skill">
 								<div class="progress">
-									<span class="percent" style="width: 93%;"></span>
-									<span >100%</span>
+									<span class="span">100%</span>
+									<span class="percent" style="width: 90%;"></span>
 								</div>
 							</div>
-							<label for="">APP</label>
+							<label for="">WEB</label>
 							<div class="about-skill">
 								<div class="progress">
-									<span class="percent" style="width: 90%;"></span>
 									<span class="span">100%</span>
+									<span class="percent" style="width: 90%;"></span>
 								</div>
 							</div>
 						</div>
@@ -120,7 +128,10 @@
 			</div>
 		</section>
 		<section class="contact">
-			<div class="map">
+			<div class="parallax">
+				<div class="parallax-layer parallax-layer-base">
+					<img src="img/map.png" alt="">
+				</div>
 			</div>
 			<div class="message">
 				<div class="container">
