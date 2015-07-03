@@ -235,8 +235,16 @@ class Database
 		while ($rec=mysqli_fetch_array($query)) 
 			return $rec;
 	}
-	
 
+	public function select_row_ptf($id)
+	{
+		$select="SELECT portfolio.name,portfolio.link,files.file_name FROM portfolio JOIN files ON portfolio.files_id=files.id WHERE portfolio.id=1";
+		$query=(mysqli_query($this->condb,$select));
+		if ($query==FALSE) 
+			return trigger_error($this->condb->error);
+		while ($rec=mysqli_fetch_array($query)) 
+			return $rec;
+	} 
 	//delete the data
 
 	public function delete($table,$fields)
@@ -291,6 +299,7 @@ class Database
 		}
 	}
 
+// NUMBER OF COLOMN
 	public function num_row()
 	{
 		$count="SELECT id FROM employee";
@@ -302,6 +311,16 @@ class Database
 		return $recset;
 	}
 
+
+	public function num_row_ptf()
+	{
+		$select="SELECT id FROM portfolio";
+		$query=mysqli_query($this->condb,$select);
+		$recset=array();
+		while ($arr=mysqli_fetch_array($query))
+			array_push($recset,$arr);
+		return $recset;
+	}
 
 }
 

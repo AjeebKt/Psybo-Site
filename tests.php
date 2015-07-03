@@ -14,9 +14,21 @@ var_dump($tst);
 var_dump($tst[0]);
 echo $tst[0][0];
 echo $tst[1][0];	*/
-$actdir="/upload-image/";
-$test=$objfile->view_image($actdir);
-// var_dump($test);
+// $actdir="/upload-image/";
+// $test=$objfile->view_image($actdir);
+// $tes=$objdb->num_row_ptf(1);
+// // var_dump($tes);	
+// // echo(count($tes));
+// echo $tes[0][0];
+// $result=$objdb->select_row_ptf($tes[0][0]);
+// var_dump($result);
+// foreach ($result as $key => $value) {
+// 	echo $key;
+// 	if (is_string($key) and $key=='name') {
+// 		var_dump($value);
+// 	}
+	
+// }
 // echo (count($tst));
 // $result=$objdb->select_row();
 // var_dump($result); 
@@ -54,9 +66,15 @@ $test=$objfile->view_image($actdir);
 // for ($i=0; $i < 3; $i++) { 
 	
 // 	if (i!=2) {
-		
-
-
 // 	}
 // }
+$str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
+// $str=wordwrap($str,5,"<br>");
+// echo (wordwrap($str,15,"<br>"));
+$text = str_replace("\n.", "\n..", $str);
+// echo $text;
+$from=" pnoushid@gmail.com";
+$headers='From:'.$from."\r\n";
+var_dump($headers);
+
 ?>
