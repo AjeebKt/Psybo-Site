@@ -1,5 +1,7 @@
-.bg-login
+
+body, .bg-login
 {
+	background-color: #008a67;
 }
 .login
 {

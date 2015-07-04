@@ -5,6 +5,7 @@
 	<title>Dashboard</title>
 </head>
 <body>
-	
+	<aside>
+	</aside>
 </body>
 </html>

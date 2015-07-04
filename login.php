@@ -1,11 +1,3 @@
- <html>
- 	<form name="loginform" id="loginform" method="POST" action="">
-	 	<input type="text" name="txtusername" id="txtusername" placeholder="uesername"><br>
-	 	<input type="password" name="textpassword" id="txtpassword" placeholder="Password"><br>
-	 	<input type="submit" name="btnlogin" id="btnlgin" value="sign in">
- 	</form>
- </html>
-
 <?php 
 
 	if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
@@ -14,3 +6,29 @@
 	}
  ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/css.css">
+	<link rel="stylesheet" href="./css/style1.css">
+</head>
+<body>
+	<div class="bg-login">
+		<form id="loginForm" class="login" method="POST">
+			<h3>Login</h3>
+			<div>
+				<a class="user"></a>
+				<input id="text" placeholder="User Name" type="text">
+			</div>
+			<div>
+				<a class="lock"></a>
+				<input id="Password" placeholder="Password" type="password">
+			</div>
+			<button id="loginButton">Login</button>
+		</form>
+	</div>
+</body>
+</html>
