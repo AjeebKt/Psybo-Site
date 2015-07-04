@@ -154,18 +154,11 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 				<h2>TESTIMONIAL</h2>
 				<div class="test-details">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus voluptatibus repellendus neque distinctio animi consequatur, maiores fuga mollitia. Impedit quibusdam pariatur, reiciendis cum reprehenderit, porro esse optio id at.</p>
-					<span id="img-user">
-						<img src="img/image.jpeg" alt="">
-					</span>
 				</div>
 			</div>
 		</section>
 		<section class="contact">
-			<div class="parallax-map">
-<!-- 				<div class="parallax-map">
-					<img src="img/map.png" alt="">
-				</div> -->
-			</div>
+			<div class="map"></div>
 			<div class="message">
 				<div class="container">
 
