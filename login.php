@@ -12,7 +12,7 @@
 	{
 		header("location:Dashbord.php");
 	}
- ?>
+ ?>kj
 
 <!DOCTYPE html>
 <html lang="en">
