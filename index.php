@@ -54,20 +54,68 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 			</div>
 		</section>
 		<section class="about">
-			<h2>ABOUT US</h2>
 			<div class="container">
-				<div class="about-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas pariatur sit, consequuntur reiciendis necessitatibus. Quod et unde doloremque praesentium incidunt suscipit sunt totam earum officiis! Deserunt consequatur ipsam iure.</p>
+				<div class="about-us">
+					<h2>ABOUT US</h2>
+					<div class="about-content">
+						<h3>Responsive Design</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas pariatur sit, consequuntur reiciendis necessitatibus. Quod et unde doloremque praesentium incidunt suscipit sunt totam earum officiis! Deserunt consequatur ipsam iure.</p>
+					</div>
+					<div class="about-img">
+						<img src="img/design.png" alt="">
+					</div>
+					<div class="about-img">
+						<img src="img/design.png" alt="">
+					</div>
+					<div class="about-content">
+						<h3>Responsive Design</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas pariatur sit, consequuntur reiciendis necessitatibus. Quod et unde doloremque praesentium incidunt suscipit sunt totam earum officiis! Deserunt consequatur ipsam iure.</p>
+					</div>
 				</div>
-				<div class="about-img">
-					<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio debitis eligendi, numquam facilis. Sunt quae, ipsa quo dicta omnis tenetur aut, voluptatem aliquam, ab, ea accusantium accusamus! Distinctio, laboriosam amet!</p>
+				<div class="about-skill">
+					<h2>Skills</h2>
+					<div class="skill-meter">
+						<div class="words">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum mollitia quod dolorem! Dolores recusandae nam cumque error, ipsa corrupti, cum et, reiciendis amet molestias sunt nobis eum laborum! Tempora, laborum?</p>
+						</div>
+						<div class="meter">
+							<label for="">PHP</label>
+							<div class="about-skill">
+								<div class="progress">
+									<span class="span">100%</span>
+									<span class="percent" style="width: 88%;"></span>
+								</div>
+							</div>
+							<label for="">WEB</label>
+							<div class="about-skill">
+								<div class="progress">
+									<span class="span">100%</span>
+									<span class="percent" style="width: 90%;"></span>
+								</div>
+							</div>
+							<label for="">WEB</label>
+							<div class="about-skill">
+								<div class="progress">
+									<span class="span">100%</span>
+									<span class="percent" style="width: 90%;"></span>
+								</div>
+							</div>
+							<label for="">WEB</label>
+							<div class="about-skill">
+								<div class="progress">
+									<span class="span">100%</span>
+									<span class="percent" style="width: 90%;"></span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="service">
-			<h2>WE DO</h2>
+		<section class="we-do">
 			<div class="container">
-				<ul class="we-do">
+				<h2>WE DO</h2>
+				<ul class="service">
 					<li>
 						<img src="img/plugin.png" alt="">
 						<h4>SOFTWARE DEVELOPMENT</h4>
@@ -101,35 +149,35 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 				</ul>
 			</div>
 		</section>
-		<section>
+		<section class="testimonial">
 			<div class="container">
-				<ul class="skill-meter">
-					<li class="words"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti necessitatibus, dolore consequuntur sit vel beatae voluptates facilis voluptatibus nesciunt perferendis maiores assumenda inventore at cum tenetur quia accusantium aperiam. Nesciunt.</p></li>
-					<li class="meter">
-						<div class="progress"><span class="percent"></span></div>
-						<label for="">PHP</label>
-						<div class="progress"><span class="percent"></span></div>
-						<label for="">WEB</label>
-						<div class="progress"><span class="percent"></span></div>
-						<label for="">NET</label>
-						<div class="progress"><span class="percent"></span></div>
-						<label for="">APP</label>
-					</li>
-				</ul>
+				<h2>TESTIMONIAL</h2>
+				<div class="test-details">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus voluptatibus repellendus neque distinctio animi consequatur, maiores fuga mollitia. Impedit quibusdam pariatur, reiciendis cum reprehenderit, porro esse optio id at.</p>
+					<span id="img-user">
+						<img src="img/image.jpeg" alt="">
+					</span>
+				</div>
 			</div>
 		</section>
 		<section class="contact">
-			<!-- <h2>CONTACT</h2> -->
-			<div class="map">as
-				<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.9079803456025!2d76.12036799999998!3d11.120230999999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6366ff7f89c8f%3A0x11041c463115229a!2sPsybo+Technologies!5e0!3m2!1sen!2sin!4v1431757472195"> -->
-			<!-- </iframe> -->
+			<div class="parallax-map">
+<!-- 				<div class="parallax-map">
+					<img src="img/map.png" alt="">
+				</div> -->
 			</div>
 			<div class="message">
-				<h3>CONTACT</h3>
 				<div class="container">
+<<<<<<< HEAD
 					<form id="message-form"  class="msg-form" action="" method="POST">Name
 						<input type="text" class="name" name="txtname" id="txtname">Email
 						<input type="text" class="mail" name="txtcoments" id="txtcomments" >Comments
+=======
+					<h3>CONTACT</h3>
+					<form id="message-form" class="msg-form" action="post">Name
+						<input type="text" class="name">Email
+						<input type="text" class="mail">Comments
+>>>>>>> 842189c2aafea1d9ea9a55489e6edf6b50912390
 						<textarea name="comments" id="comments" cols="30" rows="10" class="msg"></textarea>
 						<button class="button" id="buttonmail" name="buttonmail">SEND</button>
 					</form>
@@ -155,7 +203,7 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 				</ul>	
 				<div class="site-details">
 					<p>All Right Recieved @ PSYBO Technologies PVT.LTD</p>
-					<p>PSYBO Technologies</p>
+					<p>PSYBO Technologies 2015</p>
 				</div>
 			</div>
 		</div>

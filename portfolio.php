@@ -114,7 +114,7 @@
 				</ul>	
 				<div class="site-details">
 					<p>All Right Recieved @ PSYBO Technologies PVT.LTD</p>
-					<p>PSYBO Technologies</p>
+					<p>PSYBO Technologies 2015</p>
 				</div>
 			</div>
 		</div>
