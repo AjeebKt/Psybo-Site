@@ -89,32 +89,16 @@
 			<div class="footer-details">
 				<ul class="social-links">
 					<li>
-						<a class="facebook" <?php foreach ($cmp_details as $key => $value) {
-								if (is_string($key) and $key=="fb") {
-									echo ("href=\"".$value."\"");
-								}
-							} ?> ></a>
+						<a class="facebook" href="#"></a>
 					</li>
 					<li>
-						<a class="twitter" <?php foreach ($cmp_details as $key => $value) {
-								if (is_string($key) and $key=="twiter") {
-									echo ("href=\"".$value."\"");
-								}
-							} ?> ></a>
+						<a class="twitter" href="#"></a>
 					</li>
 					<li>
-						<a class="linkedin"  <?php foreach ($cmp_details as $key => $value) {
-								if (is_string($key) and $key=="linkedin") {
-									echo ("href=\"".$value."\"");
-								}
-							} ?>></a>
+						<a class="linkedin" href="#"></a>
 					</li>
 					<li>
-						<a class="gplus" <?php foreach ($cmp_details as $key => $value) {
-								if (is_string($key) and $key=="google_plus") {
-									echo ("href=\"".$value."\"");
-								}
-							} ?>></a>
+						<a class="gplus" href="#"></a>
 					</li>
 				</ul>	
 				<div class="site-details">
