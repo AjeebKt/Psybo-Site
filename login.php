@@ -1,11 +1,3 @@
-<?php 
-
-	if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
-	{
-		header("location:Dashbord.php");
-	}
- ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
