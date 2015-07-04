@@ -12,5 +12,5 @@
 	{
 		header("location:Dashbord.php");
 	}
- ?>
+ ?>kj
 
