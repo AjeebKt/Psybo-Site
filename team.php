@@ -29,8 +29,8 @@
 			</div>
 			<nav>
 				<ul class="navigation-links">
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="portfolio.html">PORTFOLIO</a></li>
+					<li><a href="index.php">HOME</a></li>
+					<li><a href="portfolio.php">PORTFOLIO</a></li>
 					<li><a class="active" href="team.php">TEAM</a></li>
 				</ul>
 			</nav>
