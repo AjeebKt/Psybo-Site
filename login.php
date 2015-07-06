@@ -23,7 +23,7 @@
 			$_SESSION['login']='YES';
 			$_SESSION['username']=$_POST['username'];
 			$_SESSION['password']=$_POST['password'];
-			// header("location:dashboard.php");
+			header("location:dashboard.php");
 		}
 	}
  ?>
