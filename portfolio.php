@@ -27,7 +27,7 @@
 				<ul class="navigation-links">
 					<li><a href="index.php">HOME</a></li>
 					<li><a class="active" href="portfolio.php">PORTFOLIO</a></li>
-					<li><a href="team.php">TEAM</a></li>
+					<li><a href="employee.php">TEAM</a></li>
 				</ul>
 			</nav>
 		</div>			
@@ -66,14 +66,14 @@
 				</figure>
 				<?php } ?>
 
-				<figure>
+				<!-- <figure>
 					<a target="_blank" href="#">
 						<img src="img/image.jpeg" alt="">
 						<figcaption>
 							jabajaba
 						</figcaption>
 					</a>
-				</figure>
+				</figure> -->
 				<!-- <figure>
 					<img src="img/image.jpeg" alt="">
 					<figcaption>

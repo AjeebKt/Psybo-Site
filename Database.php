@@ -7,6 +7,7 @@ class Database
 	private $password='';
 	private $database='';
 	private $condb="";
+
 	//private $condb = new mysqli($this->host,$this->user,$this->password,$this->database);
 
 	function __construct($host,$user,$password,$database)
@@ -224,6 +225,7 @@ class Database
 			
 	}
 
+	// select the details from the company details.
 	public function select_row_cmp()
 	{
 		$select="SELECT company_details.no_holidays,company_details.open_time,company_details.close_time,address.name,address.address,address.email,address.telephone,address.mobile,address.website,address.linkedin,address.fb,address.twiter,address.google_plus FROM company_details join address ON company_details.id=address.id";
@@ -236,15 +238,27 @@ class Database
 			return $rec;
 	}
 
+	// select the details from portfolio
 	public function select_row_ptf($id)
 	{
-		$select="SELECT portfolio.name,portfolio.link,files.file_name FROM portfolio JOIN files ON portfolio.files_id=files.id WHERE portfolio.id=1";
-		$query=(mysqli_query($this->condb,$select));
+		$select="SELECT portfolio.name,portfolio.link,files.file_name FROM portfolio JOIN files ON portfolio.files_id=files.id WHERE portfolio.id=".$id;
+		$query=mysqli_query($this->condb,$select);
 		if ($query==FALSE) 
 			return trigger_error($this->condb->error);
 		while ($rec=mysqli_fetch_array($query)) 
 			return $rec;
 	} 
+
+	public function select_row_tstmnl($id)
+	{
+		$select="SELECT testimonial.name,testimonial.description,testimonial.link,files.file_name FROM testimonial JOIN files ON testimonial.files_id=files.id WHERE testimonial.id=".$id;
+		$query=mysqli_query($this->condb,$select);
+		if ($query==FALSE) 
+			return trigger_error($this->condb->error);
+			while ($rec=mysqli_fetch_array($query)) 
+				return $rec; 
+	}
+
 	//delete the data
 
 	public function delete($table,$fields)
@@ -300,7 +314,7 @@ class Database
 	}
 
 // NUMBER OF COLOMN
-	public function num_row()
+	public function num_row_emp()
 	{
 		$count="SELECT id FROM employee";
 		$query=mysqli_query($this->condb,$count);

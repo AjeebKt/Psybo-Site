@@ -6,15 +6,12 @@
 
     $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
-   
-    $emp_id=$objdb->num_row();
+    $emp_id=$objdb->num_row_emp();// number of values of employee
     // var_dump($emp_id);
     $count_emp=count($emp_id);
     // var_dump($count_emp);
  	$actdir="/upload-image/";
- 	$image=$objfile->view_image($actdir);
- 	// var_dump($image);
- 	$cmp_details=$objdb->select_row_cmp();
+ 	$cmp_details=$objdb->select_row_cmp(); //select the row from company details
  ?>
  <!DOCTYPE html>
 <html lang="en">
