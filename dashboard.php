@@ -14,6 +14,12 @@ if (isset($_SESSION['username']) and isset($_SESSION['password']))
 // 	session_destroy();
 // 	header("location:login.php");
 // }
+if (isset($_POST['btnPortfolio'])) 
+{
+	$target_dir="/var/www/psybo_site/psybo/Psybo-Site/upload-image"
+	$target_file=$target_dir."/".basename($_FILES["uploadPortfolio"])
+}
+
  ?>
 
 
@@ -41,30 +47,30 @@ if (isset($_SESSION['username']) and isset($_SESSION['password']))
 			<div id="tabPortfolio" class="tab-portfolio">
 			<h3>PORTFLIO</h3>
 				<label>Portfolio Image</label>
-				<input name="" type="file" class="up"><br>
+				<input name="uploadPortfolio" type="file" class="up"><br>
 				<label>Title</label>
-				<input name="" type="text"><br>
+				<input name="txtTitle" type="text"><br>
 				<label>Link</label>
-				<input name="" type="text"><br>
-				<button class="submit">Submit</button>
+				<input name="txtLink" type="text"><br>
+				<button class="submit" name="btnPortfolio">Submit</button>
 			</div>
 			<div id="tabTeam" class="tab-team">
 			<h3>TEAM MEMBERS</h3>
 				<label>Employee Image</label>
-				<input name="" type="file"><br>
+				<input name="uploadTeam" type="file"><br>
 				<label>Name</label>
-				<input name="" type="text"><br>
+				<input name="txtName" type="text"><br>
 				<label>Designation</label>
-				<input name="" type="text"><br>
+				<input name="txtDesignation" type="text"><br>
 			<h4>Personal Links</h4>
 				<label>Facebook</label>
-				<input name="" type="text"><br>
+				<input name="txtFacebook" type="text"><br>
 				<label>Twitter</label>
-				<input name="" type="text"><br>
+				<input name="txtTwitter" type="text"><br>
 				<label>LinkedIn</label>
-				<input name="" type="text"><br>
+				<input name="txtLinkedin" type="text"><br>
 				<label>Google+</label>
-				<input name="" type="text"><br>
+				<input name="txtGplus" type="text"><br>
 				<button class="submit">Submit</button>
 			</div>
 
