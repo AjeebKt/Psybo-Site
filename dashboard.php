@@ -31,15 +31,11 @@ if (isset($_POST['logout']))
 		
 	</header>
 	<aside>
-<<<<<<< HEAD
-	dashbord
 	<form id="form1" name="form1" method="POST" action="">
 	<button name="logout"> logout </button>
 	</form>
-=======
 		<a href="#tabPortfolio"><button class="button1">tab 1</button></a>
 		<a href="#tabTeam"><button class="button2">tab 2</button></a>
->>>>>>> e844aa8d905fdffbe32bc912f6c90577731b7275
 	</aside>
 	<section>
 		<div id="tabPortfolio" class="tab-portfolio">

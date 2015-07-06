@@ -1,10 +1,25 @@
-<!DOCTYPE html>
+<?php 
+	include "file.php";
+    require_once 'Database.php';
+	
+	// use app\Database;
+
+    $objdb=new Database('localhost','root','asd','psybo-db');
+    $objfile=new File();
+    $emp_id=$objdb->num_row_emp();// number of values of employee
+    // var_dump($emp_id);
+    $count_emp=count($emp_id);
+    // var_dump($count_emp);
+ 	$actdir="/upload-image/";
+ 	$cmp_details=$objdb->select_row_cmp(); //select the row from company details
+ ?>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/css.css">
-	<title>Team PSYBO</title>
+	<title>About PSYBO</title>
 </head>
 <body>
 	<header>
@@ -14,132 +29,55 @@
 			</div>
 			<nav>
 				<ul class="navigation-links">
-					<li><a href="index.php">HOME</a></li>
-					<li><a href="portfolio.php">PORTFOLIO</a></li>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="portfolio.html">PORTFOLIO</a></li>
 					<li><a class="active" href="team.php">TEAM</a></li>
 				</ul>
 			</nav>
 		</div>			
 	</header>
 	<section class="team">
-		<h2>TEAM PSYBO</h2>
 		<div class="container">
+			<h2>TEAM PSYBO</h2>
 			<ul class="team-member">
+			<?php for ($j=0; $j<$count_emp ;$j++)
+			{ $result=$objdb->select_row_emp($emp_id[$j][0]);?>
 				<li>
-					<img src="img/image.jpeg" class="display-img" alt="">
-					<img src="" alt="">
-					<h4>Name</h4>
-					<h4>Position</h4>
+<!-- 					<img src="img/img-tech.jpg" class="display-img" alt=""> -->
+					<img src=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key=="file_name") {
+							// var_dump($actdir.$value);
+							echo "\"".$actdir.$value."\"";
+						}
+					}; ?> class="display-img" alt="">
+					<h4><?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key=="name") {
+							echo $value;
+						}
+					} ?></h4>
 					<ul class="personal-links">
 						<li>
-							<a class="facebook" target="_blank" href="https://facebook.com"></a>
+							<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key=="fb") {
+							echo ("href=\"".$value."\"");}}?> ></a>
 						</li>
 						<li>
 							<a class="twitter" href="https://twitter.com/"></a>
 						</li>
 						<li>
-							<a class="linkedin" href="https://linkedin.com/"></a>
+							<a class="linkedin" 
+							<?php foreach ($result as $key => $value) {
+								if (is_string($key) and $key=="linkedin") {
+									echo ("href=\"".$value."\"");
+								}
+							} ?>  ></a>
 						</li>
 						<li>
 							<a class="gplus" href="https://plus.google.com/"></a>
 						</li>
 					</ul>
 				</li>
-				<li>
-					<img src="img/img-tech.jpg" class="display-img" alt="">
-					<h4>Name</h4>
-					<h4>Position</h4>
-					<ul class="personal-links">
-						<li>
-							<a class="facebook" target="_blank" href="https://facebook.com"></a>
-						</li>
-						<li>
-							<a class="twitter" href="https://twitter.com/"></a>
-						</li>
-						<li>
-							<a class="linkedin" href="https://linkedin.com/"></a>
-						</li>
-						<li>
-							<a class="gplus" href="https://plus.google.com/"></a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<img src="img/image.jpeg" class="display-img" alt="">
-					<h4>Name</h4>
-					<h4>Position</h4>
-					<ul class="personal-links">
-						<li>
-							<a class="facebook" target="_blank" href="https://facebook.com"></a>
-						</li>
-						<li>
-							<a class="twitter" href="https://twitter.com/"></a>
-						</li>
-						<li>
-							<a class="linkedin" href="https://linkedin.com/"></a>
-						</li>
-						<li>
-							<a class="gplus" href="https://plus.google.com/"></a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<img src="img/img-tech.jpg" class="display-img" alt="">
-					<h4>Name</h4>
-					<h4>Position</h4>
-					<ul class="personal-links">
-						<li>
-							<a class="facebook" target="_blank" href="https://facebook.com"></a>
-						</li>
-						<li>
-							<a class="twitter" href="https://twitter.com/"></a>
-						</li>
-						<li>
-							<a class="linkedin" href="https://linkedin.com/"></a>
-						</li>
-						<li>
-							<a class="gplus" href="https://plus.google.com/"></a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<img src="img/img-tech.jpg" class="display-img" alt="">
-					<h4>Name</h4>
-					<h4>Position</h4>
-					<ul class="personal-links">
-						<li>
-							<a class="facebook" target="_blank" href="https://facebook.com"></a>
-						</li>
-						<li>
-							<a class="twitter" href="https://twitter.com/"></a>
-						</li>
-						<li>
-							<a class="linkedin" href="https://linkedin.com/"></a>
-						</li>
-						<li>
-							<a class="gplus" href="https://plus.google.com/"></a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<img src="img/image.jpeg" class="display-img" alt="">
-					<h4>Name</h4>
-					<h4>Position</h4>
-					<ul class="personal-links">
-						<li>
-							<a class="facebook" target="_blank" href="https://facebook.com"></a>
-						</li>
-						<li>
-							<a class="twitter" href="https://twitter.com/"></a>
-						</li>
-						<li>
-							<a class="linkedin" href="https://linkedin.com/"></a>
-						</li>
-						<li>
-							<a class="gplus" href="https://plus.google.com/"></a>
-						</li>
-					</ul>
-				</li>
+				<?php } ?>
 			</ul>
 		</div>
 	</section>
@@ -169,3 +107,4 @@
 	</footer>
 </body>
 </html>
+ 
