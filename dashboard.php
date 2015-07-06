@@ -41,8 +41,7 @@ if (isset($_SESSION['username']) and isset($_SESSION['password']))
 			<div id="tabPortfolio" class="tab-portfolio">
 			<h3>PORTFLIO</h3>
 				<label>Portfolio Image</label>
-				<input name="" type="text" class="up">
-				<button class="browse">Browse</button><br>
+				<input name="" type="file" class="up"><br>
 				<label>Title</label>
 				<input name="" type="text"><br>
 				<label>Link</label>
@@ -52,8 +51,7 @@ if (isset($_SESSION['username']) and isset($_SESSION['password']))
 			<div id="tabTeam" class="tab-team">
 			<h3>TEAM MEMBERS</h3>
 				<label>Employee Image</label>
-				<input name="" type="text"> 
-				<button class="browse">Browse</button><br>
+				<input name="" type="file"><br>
 				<label>Name</label>
 				<input name="" type="text"><br>
 				<label>Designation</label>
