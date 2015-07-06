@@ -6,12 +6,12 @@ body
 }
 section
 
-/*login*/
+/*--------login--------*/
 
 .login
 {
-	max-height: 350px;
 	width: 25%;
+	height: 350px;
 	margin: 10% auto 0;
 	background-color: #fff;
 }
