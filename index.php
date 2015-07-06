@@ -161,22 +161,10 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 			<div class="map"></div>
 			<div class="message">
 				<div class="container">
-<<<<<<< HEAD
-
-					<form id="message-form"  class="msg-form" action="" method="POST">Name
-						<input type="text" class="name" name="txtname" id="txtname">Email
-						<input type="text" class="mail" name="txtcoments" id="txtcomments" >Comments
-
-=======
->>>>>>> c9671a30773b19c670bd172370edfd0bf0e308b2
 					<h3>CONTACT</h3>
 					<form id="message-form" class="msg-form" action="post">Name
 						<input type="text" class="name">Email
 						<input type="text" class="mail">Comments
-<<<<<<< HEAD
-
-=======
->>>>>>> c9671a30773b19c670bd172370edfd0bf0e308b2
 						<textarea name="comments" id="comments" cols="30" rows="10" class="msg"></textarea>
 						<button class="button" id="buttonmail" name="buttonmail">SEND</button>
 					</form>

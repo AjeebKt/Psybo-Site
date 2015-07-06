@@ -22,13 +22,36 @@ if (isset($_POST['logout']))
 <head>
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<header>
+		
+	</header>
 	<aside>
+<<<<<<< HEAD
 	dashbord
 	<form id="form1" name="form1" method="POST" action="">
 	<button name="logout"> logout </button>
 	</form>
+=======
+		<a href="#tabPortfolio"><button class="button1">tab 1</button></a>
+		<a href="#tabTeam"><button class="button2">tab 2</button></a>
+>>>>>>> e844aa8d905fdffbe32bc912f6c90577731b7275
 	</aside>
+	<section>
+		<div id="tabPortfolio" class="tab-portfolio">
+			<div>Insert</div>
+			<div>Update</div>
+			<div>Delete</div>
+		</div>
+		<div id="tabTeam" class="tab-team">
+			<div>Insert</div>
+			<div>Update</div>
+			<div>Delete</div>
+		</div>
+	</section>
 </body>
 </html>
