@@ -340,7 +340,11 @@ class Database
 
 	public function insert_mul()
 	{
-		insert("files",array("file_name","type"))
+		$this->insert("files",array("file_name","type"),array("test.jpg",".jpg"));
+		$insert="INSERT INTO testimonial (name,description,link,files_id) VALUES ('client1','lorum ipsum is dummy text','www.tetimonial.com',".mysqli_insert_id($this->condb).")";
+		$query=mysqli_query($this->condb,$insert);
+		if ($query==FALSE) 
+			trigger_error($this->condb->error);
 	}
 
 }
