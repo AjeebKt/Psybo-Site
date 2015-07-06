@@ -28,26 +28,46 @@ if (isset($_SESSION['username']) and isset($_SESSION['password']))
 </head>
 <body>
 	<header>
-		
+		<form id="form1" name="form1" method="POST" action="">
+			<button class="logout" name="logout">Logout </button>
+		</form>
 	</header>
 	<aside>
-	<form id="form1" name="form1" method="POST" action="">
-	<button name="logout"> logout </button>
-	</form>
-		<a href="#tabPortfolio"><button class="button1">tab 1</button></a>
-		<a href="#tabTeam"><button class="button2">tab 2</button></a>
+			<a href="#tabPortfolio"><button class="button">tab 1</button></a>
+			<a href="#tabTeam"><button class="button">tab 2</button></a>
 	</aside>
 	<section>
-		<div id="tabPortfolio" class="tab-portfolio">
-			<div>Insert</div>
-			<div>Update</div>
-			<div>Delete</div>
-		</div>
-		<div id="tabTeam" class="tab-team">
-			<div>Insert</div>
-			<div>Update</div>
-			<div>Delete</div>
-		</div>
+		<form method="POST" action="">
+			<div id="tabPortfolio" class="tab-portfolio">
+			<h3>PORTFLIO</h3>
+				<label>Portfolio Image</label>
+				<input name="" type="text" class="up">
+				<button class="browse">Browse</button><br>
+				<label>Title</label>
+				<input name="" type="text"><br>
+				<label>Link</label>
+				<input name="" type="text">
+			</div>
+			<div id="tabTeam" class="tab-team">
+			<h3>TEAM MEMBERS</h3>
+				<label>Employee Image</label>
+				<input name="" type="text"> 
+				<button class="browse">Browse</button><br>
+				<label>Name</label>
+				<input name="" type="text"><br>
+				<label>Designation</label>
+				<input name="" type="text"><br>
+			<h4>Personal Links</h4>
+				<label>Facebook</label>
+				<input name="" type="text"><br>
+				<label>Twitter</label>
+				<input name="" type="text"><br>
+				<label>LinkedIn</label>
+				<input name="" type="text"><br>
+				<label>Google+</label>
+				<input name="" type="text"><br>
+			</div>
+		</form>
 	</section>
 </body>
 </html>

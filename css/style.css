@@ -2,6 +2,12 @@
 body
 {
 	padding: 0;
+	font-size: 12pt;
+}
+h4
+{
+	margin: 3%;
+	text-align: left;
 }
 
 /*--------login--------*/
@@ -58,6 +64,25 @@ body
 
 /*------Dashboard------*/
 
+header
+{
+
+}
+.logout
+{
+	float: right;
+	/*width: 5%;*/
+	margin: 3% 1%;
+	border: 0;
+	background-color: #606060;
+	height: 30px;
+	transition: all 0.4s ease;
+}
+.logout:hover
+{
+	background-color: #404040;
+	color: #fff;
+}
 aside
 {
 	margin-top: 80px;
@@ -72,7 +97,7 @@ section
 	margin-left: 15%;
 	width: 85%;
 }
-button
+.button
 {
 	width: 100%;
 	height: 45px;
@@ -82,34 +107,65 @@ button
 	border: 0;
 	transition: all 0.6s ease;
 }
-button:active
+.button:active
 {
 	background-color: #282828;
 	border-left: 10px solid #00ba67;
 }
-button:hover
+.button:hover
 {
 	background-color: #898989;
 }
-button:focus
+.button:focus
 {
 	background-color: #fff;
 }
 .tab-portfolio
 {
 	width: 100%;
-	padding-top: 80px;
-	height: 400px;
-	background-color: #aaf;
+	padding-top: 90px;
+	/*height: 400px;*/
+	/*background-color: #aaf;*/
+}
+.tab-portfolio input
+{
+	border: 0;
 }
 .tab-team
 {
 	width: 100%;
-	height: 400px;
-	background-color: #faa;
+	padding-top: 80px;
+	/*height: 400px;*/
+	/*background-color: #faa;*/
 }
-button:focus div.tab1-content
+.tab-team input
+{
+	border: 0;
+}
+.button:focus div.tab1-content
 {
 	display: block;
 	background-color: #aaa;
+}
+.browse
+{
+	border: 0;
+}
+.browse:hover
+{
+	background-color: #464646;
+	color: #fff;
+}
+.tab-portfolio input, .tab-team input
+{
+	margin-left: 100px;
+	margin-top: 3%;
+}
+.tab-portfolio label
+{
+	margin-left: 2%;
+}
+.tab-portfolio input.up
+{
+	margin: 1% 10% 0%;
 }
