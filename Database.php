@@ -131,11 +131,12 @@ class Database
 			$insert .= " (".$fields.")"; 
 				// echo $fields;
 		}
-		$value=str_repeat("?,", count($values)-1).'?';
+		$val=str_repeat("?,", count($values)-1).'?';
 		$value_type="";
-		for ($i=0; $i <count($values) ; $i++)
+		// for ($i=0; $i <count($values) ; $i++)
+		foreach ($values as $key => $value)
 		{ 
-			if (is_string($values[$i]))
+			if (is_string($values[$key]))
 			{
 				$value_type.="s";
 			}
@@ -145,14 +146,13 @@ class Database
 				$value_type.="i";
 			}		
 		}
-		$insert.="VALUES(".$value.")";
+		$insert.="VALUES(".$val.")";
 		$stmt=$this->condb->prepare($insert);
 		$params[0] =  &$value_type;
 		foreach ($values as $key => $value) {
 			// array_push($params,&$values[$key]);
 			$params[$key+1] = &$values[$key];
 		}
-		// var_dump($insert);
 		call_user_func_array(array(&$stmt ,'bind_param'), $params);
 		// $stmt->bind_param($value_type,$values[0],$values[1]);
 		// $stmt->bind_param($value_type,{$values[]});
@@ -338,13 +338,28 @@ class Database
 
 
 
-	public function insert_mul()
+	public function insert_mul_ptf()
 	{
 		$this->insert("files",array("file_name","type"),array("test.jpg",".jpg"));
-		$insert="INSERT INTO testimonial (name,description,link,files_id) VALUES ('client1','lorum ipsum is dummy text','www.tetimonial.com',".mysqli_insert_id($this->condb).")";
-		$query=mysqli_query($this->condb,$insert);
-		if ($query==FALSE) 
-			trigger_error($this->condb->error);
+		$last_id_fl=mysqli_insert_id($this->condb);
+		
+		$fields=array("name","link","about","files_id");
+		$values=array("dummy","some address","lorum ipsum",$last_id_fl);
+		$this->insert("portfolio",$fields,$values);
+	}
+
+	public function insert_mul_emp() // 3 tables
+	{
+		$this->insert("files",array("file_name","type"),array("test2.jpg",".jpg"));
+		$last_id_fl=mysqli_insert_id($this->condb);
+		$this->insert("address",array("name","linkedin","fb","twiter","google_plus"),array("shamas1","www.linkedin/shahid","www.twiter/shahid","www.twiter/shahid","www.googleplue/shahid"));
+		$last_id_add=mysqli_insert_id($this->condb);
+		$fields=array("designation","files_id","address_id");
+		$values=array("C T O",$last_id_fl,$last_id_add);
+		var_dump($fields);
+		var_dump($values);
+		$this->insert("employee",$fields,$values);
+		
 	}
 
 }
