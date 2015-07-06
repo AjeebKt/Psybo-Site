@@ -16,8 +16,8 @@ if (isset($_SESSION['username']) and isset($_SESSION['password']))
 // }
 if (isset($_POST['btnPortfolio'])) 
 {
-	$target_dir="/var/www/psybo_site/psybo/Psybo-Site/upload-image"
-	$target_file=$target_dir."/".basename($_FILES["uploadPortfolio"])
+	$target_dir="/var/www/psybo_site/psybo/Psybo-Site/upload-image";
+	$target_file=$target_dir."/".basename($_FILES["uploadPortfolio"]["name"]);
 }
 
  ?>
