@@ -338,9 +338,9 @@ class Database
 
 
 
-	public function select_mul()
+	public function insert_mul()
 	{
-			
+		insert("files",array("file_name","type"))
 	}
 
 }
