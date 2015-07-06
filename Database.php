@@ -336,6 +336,13 @@ class Database
 		return $recset;
 	}
 
+
+
+	public function select_mul()
+	{
+			
+	}
+
 }
 
 
