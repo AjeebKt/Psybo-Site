@@ -17,20 +17,18 @@
 <body>
 	<section>
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
+			<a href="addPortfolio.php">Add</a>
 			<table class="show-portfolio">
 				<tr>
 					<td>title</td>
 					<td>link</td>
 					<td>Description</td>
 					<td><img src="img/user.png" alt=""></td>
-					<td><a href="addPortfolio.php" class="edit"></a></td>
+					<td><a href="editPortfolio.php" class="edit"></a></td>
 					<td><a href="" class="delete"></a></td>
 				</tr>
 			</table>
 		</form>
-		<!-- <div class="add-portfolio">
-			<a></a>
-		</div> -->
 	</section>
 </body>
 </html>
