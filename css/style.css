@@ -147,6 +147,7 @@ section
 	border: 1px solid;
 	width: 40%;
 	padding: 10px;
+	margin: 0 0 2% 0;
 }
 input[type="file"]
 {
@@ -186,13 +187,8 @@ input[type="file"]
 }
 .tab-portfolio input,label, .tab-team input, label
 {
-	margin: 2%;
+	margin: 0 0 1% 2%;
 }
-.tab-portfolio input,label
-{
-/*	float: left;
-}*/
-
 .tab-team
 {
 	transition: all 0.4s ease;
@@ -201,10 +197,10 @@ input[type="file"]
 }
 .tab-team input
 {
-	border: 0;
+	border: 1px solid;
 	background-color: #aaa;
 	height: 25px;
-	width: 45%;
+	width: 35%;
 }
 
 /*-----Add Portfolio----*/
