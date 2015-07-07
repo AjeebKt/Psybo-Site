@@ -40,8 +40,8 @@ if (isset($_POST['btnPortfolio']))
 		</form>
 	</header>
 	<aside>
-			<a href="tabPortfolio.php"><button class="button">Portfolio</button></a>
-			<a href="tabTeam.php"><button class="button">Team</button></a>
+			<a href="#tabPortfolio"><button class="button">Portfolio</button></a>
+			<a href="#tabTeam"><button class="button">Team</button></a>
 	</aside>
 	<section>
 		<form id="formPortfolio" name="formPortfolio" method="POST" action="">
