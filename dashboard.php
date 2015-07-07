@@ -18,6 +18,15 @@ if (isset($_POST['btnPortfolio']))
 {
 	$target_dir="/var/www/psybo_site/psybo/Psybo-Site/upload-image";
 	$target_file=$target_dir."/".basename($_FILES["uploadPortfolio"]["name"]);
+	var_dump(basename($_FILES["uploadPortfolio"]["name"]));
+	$file_name=pathinfo($target_file,PATHINFO_BASENAME);
+	$file_type=pathinfo($target_file,PATHINFO_EXTENSION);
+	var_dump($target_file);
+	if (move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file)) 
+	{
+		chmod($_FILES["uploadPortfolio"], 777);
+	}
+
 }
 
  ?>
@@ -43,11 +52,11 @@ if (isset($_POST['btnPortfolio']))
 			<a href="#tabTeam"><button class="button">tab 2</button></a>
 	</aside>
 	<section>
-		<form method="POST" action="">
+		<form method="POST" action="" name="form1">
 			<div id="tabPortfolio" class="tab-portfolio">
 			<h3>PORTFLIO</h3>
 				<label>Portfolio Image</label>
-				<input name="uploadPortfolio" type="file" class="up"><br>
+				<input name="uploadPortfolio" id="uploadPortfolio" type="file" class="up"><br>
 				<label>Title</label>
 				<input name="txtTitle" type="text"><br>
 				<label>Link</label>
