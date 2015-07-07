@@ -343,7 +343,7 @@ class Database
 		$this->insert("files",array("file_name","type"),$values_files);
 		$last_id_fl=mysqli_insert_id($this->condb);
 		
-		$fields=array("name","link","files_id");
+		$fields=array("name","link","about","files_id");
 		
 		$this->insert("portfolio",$fields,$values_ptf);
 	}

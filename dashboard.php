@@ -92,8 +92,9 @@ $objdb=new Database("localhost","root","asd","psybo-db");
 		// var_dump("Target dir :  ".$target_dir);
 		$target_file=$target_dir . basename($_FILES["uploadPortfolio"]["name"]);
 		// var_dump("Target file  : ".$target_file);
-		$image_file_type=pathinfo($target_file,PATHINFO_EXTENSION);
-		// var_dump("image file type  :   ".$image_file_type);
+		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
+		$file_type=pathinfo($target_file,PATHINFO_EXTENSION);
+		// var_dump("image file type  :   ".$file_type);
 
 		$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
 		// var_dump($check);
@@ -119,7 +120,7 @@ $objdb=new Database("localhost","root","asd","psybo-db");
 			echo "sorry file already exist .please select onother file<br>";
 			$uploadok=0;
 		}
-		if ($image_file_type != "jpg" and $image_file_type=="png" and $image_file_type =! "jpeg") 
+		if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
 		{
 			echo "Only jp,jpeg,img files are allowed <br>";
 			$uploadok=0;
@@ -136,7 +137,9 @@ $objdb=new Database("localhost","root","asd","psybo-db");
 				echo "Error in upload image";
 			}
 		}
-
+		$values_files=array($file_name,$file_type);
+		$values_ptf=array($_POST['txtTitle'],$_POST['txtLink']);
+		$objdb->insert_mul_ptf($values_files,$values_ptf);
 
 	}
 ?>
