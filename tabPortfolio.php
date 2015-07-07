@@ -17,7 +17,7 @@
 <body>
 	<section>
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
-			<a href="addPortfolio.php">Add</a>
+			<a href="addPortfolio.php">Add Portfolio</a>
 			<table class="show-portfolio">
 				<tr>
 					<td>title</td>

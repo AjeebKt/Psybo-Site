@@ -6,13 +6,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Add Portfolio</title>
+	<title>edit Portfolio</title>
 </head>
 <body>
 	<section>
 		<form id="formPortfolio" name="formPortfolio" method="POST" action="">
 			<div id="tabPortfolio" class="tab-portfolio">
-			<h3>PORTFLIO</h3>
+			<h3>EDIT PORTFLIO</h3>
 				<div class="div-align">
 					<label>Title</label><br>
 					<input name="txtTitle" type="text">
