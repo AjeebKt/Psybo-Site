@@ -13,9 +13,12 @@ include 'dash.php';
 			<a href="addTeam.php">Add Team member</a>
 			<table class="show-portfolio">
 				<tr>
-					<td>title</td>
-					<td>link</td>
-					<td>Description</td>
+					<td>Name</td>
+					<td>Desigination</td>
+					<td>Facebook ID</td>
+					<td>Twitter ID</td>
+					<td>LinkedIn</td>
+					<td>Google+</td>
 					<td><img src="img/user.png" alt=""></td>
 					<td><a href="editTeam.php" class="edit"></a></td>
 					<td><a href="" class="delete"></a></td>
