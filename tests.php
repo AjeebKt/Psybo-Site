@@ -1,6 +1,6 @@
 <?php
- require_once '/var/www/psybo_site/Psybo-Site/Database.php';
- require_once "/var/www/psybo_site/Psybo-Site/file.php";
+ require_once '/var/www/psybo_site/psybo/Psybo-Site/Database.php';
+ require_once "/var/www/psybo_site/psybo/Psybo-Site/file.php";
  $objdb=new Database('localhost','root','asd','psybo-db');
  $objfile=new File();
 
@@ -71,10 +71,14 @@ echo $tst[1][0];	*/
 $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // $str=wordwrap($str,5,"<br>");
 // echo (wordwrap($str,15,"<br>"));
-$text = str_replace("\n.", "\n..", $str);
-// echo $text;
-$from=" pnoushid@gmail.com";
-$headers='From:'.$from."\r\n";
-var_dump($headers);
+// $text = str_replace("\n.", "\n..", $str);
+// // echo $text;
+// $from=" pnoushid@gmail.com";
+// $headers='From:'.$from."\r\n";
+// $objdb->test();
+$objdb->num_row_ptf();
+// $test="jbkj";
+$objdb->test();
+
 
 ?>

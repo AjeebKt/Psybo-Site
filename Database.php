@@ -338,14 +338,14 @@ class Database
 
 
 
-	public function insert_mul_ptf()
-	{
-		$this->insert("files",array("file_name","type"),array("test.jpg",".jpg"));
+	public function insert_mul_ptf($values_files,$values_ptf)
+	{	
+		$this->insert("files",array("file_name","type"),$values_files);
 		$last_id_fl=mysqli_insert_id($this->condb);
 		
-		$fields=array("name","link","about","files_id");
-		$values=array("dummy","some address","lorum ipsum",$last_id_fl);
-		$this->insert("portfolio",$fields,$values);
+		$fields=array("name","link","files_id");
+		
+		$this->insert("portfolio",$fields,$values_ptf);
 	}
 
 	public function insert_mul_emp() // 3 tables
@@ -361,7 +361,6 @@ class Database
 		$this->insert("employee",$fields,$values);
 		
 	}
-
 }
 
 

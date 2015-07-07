@@ -16,28 +16,16 @@
 			<button class="logout" name="logout">Logout </button>
 		</form>
 	</header>
-<<<<<<< HEAD
 	<!-- <aside>
-			<a href="#tabPortfolio"><button class="button">Portfolio</button></a>
-			<a href="#tabTeam"><button class="button">Team</button></a>
-	</aside> -->
-=======
-	<aside>
 			<a href="tabPortfolio.php"><button class="button">Portfolio</button></a>
 			<a href="tabTeam.php"><button class="button">Team</button></a>
-	</aside>
->>>>>>> 6cdf1e494242df29174ada182be3bfd1fe9af01c
+	</aside> -->
+
 	<section>
 		<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
 			<div id="tabPortfolio" class="tab-portfolio">
 			<h3>PORTFLIO</h3>
-				<div class="portfolio-container">
-<<<<<<< HEAD
-					<label>Portfolio Image</label>
-					<input name="uploadPortfolio" id="uploadPortfolio" type="file" class="up"><br>
-=======
->>>>>>> 6cdf1e494242df29174ada182be3bfd1fe9af01c
-					<label>Title</label>
+				<div class="portfolio-container"><label>Title</label>
 					<input name="txtTitle" type="text"><br>
 					<label>Link</label>
 					<input name="txtLink" type="text"><br>
@@ -78,6 +66,8 @@
 </body>
 </html>
 <?php 
+include 'Database.php';
+$objdb=new Database("localhost","root","asd","psybo-db");
 
 // session_start();
 // if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
@@ -97,14 +87,15 @@
 // var_dump(basename($_FILES["uploadPortfolio"]["name"]));
 	if (isset($_POST['btnPortfolioSubmit'])) 
 	{
+		// echo "succes";
 		$target_dir=getcwd()."/upload-image/";
-		var_dump("Target dir :  ".$target_dir);
-		$target_file=$target_dir . basename($_FILES["fileToUpload"]["name"]);
-		var_dump("Target file  : ".$target_file);
+		// var_dump("Target dir :  ".$target_dir);
+		$target_file=$target_dir . basename($_FILES["uploadPortfolio"]["name"]);
+		// var_dump("Target file  : ".$target_file);
 		$image_file_type=pathinfo($target_file,PATHINFO_EXTENSION);
-		var_dump("image file type  :   ".$image_file_type);
+		// var_dump("image file type  :   ".$image_file_type);
 
-		$check=getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+		$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
 		// var_dump($check);
 		
 		if ($check !== FALSE) 
@@ -116,7 +107,7 @@
 		{
 			echo "File is not an image";
 		}
-		if ($_FILES["fileToUpload"]["size"] > 30000000)
+		if ($_FILES["uploadPortfolio"]["size"] > 30000000)
 		{
 			echo("sorry files is to large<br>");	
 			$uploadok=0;
@@ -139,12 +130,13 @@
 		}
 		else 
 		{
-			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) 
+			$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file); 
+			if ($upload !== TRUE) 
 			{
-				echo "The file ". basename($_FILES["fileToUpload"]["name"]) . "has uploaded";
+				echo "Error in upload image";
 			}
-			else
-				echo "an error while uploadig<br>";
 		}
+
+
 	}
 ?>
