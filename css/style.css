@@ -127,7 +127,7 @@ section
 .portfolio-container, .team-container
 {
 	width: 60%;
-	/*background-color: #87f;*/
+	background-color: #87f;
 }
 .tab-portfolio
 {
