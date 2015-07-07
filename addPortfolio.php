@@ -1,18 +1,12 @@
 <?php 
-	include 'Database.php';
-	include 'file.php';
-	$objdb=new Database("localhost","root","asd","psybo-db");
-	$num_ptf=$objdb->num_row_ptf();
-	// var_dump($num_ptf);
-	$count_ptf=count($num_ptf);
-	$actdir="/upload-image/";
-	include 'dash.php'
+	include 'dash.php';
  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tabportfolio</title>
+	<title>Add Portfolio</title>
 </head>
 <body>
 	<section>
@@ -39,23 +33,6 @@
 				<button name="btnReset" class="reset">Reset</button>
 			</div>
 		</form>
-	</section>
-	<section>
-		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
-			<table class="show-portfolio">
-				<tr>
-					<td>title</td>
-					<td>link</td>
-					<td>Description</td>
-					<td><img src="img/user.png" alt=""></td>
-					<td>edit</td>
-					<td>Delete</td>
-				</tr>
-			</table>
-		</form>
-		<!-- <div class="add-portfolio">
-			<a></a>
-		</div> -->
 	</section>
 </body>
 </html>
