@@ -76,9 +76,20 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // $from=" pnoushid@gmail.com";
 // $headers='From:'.$from."\r\n";
 // $objdb->test();
-$objdb->num_row_ptf();
+// $objdb->num_row_ptf();
 // $test="jbkj";
-$objdb->test();
+// $objdb->test();
+// $arr1=array(1,2,3);
+// var_dump($arr1);
+// $arr1=array_splice($arr1, 0	,1,2);
+// var_dump($arr1);
+
+$a1=array("red","green","blue","yellow");
+var_dump($a1);	
+// var_dump(array_splice($a1,0,2,$a2));
+array_push($a1,1);
+var_dump($a1);
+
 
 
 ?>
