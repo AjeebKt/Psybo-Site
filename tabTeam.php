@@ -9,26 +9,21 @@ include 'dash.php';
 </head>
 <body>
 	<section>
-		<form id="formTeam" name="formTeam" method="POST" action="">	
-			<div id="tabTeam" class="tab-team">
-			<h3>TEAM MEMBERS</h3>
-				<label>Name</label>
-				<input name="txtName" type="text"><br>
-				<label>Designation</label>
-				<input name="txtDesignation" type="text"><br>
-				<label>Facebook</label>
-				<input name="txtFacebook" type="text"><br>
-				<label>Twitter</label>
-				<input name="txtTwitter" type="text"><br>
-				<label>LinkedIn</label>
-				<input name="txtLinkedin" type="text"><br>
-				<label>Google+</label>
-				<input name="txtGplus" type="text"><br>
-				<label>Employee Image</label>
-				<input name="uploadTeam" type="file"><br>
-				<button name="btnTeamSubmit" class="submit">Submit</button>
-				<button name="btnReset" class="reset">Reset</button>
-			</div>
+		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
+			<a href="addTeam.php">Add Team member</a>
+			<table class="show-portfolio">
+				<tr>
+					<td>Name</td>
+					<td>Desigination</td>
+					<td>Facebook ID</td>
+					<td>Twitter ID</td>
+					<td>LinkedIn</td>
+					<td>Google+</td>
+					<td><img src="img/user.png" alt=""></td>
+					<td><a href="editTeam.php" class="edit"></a></td>
+					<td><a href="" class="delete"></a></td>
+				</tr>
+			</table>
 		</form>
 	</section>
 </body>
