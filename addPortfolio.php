@@ -1,5 +1,9 @@
 <?php 
 	include 'dash.php';
+	$num_ptf=$objdb->num_row_ptf();
+	// var_dump($num_ptf);
+	$count_ptf=count($num_ptf);
+	$actdir="/upload-image/";
  ?>
 
 <!DOCTYPE html>

@@ -18,14 +18,37 @@
 	<section>
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
 			<table class="show-portfolio">
+			<?php //var_dump($count_ptf);
+			for($i = 0;$i < $count_ptf; $i++) 
+			
+				{?>
 				<tr>
-					<td>title</td>
-					<td>link</td>
-					<td>Description</td>
+				<?php //var_dump($num_ptf[0][$i]);
+					$result=$objdb->select_row_ptf($num_ptf[0][$i]);
+					?>
+					<td><?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'about' )
+					{
+						echo $value;	
+					}
+					} ?></td>
+					<td><?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'name' )
+					{
+						echo $value;	
+					}
+					} ?></td>
+					<td><?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'link' )
+					{
+						echo $value;	
+					}
+					} ?></td>
 					<td><img src="img/user.png" alt=""></td>
 					<td><a href="addPortfolio.php" class="edit"></a></td>
 					<td><a href="" class="delete"></a></td>
 				</tr>
+				<?php } ?>
 			</table>
 		</form>
 		<!-- <div class="add-portfolio">

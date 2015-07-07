@@ -36,13 +36,15 @@
 		<section class="portfolio">
 			<div class="container">
 			<?php //var_dump($count_ptf);
-			for($i = 0;$i < $count_ptf; $i++) 
-			// var_dump($i);
+					 // var_dump($num_ptf);
+			for($i = 0;$i < $count_ptf; $i++)
+					// var_dump($i); 
+					var_dump($num_ptf[$i][0]);
+					$result=$objdb->select_row_ptf($num_ptf[$i][0]);
+					// var_dump($result);
+					
 				{?>
 				<figure>
-					<?php //var_dump($num_ptf[0][$i]);
-					$result=$objdb->select_row_ptf($num_ptf[0][$i]);
-					?>
 					<a target="_blank" href=<?php foreach ($result as $key => $value) {
 					if (is_string($key) and $key == 'link' )
 					{

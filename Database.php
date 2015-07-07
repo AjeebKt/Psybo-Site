@@ -241,11 +241,14 @@ class Database
 	// select the details from portfolio
 	public function select_row_ptf($id)
 	{
-		$select="SELECT portfolio.name,portfolio.link,files.file_name FROM portfolio JOIN files ON portfolio.files_id=files.id WHERE portfolio.id=".$id;
+
+		$select="SELECT portfolio.name,portfolio.link,portfolio.about,files.file_name FROM portfolio JOIN files ON portfolio.files_id=files.id WHERE portfolio.id=9";
 		$query=mysqli_query($this->condb,$select);
 		if ($query==FALSE) 
 			return trigger_error($this->condb->error);
-		while ($rec=mysqli_fetch_array($query)) 
+		
+			while ($rec=mysqli_fetch_array($query))
+			// while ($rec=mysqli_fetch_row($query))		 
 			return $rec;
 	} 
 

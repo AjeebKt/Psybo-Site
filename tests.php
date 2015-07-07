@@ -83,13 +83,13 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // var_dump($arr1);
 // $arr1=array_splice($arr1, 0	,1,2);
 // var_dump($arr1);
-
-$a1=array("red","green","blue","yellow");
-var_dump($a1);	
-// var_dump(array_splice($a1,0,2,$a2));
-array_push($a1,1);
-var_dump($a1);
-
-
+$select="SELECT portfolio.name,portfolio.link,portfolio.about,files.file_name FROM portfolio JOIN files ON portfolio.files_id=files.id WHERE portfolio.id=9";
+		$query=mysqli_query($this->condb,$select);
+		if ($query==FALSE) 
+			return trigger_error($this->condb->error);
+		$recset=array();
+		// while ($rec=mysqli_fetch_array($query))
+			while ($rec=mysqli_fetch_row($query))		 
+			 var_dump($rec);
 
 ?>
