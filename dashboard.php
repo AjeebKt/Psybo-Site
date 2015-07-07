@@ -1,35 +1,3 @@
-<?php 
-
-session_start();
-if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
-{
-	// echo "login success";
-
-}
-// else
-// 	header("location:login.php");
-
-// if (isset($_POST['logout'])) 
-// {
-// 	session_destroy();
-// 	header("location:login.php");
-// }
-if (isset($_POST['btnPortfolio'])) 
-{
-	$target_dir="/var/www/psybo_site/psybo/Psybo-Site/upload-image";
-	$target_file=$target_dir."/".basename($_FILES["uploadPortfolio"]["name"]);
-	var_dump(basename($_FILES["uploadPortfolio"]["name"]));
-	$file_name=pathinfo($target_file,PATHINFO_BASENAME);
-	$file_type=pathinfo($target_file,PATHINFO_EXTENSION);
-	var_dump($target_file);
-	if (move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file)) 
-	{
-		chmod($_FILES["uploadPortfolio"], 777);
-	}
-
-}
-
- ?>
 
 
 <!DOCTYPE html>
@@ -48,29 +16,17 @@ if (isset($_POST['btnPortfolio']))
 			<button class="logout" name="logout">Logout </button>
 		</form>
 	</header>
-	<aside>
+	<!-- <aside>
 			<a href="#tabPortfolio"><button class="button">Portfolio</button></a>
 			<a href="#tabTeam"><button class="button">Team</button></a>
-	</aside>
+	</aside> -->
 	<section>
-<<<<<<< HEAD
-		<form method="POST" action="" name="form1">
-			<div id="tabPortfolio" class="tab-portfolio">
-			<h3>PORTFLIO</h3>
-				<label>Portfolio Image</label>
-				<input name="uploadPortfolio" id="uploadPortfolio" type="file" class="up"><br>
-				<label>Title</label>
-				<input name="txtTitle" type="text"><br>
-				<label>Link</label>
-				<input name="txtLink" type="text"><br>
-				<button class="submit" name="btnPortfolio">Submit</button>
-=======
-		<form id="formPortfolio" name="formPortfolio" method="POST" action="">
+		<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
 			<div id="tabPortfolio" class="tab-portfolio">
 			<h3>PORTFLIO</h3>
 				<div class="portfolio-container">
 					<label>Portfolio Image</label>
-					<input name="uploadPortfolio" type="file" class="up"><br>
+					<input name="uploadPortfolio" id="uploadPortfolio" type="file" class="up"><br>
 					<label>Title</label>
 					<input name="txtTitle" type="text"><br>
 					<label>Link</label>
@@ -78,7 +34,6 @@ if (isset($_POST['btnPortfolio']))
 					<button class="submit" name="btnPortfolioSubmit">Submit</button>
 					<button name="btnReset" class="reset">Reset</button>
 				</div>
->>>>>>> c469f010d42ae18cca7c5eb3901e5017b56c5b9d
 			</div>
 		</form>
 		<form id="formTeam" name="formTeam" method="POST" action="">	
@@ -110,3 +65,24 @@ if (isset($_POST['btnPortfolio']))
 	</section>
 </body>
 </html>
+<?php 
+
+// session_start();
+// if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
+// {
+// 	// echo "login success";
+
+// }
+// else
+// 	header("location:login.php");
+
+// if (isset($_POST['logout'])) 
+// {
+// 	session_destroy();
+// 	header("location:login.php");
+// }
+// echo "string";
+// var_dump(basename($_FILES["uploadPortfolio"]["name"]));
+
+
+ ?>

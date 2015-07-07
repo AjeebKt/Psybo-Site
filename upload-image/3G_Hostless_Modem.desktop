@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0.1
+Encoding=UTF-8
+Name=Mblaze_Home
+Exec=3G_Hostless_Modem2
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=3G_Hostless_Modem.png
+Categories=Application;Network;
+StartupNotify=true
+
