@@ -213,32 +213,43 @@ input[type="file"]
 }
 
 /*-----Add Portfolio----*/
-.add-portfolio
+.show-portfolio a.edit
 {
-
-}
-.add-portfolio a
-{
-	width: 60px;
-	height: 60px;
+	width: 20px;
+	height: 20px;
 	display: block;
-	border: 1px solid ;
-	background-image: url(../img/plus.png);
+	background-image: url(../img/edit.png);
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.show-portfolio a.delete
+{
+	width: 20px;
+	height: 20px;
+	display: block;
+	background-image: url(../img/delete.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
 }
 .show-portfolio
 {
 	width: 100%;
 	margin: 3% 0 0 0;
 }
+.show-portfolio > tr
+{
+	border-bottom: 1px solid;
+}
 .show-portfolio tr td
 {
-	border: 1px solid;
+	border-right: 1px solid #aaa;
 }
 .show-portfolio tr td img
 {
-	width: 80px;
-	height: 80px;
+	width: 30px;
+	height: 30px;
 }
