@@ -34,46 +34,56 @@ if (isset($_POST['btnPortfolio']))
 </head>
 <body>
 	<header>
+		<img src="img/logo-go.png" alt="">
 		<form id="form1" name="form1" method="POST" action="">
 			<button class="logout" name="logout">Logout </button>
 		</form>
 	</header>
 	<aside>
-			<a href="#tabPortfolio"><button class="button">tab 1</button></a>
-			<a href="#tabTeam"><button class="button">tab 2</button></a>
+			<a href="#tabPortfolio"><button class="button">Portfolio</button></a>
+			<a href="#tabTeam"><button class="button">Team</button></a>
 	</aside>
 	<section>
-		<form method="POST" action="">
+		<form id="formPortfolio" name="formPortfolio" method="POST" action="">
 			<div id="tabPortfolio" class="tab-portfolio">
 			<h3>PORTFLIO</h3>
-				<label>Portfolio Image</label>
-				<input name="uploadPortfolio" type="file" class="up"><br>
-				<label>Title</label>
-				<input name="txtTitle" type="text"><br>
-				<label>Link</label>
-				<input name="txtLink" type="text"><br>
-				<button class="submit" name="btnPortfolio">Submit</button>
+				<div class="portfolio-container">
+					<label>Portfolio Image</label>
+					<input name="uploadPortfolio" type="file" class="up"><br>
+					<label>Title</label>
+					<input name="txtTitle" type="text"><br>
+					<label>Link</label>
+					<input name="txtLink" type="text"><br>
+					<button class="submit" name="btnPortfolioSubmit">Submit</button>
+					<button name="btnReset" class="reset">Reset</button>
+				</div>
 			</div>
+		</form>
+		<form id="formTeam" name="formTeam" method="POST" action="">	
 			<div id="tabTeam" class="tab-team">
 			<h3>TEAM MEMBERS</h3>
-				<label>Employee Image</label>
-				<input name="uploadTeam" type="file"><br>
-				<label>Name</label>
-				<input name="txtName" type="text"><br>
-				<label>Designation</label>
-				<input name="txtDesignation" type="text"><br>
+				<div class="team-container">
+					<label>Employee Image</label>
+					<input name="uploadTeam" type="file"><br>
+					<label>Name</label>
+					<input name="txtName" type="text"><br>
+					<label>Designation</label>
+					<input name="txtDesignation" type="text"><br>
+				</div>
 			<h4>Personal Links</h4>
-				<label>Facebook</label>
-				<input name="txtFacebook" type="text"><br>
-				<label>Twitter</label>
-				<input name="txtTwitter" type="text"><br>
-				<label>LinkedIn</label>
-				<input name="txtLinkedin" type="text"><br>
-				<label>Google+</label>
-				<input name="txtGplus" type="text"><br>
-				<button class="submit">Submit</button>
+				<div class="team-container">
+					<label>Facebook</label>
+					<input name="txtFacebook" type="text"><br>
+					<label>Twitter</label>
+					<input name="txtTwitter" type="text"><br>
+					<label>LinkedIn</label>
+					<input name="txtLinkedin" type="text"><br>
+					<label>Google+</label>
+					<input name="txtGplus" type="text"><br>
+					<button name="btnTeamSubmit" class="submit">Submit</button>
+					<button name="btnReset" class="reset">Reset</button>
+				</div>
 			</div>
-
 		</form>
 	</section>
 </body>
