@@ -14,9 +14,9 @@
 			<button class="logout" name="logout">Logout </button>
 		</form>
 	</header>
-	<aside>
+	<!-- <aside>
 			<a href="tabPortfolio.php"><button class="button">Portfolio</button></a>
 			<a href="tabTeam.php"><button class="button">Team</button></a>
-	</aside>
+	</aside> -->
 </body>
 </html>

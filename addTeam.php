@@ -1,5 +1,11 @@
 <?php 
 	include 'dash.php';
+	include 'Database.php';
+	$objdb=new Database("localhost","root","asd","psybo-db");
+	$num_ptf=$objdb->num_row_ptf();
+	// var_dump($num_ptf);
+	$count_ptf=count($num_ptf);
+	$actdir="/upload-image/";
  ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -9,7 +15,7 @@
  </head>
  <body>
  	<section>
-		<form id="formTeam" name="formTeam" method="POST" action="">	
+		<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
 			<div id="tabTeam" class="tab-team">
 			<h3>ADD TEAM MEMBERS</h3>
 				<div class="div-align-team">
@@ -47,3 +53,70 @@
 	</section>
  </body>
  </html>
+
+ <?php 
+if (isset($_POST['btnTeamSubmit'])) 
+	{
+		// echo "succes";
+		$target_dir=getcwd()."/upload-image/";
+		// var_dump("Target dir :  ".$target_dir);
+		$target_file=$target_dir . basename($_FILES["uploadTeam"]["name"]);
+		// var_dump("Target file  : ".$target_file);
+		$file_name=basename($_FILES["uploadTeam"]["name"]);
+		$file_type=pathinfo($target_file,PATHINFO_EXTENSION);
+		// var_dump("image file type  :   ".$file_type);
+
+		$check=getimagesize($_FILES["uploadTeam"]["tmp_name"]);
+		// var_dump($check);
+		
+		if ($check !== FALSE) 
+		{
+			// echo "File is an image :" .$check["mime"].".";
+			$uploadok=1;
+		}
+		else
+		{
+			echo "File is not an image";
+		}
+		if ($_FILES["uploadTeam"]["size"] > 30000000)
+		{
+			echo("sorry files is to large<br>");	
+			$uploadok=0;
+		}
+		// echo "string";
+		// echo "is an image ".$check["mime"].".";
+		if (file_exists($target_file)) 
+		{
+			echo "sorry file already exist .please select onother file<br>";
+			$uploadok=0;
+		}
+		if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
+		{
+			echo "Only jp,jpeg,img files are allowed <br>";
+			$uploadok=0;
+		}
+		if ($uploadok == 0) 
+		{
+			echo "sorry your file was not upload<br>";
+		}
+		else 
+		{
+			$upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_file); 
+			if ($upload !== TRUE) 
+			{
+				echo "Error in upload image";
+			}
+		}
+			// array("name","linkedin","fb","twiter","google_plus");
+
+		$values_emp=array($_POST['txtDesignation']);
+		$values_emp_file=array($file_name,$file_type);
+		$values_emp_add=array($_POST['txtName'],$_POST['txtLinkedin'],$_POST['txtFacebook'],$_POST['txtTwitter'],$_POST['txtGplus']);
+		var_dump($values_emp_add);
+		$objdb->insert_mul_emp($values_emp,$values_emp_file,$values_emp_add);
+
+
+	}
+
+
+  ?>

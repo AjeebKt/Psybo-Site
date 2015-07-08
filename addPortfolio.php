@@ -1,5 +1,7 @@
 <?php 
 	include 'dash.php';
+	include 'Database.php';
+	$objdb=new Database("localhost","root","asd","psybo-db");
 	$num_ptf=$objdb->num_row_ptf();
 	// var_dump($num_ptf);
 	$count_ptf=count($num_ptf);
@@ -42,8 +44,7 @@
 </html>
 
 <?php 
-include 'Database.php';
-$objdb=new Database("localhost","root","asd","psybo-db");
+
 
 // session_start();
 // if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
