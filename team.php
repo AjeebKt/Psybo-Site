@@ -55,7 +55,11 @@
 							echo $value;
 						}
 					} ?></h4>
-					<h4>Desigination</h4>
+					<h4><?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key=="designation") {
+							echo $value;
+						}
+					} ?></h4>
 					<ul class="personal-links">
 						<li>
 							<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {

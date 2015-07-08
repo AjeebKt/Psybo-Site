@@ -94,6 +94,7 @@ include "file.php";
 if (isset($_GET['id'])) 
 {
 	$objdb->delete_team($_GET['id']);
-	header("refresh:0");
+	// header("refresh:0");
+	relode();
 }
  ?>
