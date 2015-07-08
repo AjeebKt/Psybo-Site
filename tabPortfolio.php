@@ -75,5 +75,6 @@
 {
 	// echo $value;
 	$objdb->delete_portfolio($_GET['id']);
+	header("refresh:0");
 } 
 ?>
