@@ -75,7 +75,13 @@ include "file.php";
 						}
 					}; ?> alt=""></td>
 					<td><a href="editTeam.php" class="edit"></a></td>
-					<td><a href="" class="delete"></a></td>
+					<td><a href=<?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'id' )
+					{
+
+						echo "\"?id=".$value."\"";	
+					}
+					} ?> class="delete"></a></td>
 				</tr>
 				<?php } ?>
 			</table>
@@ -83,3 +89,11 @@ include "file.php";
 	</section>
 </body>
 </html>
+<?php 
+
+if (isset($_GET['id'])) 
+{
+	$objdb->delete_team($_GET['id']);
+	header("refresh");
+}
+ ?>

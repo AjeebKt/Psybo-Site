@@ -226,7 +226,7 @@ class Database
 	public function select_row_emp($id)	
 	{	
 		
-		$select="SELECT employee.designation,address.name,address.fb,address.linkedin,address.address,address.email,address.twiter,address.google_plus,files.file_name,files.type FROM employee JOIN address ON employee.address_id = address.id join files ON files.id=employee.files_id where employee.id=".$id;
+		$select="SELECT employee.id,employee.designation,address.name,address.fb,address.linkedin,address.address,address.email,address.twiter,address.google_plus,files.file_name,files.type FROM employee JOIN address ON employee.address_id = address.id join files ON files.id=employee.files_id where employee.id=".$id;
 		// var_dump($select);
 		$query=mysqli_query($this->condb,$select);
 		if ($query==FALSE) 
@@ -381,6 +381,11 @@ class Database
 		// if ($delte == FALSE)  
 		// 	trigger_error($this->condb->error);
 
+	}
+	public function delete_team($id)
+	{
+		$query = "DELETE  from employee WHERE id=".$id;
+		$delete = mysqli_query($this->condb,$query);
 	}
 
 }
