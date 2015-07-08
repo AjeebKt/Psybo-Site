@@ -60,7 +60,8 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 					<div class="center">
 						<h3>Welcome to PSYBO Technologies</h3>
 						<p>PSYBO Technologies provides web solutions & services to help customer reach to a wider customer base. The web is a new and different medium for communication.Our mature software development processes, combined with excellent infrastructure have significantly increased the “on-time and on-budget” delivery of software.</p>
-					</div>
+					</div><br>
+					<h3 class="center">Featured Services</h3>
 					<div class="about-div">
 						<div class="about-content">
 							<h3>Responsive Design</h3>
@@ -156,11 +157,11 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 						<h4>ONLINE BUSINESS PORMOTION</h4>
 						<p>Our expert software consultants offer advice at every stage of your project to create the ideal foundation for growth and diversification online.</p>
 					</li>
-					<!-- <li>
+					<li>
 						<img src="img/headphones.png" alt="">
 						<h4>24/7 SUPPORT</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id accusantium quibusdam fuga dolorum provident dolor maiores, unde alias distinctio cum mollitia fugit nulla. Consequuntur recusandae minima exercitationem magni culpa, obcaecati.</p>
-					</li> -->
+					</li>
 				</ul>
 			</div>
 		</section>
