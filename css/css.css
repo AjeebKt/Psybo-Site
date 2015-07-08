@@ -4,7 +4,7 @@ html
 }
 @font-face
 {
-	font-family: aspace;
+	font-family: code-light;
 	src: url('../fonts/CODE-Light.otf');
 }
 @font-face
@@ -72,7 +72,7 @@ nav
 	}
 	.navigation-links li a
 	{
-		font-family: aspace;
+		font-family: code-light;
 		font-size: 10pt;
 		font-weight: bold;
 		-webkit-transition: color 0.5s ease;
@@ -580,7 +580,7 @@ h1
 {
 	text-align: center;
 	text-shadow: 1px 2px 4px #000;
-	font-family: aspace;
+	font-family: code-light;
 	color: #fff;
 	font-weight: normal;
 	font-size: 42pt;
@@ -591,7 +591,7 @@ h1
 }
 h2
 {
-	font-family: aspace;
+	font-family: code-light;
 	color: #000;
 	font-weight: normal;
 	font-size: 36pt;
@@ -600,14 +600,14 @@ h2
 }
 h3
 {
-	font-family: aspace;
+	font-family: code-light;
 	font-size: 20pt;
 	margin: 10px 0;
 	padding: 0;
 }
 h4
 {
-	font-family: aspace;
+	font-family: code-light;
 	font-size: 14pt;
 	margin: 10px 0;
 	text-align: center;
