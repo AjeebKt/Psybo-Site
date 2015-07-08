@@ -20,15 +20,60 @@
 			<a href="addPortfolio.php">Add Portfolio</a>
 			<table class="show-item">
 				<tr>
-					<td>title</td>
+					<td>Name</td>
+					<td>description</td>
 					<td>link</td>
-					<td>Description</td>
-					<td><img src="img/user.png" alt=""></td>
+					<td>Image</td>
+					</tr>
+				<?php 
+				// var_dump($num_ptf);
+				for ($i=0; $i < $count_ptf; $i++) { 
+				$result=$objdb->select_row_ptf($num_ptf[$i][0]);
+				// var_dump($result); 
+				?>
+				<tr>
+					<td><?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'name' )
+					{
+						echo $value;	
+					}
+					} ?></td>
+					<td><?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'about' )
+					{
+						echo $value;	
+					}
+					} ?></td>
+					<td><?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'link' )
+					{
+						echo $value;	
+					}
+					} ?></td>
+					<td><img src=<?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'file_name' )
+					{
+						echo "\"".$actdir.$value."\"";	
+					}
+					} ?> alt=""></td>
 					<td><a href="editPortfolio.php" class="edit"></a></td>
-					<td><a href="" class="delete"></a></td>
+					<td><a href=<?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'id' )
+					{
+
+						echo "\"?id=".$value."\"";	
+					}
+					} ?> class="delete"></a></td>
 				</tr>
+				<?php } ?>
 			</table>
 		</form>
 	</section>
 </body>
 </html>
+<?php if (isset($_GET['id'])) 
+{
+	// echo $value;
+	$objdb->delete_portfolio($_GET['id']);
+} 
+?>

@@ -209,21 +209,6 @@ class Database
 
 
 
-	public function select_row_emp($id)	
-	{	
-		
-		$select="SELECT address.name,address.fb,address.linkedin,address.address,address.email,files.file_name,files.type FROM employee JOIN address ON employee.address_id = address.id join files ON files.id=employee.files_id where employee.id=".$id;
-		// var_dump($select);
-		$query=mysqli_query($this->condb,$select);
-		if ($query==FALSE) 
-		
-			return trigger_error($this->condb->error);
-		
-		$recset=array();
-		while ($rec=mysqli_fetch_array($query))
-			return $rec;
-			
-	}
 
 	// select the details from the company details.
 	public function select_row_cmp()
@@ -238,25 +223,43 @@ class Database
 			return $rec;
 	}
 
+	public function select_row_emp($id)	
+	{	
+		
+		$select="SELECT employee.id,employee.designation,address.name,address.fb,address.linkedin,address.address,address.email,address.twiter,address.google_plus,files.file_name,files.type FROM employee JOIN address ON employee.address_id = address.id join files ON files.id=employee.files_id where employee.id=".$id;
+		// var_dump($select);
+		$query=mysqli_query($this->condb,$select);
+		if ($query==FALSE) 
+		
+			return trigger_error($this->condb->error);
+		
+		$recset=array();
+		while ($rec=mysqli_fetch_array($query))
+			return $rec;
+			
+	}
+
 	// select the details from portfolio
 	public function select_row_ptf($id)
 	{
-		$select="SELECT portfolio.name,portfolio.link,files.file_name FROM portfolio JOIN files ON portfolio.files_id=files.id WHERE portfolio.id=".$id;
+
+		$select="SELECT portfolio.id,portfolio.name,portfolio.link,portfolio.about,files.file_name FROM portfolio JOIN files ON portfolio.files_id=files.id WHERE portfolio.id=".$id;
 		$query=mysqli_query($this->condb,$select);
 		if ($query==FALSE) 
 			return trigger_error($this->condb->error);
-		while ($rec=mysqli_fetch_array($query)) 
-			return $rec;
+		
+			while ($rec=mysqli_fetch_array($query))	 
+				return $rec;	
 	} 
 
 	public function select_row_tstmnl($id)
 	{
-		$select="SELECT testimonial.name,testimonial.description,testimonial.link,files.file_name FROM testimonial JOIN files ON testimonial.files_id=files.id WHERE testimonial.id=".$id;
+		$select="SELECT testimonial.id,testimonial.name,testimonial.description,testimonial.link,files.file_name FROM testimonial JOIN files ON testimonial.files_id=files.id WHERE testimonial.id=".$id;
 		$query=mysqli_query($this->condb,$select);
 		if ($query==FALSE) 
 			return trigger_error($this->condb->error);
-			while ($rec=mysqli_fetch_array($query)) 
-				return $rec; 
+		while ($rec=mysqli_fetch_array($query)) 
+			return $rec; 
 	}
 
 	//delete the data
@@ -318,6 +321,8 @@ class Database
 	{
 		$count="SELECT id FROM employee";
 		$query=mysqli_query($this->condb,$count);
+		if ($query== FALSE) 
+			trigger_error($this->condb->error);
 		// $count=mysqli_num_rows($query);
 		$recset=array();
 		while($arr=mysqli_fetch_array($query))
@@ -330,6 +335,8 @@ class Database
 	{
 		$select="SELECT id FROM portfolio";
 		$query=mysqli_query($this->condb,$select);
+		if ($query== FALSE) 
+			trigger_error($this->condb->error);
 		$recset=array();
 		while ($arr=mysqli_fetch_array($query))
 			array_push($recset,$arr);
@@ -351,19 +358,36 @@ class Database
 		var_dump($values_ptf);
 	}
 
-	public function insert_mul_emp() // 3 tables
+	public function insert_mul_emp($values_emp,$values_emp_file,$values_emp_add) // 3 tables
 	{
-		$this->insert("files",array("file_name","type"),array("test2.jpg",".jpg"));
+		$this->insert("files",array("file_name","type"),$values_emp_file);
 		$last_id_fl=mysqli_insert_id($this->condb);
-		$this->insert("address",array("name","linkedin","fb","twiter","google_plus"),array("shamas1","www.linkedin/shahid","www.twiter/shahid","www.twiter/shahid","www.googleplue/shahid"));
+		$this->insert("address",array("name","linkedin","fb","twiter","google_plus"),$values_emp_add);
 		$last_id_add=mysqli_insert_id($this->condb);
 		$fields=array("designation","files_id","address_id");
-		$values=array("C T O",$last_id_fl,$last_id_add);
-		var_dump($fields);
-		var_dump($values);
-		$this->insert("employee",$fields,$values);
+		// $values=array("C T O",$last_id_fl,$last_id_add);
+		array_push($values_emp, $last_id_fl);
+		array_push($values_emp, $last_id_add);
+		// var_dump($fields);
+		// var_dump($values);
+		$this->insert("employee",$fields,$values_emp);
 		
 	}
+
+	public function delete_portfolio($id)
+	{
+		$query = "DELETE from portfolio WHERE id=".$id;
+		$delete=mysqli_query($this->condb,$query);
+		// if ($delte == FALSE)  
+		// 	trigger_error($this->condb->error);
+
+	}
+	public function delete_team($id)
+	{
+		$query = "DELETE  from employee WHERE id=".$id;
+		$delete = mysqli_query($this->condb,$query);
+	}
+
 }
 
 

@@ -35,35 +35,32 @@
 	<div class="content">
 		<section class="portfolio">
 			<div class="container">
-			<?php //var_dump($count_ptf);
-			for($i = 0;$i < $count_ptf; $i++) 
-			// var_dump($i);
-				{?>
-				<figure>
-					<?php //var_dump($num_ptf[0][$i]);
-					$result=$objdb->select_row_ptf($num_ptf[0][$i]);
-					?>
+			<?php
+				for ($i=0; $i <$count_ptf ; $i++) { 
+				 	$result=$objdb->select_row_ptf($num_ptf[$i][0]);
+				 	// var_dump($result);
+				?>
+				 <figure>
 					<a target="_blank" href=<?php foreach ($result as $key => $value) {
 					if (is_string($key) and $key == 'link' )
 					{
 						echo "\"".$value."\"";	
 					}
 					} ?> >
-						<!-- <img src="img/img-tech.jpg" alt=""> -->
-						<img src=<?php foreach ($result as $key => $value) {
+					<img src=<?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key == 'file_name') {
 									echo "\"".$actdir.$value."\"";
 								}	
 						} ?> alt="">
-						<figcaption>
+					<figcaption>
 							<?php foreach ($result as $key => $value) {
 								if (is_string($key) and $key == 'name') {
 									echo $value;
 								}
 							} ?>
-						</figcaption>
+					</figcaption>
 					</a>
-				</figure>
+				</figure> 
 				<?php } ?>
 			</div>
 		</section>		

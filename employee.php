@@ -7,7 +7,6 @@
     $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
-    // var_dump($emp_id);
     $count_emp=count($emp_id);
     // var_dump($count_emp);
  	$actdir="/upload-image/";
@@ -41,6 +40,7 @@
 			<h2>TEAM PSYBO</h2>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)
+
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);?>
 				<li>
 <!-- 					<img src="img/img-tech.jpg" class="display-img" alt=""> -->

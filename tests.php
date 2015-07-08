@@ -83,12 +83,16 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // var_dump($arr1);
 // $arr1=array_splice($arr1, 0	,1,2);
 // var_dump($arr1);
+$num_ptf=$objdb->num_row_ptf();
+var_dump($num_ptf);
+var_dump($num_ptf[0][0]);
+$count_ptf=count($num_ptf);
+for ($i=0; $i < $count_ptf; $i++) 
+{ 
+	$result=$objdb->select_row_ptf($num_ptf[$i][0]);
+	var_dump($result);
 
-$a1=array("red","green","blue","yellow");
-var_dump($a1);	
-// var_dump(array_splice($a1,0,2,$a2));
-array_push($a1,1);
-var_dump($a1);
+}
 
 
 

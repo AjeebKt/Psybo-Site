@@ -1,3 +1,22 @@
+<?php 
+	session_start();
+	if ( isset($_SESSION['login'])!='YES' ) 
+	{
+		// echo "login success";
+		header("location:admin.php");
+
+	}
+
+	if (isset($_POST['logout'])) 
+	{
+		session_destroy();
+		header("location:admin.php");
+	}
+ ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/css.css">
