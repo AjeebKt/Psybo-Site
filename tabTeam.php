@@ -11,7 +11,7 @@ include 'dash.php';
 	<section>
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
 			<a href="addTeam.php">Add Team member</a>
-			<table class="show-portfolio">
+			<table class="show-item">
 				<tr>
 					<td>Name</td>
 					<td>Desigination</td>

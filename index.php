@@ -79,32 +79,39 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum mollitia quod dolorem! Dolores recusandae nam cumque error, ipsa corrupti, cum et, reiciendis amet molestias sunt nobis eum laborum! Tempora, laborum?</p>
 						</div>
 						<div class="meter">
-							<label for="">PHP</label>
 							<div class="about-skill">
+								<label for="">ASP.NET</label>
 								<div class="progress">
-									<span class="span">100%</span>
 									<span class="percent" style="width: 88%;"></span>
+									<span class="span">88%</span>
 								</div>
 							</div>
-							<label for="">WEB</label>
 							<div class="about-skill">
+								<label for="">PHP</label>
 								<div class="progress">
-									<span class="span">100%</span>
-									<span class="percent" style="width: 90%;"></span>
+									<span class="percent" style="width: 87%;"></span>
+									<span class="span">87%</span>
 								</div>
 							</div>
-							<label for="">WEB</label>
 							<div class="about-skill">
+								<label for="">HTML</label>
 								<div class="progress">
-									<span class="span">100%</span>
-									<span class="percent" style="width: 90%;"></span>
+									<span class="percent" style="width: 93%;"></span>
+									<span class="span">93%</span>
 								</div>
 							</div>
-							<label for="">WEB</label>
 							<div class="about-skill">
+								<label for="">CSS3</label>
 								<div class="progress">
-									<span class="span">100%</span>
 									<span class="percent" style="width: 90%;"></span>
+									<span class="span">90%</span>
+								</div>
+							</div>
+							<div class="about-skill">
+								<label for="">JavaScript</label>
+								<div class="progress">
+									<span class="percent" style="width: 80%;"></span>
+									<span class="span">80%</span>
 								</div>
 							</div>
 						</div>

@@ -12,13 +12,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tabportfolio</title>
+	<title>Tab-Portfolio</title>
 </head>
 <body>
 	<section>
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
 			<a href="addPortfolio.php">Add Portfolio</a>
-			<table class="show-portfolio">
+			<table class="show-item">
 				<tr>
 					<td>title</td>
 					<td>link</td>

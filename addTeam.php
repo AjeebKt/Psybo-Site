@@ -37,7 +37,7 @@
 					<input name="txtGplus" type="text"><br>
 				</div>
 				<div class="div-align-team">
-					<label>Employee Image</label><br>
+					<label>Employee Image  (Image Must be in W:260px X H:320px)</label><br>
 					<input name="uploadTeam" type="file"><br>
 				</div>
 				<button name="btnTeamSubmit" class="submit">Submit</button>

@@ -156,6 +156,7 @@ nav
 {
 	width: 100%;
 	float: left;
+	margin-bottom: 2%;
 }
 .team
 {
@@ -177,7 +178,6 @@ nav
 	}
 .display-img
 {
-	min-height: 260px;
 	max-width: 260px;
 	max-height: 320px;
 }
@@ -339,34 +339,27 @@ nav
 }
 .meter label
 {
-	float: left;
-	margin: 1% 2% 0 0;
+	margin-right: 3%;
 }
 .progress
 {
 	width: 70%;
-	float: left;
-	/*margin: 1%;*/
 	height: 20px;
-	/*border: 1px solid #aaa;*/
 	background-color: #ddd;
-	/*padding: 2px;*/
-	float: left;
+	position: relative;
 }
 .span
 {
-	float: right;
+	position: absolute;
+	right: -20%;
 }
 .percent
 {
 	background: none repeat scroll 0 0 #008a67;
 	display: block;
 	height: 100%;
-	/*position: absolute;*/
-	top: 0px;
-	left: 0px;
-	display: block;
-	overflow: hidden;
+	position: absolute;
+	opacity: 0.7;
 	height: 100%;
 }
 .testimonial
