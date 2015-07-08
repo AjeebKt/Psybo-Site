@@ -64,8 +64,9 @@
 // var_dump(basename($_FILES["uploadPortfolio"]["name"]));
 	if (isset($_POST['btnPortfolioSubmit'])) 
 	{
-		// if ( isset($_POST['txtTitle']) and isset($_POST['txtLink']) and isset($_POST['portfolioDescription']) and isset($_POST['uploadPortfolio']) )
-		// {
+		if ( $_POST['txtTitle'] and $_POST['txtLink'] and $_POST['portfolioDescription'] )#and $_POST['uploadPortfolio'] )
+		{
+			// echo "string";	
 			// echo "succes";
 			$target_dir=getcwd()."/upload-image/";
 			// var_dump("Target dir :  ".$target_dir);
@@ -74,8 +75,11 @@
 			$file_name=basename($_FILES["uploadPortfolio"]["name"]);
 			$file_type=pathinfo($target_file,PATHINFO_EXTENSION);
 			// var_dump("image file type  :   ".$file_type);
+			// $tem = explode(".",$_FILES["uploadPortfolio"]["tmp_name"]);
+			// $new_file=rand(1,99999) . '.'.end($temp);
 
-			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
+			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);#.$new_file;
+
 			// var_dump($check);
 			
 			if ($check !== FALSE) 
@@ -111,6 +115,7 @@
 			else 
 			{
 				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file); 
+
 				if ($upload !== TRUE) 
 				{
 					echo "Error in upload image";
@@ -120,9 +125,9 @@
 			$values_ptf=array($_POST['txtTitle'],$_POST['txtLink'],$_POST['portfolioDescription']);
 			// var_dump($values_ptf);
 			$objdb->insert_mul_ptf($values_files,$values_ptf);
-		// }
-		// else
-		// 	return trigger_error("please enter full details");
+		}
+		else
+			return trigger_error("please enter full details");
 
 	}
 

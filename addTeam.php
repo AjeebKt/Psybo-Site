@@ -57,8 +57,8 @@
 <?php 
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
-	// 	if ( isset($POST['txtName']) and isset($POST['txtDesignation'] and isset($POST['txtFacebook'] and isset($POST['txtTwitter'] and isset($POST['txtGplus'] and isset($POST['txtLinkedin'] and isset($POST['uploadTeam']) 
-	// 	{
+		if ( $_POST['txtName'] and $_POST['txtDesignation'] and $_POST['txtFacebook'] and $_POST['txtTwitter'] and $_POST['txtGplus'] and $_POST['txtLinkedin'] ) 
+		{
 			// echo "succes";
 			$target_dir=getcwd()."/upload-image/";
 			// var_dump("Target dir :  ".$target_dir);
@@ -116,8 +116,8 @@
 			$values_emp_add=array($_POST['txtName'],$_POST['txtLinkedin'],$_POST['txtFacebook'],$_POST['txtTwitter'],$_POST['txtGplus']);
 			var_dump($values_emp_add);
 			$objdb->insert_mul_emp($values_emp,$values_emp_file,$values_emp_add);
-		// }
-		// else
-		// 	return trigger_error("Please enter full details");
+		}
+		else
+			return trigger_error("Please enter full details");
 	}	
 ?>
