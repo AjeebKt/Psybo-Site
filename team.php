@@ -25,7 +25,7 @@
 	<header>
 		<div class="container">
 			<div class="logo">
-				<img src="img/logo-go.png" alt="Psybo Logo">
+				<a href="index.php"><img src="img/logo-go.png" alt="Psybo Logo"></a>
 			</div>
 			<nav>
 				<ul class="navigation-links">
@@ -87,16 +87,16 @@
 			<div class="footer-details">
 				<ul class="social-links">
 					<li>
-						<a class="facebook" href="#"></a>
+						<a class="facebook" href="https://www.facebook.com/psybotechnologies"></a>
 					</li>
 					<li>
-						<a class="twitter" href="#"></a>
+						<a class="twitter" href="https://twitter.com/psybotech"></a>
 					</li>
 					<li>
 						<a class="linkedin" href="#"></a>
 					</li>
 					<li>
-						<a class="gplus" href="#"></a>
+						<a class="gplus" href="https://plus.google.com/u/0/"></a>
 					</li>
 				</ul>	
 				<div class="site-details">
