@@ -21,19 +21,19 @@
 			<h3>ADD PORTFLIOS</h3>
 				<div class="div-align">
 					<label>Title</label><br>
-					<input name="txtTitle" type="text">
+					<input name="txtTitle" type="text" required= "required">
 				</div>
 				<div class="div-align">
 					<label>Link</label><br>
-					<input name="txtLink" type="text">
+					<input name="txtLink" type="text" required= "required">
 				</div>
 				<div class="div-align left">
 					<label>Description</label><br>
-					<textarea name="portfolioDescription" id="portfolioDescription" cols="40" rows="2"></textarea><br>
+					<textarea name="portfolioDescription" id="portfolioDescription" cols="40" rows="2" required= "required"></textarea><br>
 				</div>
 				<div class="div-align">
 					<label>Portfolio Image</label><br>
-					<input name="uploadPortfolio" type="file" class="up"><br>
+					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
 				</div>
 				<button class="submit" name="btnPortfolioSubmit">Submit</button>
 				<button name="btnReset" class="reset">Reset</button>
