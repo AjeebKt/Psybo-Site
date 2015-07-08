@@ -114,7 +114,7 @@
 			$values_emp=array($_POST['txtDesignation']);
 			$values_emp_file=array($file_name,$file_type);
 			$values_emp_add=array($_POST['txtName'],$_POST['txtLinkedin'],$_POST['txtFacebook'],$_POST['txtTwitter'],$_POST['txtGplus']);
-			var_dump($values_emp_add);
+			// var_dump($values_emp_add);
 			$objdb->insert_mul_emp($values_emp,$values_emp_file,$values_emp_add);
 		}
 		else
