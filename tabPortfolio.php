@@ -21,15 +21,10 @@
 			<table class="show-portfolio">
 				<tr>
 					<td>Name</td>
-					<td>Desigination</td>
-					<td>Facebook ID</td>
-					<td>Twitter ID</td>
-					<td>LinkedIn</td>
-					<td>Google+</td>
-					<td><img src="img/user.png" alt=""></td>
-					<td><a href="editTeam.php" class="edit"></a></td>
-					<td><a href="" class="delete"></a></td>
-				</tr>
+					<td>description</td>
+					<td>link</td>
+					<td>Image</td>
+					</tr>
 				<?php 
 				// var_dump($num_ptf);
 				for ($i=0; $i < $count_ptf; $i++) { 
@@ -38,13 +33,13 @@
 				?>
 				<tr>
 					<td><?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'about' )
+					if (is_string($key) and $key == 'name' )
 					{
 						echo $value;	
 					}
 					} ?></td>
 					<td><?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'name' )
+					if (is_string($key) and $key == 'about' )
 					{
 						echo $value;	
 					}
@@ -62,7 +57,13 @@
 					}
 					} ?> alt=""></td>
 					<td><a href="editPortfolio.php" class="edit"></a></td>
-					<td><a href="" class="delete"></a></td>
+					<td><a href=<?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'id' )
+					{
+
+						echo "\"?id=".$value."\"";	
+					}
+					} ?> class="delete"></a></td>
 				</tr>
 				<?php } ?>
 			</table>
@@ -70,3 +71,9 @@
 	</section>
 </body>
 </html>
+<?php if (isset($_GET['id'])) 
+{
+	// echo $value;
+	$objdb->delete_portfolio($_GET['id']);
+} 
+?>

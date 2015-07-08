@@ -254,7 +254,7 @@ class Database
 
 	public function select_row_tstmnl($id)
 	{
-		$select="SELECT testimonial.name,testimonial.description,testimonial.link,files.file_name FROM testimonial JOIN files ON testimonial.files_id=files.id WHERE testimonial.id=".$id;
+		$select="SELECT testimonial.id,testimonial.name,testimonial.description,testimonial.link,files.file_name FROM testimonial JOIN files ON testimonial.files_id=files.id WHERE testimonial.id=".$id;
 		$query=mysqli_query($this->condb,$select);
 		if ($query==FALSE) 
 			return trigger_error($this->condb->error);
@@ -321,6 +321,8 @@ class Database
 	{
 		$count="SELECT id FROM employee";
 		$query=mysqli_query($this->condb,$count);
+		if ($query== FALSE) 
+			trigger_error($this->condb->error);
 		// $count=mysqli_num_rows($query);
 		$recset=array();
 		while($arr=mysqli_fetch_array($query))
@@ -333,6 +335,8 @@ class Database
 	{
 		$select="SELECT id FROM portfolio";
 		$query=mysqli_query($this->condb,$select);
+		if ($query== FALSE) 
+			trigger_error($this->condb->error);
 		$recset=array();
 		while ($arr=mysqli_fetch_array($query))
 			array_push($recset,$arr);
@@ -369,6 +373,16 @@ class Database
 		$this->insert("employee",$fields,$values_emp);
 		
 	}
+
+	public function delete_portfolio($id)
+	{
+		$query = "DELETE from portfolio WHERE id=".$id;
+		$delete=mysqli_query($this->condb,$query);
+		// if ($delte == FALSE)  
+		// 	trigger_error($this->condb->error);
+
+	}
+
 }
 
 

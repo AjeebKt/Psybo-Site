@@ -31,8 +31,8 @@ include "file.php";
 					<td>LinkedIn</td>
 					<td>Google+</td>
 					<td><img src="img/user.png" alt=""></td>
-					<td><a href="editTeam.php" class="edit"></a></td>
-					<td><a href="" class="delete"></a></td>
+					<!-- <td><a href="editTeam.php" class="edit"></a></td>
+					<td><a href="" class="delete"></a></td> -->
 				</tr>
 				<?php for ($j=0; $j<$count_emp ;$j++)
 
