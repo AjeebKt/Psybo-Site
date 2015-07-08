@@ -73,8 +73,10 @@
 </html>
 <?php if (isset($_GET['id'])) 
 {
-	// echo $value;
+	$get_id=$_GET['id'];
 	$objdb->delete_portfolio($_GET['id']);
+	// $select=$objdb->select("portfolio",array("files_id"),array("id",$get_id));
+	// var_dump($select);
 	relode();
 	// header("refresh:0");
 } 
