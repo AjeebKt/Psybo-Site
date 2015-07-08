@@ -126,31 +126,40 @@ nav
 }
 .about p
 {
-	margin: 8% 0 0 0;
+	margin: 5% 0 0 0;
 }
+	.about-div
+	{
+		float: left;
+	}
 	.about-content
 	{
 		/*margin: 1% 5% 3%;*/
 		width: 50%;
 		float: left;
 		text-align: justify;
+		margin: 2% 0%;
 		/*margin-right: 3%;*/
 	}
 	.about-img
 	{
-		margin: 1% 5% 3%;
+		margin: 1% 0 2% 0%;
 		width: 30%;
 		float: left;
-		margin-left: 3%;
 	}
 	.about-img img
 	{
-		max-width: 100%;
+		max-width: 80%;
+		margin: 14% 13%;
 	}
 .about-us
 {
 	width: 100%;
 	float: left;
+}
+.center
+{
+	text-align: center;
 }
 .about-skill
 {
@@ -293,20 +302,15 @@ nav
 	margin: 0 auto;
 	margin-bottom: 10%;
 	padding: 0;
-	box-sizing: border-box;
 }
 .service li
 {
-	width: 30%;
+	width: 25%;
 	float: left;
-	display: inline-block;
-	margin: 2% 1%;
-	position: relative;
-	/*border: 1px solid #008a67;
-	border-top: 10px solid #008a67;
-	border-radius: 10px;*/
+	display: block;
+	margin: 2% 3%;
 	padding: 5px;
-	/*box-sizing: border-box;*/
+	box-sizing: border-box;
 }
 	.service li img
 	{
@@ -331,11 +335,16 @@ nav
 	width: 40%;
 	float: left;
 }
+.words p
+{
+	text-align: justify;
+	font-size: 16.5pt;
+}
 .meter
 {
-	width: 60%;
+	width: 55%;
 	float: left;
-	margin: 1% 0;
+	margin: 3% 0 1% 5%;
 }
 .meter label
 {
@@ -343,7 +352,7 @@ nav
 }
 .progress
 {
-	width: 70%;
+	width: 80%;
 	height: 20px;
 	background-color: #ddd;
 	position: relative;
