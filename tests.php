@@ -93,16 +93,14 @@ for ($i=0; $i < $count_ptf; $i++)
 	// var_dump($result);
 
 }
- $int = 100;
- $char="aaa";
-$filter= filter_var($int, FILTER_VALIDATE_INT );
-var_dump($filter);	
-if ($filter== TRUE) {
-    echo("Variable is an integer");
-} else {
-    echo("Variable is not an integer");
-}
 
+$url = "www.w3schools.com";
+
+if (!filter_var($url, FILTER_VALIDATE_URL) === false) {
+    echo("$url is a valid URL");
+} else {
+    echo("$url is not a valid URL");
+}
 
 
 ?>

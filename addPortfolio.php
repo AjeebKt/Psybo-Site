@@ -1,5 +1,5 @@
 <?php 
-	include 'dash.php';
+	
 	include 'Database.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$num_ptf=$objdb->num_row_ptf();
@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<?php include 'dash.php'; ?>
 	<section>
 		<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
 			<div id="tabPortfolio" class="tab-portfolio">

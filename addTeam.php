@@ -1,5 +1,5 @@
 <?php 
-	include 'dash.php';
+	
 	include 'Database.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$num_ptf=$objdb->num_row_ptf();
@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/style.css">
  </head>
  <body>
+ 	<?php include 'dash.php'; ?>
  	<section>
 		<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
 			<div id="tabTeam" class="tab-team">
@@ -58,10 +59,11 @@
  </html>
 
 <?php 
+	$name=filter_var($_POST['txtName'],FILTER_SANITIZE_SPECIAL_CHARS);
+	$designation=filter_var($_POST['txtDesignation'],FILTER_SANITIZE_SPECIAL_CHARS);
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
-		echo "string";
-		if ( $_POST['txtName'] and $_POST['txtDesignation'] and $_POST['txtFacebook'] and $_POST['txtTwitter'] and $_POST['txtGplus'] and $_POST['txtLinkedin'] ) 
+		if ( $name and $designation ) 
 		{
 			// echo "succes";
 			$target_dir=getcwd()."/upload-image/";
