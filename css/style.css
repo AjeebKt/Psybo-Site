@@ -158,6 +158,7 @@ section
 	color: #fff;
 	display: block;
 }
+
 .portfolio-container, .team-container
 {
 	width: 60%;
@@ -175,6 +176,11 @@ section
 	float: left;
 	margin-top: 2%;
 }
+.div-align-team select
+{
+	width: 45%;
+	
+}
 .left
 {
 	margin-left: 1%;
@@ -188,8 +194,8 @@ section
 	background-color: transparent;
 	width: 80%;
 	height: 30px;
-	padding: 10px;
 	border: 1px solid #aaa;
+	padding-left: 10px;
 }
 .tab-portfolio textarea
 {

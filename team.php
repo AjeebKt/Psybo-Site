@@ -43,7 +43,6 @@
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);?>
 				<li>
-<!-- 					<img src="img/img-tech.jpg" class="display-img" alt=""> -->
 					<img src=<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="file_name") {
 							// var_dump($actdir.$value);
