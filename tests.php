@@ -95,7 +95,7 @@ for ($i=0; $i < $count_ptf; $i++)
 }
  $int = 100;
  $char="aaa";
-$filter= filter_var($int, FILTER_VALIDATE_INT);
+$filter= filter_var($int, FILTER_VALIDATE_INT );
 var_dump($filter);	
 if ($filter== TRUE) {
     echo("Variable is an integer");

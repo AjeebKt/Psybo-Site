@@ -6,6 +6,9 @@
  <head>
  	<meta charset="UTF-8">
  	<title>Edit Team</title>
+ 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/style.css">
  </head>
  <body>
  	<section>

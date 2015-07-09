@@ -8,6 +8,6 @@
 	// $parent = basename(dirname($_SERVER['PHP_SELF']));
 	// var_dump($_SERVER['SERVER_NAME']);
 
-	// header("location:".$_SERVER['SERVER_NAME']);
-	http_redirect();
+	header("location:".$_SERVER['SERVER_NAME']);
+
 ?>

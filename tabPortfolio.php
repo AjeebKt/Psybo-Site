@@ -6,16 +6,18 @@
 	// var_dump($num_ptf);
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
-	include 'dash.php'
-	// var_dump($_SESSION['username']);	
  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Tab-Portfolio</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<?php include 'dash.php' ?>
 	<section>
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
 			<a href="addPortfolio.php">Add Portfolio</a>

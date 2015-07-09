@@ -179,9 +179,9 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 				<div class="container">
 					<h3>CONTACT</h3>
 					<form id="message-form" class="msg-form" action="post">Name
-						<input type="text" class="name">Email
-						<input type="text" class="mail">Comments
-						<textarea name="comments" id="comments" cols="30" rows="10" class="msg"></textarea>
+						<input type="text" class="name" required= "required">Email
+						<input type="email" class="mail" required= "required">Comments
+						<textarea name="comments" id="comments" cols="30" rows="10" class="msg" required= "required"></textarea>
 						<button class="button" id="buttonmail" name="buttonmail">SEND</button>
 					</form>
 				</div>
