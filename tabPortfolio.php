@@ -7,6 +7,7 @@
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
 	include 'dash.php'
+	// var_dump($_SESSION['username']);	
  ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,11 @@
 <?php 
 	session_start();
-	if ( isset($_SESSION['login'])!='YES' ) 
+	// if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
+	// {
+
+	// 	header("location:tabPortfolio.php");
+	// }
+	if ( empty(isset($_SESSION['username'])) ) 
 	{
 		// echo "login success";
 		header("location:admin.php");

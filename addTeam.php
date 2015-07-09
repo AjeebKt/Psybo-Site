@@ -57,6 +57,7 @@
 <?php 
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
+		echo "string";
 		if ( $_POST['txtName'] and $_POST['txtDesignation'] and $_POST['txtFacebook'] and $_POST['txtTwitter'] and $_POST['txtGplus'] and $_POST['txtLinkedin'] ) 
 		{
 			// echo "succes";

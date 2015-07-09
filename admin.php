@@ -3,7 +3,7 @@
 	// $objdb=new Database("localhost","root","asd","psybo-db");
 	$condb=new mysqli("localhost","root","asd","psybo-db");
 	session_start();
-	if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
+	if (isset($_SESSION['username']))
 	{
 		header("location:tabPortfolio.php");
 	}
@@ -21,8 +21,9 @@
 		{
 			
 			$_SESSION['login']='YES';
-			$_SESSION['username']=$_POST['username'];
-			$_SESSION['password']=$_POST['password'];
+			$_SESSION['username']=$_POST['txtusername'];
+			$_SESSION['password']=$_POST['txtpassword'];
+			// var_dump($_SESSION['username']);	
 			header("location:tabPortfolio.php");
 		}
 	}
