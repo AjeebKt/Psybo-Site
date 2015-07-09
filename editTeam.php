@@ -25,19 +25,19 @@
 				</div>
 				<div class="div-align-team">
 					<label>Facebook</label><br>
-					<input name="txtFacebook" type="url" optional><br>
+					<input name="txtFacebook" type="text" optional><br>
 				</div>					
 				<div class="div-align-team">
 					<label>Twitter</label><br>
-					<input name="txtTwitter" type="url" optional><br>
+					<input name="txtTwitter" type="text" optional><br>
 				</div>
 				<div class="div-align-team">
 					<label>LinkedIn</label><br>
-					<input name="txtLinkedin" type="url" optional><br>
+					<input name="txtLinkedin" type="text" optional><br>
 				</div>
 				<div class="div-align-team">
 					<label>Google+</label><br>
-					<input name="txtGplus" type="url" optional><br>
+					<input name="txtGplus" type="text" optional><br>
 				</div>
 				<div class="div-align-team">
 					<label>Employee Image</label><br>
