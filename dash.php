@@ -1,3 +1,16 @@
+
+<?php 
+	session_start();
+	if ( empty(isset($_SESSION['username'])) ) 
+	{
+		header("location:admin.php");}
+
+	if (isset($_POST['logout'])) 
+	{
+		session_destroy();
+		header("location:admin.php");
+	}
+ ?>
 <header>
 	<img src="img/logo-go.png" alt="">
 	<form id="form1" name="form1" method="POST" action="">

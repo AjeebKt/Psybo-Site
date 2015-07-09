@@ -64,7 +64,7 @@
 						<li>
 							<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="fb") {
-							echo ("href=\"".$value."\"");}}?> ></a>
+							echo ("href=\"http://".$value."\"");}}?> ></a>
 						</li>
 						<li>
 							<a class="twitter" href="https://twitter.com/"></a>
@@ -73,7 +73,7 @@
 							<a class="linkedin" 
 							<?php foreach ($result as $key => $value) {
 								if (is_string($key) and $key=="linkedin") {
-									echo ("href=\"".$value."\"");
+									echo ("href=\"http://".$value."\"");
 								}
 							} ?>  ></a>
 						</li>
