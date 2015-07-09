@@ -22,7 +22,7 @@
 				</div>
 				<div class="div-align">
 					<label>Link</label><br>
-					<input name="txtLink" type="url" required>
+					<input name="txtLink" type="text" required>
 				</div>
 				<div class="div-align left">
 					<label>Description</label><br>
