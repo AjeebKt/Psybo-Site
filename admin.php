@@ -43,18 +43,24 @@
 <body style="background-color: #ccc;">
 	<form id="loginForm" method="POST">
 		<div class="login">
-			<h3>Login</h3>
 			<div class="container">
-				<div>
-					<a class="user"></a>
-					<input id="text" name="txtusername" placeholder="User Name" type="text">
-				</div>
-				<div>
-					<a class="lock"></a>
-					<input id="Password" name="txtpassword" placeholder="Password" type="password"><?php echo $msg; ?>
+				<h3>Login</h3>
+				<div >
+					<div>
+						<a class="user"></a>
+						<input id="txtusername" name="txtusername" value="" type="text" required aria-required="true" pattern="[A-Za-z-0-9]+">
+					</div>
+					<div>
+						<a class="lock"></a>
+						<input id="Password" name="txtpassword" placeholder="Password" required type="password"><?php echo $msg; ?>
+					</div>
+					<div class="remember-me">
+						<input id="checkBox" type="checkbox">
+						<label for="checkBox">Remember Me</label>
+					</div>
 				</div>
 			</div>
-			<button name="loginButton">Login</button>
+		<button class="login-button" name="loginButton">Login</button>
 		</div>
 	</form>
 </body>

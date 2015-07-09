@@ -1,5 +1,4 @@
 <?php 
-include 'dash.php';
 include "file.php";
     require_once 'Database.php';
 	
@@ -17,8 +16,12 @@ include "file.php";
 <head>
 	<meta charset="UTF-8">
 	<title>Tab Team</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<?php include 'dash.php' ?>
 	<section>
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
 			<a href="addTeam.php">Add Team member</a>

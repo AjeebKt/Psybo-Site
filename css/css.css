@@ -26,9 +26,10 @@ header
 {
 	width: 100%;
 	height: 80px;
-	background-color: #ccc;
+	background-color: rgba(204, 204, 204, 0.5);
 	position: fixed;
 	top: 0;
+	/*opacity: 0.5;*/
 	z-index: 999;
 	border-bottom: 1px solid #008a67;
 }
@@ -175,15 +176,17 @@ nav
 }
 .team-member
 {
+	width: 100%;
 	list-style: none;
 	float: left;
 	margin: 0;
 	padding: 0;
 }
-	.team-member > li
+	.team-member li
 	{
 		float: left;
-		margin: 0px 2% 3%;
+		margin: 1%;
+		display: inline-block;
 	}
 .display-img
 {
@@ -413,9 +416,9 @@ nav
 	background-position: center;
 	background-repeat: no-repeat;
 	background-origin: padding-box;
-	-webkit-background-size: cover cover;
+	/*-webkit-background-size: cover cover;*/
 	background-size: cover cover;
-	background-color: #008a67;
+	/*background-color: #008a67;*/
 }
 .message
 {
