@@ -83,24 +83,17 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // var_dump($arr1);
 // $arr1=array_splice($arr1, 0	,1,2);
 // var_dump($arr1);
-$num_ptf=$objdb->num_row_ptf();
-// var_dump($num_ptf);
-// var_dump($num_ptf[0][0]);
-$count_ptf=count($num_ptf);
-for ($i=0; $i < $count_ptf; $i++) 
-{ 
-	// $result=$objdb->select_row_ptf($num_ptf[$i][0]);
-	// var_dump($result);
+// $str=array(1,'key1' => 2);
+// $key='aa';
+// $str.=$str[$key]["gooo"];
+// var_dump($str);	
 
-}
+	$url = "http://www.w3schools.com";
 
-$url = "www.w3schools.com";
-
-if (!filter_var($url, FILTER_VALIDATE_URL) === false) {
-    echo("$url is a valid URL");
-} else {
-    echo("$url is not a valid URL");
-}
-
+	if (filter_var($url, FILTER_VALIDATE_URL)) {
+	    echo($url ."Is a valid URL");
+	} else {
+	    echo("$url is not a valid URL");
+	}
 
 ?>
