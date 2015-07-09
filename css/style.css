@@ -103,7 +103,7 @@ header > img
 	border: 0;
 	background: transparent;
 	height: 30px;
-	transition: all 0.4s ease;
+	transition: color 0.4s ease;
 }
 .logout:hover
 {
@@ -111,7 +111,7 @@ header > img
 }
 nav
 {
-	width: 20%;
+	width: 15%;
 	position: fixed;
 	background-color: #404040;
 	float: left;
@@ -120,8 +120,8 @@ nav
 }
 section
 {
-	padding-left: 20%;
-	width: 80%;
+	padding-left: 15%;
+	width: 85%;
 	background-color: #FBFBFB;
 }
 .side-links
@@ -149,6 +149,14 @@ section
 .side-links li:hover
 {
 	background-color: #777;
+}
+.side-links li a
+{
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: #fff;
+	display: block;
 }
 .portfolio-container, .team-container
 {
@@ -205,13 +213,12 @@ input[type="file"]
 	border: 0px;
 	height: 35px;
 	background-color: #686868;
-	transition: all 0.4s ease;
+	transition: background-color 0.4s ease,color 0.4s ease;
 	float: right;
 }
 .submit:hover, .reset:hover
 {
 	background-color: #008a67;
-	border: 0px;
 	color: #FFF;
 }
 .button:focus div.tab1-content

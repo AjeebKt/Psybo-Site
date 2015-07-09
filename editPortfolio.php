@@ -18,19 +18,19 @@
 			<h3>EDIT PORTFLIO</h3>
 				<div class="div-align">
 					<label>Title</label><br>
-					<input name="txtTitle" type="text" required= "required">
+					<input name="txtTitle" type="text" required>
 				</div>
 				<div class="div-align">
 					<label>Link</label><br>
-					<input name="txtLink" type="text" required= "required">
+					<input name="txtLink" type="url" required>
 				</div>
 				<div class="div-align left">
 					<label>Description</label><br>
-					<textarea name="portfolioDescription" required= "required" id="portfolioDescription" cols="40" rows="2"></textarea><br>
+					<textarea name="portfolioDescription" optional id="portfolioDescription" cols="40" rows="2"></textarea><br>
 				</div>
 				<div class="div-align">
 					<label>Portfolio Image</label><br>
-					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
+					<input name="uploadPortfolio" type="file" class="up" required><br>
 				</div>
 				<button class="submit" name="btnPortfolioSubmit">Submit</button>
 				<button name="btnReset" class="reset">Reset</button>

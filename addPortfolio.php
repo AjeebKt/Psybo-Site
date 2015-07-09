@@ -24,15 +24,15 @@
 			<h3>ADD PORTFLIOS</h3>
 				<div class="div-align">
 					<label>Title</label><br>
-					<input name="txtTitle" type="text" required= "required">
+					<input name="txtTitle" type="text" required>
 				</div>
 				<div class="div-align">
 					<label>Link</label><br>
-					<input name="txtLink" type="text" required= "required">
+					<input name="txtLink" type="url" required>
 				</div>
 				<div class="div-align left">
 					<label>Description</label><br>
-					<textarea name="portfolioDescription" id="portfolioDescription" cols="40" rows="2" required= "required"></textarea><br>
+					<textarea name="portfolioDescription" id="portfolioDescription" cols="40" rows="2" optional></textarea><br>
 				</div>
 				<div class="div-align">
 					<label>Portfolio Image</label><br>

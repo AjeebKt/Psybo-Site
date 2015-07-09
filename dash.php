@@ -19,8 +19,8 @@
 </header>
 <nav>
 	<ul class="side-links">
-		<li>Portfolio</li>
-		<li>Team</li>
-		<li>Skill Meter</li>
+		<li><a href="tabPortfolio.php">Portfolio</a></li>
+		<li><a href="tabTeam.php">Team</a></li>
+		<li><a href="skill.php">Skill Meter</a></li>
 	</ul>
 </nav>
