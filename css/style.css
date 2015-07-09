@@ -176,6 +176,11 @@ section
 	float: left;
 	margin-top: 2%;
 }
+.div-align-team select
+{
+	width: 45%;
+	
+}
 .left
 {
 	margin-left: 1%;

@@ -28,6 +28,20 @@
 				<div class="div-align-team">
 					<label>Designation</label><br>
 					<input name="txtDesignation" type="text" required><br>
+					<!-- <select>
+						<option value="">Select..</option>
+						<option value="Web Developer">Volvo</option>
+						<option value="Softwrae">Saab</option>
+						<option value="Office Ma">Mercedes</option>
+						<option value="audi">Audi</option>
+						<option value="audi">Audi</option>
+						<option value="audi">Audi</option>
+						<option value="audi">Audi</option>
+						<option value="audi">Audi</option>
+						<option value="audi">Audi</option>
+						<option value="audi">Audi</option>
+						<option value="audi">Audi</option>
+					</select>  -->
 				</div>
 				<div class="div-align-team">
 					<label>Facebook</label><br>
