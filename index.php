@@ -14,7 +14,7 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 	if ($mail==TRUE)
 		echo"comment has been sent";
 	else
-		echo "commet not send at this time";
+		echo "Can't Sent comment at this time";
 }
 
  ?>

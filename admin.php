@@ -49,7 +49,7 @@
 				<div >
 					<div>
 						<a class="user"></a>
-						<input id="txtusername" name="txtusername" value="" type="text" required aria-required="true" pattern="[A-Za-z-0-9]+">
+						<input id="txtusername" name="txtusername" placeholder="User Name" value="" type="text" required aria-required="true" pattern="[A-Za-z-0-9]+">
 					</div>
 					<div>
 						<a class="lock"></a>

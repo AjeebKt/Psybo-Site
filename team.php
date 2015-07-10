@@ -59,27 +59,29 @@
 							echo $value;
 						}
 					} ?></h4>
-					<ul class="personal-links">
-						<li>
-							<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
-						if (is_string($key) and $key=="fb") {
-							echo ("href=\"http://".$value."\"");}}?> ></a>
-						</li>
-						<li>
-							<a class="twitter" href="https://twitter.com/"></a>
-						</li>
-						<li>
-							<a class="linkedin" 
-							<?php foreach ($result as $key => $value) {
-								if (is_string($key) and $key=="linkedin") {
-									echo ("href=\"http://".$value."\"");
-								}
-							} ?>  ></a>
-						</li>
-						<li>
-							<a class="gplus" href="https://plus.google.com/"></a>
-						</li>
-					</ul>
+					<div class="center-ul">
+						<ul class="personal-links">
+							<li>
+								<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
+							if (is_string($key) and $key=="fb") {
+								echo ("href=\"http://".$value."\"");}}?> ></a>
+							</li>
+							<li>
+								<a class="twitter" href="https://twitter.com/"></a>
+							</li>
+							<li>
+								<a class="linkedin" 
+								<?php foreach ($result as $key => $value) {
+									if (is_string($key) and $key=="linkedin") {
+										echo ("href=\"http://".$value."\"");
+									}
+								} ?>  ></a>
+							</li>
+							<li>
+								<a class="gplus" href="https://plus.google.com/"></a>
+							</li>
+						</ul>
+					</div>
 				</li>
 				<?php } ?>
 			</ul>
