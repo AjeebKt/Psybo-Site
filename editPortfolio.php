@@ -1,6 +1,3 @@
-<?php 
-	include 'dash.php';
- ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<?php include 'dash.php';?>
 	<section>
 		<form id="formPortfolio" name="formPortfolio" method="POST" action="">
 			<div id="tabPortfolio" class="tab-portfolio">

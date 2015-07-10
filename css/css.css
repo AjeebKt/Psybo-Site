@@ -71,18 +71,23 @@ section
 }
 .nav-menu
 {
-	width: 100%;
+
+}
+.nav-menu nav
+{
+	width: 40%;
 	height: 80px;
-	margin: 0 auto;
-	/*background-color: rgba(204, 204, 204, 0.5);*/
+	background-color: rgba(204, 204, 204, 0.5);
 	position: fixed;
-	bottom: 0;
+	left: 34%;
+	/*bottom: 0;*/
+	top: 0;
 	z-index: 999;
 	border-bottom: 1px solid #008a67;
-	margin-top: 18px;
 }
 .navigation-links
 {
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: transparent;
