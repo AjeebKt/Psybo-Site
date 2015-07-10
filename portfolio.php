@@ -1,4 +1,3 @@
-
 <?php 
 	include 'Database.php';
 	include 'file.php';
@@ -7,7 +6,6 @@
 	// var_dump($num_ptf);
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
-
  ?>
 <!DOCTYPE html>
 <html lang="en">

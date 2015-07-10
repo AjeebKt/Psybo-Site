@@ -14,8 +14,8 @@ html
 }
 @font-face
 {
-	font-family: DilleniaUPC;
-	src: url('../fonts/DilleniaUPC.ttf');
+	font-family: Lato;
+	src: url('../fonts/Lato-Light.ttf');
 }
 body
 {
@@ -303,6 +303,11 @@ nav
 	transform: translateZ(-1px) scale(1.1);*/
   	/*z-index:-1;*/
 }
+.we-do-div
+{
+	width: 100%;
+	margin: 0 auto;
+}
 .service
 {
 	width: 100%;
@@ -318,7 +323,7 @@ nav
 	width: 25%;
 	float: left;
 	display: block;
-	margin: 2% 3%;
+	margin: 1% 2%;
 	padding: 5px;
 	box-sizing: border-box;
 }
@@ -330,7 +335,7 @@ nav
 	.service li p
 	{
 		float: left;
-		font-size: 18pt;
+		font-size: 12pt;
 		text-align: justify;
 		margin: 0;
 	}
@@ -348,7 +353,7 @@ nav
 .words p
 {
 	text-align: justify;
-	font-size: 16.5pt;
+	font-size: 14pt;
 }
 .meter
 {
@@ -359,6 +364,8 @@ nav
 .meter label
 {
 	margin-right: 3%;
+	font-family: Lato;
+	font-weight: bold;
 }
 .progress
 {
@@ -409,7 +416,7 @@ nav
 	position: relative;
 	background-color: #transparent;
 	float: left;
-	font-family: DilleniaUPC;
+	font-family: Lato;
 }
 .map
 {
@@ -486,7 +493,7 @@ nav
 		float: right;
 		margin-top: 4%;
 		border: 0;
-		font-size: 20pt;
+		font-size: 14pt;
 		background-color: #008a67;
 		transition: all 0.5s ease;
 		color: #fff;
@@ -518,7 +525,7 @@ footer
 }
 	footer p
 	{
-		font-size: 16pt;
+		font-size: 12pt;
 		text-align: center;
 		margin: 0;
 	}
@@ -535,13 +542,13 @@ footer
 		float: left;
 		padding: 0;
 		margin-left: 5px;
-		cursor: pointer;q
+		cursor: pointer;
 	}
 		.social-links li a
 		{
 			display: block;
-			width: 36px;
-			height: 36px;
+			width: 32px;
+			height: 32px;
 			background-position: center;
 			background-repeat: no-repeat;
 			-webkit-background-size: 100%;
@@ -624,7 +631,7 @@ h4
 }
 p
 {
-	font-family: DilleniaUPC;
-	font-size: 22pt;
+	font-family: Lato;
+	font-size: 14pt;
 }
 
