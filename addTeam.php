@@ -74,7 +74,7 @@
  </html>
 
 <?php 
- $name="";
+  $name="";
 	$name=filter_var($_POST['txtName'],FILTER_SANITIZE_ENCODED);
 	$designation=filter_var($_POST['txtDesignation'],FILTER_SANITIZE_ENCODED);
 	if (isset($_POST['btnTeamSubmit'])) 
@@ -105,7 +105,7 @@
 
 			if (filter_var($_POST['txtLinkedin'] , FILTER_VALIDATE_URL)) 
 			{
-				filter_var($Linkedin , FILTER_SANITIZE_URL );
+				filter_var($_POST['txtLinkedin'] , FILTER_SANITIZE_URL );
 				array_push($values_emp_add, $_POST['txtLinkedin'] );
 				array_push($fields_emp_add, "linkedin");
 			}
@@ -175,10 +175,6 @@
 			// var_dump($values_emp_add);
 			// var_dump($fields_emp_add);	
 			// $values_emp_add=array($_POST['txtName'],$_POST['txtLinkedin'],$_POST['txtFacebook'],$_POST['txtTwitter'],$_POST['txtGplus']);
-
-		
-		
-			
 			$check=getimagesize($_FILES["uploadTeam"]["tmp_name"]);
 			// var_dump($check);
 			if ($check !== FALSE) 

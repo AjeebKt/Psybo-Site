@@ -97,7 +97,6 @@
 if (isset($_GET['id'])) 
 {
 	$objdb->delete_team($_GET['id']);
-	// header("refresh:0");
-	relode();
+	header("location:tabTeam.php");
 }
  ?>

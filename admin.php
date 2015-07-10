@@ -10,7 +10,9 @@
 
 	else if (isset($_POST['loginButton'])) 
 	{
-		$query="SELECT username,password FROM admin WHERE username = '".$_POST['txtusername']."' AND password = '".$_POST['txtpassword']."'";
+		$username=filter_var($_POST['txtusername'],FILTER_SANITIZE_ENCODED);
+		$username="";
+		$query="SELECT username,password FROM admin WHERE username = '".$username."' AND password = '".$_POST['txtpassword']."'";
 		// var_dump($query);
 		$result=mysqli_query($condb,$query);
 		if ($result==FALSE) 

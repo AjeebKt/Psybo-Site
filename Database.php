@@ -345,17 +345,15 @@ class Database
 
 
 
-	public function insert_mul_ptf($values_files,$values_ptf)
+	public function insert_mul_ptf($values_files,$fields_ptf,$values_ptf)
 	{	
 		// var_dump($values_files);
 		$this->insert("files",array("file_name","type"),$values_files);
 		$last_id_fl=mysqli_insert_id($this->condb);
 		// var_dump($values_ptf);
 		array_push($values_ptf,$last_id_fl);
-		$fields=array("name","link","about","files_id");
-		
-		$this->insert("portfolio",$fields,$values_ptf);
-		var_dump($values_ptf);
+		array_push($fields_ptf, "files_id");		
+		$this->insert("portfolio",$fields_ptf,$values_ptf);
 	}
 
 	public function insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add) // 3 tables
