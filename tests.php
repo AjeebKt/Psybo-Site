@@ -91,9 +91,12 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 	$url = "http://www.w3schools.com";
 
 	if (filter_var($url, FILTER_VALIDATE_URL)) {
-	    echo($url ."Is a valid URL");
+	    echo("$url is a valid URL");
 	} else {
 	    echo("$url is not a valid URL");
 	}
+	filter_var($url, FILTER_SANITIZE_URL);
+	// var_dump($url);
+	var_dump(rand());
 
 ?>

@@ -358,11 +358,11 @@ class Database
 		var_dump($values_ptf);
 	}
 
-	public function insert_mul_emp($values_emp,$values_emp_file,$values_emp_add) // 3 tables
+	public function insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add) // 3 tables
 	{
 		$this->insert("files",array("file_name","type"),$values_emp_file);
 		$last_id_fl=mysqli_insert_id($this->condb);
-		$this->insert("address",array("name","linkedin","fb","twiter","google_plus"),$values_emp_add);
+		$this->insert("address",$fields_emp_add,$values_emp_add);
 		$last_id_add=mysqli_insert_id($this->condb);
 		$fields=array("designation","files_id","address_id");
 		// $values=array("C T O",$last_id_fl,$last_id_add);

@@ -48,44 +48,112 @@
 </html>
 
 <?php 
-
-
-// session_start();
-// if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
-// {
-// 	// echo "login success";
-
-// }
-// else
-// 	header("location:login.php");
-
-// if (isset($_POST['logout'])) 
-// {
-// 	sessi(isset($_POST['on_destroy();
-// 	header("location:login.php");
-// }
-// echo "string";
-// var_dump(basename($_FILES["uploadPortfolio"]["name"]));
+	$name="";
+	$name=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
 	if (isset($_POST['btnPortfolioSubmit'])) 
 	{
-		if ( $_POST['txtTitle'] and $_POST['txtLink'] and $_POST['portfolioDescription'] )#and $_POST['uploadPortfolio'] )
+		
+		$rand=rand();
+
+		$target_dir=getcwd()."/upload-image/";
+		// var_dump("Target dir :  ".$target_dir);
+		$target_file=$target_dir ;
+		// var_dump("Target file  : ".$target_file);
+		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
+		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
+		// var_dump("image file type  :   ".$file_type);
+
+
+		if ( $name and $designation ) 
 		{
-			// echo "string";	
-			// echo "succes";
-			$target_dir=getcwd()."/upload-image/";
-			// var_dump("Target dir :  ".$target_dir);
-			$target_file=$target_dir . basename($_FILES["uploadPortfolio"]["name"]);
-			// var_dump("Target file  : ".$target_file);
-			$file_name=basename($_FILES["uploadPortfolio"]["name"]);
-			$file_type=pathinfo($target_file,PATHINFO_EXTENSION);
-			// var_dump("image file type  :   ".$file_type);
-			// $tem = explode(".",$_FILES["uploadPortfolio"]["tmp_name"]);
-			// $new_file=rand(1,99999) . '.'.end($temp);
+			$values_emp=array($designation);
+			$values_emp_file=array($file_name,$file_type);
+			$values_emp_add=array();
+			$fields_emp_add=array();
+			if( isset($name))
+			{
+				$values_emp_add=array($name);
+				$fields_emp_add=array("name");
+			}
 
-			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);#.$new_file;
-
-			// var_dump($check);
+			if (filter_var($_POST['txtLinkedin'] , FILTER_VALIDATE_URL)) 
+			{
+				filter_var($Linkedin , FILTER_SANITIZE_URL );
+				array_push($values_emp_add, $_POST['txtLinkedin'] );
+				array_push($fields_emp_add, "linkedin");
+			}
 			
+			else
+			{
+				$linkedin="https://".$_POST['txtLinkedin'];
+				if(filter_var($linkedin,FILTER_VALIDATE_URL))
+				{
+					filter_var($linkedin , FILTER_SANITIZE_URL );
+					array_push($values_emp_add, $linkedin);
+					array_push($fields_emp_add, "linkedin");
+				}
+			}
+
+			if( filter_var($_POST['txtFacebook'] , FILTER_VALIDATE_URL) ) 
+			{
+				filter_var($_POST['txtFacebook'] , FILTER_SANITIZE_URL );
+				array_push($values_emp_add, $_POST['txtFacebook']);
+				array_push($fields_emp_add, "fb");
+			}
+			else
+			{
+				$facebook="https://".$_POST['txtFacebook'];
+				if (filter_var($facebook,FILTER_VALIDATE_URL)) 
+				{
+					filter_var($facebook , FILTER_SANITIZE_URL );
+					array_push($values_emp_add, $facebook);
+					array_push($fields_emp_add, "fb");
+
+				}
+			}
+
+			if( filter_var($_POST['txtTwitter'] , FILTER_VALIDATE_URL) ) 
+			{
+				filter_var($_POST['txtTwitter'] , FILTER_SANITIZE_URL );
+				array_push($values_emp_add, $_POST['txtTwitter']);
+				array_push($fields_emp_add, "twiter");
+			}
+			else
+			{
+				$twitter="https://".$_POST['txtTwitter'];
+				if (filter_var($twitter,FILTER_VALIDATE_URL)) 
+				{
+					filter_var($twitter , FILTER_SANITIZE_URL );
+					array_push($values_emp_add, $twitter);
+					array_push($fields_emp_add, "twiter");
+				}
+			}
+
+			if( filter_var($_POST['txtGplus'] , FILTER_VALIDATE_URL) ) 
+			{
+				filter_var($_POST['txtGplus'] , FILTER_SANITIZE_URL );
+				array_push($values_emp_add, $_POST['txtGplus']);
+				array_push($fields_emp_add, "google_plus");
+			}
+			else
+			{
+				$gplus="https://".$_POST['txtGplus'];
+				if (filter_var($gplus,FILTER_VALIDATE_URL)) 
+				{
+					filter_var($_POST['txtGplus'] , FILTER_SANITIZE_URL );
+					array_push($values_emp_add, $gplus);
+					array_push($fields_emp_add, "google_plus");
+				}
+			}
+			// var_dump($values_emp_add);
+			// var_dump($fields_emp_add);	
+			// $values_emp_add=array($_POST['txtName'],$_POST['txtLinkedin'],$_POST['txtFacebook'],$_POST['txtTwitter'],$_POST['txtGplus']);
+
+		
+		
+			
+			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
+			// var_dump($check);
 			if ($check !== FALSE) 
 			{
 				// echo "File is an image :" .$check["mime"].".";
@@ -100,39 +168,26 @@
 				echo("sorry files is to large<br>");	
 				$uploadok=0;
 			}
-			// echo "string";
-			// echo "is an image ".$check["mime"].".";
-			if (file_exists($target_file)) 
-			{
-				echo "sorry file already exist .please select onother file<br>";
-				$uploadok=0;
-			}
 			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
 			{
 				echo "Only jp,jpeg,img files are allowed <br>";
 				$uploadok=0;
 			}
 			if ($uploadok == 0) 
-			{
 				echo "sorry your file was not upload<br>";
-			}
 			else 
 			{
-				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file); 
-
-				if ($upload !== TRUE) 
+				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file .$rand.".".$file_type ); 
+				if ($upload == TRUE) 
 				{
-					echo "Error in upload image";
+					$values_emp_file=array($rand.".".$file_type,$file_type);
+					$objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
 				}
+				else
+					echo "Error in upload image";
 			}
-			$values_files=array($file_name,$file_type);
-			$values_ptf=array($_POST['txtTitle'],$_POST['txtLink'],$_POST['portfolioDescription']);
-			// var_dump($values_ptf);
-			$objdb->insert_mul_ptf($values_files,$values_ptf);
 		}
 		else
-			return trigger_error("please enter full details");
-
+			echo ("Please enter atleast name and designation");
 	}
-
 ?>	
