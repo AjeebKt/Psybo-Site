@@ -1,5 +1,5 @@
 <?php 
-	include 'dash.php';
+	// include 'dash.php';
  ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -50,3 +50,6 @@
 	</section>
  </body>
  </html>
+ <?php 
+	 echo $_GET['id'];
+  ?>

@@ -386,6 +386,18 @@ class Database
 		$delete = mysqli_query($this->condb,$query);
 	}
 
+	// public update_mul_team($values_files,$fields_add,$values_add,$values_emp,$where)
+	// {
+	// 	$fields_files=array("file_name","type");
+	// 	$this->update("files",$fields_files,$values_files,$where);
+	// 	$last_id_fl=mysqli_insert_id($this->condb);
+	// 	$this->update("address",$fields_add,$values_add,$where);
+	// 	$last_id_add=mysqli_insert_id($this->condb);
+	// 	$this->update("employee",$fields_emp,$values_emp,$where);
+
+
+	// }
+
 }
 
 
