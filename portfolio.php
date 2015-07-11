@@ -1,4 +1,3 @@
-
 <?php 
 	include 'Database.php';
 	include 'file.php';
@@ -7,7 +6,6 @@
 	// var_dump($num_ptf);
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
-
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +16,14 @@
 	<title>Our PORTFOLIO</title>
 </head>
 <body>
+<!-- Logo -->
+	<div class="container">
+		<header>
+			<div class="logo">
+				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
+			</div>
+		</header>
+	</div>
 	<header>
 		<div class="container">
 			<div class="logo">
@@ -28,6 +34,9 @@
 					<li><a href="index.php">HOME</a></li>
 					<li><a class="active" href="portfolio.php">PORTFOLIO</a></li>
 					<li><a href="team.php">TEAM</a></li>
+					<li><a href="service.php">SERVICE</a></li>
+					<li><a href="about.php">ABOUT</a></li>
+					<li><a href="contact.php">CONTACT</a></li>
 				</ul>
 			</nav>
 		</div>			

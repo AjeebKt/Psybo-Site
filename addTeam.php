@@ -1,6 +1,5 @@
 <?php 
-	
-	include 'Database.php';
+include 'Database.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$num_ptf=$objdb->num_row_ptf();
 	// var_dump($num_ptf);
@@ -17,7 +16,8 @@
 	<link rel="stylesheet" href="css/style.css">
  </head>
  <body>
- 	<?php include 'dash.php'; ?>
+
+<?php include 'dash.php';  ?>
  	<section>
 		<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
 			<div id="tabTeam" class="tab-team">
@@ -188,16 +188,16 @@
 			}
 			if ($_FILES["uploadTeam"]["size"] > 30000000)
 			{
-				echo("sorry files is to large<br>");	
+				echo("sorry files is to large");	
 				$uploadok=0;
 			}
 			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
 			{
-				echo "Only jp,jpeg,img files are allowed <br>";
+				echo "Only jp,jpeg,img files are allowed ";
 				$uploadok=0;
 			}
 			if ($uploadok == 0) 
-				echo "sorry your file was not upload<br>";
+				echo "sorry your file was not upload";
 			else 
 			{
 				$upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_file .$rand.".".$file_type ); 

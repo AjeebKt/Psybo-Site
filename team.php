@@ -32,6 +32,9 @@
 					<li><a href="index.php">HOME</a></li>
 					<li><a href="portfolio.php">PORTFOLIO</a></li>
 					<li><a class="active" href="team.php">TEAM</a></li>
+					<li><a href="service.php">SERVICE</a></li>
+					<li><a href="about.php">ABOUT</a></li>
+					<li><a href="contact.php">CONTACT</a></li>
 				</ul>
 			</nav>
 		</div>			
@@ -59,31 +62,33 @@
 							echo $value;
 						}
 					} ?></h4>
-					<ul class="personal-links">
-						<li>
-							<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
-						if (is_string($key) and $key=="fb") {
-							echo ("href=\"".$value."\"");}}?> ></a>
-						</li>
-						<li>
-							<a class="twitter" <?php foreach ($result as $key => $value) {
-						if (is_string($key) and $key=="twiter") {
-							echo ("href=\"".$value."\"");}}?> ></a>
-						</li>
-						<li>
-							<a class="linkedin" 
-							<?php foreach ($result as $key => $value) {
-								if (is_string($key) and $key=="linkedin") {
-									echo ("href=\"".$value."\"");
-								}
-							} ?>  ></a>
-						</li>
-						<li>
-							<a class="gplus" <?php foreach ($result as $key => $value) {
-						if (is_string($key) and $key=="google_plus") {
-							echo ("href=\"".$value."\"");}}?> ></a>
-						</li>
-					</ul>
+					<div class="center-ul">
+						<ul class="personal-links">
+							<li>
+								<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
+							if (is_string($key) and $key=="fb") {
+								echo ("href=\"http://".$value."\"");}}?> ></a>
+							</li>
+							<li>
+								<a class="twitter" href="https://twitter.com/"></a>
+							</li>
+							<li>
+								<a class="linkedin" 
+								<?php foreach ($result as $key => $value) {
+									if (is_string($key) and $key=="linkedin") {
+										echo ("href=\"http://".$value."\"");
+									}
+								} ?>  ></a>
+							</li>
+							<li>
+								<a class="gplus" <?php foreach ($result as $key => $value) {
+									if (is_string($key) and $key=="google_plus") {
+										echo ("href=\"http://".$value."\"");
+									}
+								} ?>  \></a>
+							</li>
+						</ul>
+					</div>
 				</li>
 				<?php } ?>
 			</ul>

@@ -27,6 +27,8 @@
 					<td>description</td>
 					<td>link</td>
 					<td>Image</td>
+					<td>Edit</td>
+					<td>Delete</td>
 					</tr>
 				<?php 
 				// var_dump($num_ptf);

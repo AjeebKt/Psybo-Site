@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 <?php 
 	// include 'dash.php';
  ?>
+=======
+>>>>>>> 3b357addfde8173c3d6feaf72765793cc4f66062
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -11,6 +14,7 @@
 	<link rel="stylesheet" href="css/style.css">
  </head>
  <body>
+	<?php include 'dash.php';?>
  	<section>
 		<form id="formTeam" name="formTeam" method="POST" action="">	
 			<div id="tabTeam" class="tab-team">
@@ -48,8 +52,16 @@
 			</div>
 		</form>
 	</section>
+	<section class="show-error style="
+    background-color: 0f5;>
+		
+	</section>
  </body>
  </html>
+<<<<<<< HEAD
  <?php 
 	 echo $_GET['id'];
   ?>
+=======
+
+>>>>>>> 3b357addfde8173c3d6feaf72765793cc4f66062

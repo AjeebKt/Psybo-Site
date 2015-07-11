@@ -11,7 +11,7 @@
 	else if (isset($_POST['loginButton'])) 
 	{
 		$username=filter_var($_POST['txtusername'],FILTER_SANITIZE_ENCODED);
-		$username="";
+		
 		$query="SELECT username,password FROM admin WHERE username = '".$username."' AND password = '".$_POST['txtpassword']."'";
 		// var_dump($query);
 		$result=mysqli_query($condb,$query);
@@ -51,7 +51,7 @@
 				<div >
 					<div>
 						<a class="user"></a>
-						<input id="txtusername" name="txtusername" value="" type="text" required aria-required="true" pattern="[A-Za-z-0-9]+">
+						<input id="txtusername" name="txtusername" placeholder="User Name" value="" type="text" required aria-required="true" pattern="[A-Za-z-0-9]+">
 					</div>
 					<div>
 						<a class="lock"></a>

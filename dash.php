@@ -11,7 +11,7 @@
 		header("location:admin.php");
 	}
  ?>
-<header>
+<header class="header-fix">
 	<img src="img/logo-go.png" alt="">
 	<form id="form1" name="form1" method="POST" action="">
 		<button class="logout" name="logout">Logout </button>
