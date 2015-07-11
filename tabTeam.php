@@ -77,7 +77,12 @@
 							echo "\"".$actdir.$value."\"";
 						}
 					}; ?> alt=""></td>
-					<td><a href="editTeam.php" class="edit"></a></td>
+					<td><a href=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key== 'id') 
+						{
+							echo "\"?id=".$value."\"";
+						}
+					} ?> class="edit"></a></td>
 					<td><a href=<?php foreach ($result as $key => $value) {
 					if (is_string($key) and $key == 'id' )
 					{
@@ -97,7 +102,10 @@
 if (isset($_GET['id'])) 
 {
 	$objdb->delete_team($_GET['id']);
-	// header("refresh:0");
-	relode();
+	header("location:tabTeam.php");
+}
+if (isset($_GET['id'])) 
+{
+	header("location:teamEdit.php");
 }
  ?>

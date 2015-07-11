@@ -81,7 +81,11 @@
 								} ?>  ></a>
 							</li>
 							<li>
-								<a class="gplus" href="https://plus.google.com/"></a>
+								<a class="gplus" <?php foreach ($result as $key => $value) {
+									if (is_string($key) and $key=="google_plus") {
+										echo ("href=\"http://".$value."\"");
+									}
+								} ?>  \></a>
 							</li>
 						</ul>
 					</div>

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<?php 
+	// include 'dash.php';
+ ?>
+=======
+>>>>>>> 3b357addfde8173c3d6feaf72765793cc4f66062
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -52,4 +58,10 @@
 	</section>
  </body>
  </html>
+<<<<<<< HEAD
+ <?php 
+	 echo $_GET['id'];
+  ?>
+=======
 
+>>>>>>> 3b357addfde8173c3d6feaf72765793cc4f66062

@@ -47,44 +47,58 @@
 </html>
 
 <?php 
-
-
-// session_start();
-// if (isset($_SESSION['username']) and isset($_SESSION['password'])) 
-// {
-// 	// echo "login success";
-
-// }
-// else
-// 	header("location:login.php");
-
-// if (isset($_POST['logout'])) 
-// {
-// 	sessi(isset($_POST['on_destroy();
-// 	header("location:login.php");
-// }
-// echo "string";
-// var_dump(basename($_FILES["uploadPortfolio"]["name"]));
+	$title="";
+	$title=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
 	if (isset($_POST['btnPortfolioSubmit'])) 
 	{
-		if ( $_POST['txtTitle'] and $_POST['txtLink'] and $_POST['portfolioDescription'] )#and $_POST['uploadPortfolio'] )
+		
+		$rand=rand();
+
+		$target_dir=getcwd()."/upload-image/";
+		// var_dump("Target dir :  ".$target_dir);
+		$target_file=$target_dir ;
+		// var_dump("Target file  : ".$target_file);
+		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
+		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
+		// var_dump("image file type  :   ".$file_type);
+
+
+		if ( $title and $_FILES['uploadPortfolio']['tmp_name'] ) 
 		{
-			// echo "string";	
-			// echo "succes";
-			$target_dir=getcwd()."/upload-image/";
-			// var_dump("Target dir :  ".$target_dir);
-			$target_file=$target_dir . basename($_FILES["uploadPortfolio"]["name"]);
-			// var_dump("Target file  : ".$target_file);
-			$file_name=basename($_FILES["uploadPortfolio"]["name"]);
-			$file_type=pathinfo($target_file,PATHINFO_EXTENSION);
-			// var_dump("image file type  :   ".$file_type);
-			// $tem = explode(".",$_FILES["uploadPortfolio"]["tmp_name"]);
-			// $new_file=rand(1,99999) . '.'.end($temp);
+			$fields_ptf=array();
+			$values_ptf=array();
+			$values_ptf_file=array($file_name,$file_type);
+			if( isset($title))
+			{
+				$values_ptf=array($title);
+				$fields_ptf=array("name");
+			}
 
-			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);#.$new_file;
-
-			// var_dump($check);
+			if (filter_var($_POST['txtLink'] , FILTER_VALIDATE_URL)) 
+			{
+				filter_var($_POST['txtLink'] , FILTER_SANITIZE_URL );
+				array_push($values_ptf, $_POST['txtLink'] );
+				array_push($fields_ptf, "link");
+			}
 			
+			else
+			{
+				$link="https://".$_POST['txtLink'];
+				if(filter_var($link,FILTER_VALIDATE_URL))
+				{
+					filter_var($link , FILTER_SANITIZE_URL );
+					array_push($values_ptf, $link);
+					array_push($fields_ptf, "link");
+				}
+			}
+			if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
+			{
+				array_push($values_ptf, $_POST['portfolioDescription']);
+				array_push($fields_ptf, "about");
+			}
+			
+			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
+			// var_dump($check);
 			if ($check !== FALSE) 
 			{
 				// echo "File is an image :" .$check["mime"].".";
@@ -99,39 +113,29 @@
 				echo("sorry files is to large<br>");	
 				$uploadok=0;
 			}
-			// echo "string";
-			// echo "is an image ".$check["mime"].".";
-			if (file_exists($target_file)) 
-			{
-				echo "sorry file already exist .please select onother file<br>";
-				$uploadok=0;
-			}
 			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
 			{
 				echo "Only jp,jpeg,img files are allowed <br>";
 				$uploadok=0;
 			}
 			if ($uploadok == 0) 
-			{
 				echo "sorry your file was not upload<br>";
-			}
 			else 
 			{
-				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file); 
-
-				if ($upload !== TRUE) 
+				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file .$rand.".".$file_type ); 
+				if ($upload == TRUE) 
 				{
-					echo "Error in upload image";
+					// var_dump($values_ptf);
+					// var_dump($fields_ptf);	
+					$values_ptf_files=array($rand.".".$file_type,$file_type);
+					// var_dump($fields_ptf);
+					$objdb->insert_mul_ptf($values_ptf_files,$fields_ptf,$values_ptf);
 				}
+				else
+					echo "Error in upload image";
 			}
-			$values_files=array($file_name,$file_type);
-			$values_ptf=array($_POST['txtTitle'],$_POST['txtLink'],$_POST['portfolioDescription']);
-			// var_dump($values_ptf);
-			$objdb->insert_mul_ptf($values_files,$values_ptf);
 		}
 		else
-			return trigger_error("please enter full details");
-
+			echo ("Please enter title and select the image");
 	}
-
 ?>	
