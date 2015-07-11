@@ -76,7 +76,9 @@ include 'Database.php';
 <?php 
   $name="";
 	$name=filter_var($_POST['txtName'],FILTER_SANITIZE_ENCODED);
+	$name=str_replace("%20", " ", $name);
 	$designation=filter_var($_POST['txtDesignation'],FILTER_SANITIZE_ENCODED);
+	$designation=str_replace("%20", " ", $designation);
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
 		

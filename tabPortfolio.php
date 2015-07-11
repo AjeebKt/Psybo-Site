@@ -69,12 +69,18 @@
 						echo "\"".$actdir.$value."\"";	
 					}
 					} ?> alt=""></td>
-					<td><a href="editPortfolio.php" class="edit"></a></td>
 					<td><a href=<?php foreach ($result as $key => $value) {
 					if (is_string($key) and $key == 'id' )
 					{
 
-						echo "\"?id=".$value."\"";	
+						echo "\"?edit_id=".$value."\"";	
+					}
+					} ?> class="edit"></a></td>
+					<td><a href=<?php foreach ($result as $key => $value) {
+					if (is_string($key) and $key == 'id' )
+					{
+
+						echo "\"?delete_id=".$value."\"";	
 					}
 					} ?> class="delete"></a></td>
 				</tr>
@@ -87,7 +93,7 @@
 </html>
 <?php if (isset($_GET['id'])) 
 {
-	$get_id=$_GET['id'];
+	$get_id=$_GET['delete_id'];
 	$objdb->delete_portfolio($_GET['id']);
 	header("location:tabPortfolio.php");
 } 

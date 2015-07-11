@@ -11,7 +11,19 @@
 	else if (isset($_POST['loginButton'])) 
 	{
 		$username=filter_var($_POST['txtusername'],FILTER_SANITIZE_ENCODED);
-		
+		$username=str_replace("%20", " ", $username);
+		$password=$_POST['txtpassword'];
+		// $password=strip_tags($password);
+		// $password=preg_replace('/[^A-Za-z0-9\s.\s-]/', '', '$password');
+		// $password=str_replace(array('-','.'), '' , $password);
+
+		// if(filter_var($_POST['txtusername'] , FILTER_SANITIZE_ENCODED));
+		// 	{
+		// 		var_dump($passwo)
+		// 		echo "please enter correct password";
+
+		// 	}// exit();
+		// // $Password=str_replace("%20", " ", $Password);
 		$query="SELECT username,password FROM admin WHERE username = '".$username."' AND password = '".$_POST['txtpassword']."'";
 		// var_dump($query);
 		$result=mysqli_query($condb,$query);
