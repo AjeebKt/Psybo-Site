@@ -85,7 +85,7 @@ header
 }
 .div-center
 {
-	width: 390px;
+	width: 425px;
 	margin: 0 auto;
 }
 .nav-menu
@@ -119,6 +119,7 @@ header
 		transition: color 0.5s ease;
 		text-decoration: none;
 		color: #000;
+		letter-spacing: 1px;
 	}
 	.navigation-links li:hover a
 	{

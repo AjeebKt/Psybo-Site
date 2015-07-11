@@ -16,6 +16,14 @@
 	<title>Our PORTFOLIO</title>
 </head>
 <body>
+<!-- Logo -->
+	<div class="container">
+		<header>
+			<div class="logo">
+				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
+			</div>
+		</header>
+	</div>
 	<header>
 		<div class="container">
 			<div class="logo">
