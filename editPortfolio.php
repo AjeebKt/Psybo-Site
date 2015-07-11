@@ -11,6 +11,9 @@
 <body>
 	<?php include 'dash.php';?>
 	<section>
+	<div class="edit-form">
+		hiiii
+	</div>
 		<form id="formPortfolio" name="formPortfolio" method="POST" action="">
 			<div id="tabPortfolio" class="tab-portfolio">
 			<h3>EDIT PORTFLIO</h3>

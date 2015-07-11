@@ -216,7 +216,17 @@ section
 	padding: 10px;
 	/*margin: 0 0 2% 0;*/
 }
-
+.edit-form
+{
+	position: relative;
+	float: left;
+	background-color: #f45;
+}
+.edit-hidden
+{
+	position: absolute;
+	background-color: #4f5;
+}
 input[type="file"]
 {
 	border: 0;

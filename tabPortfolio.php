@@ -19,6 +19,14 @@
 <body>
 	<?php include 'dash.php' ?>
 	<section>
+	<div class="edit-form">
+		<div class="edit-hidden">
+			<form id="editForm" name="editForm" action="" method="POST">
+				sa
+			</form>
+		</div>
+	</div>
+	<div class="form-add-portfolio">
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
 			<a href="addPortfolio.php">Add Portfolio</a>
 			<table class="show-item">
@@ -73,6 +81,7 @@
 				<?php } ?>
 			</table>
 		</form>
+	</div>
 	</section>
 </body>
 </html>
