@@ -20,6 +20,7 @@
 	<?php include 'dash.php' ?>
 	<section>
 	<div class="edit-form">
+	<h3>Edit Portfolio</h3>
 		<div class="edit-hidden">
 			<form id="editForm" name="editForm" action="" method="POST">
 				sa

@@ -218,14 +218,21 @@ section
 }
 .edit-form
 {
+	width: 100%;
 	position: relative;
 	float: left;
 	background-color: #f45;
+	display: none;
 }
 .edit-hidden
 {
 	position: absolute;
 	background-color: #4f5;
+	/*display: none;*/
+}
+.form-add-portfolio
+{
+	width: 100%;
 }
 input[type="file"]
 {

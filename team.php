@@ -18,29 +18,21 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/css.css">
+	<!-- <link rel="stylesheet" href="css/css.css"> -->
+	<link rel="stylesheet" href="css/theme.css">
 	<title>About PSYBO</title>
 </head>
 <body>
-	<header>
-		<div class="container">
+<!-- Logo -->
+	<div class="container">
+		<header>
 			<div class="logo">
-				<a href="index.php"><img src="img/logo-go.png" alt="Psybo Logo"></a>
+				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
-			<nav>
-				<ul class="navigation-links">
-					<li><a href="index.php">HOME</a></li>
-					<li><a href="portfolio.php">PORTFOLIO</a></li>
-					<li><a class="active" href="team.php">TEAM</a></li>
-					<li><a href="service.php">SERVICE</a></li>
-					<li><a href="about.php">ABOUT</a></li>
-					<li><a href="contact.php">CONTACT</a></li>
-				</ul>
-			</nav>
-		</div>			
-	</header>
-	<section class="team">
-		<div class="container">
+		</header>
+	</div>
+	<div class="container">
+		<section class="team">
 			<h2>TEAM PSYBO</h2>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)
@@ -92,32 +84,29 @@
 				</li>
 				<?php } ?>
 			</ul>
-		</div>
-	</section>
-	<footer>
+		</section>
+	</div>
+<!-- Navigation Menu -->
+	<div class="div-menu">
 		<div class="container">
-			<div class="footer-details">
-				<ul class="social-links">
-					<li>
-						<a class="facebook" href="https://www.facebook.com/psybotechnologies"></a>
-					</li>
-					<li>
-						<a class="twitter" href="https://twitter.com/psybotech"></a>
-					</li>
-					<li>
-						<a class="linkedin" href="#"></a>
-					</li>
-					<li>
-						<a class="gplus" href="https://plus.google.com/u/0/"></a>
-					</li>
-				</ul>	
-				<div class="site-details">
-					<p>All Right Recieved @ PSYBO Technologies PVT.LTD</p>
-					<p>PSYBO Technologies 2015</p>
-				</div>
+			<div class="div-center">
+				<nav class="nav-menu">
+					<ul class="navigation-links">
+						<li><a class="active" href="index.php">HOME</a></li>
+						<li><a href="portfolio.php">PORTFOLIO</a></li>
+						<li><a href="team.php">TEAM</a></li>
+						<li><a href="service.php">SERVICE</a></li>
+						<li><a href="about.php">ABOUT</a></li>
+						<li><a href="contact.php">CONTACT</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
-	</footer>
+	</div>
+	<div class="picture">
+		<img src="img/010.png" alt="">
+	</div>
+	<?php include 'footer.php'; ?>
 </body>
 </html>
  
