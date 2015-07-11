@@ -165,6 +165,7 @@ header
 	right: 0;
 	top: 40%;
 	border: 1px solid #008a67;
+	transition: right 0.4s ease;
 }
 .arrow-right a
 {
@@ -177,6 +178,10 @@ header
 	background-size: 100%;
 	background-image: url(../img/right-arrow.png);	
 }
+.arrow-right:hover
+{
+	right: 10px;
+}
 .arrow-left
 {
 	width: 36px;
@@ -186,6 +191,7 @@ header
 	left: 0;
 	top: 40%;
 	border: 1px solid #008a67;
+	transition: left 0.4s ease;
 }
 .arrow-left a
 {
@@ -197,6 +203,10 @@ header
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	background-image: url(../img/left-arrow.png);
+}
+.arrow-left:hover
+{
+	left: 10px;
 }
 
 /*---Footer---*/
