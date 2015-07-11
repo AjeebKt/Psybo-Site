@@ -42,6 +42,8 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 			<h1>WELCOME TO <b>PSYBO</b> TECHNOLOGIES</h1>
 			<h2>THE FINAL SOFTWARE DESTINATION</h2>
 		</div>
+		<div class="arrow-right"><a href="#"></a></div>
+		<div class="arrow-left"><a href="#"></a></div>
 	</div>
 <!-- Navigation Menu -->
 	<div class="div-menu">

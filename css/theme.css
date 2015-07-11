@@ -134,8 +134,9 @@ header
 	width: 90%;
 	margin: 0 auto;
 	overflow: hidden;
-	border-left: 2px solid #f99;
-	border-right: 2px solid #f99;
+	position: relative;
+	/*border-left: 2px solid #f99;*/
+	/*border-right: 2px solid #f99;*/
 }
 .picture
 {
@@ -154,6 +155,48 @@ header
     -webkit-animation-delay: -2s; /* Chrome, Safari, Opera */
     animation: mymove 5s;
     animation-delay: -2s;
+}
+.arrow-right
+{
+	height: 36px;
+	width: 36px;
+	position: absolute;
+	z-index: 999999;
+	right: 0;
+	top: 40%;
+	border: 1px solid #008a67;
+}
+.arrow-right a
+{
+	display: block;
+	width: 36px;
+	height: 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	background-image: url(../img/right-arrow.png);	
+}
+.arrow-left
+{
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	z-index: 999999;
+	left: 0;
+	top: 40%;
+	border: 1px solid #008a67;
+}
+.arrow-left a
+{
+	display: block;
+	width: 36px;
+	height: 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	background-image: url(../img/left-arrow.png);
 }
 
 /*---Footer---*/
