@@ -31,39 +31,32 @@
 		<aside class="about-tabs">
 			<ul class="about-links">
 				<li>
-					<a href="">
-						<div class="tab-items">
+					<a href="#">
+						<div class="tab-items ">
 							<h4>Work hard</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto quidem, porro, possimus explicabo, pariatur commodi ducimus expedita nam quisquam delectus perspiciatis laboriosam harum quod unde nostrum fuga nihil! Accusantium.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
 						</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="#">
 						<div class="tab-items">
 							<h4>Amaze people</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto quidem, porro, possimus explicabo, pariatur commodi ducimus expedita nam quisquam delectus perspiciatis laboriosam harum quod unde nostrum fuga nihil! Accusantium.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
 						</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="#">
 						<div class="tab-items">
 							<h4>taste the cake</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto quidem, porro, possimus explicabo, pariatur commodi ducimus expedita nam quisquam delectus perspiciatis laboriosam harum quod unde nostrum fuga nihil! Accusantium.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
 						</div>
 					</a>
 				</li>
 			</ul>
 		</aside>
 		<section class="tab-show">
-			<div class="show-first">
-				<h2>Work Hard</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
-					chetta.as
-				</p>
-			</div>
 			<div class="show-tab">
 				<h2>Work Hard</h2>
 				<p>
@@ -72,7 +65,14 @@
 				</p>
 			</div>
 			<div class="show-tab">
-				<h2>Work Hard</h2>
+				<h2>AMAZE PEOPLE</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
+					chetta.as
+				</p>
+			</div>
+			<div class="show-tab">
+				<h2>TASTE THE CAKE</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
 					chetta.as

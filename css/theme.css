@@ -57,6 +57,20 @@ h4
 	text-align: center;
 	letter-spacing: 1px;
 }
+h5{
+	text-align: center;
+	font-family: lato;
+	font-size: 70pt;
+	font-weight: bolder;
+}
+h5 p{
+	font-family: lato;
+	font-size: 70pt;
+	font-weight: bolder;
+	color: #f23;
+	margin: 0;
+	padding: 0;
+}
 p
 {
 	font-family: code-light;
@@ -405,45 +419,43 @@ footer
 			}
 .we-do
 {
+	padding: 5% 0;
 	width: 100%;
 	display: block;
 	overflow: hidden;
 }
-.we-do-div
+.left-title
 {
-	width: 100%;
-	margin: 0 auto;
-	overflow: hidden;
+	width: 30%;
+	float: left;
+	padding-top: 5%;
 }
-.service
-{
+.right-side{
+	width: 70%;
+	float: right;
+}
+.features{
+	margin: 2% 0 2% 10%;
+	display: inline-block;
 	width: 100%;
 	list-style: none;
-	margin: 0;
-	padding: 0;
+/*	float: left;
+	max-width: 80px;*/
 }
-.service li
-{
-	width: 20%;
-	display: inline-block;
-	margin: 0 10px 20px;
-	box-sizing: border-box;
-	text-align: center;
+.features img{
+	max-width: 100px;
+	opacity: 0.7;
+	float: left;
 }
-	.service li img
-	{
-		max-width: 60px;
-		opacity: 0.6;
-	}
-	.service li p
-	{
-		float: left;
-		font-size: 10pt;
-		text-align: center;
-		margin: 0;
-		font-family: Sertig;
-		font-weight: normal;
-	}
+.features p{
+	width: 60%;
+	float: left;
+	font-family: Lato;
+	font-weight: normal;
+	margin-left: 20px;
+}
+
+
 .about-tabs
 {
 	width: 30%;
@@ -487,11 +499,14 @@ footer
 }
 .show-first
 {
-	display: block;
+	/*display: none;*/
 	position: absolute;
+	bottom: 0;
 }
 .show-tab
 {
-	display: none;
+	display: block;
 	position: absolute;
+	/*left: -2000%;*/
+	background-color: #F46;
 }
