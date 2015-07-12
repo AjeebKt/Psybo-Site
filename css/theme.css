@@ -3,6 +3,11 @@
 	font-family: code-light;
 	src: url('../fonts/CODE-Light.otf');
 }
+@font-face
+{
+	font-family: Sertig;
+	src: url('../fonts/Lato-Regular.ttf')
+}
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove
 {
@@ -14,11 +19,6 @@
     from {top: -2000px;}
     to {top: 0px;}
 }
-body
-{
-	width: 1366px;
-}
-
 h1
 {
 	text-align: center;
@@ -55,6 +55,7 @@ h4
 	font-size: 14pt;
 	margin: 10px 0;
 	text-align: center;
+	letter-spacing: 1px;
 }
 p
 {
@@ -328,7 +329,6 @@ footer
 .team
 {
 	width: 100%;
-	/*background-color: #ececec;*/
 	float: left;
 }
 .team-member
@@ -403,7 +403,6 @@ footer
 {
 	width: 100%;
 	display: block;
-	/*background-color: #eee;*/
 	overflow: hidden;
 }
 .we-do-div
@@ -416,19 +415,16 @@ footer
 {
 	width: 100%;
 	list-style: none;
-	text-align: center;
-	float: left;
 	margin: 0;
 	padding: 0;
 }
 .service li
 {
-	width: 300px;
-	float: left;
+	width: 20%;
 	display: inline-block;
-	margin: 0 10px;
-	padding: 10px;
+	margin: 0 10px 20px;
 	box-sizing: border-box;
+	text-align: center;
 }
 	.service li img
 	{
@@ -439,6 +435,8 @@ footer
 	{
 		float: left;
 		font-size: 10pt;
-		text-align: justify;
+		text-align: center;
 		margin: 0;
+		font-family: Sertig;
+		font-weight: normal;
 	}
