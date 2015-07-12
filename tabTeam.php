@@ -80,14 +80,15 @@
 					<td><a href=<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key== 'id') 
 						{
-							echo "\"?id=".$value."\"";
+							echo "\"editTeam.php?editid=".$value."\"";
 						}
 					} ?> class="edit"></a></td>
-					<td><a href=<?php foreach ($result as $key => $value) {
+					<td> 
+					 <a href=<?php foreach ($result as $key => $value) {
 					if (is_string($key) and $key == 'id' )
 					{
 
-						echo "\"?id=".$value."\"";	
+						echo "\"?deleteid=".$value."\"";	
 					}
 					} ?> class="delete"></a></td>
 				</tr>
@@ -99,13 +100,15 @@
 </html>
 <?php 
 
-if (isset($_GET['id'])) 
+if (isset($_GET['deleteid'])) 
 {
-	$objdb->delete_team($_GET['id']);
+	$objdb->delete_team($_GET['deleteid']);
+	// if ($objdb == true) 
+	// {
+	// 	echo "<script type='text/javascript'>alert('Delete succefully!');</script>";	
+		
+	// }
 	header("location:tabTeam.php");
 }
-if (isset($_GET['id'])) 
-{
-	header("location:teamEdit.php");
-}
- ?>
+
+?>

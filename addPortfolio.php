@@ -49,6 +49,7 @@
 <?php 
 	$title="";
 	$title=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
+	$title=str_replace("%20", " ", $title);
 	if (isset($_POST['btnPortfolioSubmit'])) 
 	{
 		

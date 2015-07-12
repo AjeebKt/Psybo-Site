@@ -88,15 +88,78 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // $str.=$str[$key]["gooo"];
 // var_dump($str);	
 
-	$url = "http://www.w3schools.com";
+	// $url = "http://www.w3schools.com";
 
-	if (filter_var($url, FILTER_VALIDATE_URL)) {
-	    echo("$url is a valid URL");
-	} else {
-	    echo("$url is not a valid URL");
-	}
-	filter_var($url, FILTER_SANITIZE_URL);
+	// if (filter_var($url, FILTER_VALIDATE_URL)) {
+	//     echo("$url is a valid URL");
+	// } else {
+	//     echo("$url is not a valid URL");
+	// }
+	// filter_var($url, FILTER_SANITIZE_URL);
 	// var_dump($url);
-	var_dump(rand());
+	// var_dump(rand());
+	// $str="is dummy.tst";
+	// $str=filter_var($str,FILTER_SANITIZE_ENCODED);
+	// // echo $str; 
+	// $str=str_replace("%20", " 	", $str);
+	// echo $str;
+	
+
+
+// $string = '`~!@#$%^&^&*()_+{}[]|\/;:"< >,.?-<h1>You .</h1><p> text</p>'."'";
+// $string="hjbkjh";
+// // var_dump($string);
+// $string=strip_tags($string,"");
+// $string = 'foo';
+
+
+$string = "a.<>=bc  123vj$%^&*--";
+$regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$%^&]).*$/";
+// if ( preg_match($regex, $string)) 
+// {
+// var_dump("succes");
+// }
+var_dump("befor strip :  ".$string);
+
+// var_dump( preg_match($regex, $string));	
+$string=strip_tags($string);
+echo "after strip  ".$string."<br>";
+$string = preg_replace('/[^A-Za-z0-9\s.]/','',$string); 
+var_dump("after preg rplc  :  ".$string);
+echo $string = str_replace( array( '-', '.' ), '', $string);
+
+
+$pass="abc1";
+
+$ucl = preg_match('/[A-Z]/', $pass); // Uppercase Letter
+$lcl = preg_match('/[a-z]/', $pass); // Lowercase Letter
+$dig = preg_match('/\d/', $pass); // Numeral
+$nos = preg_match('/\W/', $pass); // Non-alpha/num characters (allows underscore)
+
+// if($ucl) {
+//     echo "Contains upper case!<br>";
+// }
+
+// if($lcl) {
+//     echo "Contains lower case!<br>";
+// }
+
+// if($dig) {
+//     echo "Contains a numeral!<br>";
+// }
+
+// // I negated this if you want to dis-allow non-alphas/num:
+// if(!$nos) {
+//     echo "Contains no Symbols!<br>"; 
+// }
+
+// if ($ucl && $lcl && $dig && !$nos) { // Negated on $nos here as well
+if($lcl and $dig and !$nos){
+    echo "<br>All Four Pass!!!";
+
+} else {
+    echo "<br>Failure...";
+}
+
 
 ?>

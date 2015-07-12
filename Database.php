@@ -147,6 +147,7 @@ class Database
 			}		
 		}
 		$insert.="VALUES(".$val.")";
+		// var_dump($insert);
 		$stmt=$this->condb->prepare($insert);
 		$params[0] =  &$value_type;
 		foreach ($values as $key => $value) {
@@ -185,11 +186,11 @@ class Database
 		
 		if($where != null)
 		{
-			$select.=" WHERE ".$where[0]." = ".$where[1];
+			$select.=" WHERE ".$where[0]." = ";#.$where[1];
 			if (is_string($where[1]))
-			{
-			 $select.="'".$where[1]."'";
-			}
+				$select.="'".$where[1]."'";
+			else
+				$select.=$where[1];
 		}
 		// var_dump($select);
 		$query=mysqli_query($this->condb,$select);
@@ -268,7 +269,7 @@ class Database
 	{
 		$fields=implode(',', $fields);
 		$delete="DELETE FROM ".$table;
-		echo $delete;
+		// echo $delete;
 		$query=mysqli_query($this->condb,$delete) or die(mysqli_error());
 	}
 //	update data
@@ -278,17 +279,21 @@ class Database
 		if (count($fields)==count($new_values)) 
 		{
 			$update="UPDATE ".$table." SET ";
-			// $count=count($fields);
+			$count=count($fields);
 			// for ($i=0; $i < $count; $i++)
-			foreach ($fields as $value) 
-			{				
-				$update.=$fields[$i]." = ?";
-				if($i != $count -1)
+			foreach ($fields as $key => $value) 
+			{	
+				$update.=$fields[$key]." = ?";
+				if($key != $count -1)
 					$update.=' , ';
 			}
-			
-			$update.=" WHERE id=".$where;
-//			$where=117;
+			// var_dump($where);
+			$update.=" WHERE ".$where[0]." = ";#.$where[1];
+			if (is_string($where[1])) 
+				$update.="'".$where[1]."'";
+			else
+				$update.=$where[1];
+			// var_dump($update);
 			$type_value=str_repeat("s",count($fields));
 			$stmt=$this->condb->prepare($update);
 			if($stmt===FALSE)
@@ -312,7 +317,7 @@ class Database
 			{
 				trigger_error($this->condb->error);
 				return(FALSE);		
-			}			
+			}	
 		}
 	}
 
@@ -386,18 +391,32 @@ class Database
 		$delete = mysqli_query($this->condb,$query);
 	}
 
-	// public update_mul_team($values_files,$fields_add,$values_add,$values_emp,$where)
-	// {
-	// 	$fields_files=array("file_name","type");
-	// 	$this->update("files",$fields_files,$values_files,$where);
-	// 	$last_id_fl=mysqli_insert_id($this->condb);
-	// 	$this->update("address",$fields_add,$values_add,$where);
-	// 	$last_id_add=mysqli_insert_id($this->condb);
-	// 	$this->update("employee",$fields_emp,$values_emp,$where);
+	public function update_mul_team($values_files,$fields_add,$values_add,$values_emp,$where)
+	{
+		$result=select("employee",array("files_id","address_id"),array("id",$emp_id));
+		$fields_files=array("file_name","type");
+		$where=array("id",$files_id);	
+		$this->update("files",$fields_files,$values_files,$where);
+		$last_id_fl=mysqli_insert_id($this->condb);
+		$where=array("id",$add_id);
+		$this->update("address",$fields_add,$values_add,$where);
+		$last_id_add=mysqli_insert_id($this->condb);
+		$where=array("id",$emp_id);
+		$this->update("employee",$fields_emp,$values_emp,$where);
+	}
 
+	public function update_mul_ptf($values_files,$files_id,$fields_ptf,$values_ptf,$ptf_id)
+	{
+		// var_dump($files_id);
+		$fields=array("type","file_name");
+		// var_dump($fields_files);
+		// var_dump($values_files);
+		$where=array("id",$files_id);
+		// var_dump($files_id);
+		$this->update("files",$fields , $values_files , $where);
+		$this->update("portfolio" , $fields_ptf,$values_ptf,array("id" , $ptf_id) );
 
-	// }
-
+	}
 }
 
 
@@ -432,10 +451,10 @@ class Database
 
 // $obj->delete("users",array("username"));
 
-// $fields=array("name");
+// $fields=array("name","email");
 // $values=array("");
-// $where=5;
-// $new_values=array("sanoopa"	);
+// $where=array("id",11);
+// $new_values=array("sanoopa" ,"dummy@kjh.com"	);
 // $obj->update("users",$fields,$new_values,$where);
 
 ?>
