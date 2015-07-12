@@ -15,21 +15,6 @@
 			<div class="logo">
 				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
-		</header>
-	</div>
-<!-- Slides -->
-	<div class="container">
-		<div class="slider">
-			<h2>____HELLO____</h2>
-			<h1>WELCOME TO <b>PSYBO</b> TECHNOLOGIES</h1>
-			<h2>THE FINAL SOFTWARE DESTINATION</h2>
-		</div>
-		<div class="arrow-right"><a href="#"></a></div>
-		<div class="arrow-left"><a href="#"></a></div>
-	</div>
-<!-- Navigation Menu -->
-	<div class="div-menu">
-		<div class="container">
 			<div class="div-center">
 				<nav class="nav-menu">
 					<ul class="navigation-links">
@@ -42,10 +27,17 @@
 					</ul>
 				</nav>
 			</div>
-		</div>
+		</header>
 	</div>
-	<div class="picture">
-		<img src="img/010.png" alt="">
+<!-- Slides -->
+	<div class="container">
+		<div class="slider">
+			<h2>____HELLO____</h2>
+			<h1>WELCOME TO <b>PSYBO</b> TECHNOLOGIES</h1>
+			<h2>THE FINAL SOFTWARE DESTINATION</h2>
+		</div>
+		<div class="arrow-right"><a href="#"></a></div>
+		<div class="arrow-left"><a href="#"></a></div>
 	</div>
 	<?php include 'footer.php'; ?>
 </body>

@@ -23,44 +23,6 @@
 			<div class="logo">
 				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
-		</header>
-	</div>
-	<div class="content">
-		<div class="container">
-			<section class="portfolio">
-			<?php
-				for ($i=0; $i <$count_ptf ; $i++) { 
-				 	$result=$objdb->select_row_ptf($num_ptf[$i][0]);
-				 	// var_dump($result);
-				?>
-				 <figure>
-					<a target="_blank" href=<?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'link' )
-					{
-						echo "\"".$value."\"";	
-					}
-					} ?> >
-					<img src=<?php foreach ($result as $key => $value) {
-							if (is_string($key) and $key == 'file_name') {
-									echo "\"".$actdir.$value."\"";
-								}	
-						} ?> alt="">
-					<figcaption>
-							<?php foreach ($result as $key => $value) {
-								if (is_string($key) and $key == 'name') {
-									echo $value;
-								}
-							} ?>
-					</figcaption>
-					</a>
-				</figure> 
-				<?php } ?>
-			</section>		
-		</div>
-	</div>
-	<!-- Navigation Menu -->
-	<div class="div-menu">
-		<div class="container">
 			<div class="div-center">
 				<nav class="nav-menu">
 					<ul class="navigation-links">
@@ -73,10 +35,38 @@
 					</ul>
 				</nav>
 			</div>
-		</div>
+		</header>
 	</div>
-	<div class="picture">
-		<img src="img/010.png" alt="">
+	<div class="container">
+		<section class="portfolio">
+		<?php
+			for ($i=0; $i <$count_ptf ; $i++) { 
+			 	$result=$objdb->select_row_ptf($num_ptf[$i][0]);
+			 	// var_dump($result);
+			?>
+			 <figure>
+				<a target="_blank" href=<?php foreach ($result as $key => $value) {
+				if (is_string($key) and $key == 'link' )
+				{
+					echo "\"".$value."\"";	
+				}
+				} ?> >
+				<img src=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key == 'file_name') {
+								echo "\"".$actdir.$value."\"";
+							}	
+					} ?> alt="">
+				<figcaption>
+						<?php foreach ($result as $key => $value) {
+							if (is_string($key) and $key == 'name') {
+								echo $value;
+							}
+						} ?>
+				</figcaption>
+				</a>
+			</figure> 
+			<?php } ?>
+		</section>		
 	</div>
 	<?php include 'footer.php'; ?>
 </body>

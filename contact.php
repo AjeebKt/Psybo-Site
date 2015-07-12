@@ -3,27 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/theme.css">
 	<title>CONTACT US</title>
 </head>
 <body>
-	<header>
-		<div class="container">
+<!-- Logo -->
+	<div class="container">
+		<header>
 			<div class="logo">
-				<a href="index.php"><img src="img/logo-go.png" alt="Psybo Logo"></a>
+				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
-			<nav>
-				<ul class="navigation-links">
-					<li><a href="index.php">HOME</a></li>
-					<li><a href="portfolio.php">PORTFOLIO</a></li>
-					<li><a href="team.php">TEAM</a></li>
-					<li><a href="service.php">SERVICE</a></li>
-					<li><a href="about.php">ABOUT</a></li>
-					<li><a class="active" href="contact.php">CONTACT</a></li>
-				</ul>
-			</nav>
-		</div>			
-	</header>
+			<div class="div-center">
+				<nav class="nav-menu">
+					<ul class="navigation-links">
+						<li><a href="index.php">HOME</a></li>
+						<li><a href="portfolio.php">PORTFOLIO</a></li>
+						<li><a href="team.php">TEAM</a></li>
+						<li><a href="service.php">SERVICE</a></li>
+						<li><a href="about.php">ABOUT</a></li>
+						<li><a class="active" href="contact.php">CONTACT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>
 	<section class="contact">
 		<div class="map"></div>
 		<div class="message">
