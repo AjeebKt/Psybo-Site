@@ -485,3 +485,13 @@ footer
 {
 	font-family: Lato;
 }
+.show-first
+{
+	display: block;
+	position: absolute;
+}
+.show-tab
+{
+	display: none;
+	position: absolute;
+}
