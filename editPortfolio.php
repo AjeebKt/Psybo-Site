@@ -9,7 +9,8 @@
 	$where=array("id",$ptf_id);
 	// var_dump($where);
 	$result=$objdb->select("portfolio",$fields,$where);
-	// var_dump($result);
+	// error_reporting(E_ALL);
+	// ini_set('display_errors', 1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,10 +82,7 @@
 	$title=str_replace("%20", " ", $title);
 	if (isset($_POST["btnPortfolioSubmit"])) 
 	{
-	
-
 		$rand=rand();
-
 		$target_dir=getcwd()."/upload-image/";
 		var_dump("Target dir :  ".$target_dir);
 		$target_file=$target_dir ;
@@ -107,7 +105,6 @@
 			array_push($values_ptf, $_POST['txtLink'] );
 			array_push($fields_ptf, "link");
 		}
-		
 		else
 		{
 			$link="https://".$_POST['txtLink'];
@@ -128,7 +125,6 @@
 			{
 			// echo "string";
 			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
-			// var_dump($check);
 			if ($check !== FALSE) 
 			{
 				// echo "File is an image :" .$check["mime"].".";
@@ -136,21 +132,29 @@
 			}
 			else
 			{
-				echo "File is not an image";
+				echo "<script type='text/javascript'>
+						alert('Please select a image!');
+					</script>";
 				$uploadok=0;
 			}
 			if ($_FILES["uploadPortfolio"]["size"] > 30000000)
 			{
-				echo("sorry files is to large<br>");	
-				$uploadok=0;
+				echo "<script type='text/javascript'>
+						alert('Sorry file to be large .please select onether file!');
+					</script>";				
+					$uploadok=0;
 			}
 			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
 			{
-				echo "Only jp,jpeg,img files are allowed <br>";
+				echo "<script type='text/javascript'>
+						alert('Please select jpg or png or jpeg files!');
+					</script>";
 				$uploadok=0;
 			}
 			if ($uploadok == 0) 
-				echo "sorry your file was not upload<br>";
+				echo "<script type='text/javascript'>
+						alert('Canot upload photo at this time .please try again later !');
+					</script>";
 			else 
 			{
 				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file .$rand.".".$file_type ); 
@@ -163,7 +167,9 @@
 					$objdb->update("files",$fields , $values , $where);
 				}
 				else
-					echo "Error in upload image";
+					"<script type='text/javascript'>
+						alert('Canot upload photo at this time .please try again later !');
+					</script>";
 			}
 		}
 		// var_dump($values_ptf);
@@ -171,6 +177,8 @@
 		
 		// var_dump($fields_ptf);
 		$objdb->update("portfolio" , $fields_ptf,$values_ptf,array("id" , $ptf_id) );
+		if ($objdb == TRUE) 
+			header("location:tabPortfolio.php");
 		// var_dump($values_files);
 		// var_dump($files_id);
 		// $objdb->update_mul_ptf($values_files,$files_id,$fields_ptf,$values_ptf,$ptf_id);

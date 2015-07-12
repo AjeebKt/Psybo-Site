@@ -29,7 +29,7 @@
 		$result=mysqli_query($condb,$query);
 		if ($result==FALSE) 
 		{
-			trigger_error($condb->error);
+			echo (trigger_error($condb->error));
 		}
 		if ($result->num_rows==1) 
 		{
@@ -40,10 +40,13 @@
 			// var_dump($_SESSION['username']);	
 			header("location:tabPortfolio.php");
 		}
+		else
+		{
+			echo "<script type='text/javascript'>
+				alert('Please enter valid username and password');
+			</script>";
+		}
 	}
-	else
-		$msg="please Enter correct username and password";
-	$msg="";
  ?>
 
 <!DOCTYPE html>
@@ -67,7 +70,7 @@
 					</div>
 					<div>
 						<a class="lock"></a>
-						<input id="Password" name="txtpassword" placeholder="Password" required type="password"><?php echo $msg; ?>
+						// <input id="Password" name="txtpassword" placeholder="Password" required type="password"><?php//echo $msg; ?>
 					</div>
 					<div class="remember-me">
 						<input id="checkBox" type="checkbox">

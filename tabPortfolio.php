@@ -95,12 +95,44 @@
 <?php if (isset($_GET['delete_id'])) 
 {
 	$objdb->delete_portfolio($_GET['delete_id']);
-	if ($objdb== true) 
-	{
-		echo "<script type='text/javascript'>alert('submitted successfully!')</script>";
-	}
 	header("location:tabPortfolio.php");
-} 
+	
+}
+// 	echo "<script type='text/javascript'>
+// 			var answer = confirm('Do you really need to delete ?');
+// 			if (answer){
+// 				window.location.replace('tabPortfolio.php');
+// 			}
+// 		</script>";
+// // echo ("<script type='text/javascript'>
+
+// //         if (confirm('Are you sure you want to delete this?')) {
+// //             //Make ajax call
+// //             $.ajax({
+// //                 url: 'scriptDelete.php',
+// //                 type: 'GET',
+// //                 dataType: 'html', 
+// //                 success: function() {
+// //                     alert('It was succesfully deleted!');
+// //                 }
+// //             });
+// //         }
+// // </script>");
+//                 // data: {id : 5},
+//     // function confirmDelete() {
+//     // }
+
+	// $objdb->delete_portfolio($_GET['delete_id']);
+	// if ($objdb== true) 
+	// {
+		// echo "<script type='text/javascript'>
+		// 		var answer = confirm('Do you really need to delete ?');
+		// 		if (answer){
+		// 			window.location.replace('tabPortfolio.php');
+		// 		}
+		// 	</script>";
+	// }
+
 // if (isset($_GET['edit_id'])) 
 // {
 // 	$_SESSION['editid']=$_GET['edit_id'];

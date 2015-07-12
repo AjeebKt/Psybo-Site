@@ -107,20 +107,31 @@
 			}
 			else
 			{
-				echo "File is not an image";
+				echo "<script type='text/javascript'>
+						alert('Please select onether image!');
+					</script>";	
+				return;
 			}
 			if ($_FILES["uploadPortfolio"]["size"] > 30000000)
 			{
-				echo("sorry files is to large<br>");	
+				echo "<script type='text/javascript'>
+						alert('Sorry file to be large .please select onether file!');
+					</script>";	
 				$uploadok=0;
 			}
 			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
 			{
-				echo "Only jp,jpeg,img files are allowed <br>";
+				echo "<script type='text/javascript'>
+						alert('PLease select jpg or png or jpeg file!');
+					</script>";
 				$uploadok=0;
 			}
 			if ($uploadok == 0) 
-				echo "sorry your file was not upload<br>";
+			{
+				echo "<script type='text/javascript'>
+						alert('Upload failed try again later!');
+					</script>";			
+			}
 			else 
 			{
 				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file .$rand.".".$file_type ); 
@@ -131,12 +142,24 @@
 					$values_ptf_files=array($rand.".".$file_type,$file_type);
 					// var_dump($fields_ptf);
 					$objdb->insert_mul_ptf($values_ptf_files,$fields_ptf,$values_ptf);
+						echo "<script type='text/javascript'>
+						alert('Adding succefull');
+					</script>";
+					header("location:tabPortfolio.php");
 				}
 				else
-					echo "Error in upload image";
+				{
+					echo "<script type='text/javascript'>
+						alert('Upload failed try again later!');
+					</script>";
+				}
 			}
 		}
 		else
-			echo ("Please enter title and select the image");
+		{
+			echo "<script type='text/javascript'>
+					alert('Upload failed try again later!');
+				</script>";
+		}
 	}
 ?>	

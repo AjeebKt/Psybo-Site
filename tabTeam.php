@@ -103,12 +103,12 @@
 if (isset($_GET['deleteid'])) 
 {
 	$objdb->delete_team($_GET['deleteid']);
+	header("location:tabTeam.php");
 	// if ($objdb == true) 
 	// {
 	// 	echo "<script type='text/javascript'>alert('Delete succefully!');</script>";	
 		
 	// }
-	header("location:tabTeam.php");
 }
 
 ?>

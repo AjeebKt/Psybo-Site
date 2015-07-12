@@ -1,8 +1,7 @@
 <?php 
-include 'Database.php';
+	include 'Database.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$num_ptf=$objdb->num_row_ptf();
-	// var_dump($num_ptf);
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
  ?>
@@ -17,7 +16,7 @@ include 'Database.php';
  </head>
  <body>
 
-<?php //include 'dash.php';  ?>
+<?php include 'dash.php';  ?>
  	<section>
 		<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
 			<div id="tabTeam" class="tab-team">
@@ -29,20 +28,6 @@ include 'Database.php';
 				<div class="div-align-team">
 					<label>Designation</label><br>
 					<input name="txtDesignation" type="text" ><br>
-					<!-- <select>
-						<option value="">Select..</option>
-						<option value="Web Developer">Volvo</option>
-						<option value="Softwrae">Saab</option>
-						<option value="Office Ma">Mercedes</option>
-						<option value="audi">Audi</option>
-						<option value="audi">Audi</option>
-						<option value="audi">Audi</option>
-						<option value="audi">Audi</option>
-						<option value="audi">Audi</option>
-						<option value="audi">Audi</option>
-						<option value="audi">Audi</option>
-						<option value="audi">Audi</option>
-					</select>  -->
 				</div>
 				<div class="div-align-team">
 					<label>Facebook</label><br>
@@ -86,7 +71,6 @@ include 'Database.php';
 	// $designation=str_replace("%20", " ", $designation);
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
-		echo "string";	
 		$rand=rand();
 		$target_dir=getcwd()."/upload-image/";
 		// var_dump("Target dir :  ".$target_dir);
@@ -187,20 +171,30 @@ include 'Database.php';
 			}
 			else
 			{
-				echo "File is not an image";
+				echo "<script type='text/javascript'>
+						alert('Please select onether image!');
+					</script>";	
 			}
 			if ($_FILES["uploadTeam"]["size"] > 30000000)
 			{
-				echo("sorry files is to large");	
+				echo "<script type='text/javascript'>
+						alert('Sorry file to be large .please select onether file!');
+					</script>";	
 				$uploadok=0;
 			}
 			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
 			{
-				echo "Only jp,jpeg,img files are allowed ";
+				echo "<script type='text/javascript'>
+						alert('PLease select jpg or png or jpeg file!');
+					</script>";
 				$uploadok=0;
 			}
-			if ($uploadok == 0) 
-				echo "sorry your file was not upload";
+			if ($uploadok == 0)
+			{ 
+				echo "<script type='text/javascript'>
+						alert('Upload failed try again later!');
+					</script>";	
+			}
 			else 
 			{
 				$upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_file .$rand.".".$file_type ); 
@@ -208,12 +202,21 @@ include 'Database.php';
 				{
 					$values_emp_file=array($rand.".".$file_type,$file_type);
 					$objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
+					echo "<script type='text/javascript'>
+						alert('Adding sucesfull!');
+					</script>";
+					header("location:tabTeam.php");
 				}
 				else
-					echo "Error in upload image";
+					echo "<script type='text/javascript'>
+						alert('Upload filed try again later!');
+					</script>";	
 			}
 		}
 		else
-			echo ("Please enter atleast name and designation");
-	}	
+		{
+			echo "<script type='text/javascript'>
+					alert('Please enter name and designation!');
+				</script>";	
+		}	
 ?>

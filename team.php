@@ -71,23 +71,25 @@
 							<li>
 								<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key=="fb") {
-								echo ("href=\"http://".$value."\"");}}?> ></a>
+								echo ("href=\"".$value."\"");}}?> ></a>
 							</li>
 							<li>
-								<a class="twitter" href="https://twitter.com/"></a>
+								<a class="twitter" <?php foreach ($result as $key => $value) {
+							if (is_string($key) and $key=="twiter") {
+								echo ("href=\"".$value."\"");}}?>></a>
 							</li>
 							<li>
 								<a class="linkedin" 
 								<?php foreach ($result as $key => $value) {
 									if (is_string($key) and $key=="linkedin") {
-										echo ("href=\"http://".$value."\"");
+										echo ("href=\"".$value."\"");
 									}
 								} ?>  ></a>
 							</li>
 							<li>
 								<a class="gplus" <?php foreach ($result as $key => $value) {
 									if (is_string($key) and $key=="google_plus") {
-										echo ("href=\"http://".$value."\"");
+										echo ("href=\"".$value."\"");
 									}
 								} ?>  \></a>
 							</li>

@@ -161,5 +161,8 @@ if($lcl and $dig and !$nos){
     echo "<br>Failure...";
 }
 
+$str1="dfghjkl;'";
+$str1=strip_tags($str1);
+	preg_replace('/[^A-Za-z0-9\s.]/', '', $str1);
 
 ?>
