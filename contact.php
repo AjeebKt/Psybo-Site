@@ -26,11 +26,8 @@
 				</nav>
 			</div>
 		</header>
-	</div>
-	<section class="contact">
-		<div class="map"></div>
-		<div class="message">
-			<div class="container">
+		<section class="contact">
+			<div class="message">
 				<h3>CONTACT</h3>
 				<form id="message-form" class="msg-form" action="post">Name
 					<input type="text" class="name" required= "required">Email
@@ -39,8 +36,8 @@
 					<button class="button" id="buttonmail" name="buttonmail">SEND</button>
 				</form>
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 	<?php include 'footer.php'; ?>
 </body>
 </html>

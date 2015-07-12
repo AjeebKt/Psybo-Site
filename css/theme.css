@@ -439,8 +439,6 @@ footer
 	display: inline-block;
 	width: 100%;
 	list-style: none;
-/*	float: left;
-	max-width: 80px;*/
 }
 .features img{
 	max-width: 100px;
@@ -509,4 +507,58 @@ footer
 	position: absolute;
 	/*left: -2000%;*/
 	background-color: #F46;
+}
+
+
+.contact
+{
+	width: 100%;
+	position: relative;
+	background-color: #transparent;
+	float: left;
+	font-family: Lato;
+}
+
+.change-pwrd{
+	width: 400px;
+	height: 400px;
+	margin: 10% auto 0;
+	background-color: #1CA583;
+
+}
+.change-pwrd form{
+	margin: 10% 20px;
+	/*padding-top: 30%;*/
+
+}
+.change-pwrd input{
+	border: 0;
+	width: 88%;
+	height: 32px;
+	padding-left: 40px;
+	margin-bottom: 10px;
+	background-image: url(../img/lock.png);
+	background-repeat: no-repeat;
+	background-size: 30px;
+  background-position:left;
+}
+.change-pwrd button{
+	float: right;
+	border: 1px solid #008a67;
+	background-color: #1CA583;
+	height: 30px;
+	margin-left: 10px;
+	transition: background-color 0.4s ease, color 0.4s ease;
+}
+.change-pwrd button:hover{
+	background-color: #008060;
+	color: #fff;
+}
+.change-pwrd label{
+	margin-bottom: 5px;
+	float: left;
+}
+.change-pwrd h3{
+	padding: 5% 10%;
+	margin: 0;
 }
