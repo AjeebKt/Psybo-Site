@@ -79,7 +79,7 @@ include 'Database.php';
 	$designation=filter_var($_POST['txtDesignation'],FILTER_SANITIZE_ENCODED);
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
-		
+		echo "string";	
 		$rand=rand();
 
 		$target_dir=getcwd()."/upload-image/";
