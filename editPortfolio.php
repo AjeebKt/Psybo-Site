@@ -1,4 +1,16 @@
-
+<?php 
+	include 'Database.php' ;
+	$objdb=new Database("localhost","root","asd","psybo-db");
+	$ptf_id=$_GET['edit_id'];
+	$ptf_id=(int)$ptf_id;
+	// echo $ptf_id;
+	$fields=array();
+	// var_dump($fields);
+	$where=array("id",$ptf_id);
+	// var_dump($where);
+	$result=$objdb->select("portfolio",$fields,$where);
+	// var_dump($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,26 +24,37 @@
 	<?php include 'dash.php';?>
 	<section>
 	<div class="edit-form">
-		hiiii
 	</div>
-		<form id="formPortfolio" name="formPortfolio" method="POST" action="">
+		<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
 			<div id="tabPortfolio" class="tab-portfolio">
 			<h3>EDIT PORTFLIO</h3>
 				<div class="div-align">
 					<label>Title</label><br>
-					<input name="txtTitle" type="text" required>
+					<input name="txtTitle" type="text" <?php foreach ($result[0] as $key => $value) {
+					if (is_string($key) and $key == 'name') {
+							echo "value=\"".$value."\"";
+						}	
+					}?> required>
 				</div>
 				<div class="div-align">
 					<label>Link</label><br>
-					<input name="txtLink" type="text" required>
+					<input name="txtLink" type="text" <?php foreach ($result[0] as $key => $value) {
+					if (is_string($key) and $key == 'link') {
+							echo "value=\"".$value."\"";
+						}	
+					}?> required>
 				</div>
 				<div class="div-align left">
 					<label>Description</label><br>
-					<textarea name="portfolioDescription" optional id="portfolioDescription" cols="40" rows="2"></textarea><br>
+					<textarea name="portfolioDescription" optional id="portfolioDescription" cols="40" rows="2"><?php foreach ($result[0] as $key => $value) {
+					if (is_string($key) and $key == 'about') {
+							echo $value;	
+						}	
+					}?></textarea><br>
 				</div>
 				<div class="div-align">
 					<label>Portfolio Image</label><br>
-					<input name="uploadPortfolio" type="file" class="up" required><br>
+					<input name="uploadPortfolio" type="file" class="up" ><br>
 				</div>
 				<button class="submit" name="btnPortfolioSubmit">Submit</button>
 				<button name="btnReset" class="reset">Reset</button>
@@ -40,3 +63,116 @@
 	</section>
 </body>
 </html>
+
+<?php 
+
+
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key='files_id') 
+		{
+			$files_id=$value;
+		}
+	}
+	$files_id=(int)$files_id;
+
+	$title="";
+	$title=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
+	$title=str_replace("%20", " ", $title);
+	if (isset($_POST["btnPortfolioSubmit"])) 
+	{
+	
+
+		$rand=rand();
+
+		$target_dir=getcwd()."/upload-image/";
+		var_dump("Target dir :  ".$target_dir);
+		$target_file=$target_dir ;
+		var_dump("Target file  : ".$target_file);
+		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
+		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
+		var_dump("image file type  :   ".$file_type);
+		$fields_ptf=array();
+		$values_ptf=array();
+		$values_ptf_file=array($file_name,$file_type);
+		if( isset($title))
+		{
+			$values_ptf=array($title);
+			$fields_ptf=array("name");
+		}
+
+		if (filter_var($_POST['txtLink'] , FILTER_VALIDATE_URL)) 
+		{
+			filter_var($_POST['txtLink'] , FILTER_SANITIZE_URL );
+			array_push($values_ptf, $_POST['txtLink'] );
+			array_push($fields_ptf, "link");
+		}
+		
+		else
+		{
+			$link="https://".$_POST['txtLink'];
+			if(filter_var($link,FILTER_VALIDATE_URL))
+			{
+				filter_var($link , FILTER_SANITIZE_URL );
+				array_push($values_ptf, $link);
+				array_push($fields_ptf, "link");
+			}
+		}
+		if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
+		{
+			array_push($values_ptf, $_POST['portfolioDescription']);
+			array_push($fields_ptf, "about");
+		}
+		//upload image
+		if (!empty($file_name) )
+			{
+			// echo "string";
+			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
+			// var_dump($check);
+			if ($check !== FALSE) 
+			{
+				// echo "File is an image :" .$check["mime"].".";
+				$uploadok=1;
+			}
+			else
+			{
+				echo "File is not an image";
+				$uploadok=0;
+			}
+			if ($_FILES["uploadPortfolio"]["size"] > 30000000)
+			{
+				echo("sorry files is to large<br>");	
+				$uploadok=0;
+			}
+			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
+			{
+				echo "Only jp,jpeg,img files are allowed <br>";
+				$uploadok=0;
+			}
+			if ($uploadok == 0) 
+				echo "sorry your file was not upload<br>";
+			else 
+			{
+				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file .$rand.".".$file_type ); 
+				if ($upload == TRUE) 
+				{
+					echo "success uploading";
+					$values=array($rand.".".$file_type,$file_type);
+					$fields=array("file_name","type");
+					$where=array("id",$files_id);
+					$objdb->update("files",$fields , $values , $where);
+				}
+				else
+					echo "Error in upload image";
+			}
+		}
+		// var_dump($values_ptf);
+		// var_dump($fields_ptf);	
+		
+		// var_dump($fields_ptf);
+		$objdb->update("portfolio" , $fields_ptf,$values_ptf,array("id" , $ptf_id) );
+		// var_dump($values_files);
+		// var_dump($files_id);
+		// $objdb->update_mul_ptf($values_files,$files_id,$fields_ptf,$values_ptf,$ptf_id);
+	}
+?>

@@ -113,25 +113,28 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // $string = 'foo';
 
 
-// $string = "a.=bc123";
-// $regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$%^&]).*$/";
+$string = "a.<>=bc  123vj$%^&*--";
+$regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$%^&]).*$/";
 // if ( preg_match($regex, $string)) 
 // {
 // var_dump("succes");
 // }
+var_dump("befor strip :  ".$string);
+
 // var_dump( preg_match($regex, $string));	
-// echo "after strip".$string."<br>";
-// $string = preg_replace('/[^A-Za-z0-9\s.\s-]/','',$string); 
-// var_dump($string);
-// echo $string = str_replace( array( '-', '.' ), '', $string);
+$string=strip_tags($string);
+echo "after strip  ".$string."<br>";
+$string = preg_replace('/[^A-Za-z0-9\s.]/','',$string); 
+var_dump("after preg rplc  :  ".$string);
+echo $string = str_replace( array( '-', '.' ), '', $string);
 
 
-$pass="ab@#*&(c1";
+$pass="abc1";
 
-// $ucl = preg_match('/[A-Z]/', $pass); // Uppercase Letter
+$ucl = preg_match('/[A-Z]/', $pass); // Uppercase Letter
 $lcl = preg_match('/[a-z]/', $pass); // Lowercase Letter
-// $dig = preg_match('/\d/', $pass); // Numeral
-// $nos = preg_match('/\W/', $pass); // Non-alpha/num characters (allows underscore)
+$dig = preg_match('/\d/', $pass); // Numeral
+$nos = preg_match('/\W/', $pass); // Non-alpha/num characters (allows underscore)
 
 // if($ucl) {
 //     echo "Contains upper case!<br>";
@@ -151,7 +154,7 @@ $lcl = preg_match('/[a-z]/', $pass); // Lowercase Letter
 // }
 
 // if ($ucl && $lcl && $dig && !$nos) { // Negated on $nos here as well
-if(!$lcl){
+if($lcl and $dig and !$nos){
     echo "<br>All Four Pass!!!";
 
 } else {

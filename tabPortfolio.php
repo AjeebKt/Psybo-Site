@@ -73,7 +73,7 @@
 					if (is_string($key) and $key == 'id' )
 					{
 
-						echo "\"?edit_id=".$value."\"";	
+						echo "\"editPortfolio.php?edit_id=".$value."\"";	
 					}
 					} ?> class="edit"></a></td>
 					<td><a href=<?php foreach ($result as $key => $value) {
@@ -91,10 +91,18 @@
 	</section>
 </body>
 </html>
-<?php if (isset($_GET['id'])) 
+<?php if (isset($_GET['delete_id'])) 
 {
-	$get_id=$_GET['delete_id'];
-	$objdb->delete_portfolio($_GET['id']);
+	$objdb->delete_portfolio($_GET['delete_id']);
+	if ($objdb== true) 
+	{
+		echo "<script type='text/javascript'>alert('submitted successfully!')</script>";
+	}
 	header("location:tabPortfolio.php");
 } 
+// if (isset($_GET['edit_id'])) 
+// {
+// 	$_SESSION['editid']=$_GET['edit_id'];
+// 	header("location:editPortfolio.php");
+// }
 ?>

@@ -1,9 +1,12 @@
-<<<<<<< HEAD
+
 <?php 
 	// include 'dash.php';
+	include 'Database.php';
+	$objdb=new Database("localhost","root","asd","psybo-db");
+	$emp_id=(int)$_GET['editid'];
+	$result=$objdb->select("employee",array(),array("id",$emp_id));
+	var_dump($result);
  ?>
-=======
->>>>>>> 3b357addfde8173c3d6feaf72765793cc4f66062
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -21,7 +24,9 @@
 			<h3>EDIT TEAM MEMBERS</h3>
 				<div class="div-align-team">
 					<label>Name</label><br>
-					<input name="txtName" type="name" required><br>
+					<input name="txtName" type="name" value=<?php foreach ($result[0] as $key => $value) {
+						
+					} ?> required><br>
 				</div>
 				<div class="div-align-team">
 					<label>Designation</label><br>
@@ -58,10 +63,5 @@
 	</section>
  </body>
  </html>
-<<<<<<< HEAD
- <?php 
-	 echo $_GET['id'];
-  ?>
-=======
+ 
 
->>>>>>> 3b357addfde8173c3d6feaf72765793cc4f66062
