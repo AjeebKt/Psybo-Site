@@ -86,19 +86,14 @@ include 'Database.php';
 	// $designation=str_replace("%20", " ", $designation);
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
-	var_dump($designation);
-		
+		echo "string";	
 		$rand=rand();
-
 		$target_dir=getcwd()."/upload-image/";
 		// var_dump("Target dir :  ".$target_dir);
 		$target_file=$target_dir ;
 		// var_dump("Target file  : ".$target_file);
 		$file_name=basename($_FILES["uploadTeam"]["name"]);
 		$file_type=pathinfo(basename($_FILES["uploadTeam"]["name"]),PATHINFO_EXTENSION);
-		// var_dump("image file type  :   ".$file_type);
-
-
 		if ( $name and $designation ) 
 		{
 			$values_emp=array($designation);

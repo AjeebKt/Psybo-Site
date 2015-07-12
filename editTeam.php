@@ -1,12 +1,14 @@
 
+
 <?php 
-	// include 'dash.php';
+	include 'dash.php';
 	include 'Database.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$emp_id=(int)$_GET['editid'];
 	$result=$objdb->select("employee",array(),array("id",$emp_id));
 	var_dump($result);
  ?>
+
  <!DOCTYPE html>
  <html lang="en">
  <head>
