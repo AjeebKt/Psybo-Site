@@ -218,5 +218,5 @@
 			echo "<script type='text/javascript'>
 					alert('Please enter name and designation!');
 				</script>";	
-		}	
+	}	}	
 ?>
