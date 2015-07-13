@@ -31,7 +31,7 @@
 			<h3>EDIT PORTFLIO</h3>
 				<div class="div-align">
 					<label for="txtTitle">Title</label><br>
-					<input id="txtTitle"> name="txtTitle" type="text" <?php foreach ($result[0] as $key => $value) {
+					<input id="txtTitle" name="txtTitle" type="text" <?php foreach ($result[0] as $key => $value) {
 					if (is_string($key) and $key == 'name') {
 							echo "value=\"".$value."\"";
 						}	
@@ -39,7 +39,7 @@
 				</div>
 				<div class="div-align">
 					<label for="txtLink">Link</label><br>
-					<input id="txtLink"> name="txtLink" type="text" <?php foreach ($result[0] as $key => $value) {
+					<input id="txtLink" name="txtLink" type="text" <?php foreach ($result[0] as $key => $value) {
 					if (is_string($key) and $key == 'link') {
 							echo "value=\"".$value."\"";
 						}	
@@ -55,7 +55,7 @@
 				</div>
 				<div class="div-align">
 					<label for="uploadPortfolio">Portfolio Image</label><br>
-					<input id="uploadPortfolio"> name="uploadPortfolio" type="file" class="up" ><br>
+					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" ><br>
 				</div>
 				<button class="submit" name="btnPortfolioSubmit">Submit</button>
 				<button name="btnReset" class="reset">Reset</button>

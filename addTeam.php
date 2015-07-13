@@ -219,5 +219,6 @@
 					alert('Please enter name and designation!');
 				</script>";	
 		}
-	}	
+	}		
+
 ?>

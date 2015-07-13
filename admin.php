@@ -12,7 +12,7 @@
 	{
 		$username=filter_var($_POST['txtusername'],FILTER_SANITIZE_ENCODED);
 		$username=str_replace("%20", " ", $username);
-		$password=$_POST['txtpassword'];
+		$password=md5($_POST['txtpassword']);
 		// $password=strip_tags($password);
 		// $password=preg_replace('/[^A-Za-z0-9\s.\s-]/', '', '$password');
 		// $password=str_replace(array('-','.'), '' , $password);
@@ -24,19 +24,20 @@
 
 		// 	}// exit();
 		// // $Password=str_replace("%20", " ", $Password);
-		$query="SELECT username,password FROM admin WHERE username = '".$username."' AND password = '".$_POST['txtpassword']."'";
+		$query="SELECT username,password FROM admin WHERE username = '".$username."' AND password = '".md5($_POST['txtpassword'])."'";
 		// var_dump($query);
 		$result=mysqli_query($condb,$query);
 		if ($result==FALSE) 
 		{
-			echo (trigger_error($condb->error));
-		}
+			"<script type='text/javascript'>
+				alert('login failed.please try agian later !');
+			</script>";		}
 		if ($result->num_rows==1) 
 		{
 			
 			$_SESSION['login']='YES';
 			$_SESSION['username']=$_POST['txtusername'];
-			$_SESSION['password']=$_POST['txtpassword'];
+			$_SESSION['password']=md5($_POST['txtpassword']);
 			// var_dump($_SESSION['username']);	
 			header("location:tabPortfolio.php");
 		}
