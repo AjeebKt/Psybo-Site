@@ -29,7 +29,7 @@
 		</header>
 		<section class="we-do">
 			<div class="left-title">
-				<h5>THE <br><p>HARD</p>WORK</h5>
+				<h5>THE <br><b>HARD</b><br>WORK</h5>
 			</div>
 			<div class="right-side">
 				<div class="features one">
