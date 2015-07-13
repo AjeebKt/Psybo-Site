@@ -161,10 +161,18 @@ if($lcl and $dig and !$nos){
     echo "<br>Failure...";
 }
 
-$str1="dfghjkl!@#$%^&*34567890;";
-// $str1=strip_tags($str1);
-// 	preg_replace('/[^A-Za-z0-9\s.]/', '', $str1);
-if(preg_match('/[^A-Za-z0-9\s.]/', '', $str1))
-	echo "string";
+// $str1="dfghjkl!@#$%^&*34567890;";
+// // $str1=strip_tags($str1);
+// // 	preg_replace('/[^A-Za-z0-9\s.]/', '', $str1);
+// if(preg_match('/[^A-Za-z0-9\s.]/', '', $str1))
+// 	echo "string";
+
+
+// echo strrchr("Hello world!",101);
+$a='how are you';
+if (strpos($a,'are') !== false) {
+    echo 'true';
+}
+
 
 ?>

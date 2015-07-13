@@ -39,24 +39,37 @@
 					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
 				</div>
 				<button class="submit" name="btnPortfolioSubmit">Submit</button>
-				<button name="btnReset" class="reset">Reset</button>
 			</div>
+		</form>
+		<form action="tabPortfolio.php" method="POST">
+			<button name="btnReset" class="reset">Cancel</button>
 		</form>
 	</section>
 </body>
 </html>
 
 <?php 
-	$title="";
-	$title=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
-	$title=str_replace("%20", " ", $title);
+	
+	
+	if (isset($_POST['btnPortfolioSubmit']) and !empty($title) ) 
+	{	
+		$title=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
+		// $title=str_replace("%20", " ", $title);
 
-	$Description="";
-	$Description=filter_var($_POST['portfolioDescription'],FILTER_SANITIZE_ENCODED);
-	$Description=str_replace("%20", " ", $Description);
-	if (isset($_POST['btnPortfolioSubmit'])) 
-	{
-		
+		// $Description="";
+		$Description=filter_var($_POST['portfolioDescription'],FILTER_SANITIZE_ENCODED);
+		// $Description=str_replace("%20", " ", $Description);
+		if (!empty($Description)) 
+		{
+			if(strpos($Description,'%') !== false)
+			{
+				echo "<script type='text/javascript'>
+						alert(' please enter Correct information!');
+					</script>";
+				exit();
+			}
+		}
+		// echo "string";
 		$rand=rand();
 
 		$target_dir=getcwd()."/upload-image/";
@@ -68,7 +81,7 @@
 		// var_dump("image file type  :   ".$file_type);
 
 
-		if ( $title and $_FILES['uploadPortfolio']['tmp_name'] ) 
+		if ( !empty($title) and $_FILES['uploadPortfolio']['tmp_name'] ) 
 		{
 			$fields_ptf=array();
 			$values_ptf=array();
@@ -78,7 +91,8 @@
 				$values_ptf=array($title);
 				$fields_ptf=array("name");
 			}
-
+		if (!empty($txtLink)) 
+		{
 			if (filter_var($_POST['txtLink'] , FILTER_VALIDATE_URL)) 
 			{
 				filter_var($_POST['txtLink'] , FILTER_SANITIZE_URL );
@@ -96,6 +110,7 @@
 					array_push($fields_ptf, "link");
 				}
 			}
+		}	
 			// if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
 			if (!empty($Description))
 			{
@@ -148,10 +163,12 @@
 					$values_ptf_files=array($rand.".".$file_type,$file_type);
 					// var_dump($fields_ptf);
 					$objdb->insert_mul_ptf($values_ptf_files,$fields_ptf,$values_ptf);
-						echo "<script type='text/javascript'>
-						alert('Adding succefull');
-					</script>";
-					header("location:tabPortfolio.php");
+					
+					// header("location:tabPortfolio.php");
+					echo "<script type='text/javascript'>
+							alert('Update succesfull');
+							window.location.replace('tabTeam.php');
+						</script>";
 				}
 				else
 				{
@@ -168,4 +185,5 @@
 				</script>";
 		}
 	}
+
 ?>	

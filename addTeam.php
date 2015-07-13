@@ -51,26 +51,29 @@
 					<!-- <input name="uploadTeam" type="file" > -->
 				</div>
 				<button name="btnTeamSubmit" class="submit">Submit</button>
-				<button name="btnReset" class="reset">Reset</button>
 			</div>
+		</form>
+		<form action="tabTeam.php" method="POST">
+			
+				<button name="btnCancel" class="reset">Cancel</button>
 		</form>
 	</section>
  </body>
  </html>
 
 <?php 
-  	$name="";
-	$name=filter_var($_POST['txtName'],FILTER_SANITIZE_ENCODED);
-	$name=str_replace("%20", " ", $name);
-	$name=strip_tags($_POST['txtName']);
-	// $name=preg_replace('/[^A-Za-z0-9\s.', '', $name);
-	// $designation=
-	$designation=strip_tags($_POST['txtDesignation']);
-	preg_replace('/[^A-Za-z0-9\s.', '', $designation);
-	// $designation=filter_var($_POST['txtDesignation'],FILTER_SANITIZE_ENCODED);
-	// $designation=str_replace("%20", " ", $designation);
+  	
 	if (isset($_POST['btnTeamSubmit'])) 
-	{
+	{	
+		$name=filter_var($_POST['txtName'],FILTER_SANITIZE_ENCODED);
+		$name=str_replace("%20", " ", $name);
+		$name=strip_tags($_POST['txtName']);
+		// $name=preg_replace('/[^A-Za-z0-9\s.', '', $name);
+		// $designation=
+		// $designation=strip_tags($_POST['txtDesignation']);
+		// preg_replace('/[^A-Za-z0-9\s.', '', $designation);
+		$designation=filter_var($_POST['txtDesignation'],FILTER_SANITIZE_ENCODED);
+		// $designation=str_replace("%20", " ", $designation);
 		$rand=rand();
 		$target_dir=getcwd()."/upload-image/";
 		// var_dump("Target dir :  ".$target_dir);
@@ -78,8 +81,19 @@
 		// var_dump("Target file  : ".$target_file);
 		$file_name=basename($_FILES["uploadTeam"]["name"]);
 		$file_type=pathinfo(basename($_FILES["uploadTeam"]["name"]),PATHINFO_EXTENSION);
-		if ( $name and $designation ) 
+
+		if(strpos($designation,'%') !== false)
 		{
+			echo "<script type='text/javascript'>
+					alert(' please enter Correct information!');
+				</script>";
+			exit();
+		}
+		
+
+		if ( $name and $designation )#and strpos($designation,'%') !== false ) 
+		{
+			// if (strpos($designation,'%') !== false)
 			$values_emp=array($designation);
 			$values_emp_file=array($file_name,$file_type);
 			$values_emp_add=array();
@@ -202,10 +216,12 @@
 				{
 					$values_emp_file=array($rand.".".$file_type,$file_type);
 					$objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
+	
+					// header("location:tabTeam.php");
 					echo "<script type='text/javascript'>
-						alert('Adding sucesfull!');
-					</script>";
-					header("location:tabTeam.php");
+							alert('Update succesfull');
+							window.location.replace('tabTeam.php');
+						  </script>";
 				}
 				else
 					echo "<script type='text/javascript'>
@@ -216,7 +232,7 @@
 		else
 		{
 			echo "<script type='text/javascript'>
-					alert('Please enter name and designation!');
+					alert('Please enter valid name and designation!');
 				</script>";	
 		}
 	}		

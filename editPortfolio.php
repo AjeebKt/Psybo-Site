@@ -58,8 +58,10 @@
 					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" ><br>
 				</div>
 				<button class="submit" name="btnPortfolioSubmit">Submit</button>
-				<button name="btnReset" class="reset">Reset</button>
 			</div>
+		</form>
+		<form action="tabPortfolio.php" method="POST">
+			<button name="btnReset" class="reset">Cancel</button>
 		</form>
 	</section>
 </body>
@@ -178,9 +180,12 @@
 		// var_dump($fields_ptf);
 		$objdb->update("portfolio" , $fields_ptf,$values_ptf,array("id" , $ptf_id) );
 		if ($objdb == TRUE) 
-			header("location:tabPortfolio.php");
-		// var_dump($values_files);
-		// var_dump($files_id);
-		// $objdb->update_mul_ptf($values_files,$files_id,$fields_ptf,$values_ptf,$ptf_id);
+		{
+			echo "<script type='text/javascript'>
+				alert('Update succesfull');
+				window.location.replace('tabTeam.php');
+			</script>";	
+			// header("location:tabPortfolio.php");
+		}
 	}
 ?>

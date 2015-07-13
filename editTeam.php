@@ -82,15 +82,13 @@
 					<input id="uploadTeam" name="uploadTeam" type="file" ><br>
 				</div>
 				<button name="btnTeamSubmit" class="submit">Submit</button>
-				<button name="btnReset" class="reset">Reset</button>
 			</div>
 		</form>
+		<form action="tabTeam.php" method="POST">
+			<button name="btnReset" class="reset">Cancel</button>
+		</form>
 	</section>
-	<section class="show-error style="
-    background-color: 0f5;>
-		
-	</section>
- </body>
+</body>
  </html>
  <?php 	
 	if (isset($_POST['btnTeamSubmit'])) 
@@ -255,9 +253,9 @@
 
 		echo "<script type='text/javascript'>
 				alert('Update succesfull');
+				window.location.replace('tabTeam.php');
 			</script>";
-		header('location:tabTeam.php');
-		
+	
 	}	
 
 ?> 
