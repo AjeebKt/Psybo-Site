@@ -58,7 +58,7 @@
 	<link rel="stylesheet" href="css/css.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background-color: #ccc;">
+<body style="background-color: #095936;">
 	<form id="loginForm" method="POST">
 		<div class="login">
 			<div class="container">
@@ -70,7 +70,7 @@
 					</div>
 					<div>
 						<a class="lock"></a>
-						// <input id="Password" name="txtpassword" placeholder="Password" required type="password"><?php//echo $msg; ?>
+						<input id="Password" name="txtpassword" placeholder="Password" required type="password"><?php//echo $msg; ?>
 					</div>
 					<div class="remember-me">
 						<input id="checkBox" type="checkbox">

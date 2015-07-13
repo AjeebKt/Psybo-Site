@@ -36,50 +36,50 @@
 			<div id="tabTeam" class="tab-team">
 			<h3>EDIT TEAM MEMBERS</h3>
 				<div class="div-align-team">
-					<label>Name</label><br>
-					<input name="txtName" type="name" <?php foreach ($result_add[0] as $key => $value) {
+					<label for="txtName">Name</label><br>
+					<input id="txtName"> name="txtName" type="name" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'name')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
 				<div class="div-align-team">
-					<label>Designation</label><br>
-					<input name="txtDesignation" type="text" <?php foreach ($result_emp[0] as $key => $value) {
+					<label for="txtDesignation">Designation</label><br>
+					<input id="txtDesignation"> name="txtDesignation" type="text" <?php foreach ($result_emp[0] as $key => $value) {
 						if (is_string($key) and $key == 'designation')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
 				<div class="div-align-team">
-					<label>Facebook</label><br>
-					<input name="txtFacebook" type="text" <?php foreach ($result_add[0] as $key => $value) {
+					<label for="txtFacebook">Facebook</label><br>
+					<input id="txtFacebook"> name="txtFacebook" type="text" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'fb')
 							echo "value=\"".$value."\"";
 					} ?>><br>
 				</div>					
 				<div class="div-align-team">
-					<label>Twitter</label><br>
-					<input name="txtTwitter" type="text" <?php foreach ($result_add[0] as $key => $value) {
+					<label for="txtTwitter">Twitter</label><br>
+					<input id="txtTwitter"> name="txtTwitter" type="text" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'twiter')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
 				<div class="div-align-team">
-					<label>LinkedIn</label><br>
-					<input name="txtLinkedin" type="text" <?php foreach ($result_add[0] as $key => $value) {
+					<label for="txtLinkedin">LinkedIn</label><br>
+					<input id="txtLinkedin"> name="txtLinkedin" type="text" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'Linkedin')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
 				<div class="div-align-team">
-					<label>Google+</label><br>
-					<input name="txtGplus" type="text"<?php foreach ($result_add[0] as $key => $value) {
+					<label for="txtGplus">Google+</label><br>
+					<input id="txtGplus"> name="txtGplus" type="text"<?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'google_plus')
 							echo "value=\"".$value."\"";
 					} ?>  ><br>
 				</div>
 				<div class="div-align-team">
-					<label>Employee Image</label><br>
-					<input name="uploadTeam" type="file" ><br>
+					<label for="uploadTeam">Employee Image</label><br>
+					<input id="uploadTeam"> name="uploadTeam" type="file" ><br>
 				</div>
 				<button name="btnTeamSubmit" class="submit">Submit</button>
 				<button name="btnReset" class="reset">Reset</button>
