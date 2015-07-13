@@ -7,6 +7,7 @@
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
  ?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
