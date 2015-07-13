@@ -21,6 +21,6 @@
 	<ul class="side-links">
 		<li><a href="tabPortfolio.php">Portfolio</a></li>
 		<li><a href="tabTeam.php">Team</a></li>
-		<li><a href="skill.php">Skill Meter</a></li>
+		<li><a href="changePassword.php">Change Password</a></li>
 	</ul>
 </nav>

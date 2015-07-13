@@ -59,7 +59,7 @@
 	<link rel="stylesheet" href="css/css.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background-color: #ccc;">
+<body style="background-color: #095936;">
 	<form id="loginForm" method="POST">
 		<div class="login">
 			<div class="container">

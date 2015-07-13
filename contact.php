@@ -26,18 +26,35 @@
 				</nav>
 			</div>
 		</header>
-		<section class="contact">
+	</div>
+	<div class="cap-full">
+		<div class="container">
+			<div class="caption1">
+				<h3>Let us Hear from <br><b>"You"</b></h3>
+			</div>
+		</div>
+	</div>
+	<section class="contact">
+		<div class="container">
 			<div class="message">
-				<h3>CONTACT</h3>
-				<form id="message-form" class="msg-form" action="post">Name
-					<input type="text" class="name" required= "required">Email
-					<input type="email" class="mail" required= "required">Comments
-					<textarea name="comments" id="comments" cols="30" rows="10" class="msg" required= "required"></textarea>
+				<form id="message-form" class="msg-form" action="post">
+					<label for="msgName">Name</label>
+					<br>
+					<input id="msgName" type="text" class="name" required>
+					<label for="msgEmail">Email</label>
+					<br>
+					<input id="msgEmail" type="email" class="mail" required>
+					<label for="msgComment">Comments</label>
+					<br>
+					<textarea id="msgComments" name="comments" id="comments" cols="30" rows="5" class="msg" required></textarea>
 					<button class="button" id="buttonmail" name="buttonmail">SEND</button>
 				</form>
 			</div>
-		</section>
-	</div>
+			<div class="black-img">
+				<img src="img/blacky.png" alt="">
+			</div>
+		</div>
+	</section>
 	<?php include 'footer.php'; ?>
 </body>
 </html>

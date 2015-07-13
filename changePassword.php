@@ -23,7 +23,6 @@ $condb=new mysqli("localhost","root","asd","psybo-db");
 			<label for="confirmPwrd">Confirm Password</label>
 			<input id="confirmPwrd" name="confirmPwrd" type="password">
 			<button name="changeSubmit">Submit</button>
-			<button>Reset</button>
 		</form>
 	</div>
 </body>

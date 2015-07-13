@@ -22,32 +22,32 @@
 			<div id="tabTeam" class="tab-team">
 			<h3>ADD TEAM MEMBERS</h3>
 				<div class="div-align-team">
-					<label>Name</label><br>
-					<input name="txtName" type="name" ><br>
+					<label for="txtName">Name</label><br>
+					<input id="txtName" name="txtName" type="name" required><br>
 				</div>
 				<div class="div-align-team">
-					<label>Designation</label><br>
-					<input name="txtDesignation" type="text" ><br>
+					<label for="txtDesignation">Designation</label><br>
+					<input id="txtDesignation" name="txtDesignation" type="text" required><br>
 				</div>
 				<div class="div-align-team">
-					<label>Facebook</label><br>
-					<input name="txtFacebook" type="text" optional><br>
+					<label for="txtFacebook">Facebook</label><br>
+					<input id="txtFacebook" name="txtFacebook" type="text" optional><br>
 				</div>					
 				<div class="div-align-team">
-					<label>Twitter</label><br>
-					<input name="txtTwitter" type="text" optional><br>
+					<label for="txtTwitter">Twitter</label><br>
+					<input id="txtTwitter" name="txtTwitter" type="text" optional><br>
 				</div>
 				<div class="div-align-team">
-					<label>LinkedIn</label><br>
-					<input name="txtLinkedin" type="text" optional><br>
+					<label for="txtLinkedin">LinkedIn</label><br>
+					<input id="txtLinkedin" name="txtLinkedin" type="text" optional><br>
 				</div>
 				<div class="div-align-team">
-					<label>Google+</label><br>
-					<input name="txtGplus" type="text" optional><br>
+					<label for="txtGplus">Google+</label><br>
+					<input id="txtGplus" name="txtGplus" type="text" optional><br>
 				</div>
 				<div class="div-align-team">
-					<label>Employee Image  (Image Must be in W:260px X H:320px)</label><br>
-					<input name="uploadTeam" type="file" required= "required"><br>
+					<label for="uploadTeam">Employee Image  (Image Must be in W:260px X H:320px)</label><br>
+					<input id="uploadTeam" name="uploadTeam" type="file" required><br>
 					<!-- <input name="uploadTeam" type="file" > -->
 				</div>
 				<button name="btnTeamSubmit" class="submit">Submit</button>
@@ -218,5 +218,7 @@
 			echo "<script type='text/javascript'>
 					alert('Please enter name and designation!');
 				</script>";	
-	}	}	
+		}
+	}		
+
 ?>
