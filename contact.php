@@ -46,7 +46,7 @@
 					<input id="msgEmail" type="email" class="mail" required>
 					<label for="msgComment">Comments</label>
 					<br>
-					<textarea id="msgComments" name="comments" id="comments" cols="30" rows="5" class="msg" required></textarea>
+					<textarea id="msgComments" name="comments" cols="30" rows="5" class="msg" required></textarea>
 					<button class="button" id="buttonmail" name="buttonmail">SEND</button>
 				</form>
 			</div>
