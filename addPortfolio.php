@@ -28,7 +28,7 @@
 				</div>
 				<div class="div-align">
 					<label>Link</label><br>
-					<input name="txtLink" type="text" required>
+					<input name="txtLink" type="text" >
 				</div>
 				<div class="div-align left">
 					<label>Description</label><br>
@@ -50,6 +50,10 @@
 	$title="";
 	$title=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
 	$title=str_replace("%20", " ", $title);
+
+	$Description="";
+	$Description=filter_var($_POST['portfolioDescription'],FILTER_SANITIZE_ENCODED);
+	$Description=str_replace("%20", " ", $Description);
 	if (isset($_POST['btnPortfolioSubmit'])) 
 	{
 		
@@ -92,9 +96,11 @@
 					array_push($fields_ptf, "link");
 				}
 			}
-			if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
+			// if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
+			if (!empty($Description))
 			{
-				array_push($values_ptf, $_POST['portfolioDescription']);
+				// array_push($values_ptf, $_POST['portfolioDescription']);
+				array_push($values_ptf, $Description);
 				array_push($fields_ptf, "about");
 			}
 			
