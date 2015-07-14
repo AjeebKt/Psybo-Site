@@ -70,8 +70,8 @@
 		$name=strip_tags($_POST['txtName']);
 		// $name=preg_replace('/[^A-Za-z0-9\s.', '', $name);
 		// $designation=
-		// $designation=strip_tags($_POST['txtDesignation']);
 		// preg_replace('/[^A-Za-z0-9\s.', '', $designation);
+		$designation=strip_tags($_POST['txtDesignation']);
 		$designation=filter_var($_POST['txtDesignation'],FILTER_SANITIZE_ENCODED);
 		// $designation=str_replace("%20", " ", $designation);
 		$rand=rand();
@@ -219,7 +219,7 @@
 	
 					// header("location:tabTeam.php");
 					echo "<script type='text/javascript'>
-							alert('Update succesfull');
+							alert('Adding succesfull');
 							window.location.replace('tabTeam.php');
 						  </script>";
 				}

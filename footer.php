@@ -9,7 +9,7 @@
 					<a class="twitter" href="https://twitter.com/psybotech"></a>
 				</li>
 				<li>
-					<a class="linkedin" href="#"></a>
+					<a class="linkedin" href="https://www.linkedin.php"></a>
 				</li>
 				<li>
 					<a class="gplus" href="https://plus.google.com/u/0/"></a>

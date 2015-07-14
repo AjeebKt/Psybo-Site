@@ -71,7 +71,7 @@
 					</div>
 					<div>
 						<a class="lock"></a>
-						<input id="Password" name="txtpassword" placeholder="Password" required type="password"><?php//echo $msg; ?>
+						<input id="Password" name="txtpassword" placeholder="Password" required type="password">
 					</div>
 					<div class="remember-me">
 						<input id="checkBox" type="checkbox">
