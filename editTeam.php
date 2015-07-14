@@ -17,7 +17,6 @@
 		$add_id=$value;
 	}
 	$result_add=$objdb->select("address", array(),array("id",$add_id));
-	// var_dump($result_add);
  ?>
 
  <!DOCTYPE html>

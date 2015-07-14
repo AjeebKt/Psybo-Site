@@ -184,13 +184,27 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // );
 // echo $url;
 
+///////////////////////////URL STRONG VALIDATION///////////////////// 
+			// $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+			//             if(preg_match($preg, 'http://www.google.net') == False)
+			//             {
+			//              var_dump('URL is not valid.');
+			//             }
+			//             else
+			//             	echo "url is valid";
+// ///////////////////////////////////
+// // $str="dummy text dummy text .&^<>dummy text dummy text dummy text dummy text ";
+// // if(preg_match(  '/[^A-Za-z0-9\d\.\ ]/',$str))
+// // 	echo "is correct";
+// // else
+// 	echo "not string";
+$yourString = "blahbhhl kjjkha.,h";
+if (preg_match('/^[A-Za-z0-9., _-]*$/', $yourString)) {
+    echo "your string is good";
+}
+else
+	echo "string is not good";
 
-$preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
-            if(preg_match($preg, 'http://www.google.net') == False)
-            {
-             var_dump('URL is not valid.');
-            }
-            else
-            	echo "url is valid";
+
 ?>
 

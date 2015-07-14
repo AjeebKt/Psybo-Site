@@ -9,7 +9,7 @@
 	$where=array("id",$ptf_id);
 	// var_dump($where);
 	$result=$objdb->select("portfolio",$fields,$where);
-	// error_reporting(E_ALL);
+	error_reporting(E_ALL);
 	// ini_set('display_errors', 1);
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<?php include 'dash.php';?>
+	<?php //include 'dash.php';?>
 	<section>
 	<div class="edit-form">
 	</div>
@@ -79,52 +79,106 @@
 	}
 	$files_id=(int)$files_id;
 
-	$title="";
-	$title=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
-	$title=str_replace("%20", " ", $title);
 	if (isset($_POST["btnPortfolioSubmit"])) 
 	{
+		$title=$_POST['txtTitle'];
+		// $title=filter_var($title,FILTER_SANITIZE_STRING);
+		// $title=str_replace("%20", " ", $title);
+		// $title=strip_tags($title);
+		$description=$_POST['portfolioDescription'];
+		// $description=filter_var($description,FILTER_SANITIZE_STRING);
+		// $description=strip_tags($description);
+
 		$rand=rand();
+
 		$target_dir=getcwd()."/upload-image/";
-		var_dump("Target dir :  ".$target_dir);
-		$target_file=$target_dir ;
-		var_dump("Target file  : ".$target_file);
+		$target_dir=$target_dir ;
 		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
 		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
-		var_dump("image file type  :   ".$file_type);
 		$fields_ptf=array();
 		$values_ptf=array();
-		$values_ptf_file=array($file_name,$file_type);
-		if( isset($title))
-		{
-			$values_ptf=array($title);
-			$fields_ptf=array("name");
-		}
 
-		if (filter_var($_POST['txtLink'] , FILTER_VALIDATE_URL)) 
+		$fields_ptf_Add=array();
+		$values_ptf_Add=array();
+
+		$values_ptf_file=array($file_name,$file_type);
+
+
+		if( !empty($title) and (strpos($title, '%') == FALSE) )
 		{
-			filter_var($_POST['txtLink'] , FILTER_SANITIZE_URL );
-			array_push($values_ptf, $_POST['txtLink'] );
-			array_push($fields_ptf, "link");
+			if (preg_match('/^[A-Za-z0-9., _-]*$/', $title))
+			{
+				$values_ptf=array($title);
+				$fields_ptf=array("name");
+			}
+			else
+			{
+				echo "<script type='text/javascript'>
+							alert(' please enter Correct title!');
+						</script>";
+				exit();
+			}
+
+			if (!empty($description)) 
+			{
+				// if (strpos($description, '%') == FALSE) 
+				if (preg_match('/^[A-Za-z0-9., _-]*$/', $description))
+				{
+					array_push($values_ptf, $description);
+					array_push($fields_ptf, "about");
+				}
+				else
+				{
+					echo "<script type='text/javascript'>
+							alert(' please enter Correct description!');
+						</script>";
+					exit();
+				}
+			}
+
+			if (!empty($_POST['txtLink']) ) 
+			{
+				$preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+				if (preg_match($preg, $_POST['txtLink']) != FALSE ) 
+				{
+					$valid_url=$_POST['txtLink'];
+					if (filter_var($valid_url , FILTER_VALIDATE_URL)) 
+					{
+						array_push($values_ptf_add, $_POST['txtLink'] );
+						array_push($fields_ptf_Add, "link");
+					}
+					else
+					{
+						$link = "https://".$valid_url;
+						array_push($values_ptf_Add, $_POST['txtLink'] );
+						array_push($fields_ptf_Add, "link");
+					}
+				}
+			}
+			else
+			{
+				echo "<script type='text/javascript'>
+						alert('The link has not valid .Please Enter the correct link.!');
+					</script>";	
+				exit();
+			}
+			// if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
+			// {
+			// 	array_push($values_ptf, $_POST['portfolioDescription']);
+			// array_push($fields_ptf, "about");
 		}
 		else
 		{
-			$link="https://".$_POST['txtLink'];
-			if(filter_var($link,FILTER_VALIDATE_URL))
-			{
-				filter_var($link , FILTER_SANITIZE_URL );
-				array_push($values_ptf, $link);
-				array_push($fields_ptf, "link");
-			}
+			echo "<script type='text/javascript'>
+						alert('Update failed !');
+					</script>";
+			exit();
 		}
-		if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
-		{
-			array_push($values_ptf, $_POST['portfolioDescription']);
-			array_push($fields_ptf, "about");
-		}
-		//upload image
+
+
+		// //upload image
 		if (!empty($file_name) )
-			{
+		{
 			// echo "string";
 			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
 			if ($check !== FALSE) 
@@ -159,7 +213,7 @@
 					</script>";
 			else 
 			{
-				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file .$rand.".".$file_type ); 
+				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
 				if ($upload == TRUE) 
 				{
 					echo "success uploading";
@@ -174,16 +228,16 @@
 					</script>";
 			}
 		}
-		// var_dump($values_ptf);
+		// echo $values_ptf;
 		// var_dump($fields_ptf);	
+		// var_dump($values_ptf);
 		
-		// var_dump($fields_ptf);
 		$objdb->update("portfolio" , $fields_ptf,$values_ptf,array("id" , $ptf_id) );
 		if ($objdb == TRUE) 
 		{
 			echo "<script type='text/javascript'>
 				alert('Update succesfull');
-				window.location.replace('tabTeam.php');
+				window.location.replace('tabPortfolio.php');
 			</script>";	
 			// header("location:tabPortfolio.php");
 		}

@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<?php //include 'dash.php'; ?>
+	<?php include 'dash.php'; ?>
 	<section>
 		<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
 			<div id="tabPortfolio" class="tab-portfolio">
@@ -55,46 +55,61 @@
 	if (isset($_POST['btnPortfolioSubmit']) ) 
 	{	
 		$title=$_POST['txtTitle'];
-		var_dump($title);
-		$title=filter_var($title,FILTER_SANITIZE_ENCODED);
+		// $title=filter_var($title,FILTER_SANITIZE_ENCODED);
 		// $title=str_replace("%20", " ", $title);
-		$title=strip_tags($title);
-		$Description=filter_var($_POST['portfolioDescription'],FILTER_SANITIZE_ENCODED);
-		$designation=strip_tags($Description)	;
-		// $Description=str_replace("%20", " ", $Description);
+		// $title=strip_tags($title);
+
+		$description=$_POST['portfolioDescription'];
+		// $description=filter_var($_POST['portfolioDescription'],FILTER_SANITIZE_ENCODED);
+		// $discription=strip_tags($description)	;
+		// $description=str_replace("%20", " ", $description);
 		
 
 		$rand=rand();
 
 		$target_dir=getcwd()."/upload-image/";
 		// var_dump("Target dir :  ".$target_dir);
-		$target_file=$target_dir ;
-		// var_dump("Target file  : ".$target_file);
 		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
 		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
 		// var_dump("image file type  :   ".$file_type);
 
+		$fields_ptf=array();
+		$values_ptf=array();
+		$values_ptf_file=array($file_name,$file_type);
 
-		if ( !empty($title) and (strpos($title,'%') == FALSE) and $_FILES['uploadPortfolio']['tmp_name'] ) 
+		if ( !empty($title) and (strpos($title,'%') == FALSE) and isset($_FILES['uploadPortfolio']['tmp_name']) ) 
 		{
-			if (!empty($Description)) 
+			if (preg_match('/^[A-Za-z0-9., _-]*$/', $title))
 			{
-				if(strpos($Description,'%') !== FALSE)# or strpos($title,'%') !== FALSE)
+				$values_ptf=array($title);
+				$fields_ptf=array("name");	
+			}
+			else
+			{
+				echo "<script type='text/javascript'>
+							alert(' please enter Correct title!');
+						</script>";
+				exit();
+			}
+			
+			if (!empty($description)) 
+			{
+				// if(strpos($description,'%') == FALSE)# or strpos($title,'%') !== FALSE)
+				if (preg_match('/^[A-Za-z0-9., _-]*$/', $description))
+				{
+					array_push($values_ptf, $description);
+					array_push($fields_ptf, "about");
+				}
+				else
 				{
 					echo "<script type='text/javascript'>
-							alert(' please enter Correct information!');
+							alert(' please enter Correct description!');
 						</script>";
 					exit();
 				}
 			}
-			$fields_ptf=array();
-			$values_ptf=array();
-			$values_ptf_file=array($file_name,$file_type);
-			if( !empty($title) )
-			{
-				$values_ptf=array($title);
-				$fields_ptf=array("name");
-			}
+			
+		
 			if (!empty($_POST['txtLink'])) 
 			{
 
@@ -137,12 +152,13 @@
 				}
 			}	
 			// if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
-			if (!empty($Description))
-			{
-				// array_push($values_ptf, $_POST['portfolioDescription']);
-				array_push($values_ptf, $Description);
-				array_push($fields_ptf, "about");
-			}
+			// if (!empty($description))
+			// {
+			// 	// array_push($values_ptf, $_POST['portfolioDescription']);
+			// 	array_push($values_ptf, $description);
+			// 	array_push($fields_ptf, "about");
+			// }
+
 			//uplaod file 
 			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
 			if ($check !== FALSE) 
@@ -179,7 +195,7 @@
 			}
 			else 
 			{
-				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file .$rand.".".$file_type ); 
+				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
 				if ($upload == TRUE) 
 				{
 					// var_dump($values_ptf);
