@@ -5,7 +5,18 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<!-- <link rel="stylesheet" href="css/css.css"> -->
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="bx/jquery.bxslider.min.js"></script>
+	<link href="bx/jquery.bxslider.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/theme.css">
+	<script>
+		$('.bxslider').bxSlider({
+		  nextSelector: '#R-arrow',
+		  prevSelector: '#L-arrow',
+		  // nextText: 'Onward →',
+		  // prevText: '← Go back'
+		});
+	</script>
 	<title>PSYBO Home</title>
 </head>
 <body>
@@ -28,17 +39,21 @@
 				</nav>
 			</div>
 		</header>
-	</div>
 <!-- Slides -->
-	<div class="container">
-		<div class="slider">
+		<ul class="bxslider">
+			<li><img src="img/01.jpg" alt=""></li>
+			<li><img src="img/02.png" alt=""></li>
+			<li><img src="img/03.png" alt=""></li>
+		</ul>
+		<!-- <div class="slider">
 			<h2>____HELLO____</h2>
 			<h1>WELCOME TO <b>PSYBO</b> TECHNOLOGIES</h1>
 			<h2>THE FINAL SOFTWARE DESTINATION</h2>
-		</div>
-		<div class="arrow-right"><a href="#"></a></div>
-		<div class="arrow-left"><a href="#"></a></div>
+		</div> -->
+		<div id="R-arrow" class="arrow-right"><a href="#"></a></div>
+		<div id="L-arrow" class="arrow-left"><a href="#"></a></div>
 	</div>
 	<?php include 'footer.php'; ?>
+
 </body>
 </html>

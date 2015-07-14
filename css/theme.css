@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 @font-face
 {
 	font-family: code-light;
@@ -5,7 +6,7 @@
 }
 @font-face
 {
-	font-family: Sertig;
+	font-family: Lato;
 	src: url('../fonts/Lato-Regular.ttf');
 }
 /* Chrome, Safari, Opera */
@@ -179,6 +180,7 @@ header
 .slider
 {
 	width: 100%;
+	float: left;
 	text-align: center;
 	position: relative;
   -webkit-animation: top-move 5s; /* Chrome, Safari, Opera */
