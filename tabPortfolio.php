@@ -94,7 +94,27 @@
 </html>
 <?php if (isset($_GET['delete_id'])) 
 {
+	$ptf_id=$_GET['delete_id'];
+	var_dump($ptf_id);
+	$result=$objdb->select("portfolio",array("files_id"),array("id",$ptf_id));
+	echo "string";
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == "files_id")  
+		{
+			$files_id=$value;
+		}
+	}
+	$result=$objdb->select("files",array("file_name"),array("id",$files_id));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key== "file_name") 
+		{
+			$file_name=$value;
+		}
+	}
 	$objdb->delete_portfolio($_GET['delete_id']);
+	unlink(getcwd().$actdir.$file_name);
 	header("location:tabPortfolio.php");
 	
 }

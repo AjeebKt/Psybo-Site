@@ -198,12 +198,19 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // // 	echo "is correct";
 // // else
 // 	echo "not string";
-$yourString = "blahbhhl kjjkha.,h";
-if (preg_match('/^[A-Za-z0-9., _-]*$/', $yourString)) {
-    echo "your string is good";
-}
-else
-	echo "string is not good";
+
+			/////////////////////STRING VALIDATION/////////
+			// $yourString = "blahbhhl kjjkha.,h";
+			// if (preg_match('/^[A-Za-z0-9., _-]*$/', $yourString)) {
+			//     echo "your string is good";
+			// }
+			// else
+			// 	echo "string is not good";
+
+/////////////////////////////////////////////////
+
+$dir=getcwd()."/upload-image/";
+unlink($dir."aaaaa.jpg");
 
 
 ?>

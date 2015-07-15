@@ -1,20 +1,20 @@
 
 
 <?php 
+	// error_reporting(0);
 	include 'Database.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$emp_id=(int)$_GET['editid'];
 	$result_emp=$objdb->select("employee",array(),array("id",$emp_id));
-	// var_dump($result_emp);
 	foreach ($result_emp[0] as $key => $value) 
 	{
 		if (is_string($key) and $key == 'files_id') 
-		$file_id=$value;
+		$file_id=(int)$value;
 	}
 	foreach ($result_emp[0] as $key => $value) 
 	{
 		if (is_string($key) and $key == 'address_id') 
-		$add_id=$value;
+		$add_id=(int)$value;
 	}
 	$result_add=$objdb->select("address", array(),array("id",$add_id));
  ?>
@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="css/style.css">
  </head>
  <body>
-	<?php include 'dash.php';?>
+	<?php //include 'dash.php';?>
  	<section>
 		<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
 			<div id="tabTeam" class="tab-team">
@@ -65,7 +65,7 @@
 				<div class="div-align-team">
 					<label for="txtLinkedin">LinkedIn</label><br>
 					<input id="txtLinkedin" name="txtLinkedin" <?php foreach ($result_add[0] as $key => $value) {
-						if (is_string($key) and $key == 'Linkedin')
+						if (is_string($key) and $key == 'linkedin')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
@@ -89,174 +89,229 @@
 	</section>
 </body>
  </html>
- <?php 	
+ <?php
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
 		//upload file details
-		$file_name=basename($_FILES["uploadTeam"]["name"]);
-		$file_type=pathinfo(basename($_FILES["uploadTeam"]["name"]),PATHINFO_EXTENSION);
 		$rand=rand();
-		$target_dir=getcwd()."/upload-image/";
-		$target_file=$target_dir ;
 		$file_name=basename($_FILES["uploadTeam"]["name"]);
 		$file_type=pathinfo(basename($_FILES["uploadTeam"]["name"]),PATHINFO_EXTENSION);
+		$target_dir=getcwd()."/upload-image/";
 
 		$name=$_POST['txtName'];
-		$name=strip_tags($_POST['txtName']);
-		$name=preg_replace('/[^A-Za-z0-9\s.]/', '', $name);
-		// echo $name;
-		$designation=strip_tags($_POST['txtDesignation']);
-		preg_replace('/[^A-Za-z0-9\s.]/', '', $designation);
-		
-		if( !empty($name) )
-		{
-			$values_add=array($name);
-			$fields_add=array("name");
-			// var_dump($values_add);
-			// var_dump($fields_add);
-		}
 
-		if (filter_var($_POST['txtLinkedin'] , FILTER_VALIDATE_URL)) 
-		{
-			filter_var($_POST['txtLinkedin'] , FILTER_SANITIZE_URL );
-			array_push($values_add, $_POST['txtLinkedin'] );
-			array_push($fields_add, "linkedin");
-		}
-		
-		else
-		{
-			$linkedin="https://".$_POST['txtLinkedin'];
-			if(filter_var($linkedin,FILTER_VALIDATE_URL))
-			{
-				filter_var($linkedin , FILTER_SANITIZE_URL );
-				array_push($values_add, $linkedin);
-				array_push($fields_add, "linkedin");
-			}
-		}
+		$designation=$_POST['txtDesignation'];
+		// $designation=strip_tags($_POST['txtDesignation']);
+		// preg_replace('/[^A-Za-z0-9\s.]/', '', $designation);
+		$values_emp_add=array();
+		$fields_emp_add=array();
 
-		if( filter_var($_POST['txtFacebook'] , FILTER_VALIDATE_URL) ) 
+		if ( !empty($name) and !empty($designation) )
 		{
-			filter_var($_POST['txtFacebook'] , FILTER_SANITIZE_URL );
-			array_push($values_add, $_POST['txtFacebook']);
-			array_push($fields_add, "fb");
-		}
-		else
-		{
-			$facebook="https://".$_POST['txtFacebook'];
-			if (filter_var($facebook,FILTER_VALIDATE_URL)) 
-			{
-				filter_var($facebook , FILTER_SANITIZE_URL );
-				array_push($values_add, $facebook);
-				array_push($fields_add, "fb");
+      if (preg_match('/^[A-Za-z0-9., _-]*$/', $name))
+      {
+				$values_emp_add=array($name);
+				$fields_emp_add=array("name");
+      }
+      else
+      {
+        echo "<script type='text/javascript'>
+                alert(' please enter Correct name!');
+            </script>";
+        exit();
+      }
 
-			}
-		}
+      if (preg_match('/^[A-Za-z0-9., _-]*$/', $designation))
+      {
+          $values_emp=array($designation);
+          $fields_emp=array("designation");
+      }
+      else
+      {
+      	echo "<script type='text/javascript'>
+        	      alert(' please enter Correct Designation!');
+             </script>";
+        exit(); 
+      }
 
-		if( filter_var($_POST['txtTwitter'] , FILTER_VALIDATE_URL) ) 
-		{
-			filter_var($_POST['txtTwitter'] , FILTER_SANITIZE_URL );
-			array_push($values_add, $_POST['txtTwitter']);
-			array_push($fields_add, "twiter");
-		}
-		else
-		{
-			$twitter="https://".$_POST['txtTwitter'];
-			if (filter_var($twitter,FILTER_VALIDATE_URL)) 
+			if (!empty($_POST['txtLinkedin']) ) 
+    	{
+	      $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+	      if (preg_match($preg, $_POST['txtLinkedin']) != FALSE ) 
+	      {
+	        $valid_url=$_POST['txtLinkedin'];
+	        if (filter_var($valid_url,FILTER_VALIDATE_URL)) 
+	        {
+	            array_push($values_emp_add, $_POST['txtLinkedin'] );
+	            array_push($fields_emp_add, "linkedin");
+	        }
+	        else
+	        {
+	            $link="https://".$valid_url;
+	            array_push($values_emp_add, $link );
+	            array_push($fields_emp_add, "linkedin");
+	        }
+	      }
+	      else
+	      {
+	        echo "<script type='text/javascript'>
+	            alert('The linkedin link has not valid .Please Enter the correct link.!');
+	        </script>"; 
+	        exit();
+	      }
+	    }
+		  if (!empty($_POST['txtFacebook']) ) 
+		  {
+		    $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+		    if (preg_match($preg, $_POST['txtFacebook']) != FALSE ) 
+		    {
+		      $valid_url=$_POST['txtFacebook'];
+		      if (filter_var($valid_url,FILTER_VALIDATE_URL)) 
+		      {
+		          array_push($values_emp_add, $_POST['txtFacebook'] );
+		          array_push($fields_emp_add, "fb");
+		      }
+		      else
+		      {
+		          $link="https://".$valid_url;
+		          array_push($values_emp_add, $link );
+		          array_push($fields_emp_add, "fb");
+		      }
+		    }
+		    else
+		    {
+		      echo "<script type='text/javascript'>
+		        	  alert('The Facebook link has not valid .Please Enter the correct link.!');
+		      		</script>"; 
+		      exit();
+		    }
+		  }
+			if (!empty($_POST['txtTwitter']) ) 
 			{
-				filter_var($twitter , FILTER_SANITIZE_URL );
-				array_push($values_add, $twitter);
-				array_push($fields_add, "twiter");
+			  $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+			  if (preg_match($preg, $_POST['txtTwitter']) != FALSE ) 
+			  {
+				 	$valid_url=$_POST['txtTwitter'];
+			    if (filter_var($valid_url,FILTER_VALIDATE_URL)) 
+			    {
+			        array_push($values_emp_add, $_POST['txtTwitter'] );
+			        array_push($fields_emp_add, "twiter");
+			    }
+			    else
+			    {
+			        $link="https://".$valid_url;
+			        array_push($values_emp_add, $link );
+			        array_push($fields_emp_add, "twiter");
+			    }
+			  }
+			  else
+			  {
+			  	echo "<script type='text/javascript'>
+			      	  alert('The twiter link has not valid .Please Enter the correct link.!');
+			   		 	</script>"; 
+			    exit();
+			  }
 			}
-		}
+			if (!empty($_POST['txtGplus']) ) 
+			{
+			  $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+			  if (preg_match($preg, $_POST['txtGplus']) != FALSE ) 
+			  {
+			    $valid_url=$_POST['txtGplus'];
+			    if (filter_var($valid_url,FILTER_VALIDATE_URL)) 
+			    {
+			      array_push($values_emp_add, $_POST['txtGplus'] );
+			      array_push($fields_emp_add, "google_plus");
+			    }
+			    else
+			    {
+			      $link="https://".$valid_url;
+			      array_push($values_emp_add, $link );
+			      array_push($fields_emp_add, "google_plus");
+			    }
+			  }
+			  else
+			  {
+			    echo "<script type='text/javascript'>
+			      	  alert('The google account has not valid .Please Enter the correct link.!');
+			  		  </script>"; 
+			    exit();
+			  }
+			}
 
-		if( filter_var($_POST['txtGplus'] , FILTER_VALIDATE_URL) ) 
-		{
-			filter_var($_POST['txtGplus'] , FILTER_SANITIZE_URL );
-			array_push($values_add, $_POST['txtGplus']);
-			array_push($fields_add, "google_plus");
-		}
-		else
-		{
-			$gplus="https://".$_POST['txtGplus'];
-			if (filter_var($gplus,FILTER_VALIDATE_URL)) 
+			if (!empty($file_name)) 
 			{
-				filter_var($_POST['txtGplus'] , FILTER_SANITIZE_URL );
-				array_push($values_add, $gplus);
-				array_push($fields_add, "google_plus");
-			}
-		}
-
-		if (!empty($file_name)) 
-		{
-			$check=getimagesize($_FILES["uploadTeam"]["tmp_name"]);
-			// echo curl_errno($check);
-			if ($check == FALSE) 
-			{
-				echo "<script type='text/javascript'>
-						alert('Please select a image!');
-					</script>";	
-			}
-			if ($check !== FALSE) 
-			{
-				// echo "File is an image :" .$check["mime"].".";
-				$uploadok=1;
-			}
-			// else
-			// {
-			// 	echo "File is not an image";
-			// }
-			if ($_FILES["uploadTeam"]["size"] > 30000000)
-			{
-				"<script type='text/javascript'>
-						alert('File to be large, Please select another file !');
-					</script>";
-				$uploadok=0;
-			}
-			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
-			{
-				"<script type='text/javascript'>
-						alert('Please select jpg or png or jpeg files!');
-					</script>";
-				$uploadok=0;
-			}
-			if ($uploadok == 0) 
-			{
-				"<script type='text/javascript'>
-						alert('Canot upload photo at this time .please try again later !');
-					</script>";
-					exit();
-			}
-			else 
-			{
-				$upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_file .$rand.".".$file_type ); 
-				if ($upload == TRUE ) 
+				$check=getimagesize($_FILES["uploadTeam"]["tmp_name"]);
+				// echo curl_errno($check);
+				if ($check == FALSE) 
 				{
-					$fields=array("type","file_name");
-					$values=array($file_type,$rand.".".$file_type);
-					$where=array("id" , $file_id);
-					// var_dump($values);
-					$objdb->update("files",$fields,$values,$where );
-					
-				}
-				else
 					echo "<script type='text/javascript'>
-							alert('Error in upload image.Please try again later');
+							alert('Please select a image!');
+						</script>";	
+				}
+				if ($check !== FALSE) 
+				{
+					// echo "File is an image :" .$check["mime"].".";
+					$uploadok=1;
+				}
+				// else
+				// {
+				// 	echo "File is not an image";
+				// }
+				if ($_FILES["uploadTeam"]["size"] > 30000000)
+				{
+					"<script type='text/javascript'>
+							alert('File to be large, Please select another file !');
 						</script>";
+					$uploadok=0;
+				}
+				if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
+				{
+					"<script type='text/javascript'>
+							alert('Please select jpg or png or jpeg files!');
+						</script>";
+					$uploadok=0;
+				}
+				if ($uploadok == 0) 
+				{
+					"<script type='text/javascript'>
+							alert('Canot upload photo at this time .please try again later !');
+						</script>";
+						exit();
+				}
+				else 
+				{
+					chmod($_FILES["uploadTeam"]["tmp_name"], 'a+rwxt');
+					$upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
+					if ($upload == TRUE ) 
+					{
+						$fields=array("type","file_name");
+						$values=array($file_type,$rand.".".$file_type);
+						$where=array("id" , $file_id);
+						// var_dump($values);
+						$objdb->update("files",$fields,$values,$where );
+						
+					}
+					else
+					{
+						echo "<script type='text/javascript'>
+								alert('Error in upload image.Please try again later');
+							</script>";
+							exit();
+					}
+				}
 			}
-		}
-	 	if (!empty($designation))
-	 	{
-			$objdb->update("address",$fields_add,$values_add,array("id",$add_id));	
-			$objdb->update("employee",array("designation"),array($designation),array("id",$emp_id));
-	 	}
-
+		$objdb->update("address",$fields_emp_add,$values_emp_add,array("id",$add_id));	
+		$objdb->update("employee",array("designation"),$values_emp,array("id",$emp_id));
+		if ($objdb == TRUE) 
+		{
 		echo "<script type='text/javascript'>
-				alert('Update succesfull');
-				window.location.replace('tabTeam.php');
+					alert('Update succesfull');
+					window.location.replace('tabTeam.php');
 			</script>";
-	
-	}	
-
+		}
+	}
+}	
 ?> 
  
 

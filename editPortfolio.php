@@ -43,7 +43,7 @@
 					if (is_string($key) and $key == 'link') {
 							echo "value=\"".$value."\"";
 						}	
-					}?> required>
+					}?> >
 				</div>
 				<div class="div-align left">
 					<label for="portfolioDescription">Description</label><br>
@@ -92,7 +92,6 @@
 		$rand=rand();
 
 		$target_dir=getcwd()."/upload-image/";
-		$target_dir=$target_dir ;
 		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
 		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
 		$fields_ptf=array();

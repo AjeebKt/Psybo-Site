@@ -293,7 +293,7 @@ class Database
 				$update.="'".$where[1]."'";
 			else
 				$update.=$where[1];
-			// var_dump($update);
+			var_dump($update);
 			$type_value=str_repeat("s",count($fields));
 			$stmt=$this->condb->prepare($update);
 			if($stmt===FALSE)

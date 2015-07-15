@@ -102,13 +102,32 @@
 
 if (isset($_GET['deleteid'])) 
 {
+	$ptf_id=$_GET['deleteid'];
+	$result=$objdb->select("employee",array("files_id"),array("id",$ptf_id));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == "files_id")  
+		{
+			$files_id=$value;
+		}
+	}
+	$result=$objdb->select("files",array("file_name"),array("id",$files_id));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key== "file_name") 
+		{
+			$file_name=$value;
+		}
+	}
+	echo $file_name;
+ 	unlink(getcwd().$actdir.$file_name);
 	$objdb->delete_team($_GET['deleteid']);
 	header("location:tabTeam.php");
-	// if ($objdb == true) 
-	// {
-	// 	echo "<script type='text/javascript'>alert('Delete succefully!');</script>";	
+	if ($objdb == true) 
+	{
+		echo "<script type='text/javascript'>alert('Delete succefully!');</script>";	
 		
-	// }
+	}
 }
 
 ?>

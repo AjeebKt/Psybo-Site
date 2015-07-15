@@ -77,7 +77,7 @@
 		$values_ptf=array();
 		$values_ptf_file=array($file_name,$file_type);
 
-		if ( !empty($title) and (strpos($title,'%') == FALSE) and isset($_FILES['uploadPortfolio']['tmp_name']) ) 
+		if ( !empty($title) and isset($_FILES['uploadPortfolio']['tmp_name']) ) 
 		{
 			if (preg_match('/^[A-Za-z0-9., _-]*$/', $title))
 			{
