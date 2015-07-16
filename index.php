@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<!-- <link rel="stylesheet" href="css/css.css"> -->
+    <script src="js/js-image-slider.js" type="text/javascript"></script>
+    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/theme.css">
 	<title>PSYBO Home</title>
 </head>
@@ -28,17 +30,16 @@
 				</nav>
 			</div>
 		</header>
-	</div>
 <!-- Slides -->
-	<div class="container">
-		<div class="slider">
-			<h2>____HELLO____</h2>
-			<h1>WELCOME TO <b>PSYBO</b> TECHNOLOGIES</h1>
-			<h2>THE FINAL SOFTWARE DESTINATION</h2>
-		</div>
-		<div class="arrow-right"><a href="#"></a></div>
-		<div class="arrow-left"><a href="#"></a></div>
+		<div id="sliderFrame">
+	        <div id="slider" style="background-size: 100% auto;">
+	            <img src="img/bg.png" alt="Welcome to Menucool.com" />
+	            <img src="img/bg1.jpg" alt="First slide" />
+	            <img src="img/bg2.jpg" alt="Second slide" />
+	        </div>
+   		</div>
 	</div>
 	<?php include 'footer.php'; ?>
+
 </body>
 </html>
