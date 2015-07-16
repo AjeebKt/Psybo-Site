@@ -61,7 +61,7 @@
 							echo $value;
 						}
 					} ?></h4>
-					<h4><?php foreach ($result as $key => $value) {
+					<h4 class="dev-small"><?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="designation") {
 							echo $value;
 						}

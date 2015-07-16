@@ -1,14 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 @font-face
 {
-	font-family: code-light;
-	src: url('../fonts/CODE-Light.otf');
+	font-family: Lato-Light;
+	src: url('../fonts/Lato-Light.ttf');
 }
 @font-face
 {
 	font-family: Lato;
 	src: url('../fonts/Lato-Regular.ttf');
 }
+
 /* Chrome, Safari, Opera */
 
 @-webkit-keyframes top-move
@@ -35,7 +36,7 @@ h1
 {
 	text-align: center;
 	/*text-shadow: 1px 2px 4px #000;*/
-	font-family: code-light;
+	font-family: Lato-light;
 	color: #008a67;
 	font-weight: normal;
 	font-size: 42pt;
@@ -46,7 +47,7 @@ h1
 }
 h2
 {
-	font-family: code-light;
+	font-family: Lato-light;
 	color: #000;
 	font-weight: bold;
 	font-size: 36pt;
@@ -56,27 +57,26 @@ h2
 }
 h3
 {
-	font-family: code-light;
+	font-family: Lato-light;
 	font-size: 20pt;
 	margin: 10px 0;
 	padding: 0;
 }
 h4
 {
-	font-family: code-light;
+	font-family: Lato-light;
 	font-size: 14pt;
 	margin: 10px 0;
 	text-align: center;
-	letter-spacing: 1px;
 }
 h5{
 	text-align: center;
-	font-family: lato;
+	font-family: Lato;
 	font-size: 70pt;
 	font-weight: bolder;
 }
 h5 b{
-	font-family: lato;
+	font-family: Lato;
 	font-size: 70pt;
 	font-weight: bolder;
 	color: #f23;
@@ -85,8 +85,12 @@ h5 b{
 }
 p
 {
-	font-family: Lato;
+	font-family: open-sans;
+	/*font-weight: lighter;*/
 	font-size: 12pt;
+	line-height: 18pt;
+	/*word-spacing: 1px;*/
+	/*letter-spacing: 1px;*/
 }
 
 /*------Index Page-----*/
@@ -145,15 +149,15 @@ header
 	}
 	.navigation-links li a
 	{
-		font-family: code-light;
+		font-family: Lato;
 		font-size: 10pt;
-		font-weight: bold;
+		/*font-weight: bold;*/
 		-webkit-transition: color 0.5s ease;
 		-o-transition: color 0.5s ease;
 		transition: color 0.5s ease;
 		text-decoration: none;
 		color: #000;
-		letter-spacing: 1px;
+		/*letter-spacing: 1px;*/
 	}
 	.navigation-links li:hover a
 	{
@@ -329,6 +333,8 @@ footer
 	max-width: 100%;
 }
 .folio-caption p{
+	font-family: Lato-Light;
+
 	padding-left: 2%;
 	text-align: left;
 	color: #fff;
@@ -383,6 +389,9 @@ footer
 		margin: 1%;
 		display: inline-block;
 	}
+.dev-small{
+	font-size: 12pt;
+}
 .display-img
 {
 	max-width: 260px;
