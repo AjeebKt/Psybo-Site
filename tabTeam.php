@@ -1,9 +1,8 @@
 <?php 
+	error_reporting(0);
 	include "file.php";
     require_once 'Database.php';
-	
 	// use app\Database;
-
     $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee

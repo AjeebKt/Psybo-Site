@@ -1,3 +1,27 @@
+<?php 
+error_reporting(0);
+
+if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['txtemail']) and isset($_POST['txtcomments']))
+{
+
+	if ( filter_var($_POST['txtemail'] , FILTER_VALIDATE_EMAIL))
+	{
+		$to="pnoushid@gmail.com";
+		$from = $_POST['txtemail'];
+		$name = $_POST['txtname'];
+		$subject="comments from ".$name;
+		$message=$_POST['txtcomments'];
+		$message=wordwrap($message,70,"<br>");
+		$message=str_replace("\n.","\n..",$message);
+		$headers='From:'.$from."\r\n";
+		$mail=mail($to, $subject, $message,$headers);
+		if ($mail==TRUE)
+			$message="comment has been sent";
+		else
+			$message= "commet not send at this time";
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,30 +79,8 @@
 			</div>
 		</div>
 	</div>
-	<?php include 'footer.php'; ?>
+	<?php include 'footer.php'; 
+		echo $message;
+	?>
 </body>
 </html>
-
-<?php 
-
-if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['txtemail']) and isset($_POST['txtcomments']))
-{
-
-	if ( filter_var($_POST['txtemail'] , FILTER_VALIDATE_EMAIL))
-	{
-		$to="pnoushid@gmail.com";
-		$from = $_POST['txtemail'];
-		$name = $_POST['txtname'];
-		$subject="comments from ".$name;
-		$message=$_POST['txtcomments'];
-		$message=wordwrap($message,70,"<br>");
-		$message=str_replace("\n.","\n..",$message);
-		$headers='From:'.$from."\r\n";
-		$mail=mail($to, $subject, $message,$headers);
-		if ($mail==TRUE)
-			echo"comment has been sent";
-		else
-			echo "commet not send at this time";
-	}
-}
-?>

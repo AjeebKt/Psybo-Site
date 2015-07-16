@@ -1,9 +1,9 @@
 <?php 
+	error_reporting(0);
 	include 'Database.php';
 	include 'file.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$num_ptf=$objdb->num_row_ptf();
-	// var_dump($num_ptf);
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
  ?>
@@ -46,7 +46,6 @@
 		<?php
 			for ($i=0; $i <$count_ptf ; $i++) { 
 			 	$result=$objdb->select_row_ptf($num_ptf[$i][0]);
-			 	// var_dump($result);
 			?>
 			 <figure>
 				<a target="_blank" href=<?php foreach ($result as $key => $value) {

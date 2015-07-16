@@ -3,12 +3,22 @@
  require_once "/var/www/psybo_site/psybo/Psybo-Site/file.php";
  $objdb=new Database('localhost','root','asd','psybo-db');
  $objfile=new File();
+ // $result=$objdb->select("admin",array(),array("id",1));
+ // var_dump($result);
+ // foreach ($result as $key => $value) {
+ // 	foreach ($value as $key => $value) {
+ // 		if (is_string($key) and $key=="username") {
+ // 		echo $value."<br>";
+ // 			# code...
+ // 		}
+ // 	}
+ // }
 
-/*$id=1;
-$result=$objdb->select_row_emp($id);
-echo "result";
-var_dump($result);
-$tst=$objdb->num_row();
+// $id=1;
+// $result=$objdb->select_row_emp($id);
+// echo "result";
+// var_dump($result);
+/*$tst=$objdb->num_row();
 echo "tst";
 var_dump($tst);	
 var_dump($tst[0]);
@@ -209,8 +219,8 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 
 /////////////////////////////////////////////////
 
-$dir=getcwd()."/upload-image/";
-unlink($dir."aaaaa.jpg");
+// $dir=getcwd()."/upload-image/";
+// unlink($dir."aaaaa.jpg");
 
 
 ?>
