@@ -50,6 +50,8 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 				</nav>
 			</div>
 		</header>
+	</div>
+	<div class="container">
 		<div class="cap-full">
 			<div class="caption1">
 				<h3>Let us Hear from <br><b>"You"</b></h3>

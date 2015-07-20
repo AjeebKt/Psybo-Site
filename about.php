@@ -62,7 +62,7 @@
 					chetta.as
 				</p>
 			</div>
-			<div id="as2" class="show-tab">
+			<!-- <div id="as2" class="show-tab">
 				<h2>AMAZE PEOPLE</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
@@ -75,7 +75,7 @@
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
 					chetta.as
 				</p>
-			</div>
+			</div> -->
 		</section>
 	</div>
 	<?php include 'footer.php'; ?>

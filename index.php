@@ -34,9 +34,9 @@
 <!-- Slides -->
 		<div id="sliderFrame">
 	        <div id="slider" style="background-size: 100% auto;">
-	            <img src="img/bg.png" alt="Welcome to Menucool.com" />
-	            <img src="img/bg1.jpg" alt="First slide" />
-	            <img src="img/bg2.jpg" alt="Second slide" />
+	            <img src="img/bg.png" alt="Welcome to Psybo Technologies" />
+	            <img src="img/bg2.jpg" alt="We get Started" />
+	            <img src="img/bg1.jpg" alt="The Final Software Destination" />
 	        </div>
    		</div>
 	</div>
