@@ -9,6 +9,45 @@
     $count_emp=count($emp_id);
     // var_dump($count_emp);
  	$actdir="/upload-image/";
+
+	if (isset($_GET['deleteid'])) 
+	{
+		$ptf_id=$_GET['deleteid'];
+		$result=$objdb->select("employee",array("files_id","address_id"),array("id",$ptf_id));
+		foreach ($result[0] as $key => $value) 
+		{
+			if (is_string($key) and $key == "files_id")  
+			{
+				$files_id=$value;
+			}
+			if (is_string($key) and $key== "address_id") 
+			{
+				$address_id=$value;
+			}
+		}
+
+		$result=$objdb->select("files",array("file_name"),array("id",$files_id));
+
+		foreach ($result[0] as $key => $value) 
+		{
+			if (is_string($key) and $key== "file_name") 
+			{
+				$file_name=$value;
+			}
+		}
+	 	unlink(getcwd().$actdir.$file_name);
+		$objdb->delete_team($_GET['deleteid']);
+		// header("location:tabTeam.php");
+		if ($objdb == true ) 
+		{
+			$message ="<script type='text/javascript'>alert('Deleted!');
+							window.location.replace('tabTeam.php');
+						</script>";	
+			$objdb->delete("address",array("id",$address_id));
+			$objdb->delete("files",array("id",$files_id));
+
+		}
+	}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +72,6 @@
 					<td>LinkedIn</td>
 					<td>Google+</td>
 					<td><img src="img/user.png" alt=""></td>
-					<!-- <td><a href="editTeam.php" class="edit"></a></td>
-					<td><a href="" class="delete"></a></td> -->
 				</tr>
 				<?php for ($j=0; $j<$count_emp ;$j++)
 
@@ -95,38 +132,7 @@
 			</table>
 		</form>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>
-<?php 
 
-if (isset($_GET['deleteid'])) 
-{
-	$ptf_id=$_GET['deleteid'];
-	$result=$objdb->select("employee",array("files_id"),array("id",$ptf_id));
-	foreach ($result[0] as $key => $value) 
-	{
-		if (is_string($key) and $key == "files_id")  
-		{
-			$files_id=$value;
-		}
-	}
-	$result=$objdb->select("files",array("file_name"),array("id",$files_id));
-	foreach ($result[0] as $key => $value) 
-	{
-		if (is_string($key) and $key== "file_name") 
-		{
-			$file_name=$value;
-		}
-	}
-	echo $file_name;
- 	unlink(getcwd().$actdir.$file_name);
-	$objdb->delete_team($_GET['deleteid']);
-	header("location:tabTeam.php");
-	if ($objdb == true) 
-	{
-		echo "<script type='text/javascript'>alert('Delete succefully!');</script>";	
-		
-	}
-}
-
-?>

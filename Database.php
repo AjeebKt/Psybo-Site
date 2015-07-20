@@ -266,11 +266,10 @@ class Database
 
 	//delete the data
 
-	public function delete($table,$fields)
+	public function delete($table,$where)
 	{
 		$fields=implode(',', $fields);
-		$delete="DELETE FROM ".$table;
-		// echo $delete;
+		$delete="DELETE FROM ".$table." WHERE ".$where[0]." = ".$where[1];
 		$query=mysqli_query($this->condb,$delete) or die(mysqli_error());
 	}
 //	update data
@@ -404,19 +403,6 @@ class Database
 		$where=array("id",$emp_id);
 		$this->update("employee",$fields_emp,$values_emp,$where);
 	}
-
-	// public function update_mul_ptf($values_files,$files_id,$fields_ptf,$values_ptf,$ptf_id)
-	// {
-	// 	// var_dump($files_id);
-	// 	$fields=array("type","file_name");
-	// 	// var_dump($fields_files);
-	// 	// var_dump($values_files);
-	// 	$where=array("id",$files_id);
-	// 	// var_dump($files_id);
-	// 	$this->update("files",$fields , $values_files , $where);
-	// 	$this->update("portfolio" , $fields_ptf,$values_ptf,array("id" , $ptf_id) );
-
-	// }
 }
 
 

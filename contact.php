@@ -1,24 +1,30 @@
 <?php 
 error_reporting(0);
 
-if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['txtemail']) and isset($_POST['txtcomments']))
+if (isset($_POST['buttonmail']) )
+	// and isset($_POST['msgName']) and isset($_POST['msgEmail']) and isset($_POST['comments']))
 {
 
-	if ( filter_var($_POST['txtemail'] , FILTER_VALIDATE_EMAIL))
+	if ( filter_var($_POST['msgEmail'] , FILTER_VALIDATE_EMAIL))
 	{
 		$to="pnoushid@gmail.com";
-		$from = $_POST['txtemail'];
-		$name = $_POST['txtname'];
+		$from = $_POST['msgEmail'];
+		$name = $_POST['msgName'];
 		$subject="comments from ".$name;
 		$message=$_POST['txtcomments'];
 		$message=wordwrap($message,70,"<br>");
 		$message=str_replace("\n.","\n..",$message);
-		$headers='From:'.$from."\r\n";
-		$mail=mail($to, $subject, $message,$headers);
+		$headers='From: '.$from;
+		$mail=mail($to, $subject, $message);
 		if ($mail==TRUE)
-			$message="comment has been sent";
+			$message="<script type='text/javascript'	
+						alert('comment has been sent');
+						</script>";
+
 		else
-			$message= "commet not send at this time";
+			$message= "<script type='text/javascript'>
+					alert('Comments are not send at this time!.thanks');
+				</script>";
 	}
 }
 ?>
@@ -61,13 +67,13 @@ if (isset($_POST['buttonmail']) and isset($_POST['txtname']) and isset($_POST['t
 	<div class="contact">
 		<div class="container">
 			<div class="message">
-				<form id="message-form" class="msg-form" action="post">
+				<form id="message-form" class="msg-form" method="POST" action="">
 					<label for="msgName">Name</label>
 					<br>
-					<input id="msgName" type="text" class="name" required>
+					<input id="msgName" name="msgName" type="text" class="name" required>
 					<label for="msgEmail">Email</label>
 					<br>
-					<input id="msgEmail" type="email" class="mail" required>
+					<input id="msgEmail" name="msgEmail" type="email" class="mail" required>
 					<label for="msgComments">Comments</label>
 					<br>
 					<textarea id="msgComments" name="comments" cols="30" rows="5" class="msg" required></textarea>

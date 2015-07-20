@@ -6,7 +6,36 @@
 	$num_ptf=$objdb->num_row_ptf();
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
- ?>
+	if (isset($_GET['delete_id'])) 
+	{
+		$ptf_id=$_GET['delete_id'];
+		$result=$objdb->select("portfolio",array("files_id"),array("id",$ptf_id));
+		foreach ($result[0] as $key => $value) 
+		{
+			if (is_string($key) and $key == "files_id")  
+			{
+				$files_id=$value;
+			}
+		}
+		$result=$objdb->select("files",array("file_name"),array("id",$files_id));
+		foreach ($result[0] as $key => $value) 
+		{
+			if (is_string($key) and $key== "file_name") 
+			{
+				$file_name=$value;
+			}
+		}
+		$objdb->delete_portfolio($_GET['delete_id']);
+		unlink(getcwd().$actdir.$file_name);
+		if ($objdb == true) 
+		{
+			$message="<script type='text/javascript'>alert('Deleted!');
+							window.location.replace('tabPortfolio.php');
+						</script>";	
+			$objdb->delete("files",array("id",$files_id));
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,10 +69,8 @@
 					<td>Delete</td>
 					</tr>
 				<?php 
-				// var_dump($num_ptf);
 				for ($i=0; $i < $count_ptf; $i++) { 
 				$result=$objdb->select_row_ptf($num_ptf[$i][0]);
-				// var_dump($result); 
 				?>
 				<tr>
 					<td><?php foreach ($result as $key => $value) {
@@ -90,70 +117,7 @@
 		</form>
 	</div>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>
-<?php if (isset($_GET['delete_id'])) 
-{
-	$ptf_id=$_GET['delete_id'];
-	$result=$objdb->select("portfolio",array("files_id"),array("id",$ptf_id));
-	foreach ($result[0] as $key => $value) 
-	{
-		if (is_string($key) and $key == "files_id")  
-		{
-			$files_id=$value;
-		}
-	}
-	$result=$objdb->select("files",array("file_name"),array("id",$files_id));
-	foreach ($result[0] as $key => $value) 
-	{
-		if (is_string($key) and $key== "file_name") 
-		{
-			$file_name=$value;
-		}
-	}
-	$objdb->delete_portfolio($_GET['delete_id']);
-	unlink(getcwd().$actdir.$file_name);
-	header("location:tabPortfolio.php");
-	
-}
-// 	echo "<script type='text/javascript'>
-// 			var answer = confirm('Do you really need to delete ?');
-// 			if (answer){
-// 				window.location.replace('tabPortfolio.php');
-// 			}
-// 		</script>";
-// // echo ("<script type='text/javascript'>
 
-// //         if (confirm('Are you sure you want to delete this?')) {
-// //             //Make ajax call
-// //             $.ajax({
-// //                 url: 'scriptDelete.php',
-// //                 type: 'GET',
-// //                 dataType: 'html', 
-// //                 success: function() {
-// //                     alert('It was succesfully deleted!');
-// //                 }
-// //             });
-// //         }
-// // </script>");
-//                 // data: {id : 5},
-//     // function confirmDelete() {
-//     // }
-
-	// $objdb->delete_portfolio($_GET['delete_id']);
-	// if ($objdb== true) 
-	// {
-		// echo "<script type='text/javascript'>
-		// 		var answer = confirm('Do you really need to delete ?');
-		// 		if (answer){
-		// 			window.location.replace('tabPortfolio.php');
-		// 		}
-		// 	</script>";
-	// }
-
-// if (isset($_GET['edit_id'])) 
-// {
-// 	$_SESSION['editid']=$_GET['edit_id'];
-// 	header("location:editPortfolio.php");
-// }
-?>

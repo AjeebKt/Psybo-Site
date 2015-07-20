@@ -9,18 +9,11 @@
 	if (isset($_POST['btnPortfolioSubmit']) ) 
 	{	
 		$title=$_POST['txtTitle'];
-		// $title=filter_var($title,FILTER_SANITIZE_ENCODED);
-		// $title=str_replace("%20", " ", $title);
-		// $title=strip_tags($title);
-
-		$description=$_POST['portfolioDescription'];
-		// $description=filter_var($_POST['portfolioDescription'],FILTER_SANITIZE_ENCODED);
-		// $discription=strip_tags($description)	;
-		// $description=str_replace("%20", " ", $description);
 		
 
+		$description=$_POST['portfolioDescription'];
+		
 		$rand=rand();
-
 		$target_dir=getcwd()."/upload-image/";
 		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
 		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
@@ -79,12 +72,9 @@
 					else
 					{
 						$link="https://".$valid_url;
-						// filter_var($link , FILTER_SANITIZE_URL );
 						array_push($values_ptf, $link);
 						array_push($fields_ptf, "link");
-					
 					}
-
 				}
 				
 				else
