@@ -39,8 +39,6 @@
 				</nav>
 			</div>
 		</header>
-	</div>
-	<div class="container">
 		<section class="team">
 			<h2>TEAM PSYBO</h2>
 			<ul class="team-member">

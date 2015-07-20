@@ -57,8 +57,8 @@ if (isset($_POST['buttonmail']) )
 			</div>
 		</header>
 	</div>
-	<div class="cap-full">
-		<div class="container">
+	<div class="container">
+		<div class="cap-full">
 			<div class="caption1">
 				<h3>Let us Hear from <br><b>"You"</b></h3>
 			</div>
