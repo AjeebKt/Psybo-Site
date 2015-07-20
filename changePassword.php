@@ -1,8 +1,76 @@
 <?php 
+error_reporting(0);
 include 'Database.php';
 $objdb=new Database("localhost","root","asd","psybo-db");
 $condb=new mysqli("localhost","root","asd","psybo-db");
- ?>
+
+$message="";
+session_start();
+session_destroy();
+if (isset($_POST['changeSubmit']))
+{
+	if (!empty($_POST['newPwrd']) and !empty($_POST['confirmPwrd'])) 
+	{
+	
+		if( $_POST['newPwrd'] == $_POST['confirmPwrd'] ) 
+		{
+			$currentPwd=md5($_POST['currentPwrd']);
+			// $query="SELECT password FROM admin WHERE password = '".$currentPwd."'";
+			// $select=mysqli_query($condb,$query);
+			$result=$objdb->select("admin",array("password"),array("password",$currentPwd));
+			// if ($select == FALSE) 
+			// {
+			// 	"<script type='text/javascript'>
+			// 		alert('canot change password ath this time.please try agian later !');
+			// 	</script>";
+			// }
+			if (!empty($result)) 
+			{
+				foreach ($result[0] as $key => $value) 
+				{
+					if (is_string($key) and $key == "password") 
+					{
+						if ($currentPwd == $value) 
+						{
+							$newPwd=md5($_POST['newPwrd']);
+							$objdb->update("admin",array("password"),array($newPwd),array("password",$currentPwd) );
+							header("location:admin.php");
+						}
+						else
+						{
+							$message= "<script type='text/javascript'>
+									alert('Incorrecct passwords.please try again!');
+								</script>";
+						}	
+					}
+				}
+			}
+			else
+			{
+				$message= "<script type='text/javascript'>
+						alert('Incorrect password ,try again later');
+					</script>";
+			}
+		}
+		else
+		{
+			$message= "<script type='text/javascript'>
+						alert('confirm password incorrect.please try again!');
+					</script>";
+		}
+	}
+	else
+	{
+		$message= "<script type='text/javascript'>
+					alert('Please enter the new password!');
+				</script>";	
+	}	
+}
+if (isset($_POST['cancel']) )
+{
+	header("location:admin.php");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,41 +90,13 @@ $condb=new mysqli("localhost","root","asd","psybo-db");
 			<input id="newPwrd" name="newPwrd" type="password">
 			<label for="confirmPwrd">Confirm Password</label>
 			<input id="confirmPwrd" name="confirmPwrd" type="password">
-			<button name="changeSubmit">Submit</button>
+			<button name="changeSubmit">Update</button>
+			<button name="cancel">Cancel</button>
+
 		</form>
 	</div>
+	<?php echo $message; ?>
 </body>
 </html>
 <?php 
 
-if (isset($_POST['changeSubmit']))
-{
-	$username=filter_var($_POST['txtusername'],FILTER_SANITIZE_ENCODED);
-	$username=str_replace("%20", " ", $username);
-	if( $_POST['newPwrd'] == $_POST['confirmPwrd'] ) 
-	{
-		$currentPwd=$_POST['currentPwrd'];
-		$query="SELECT password FROM admin WHERE password = '".$currentPwd."'";
-		$select=mysqli_query($condb,$query);
-		if ($select == FALSE) 
-		{
-			"<script type='text/javascript'>
-				alert('canot change password ath this time.please try agian later !');
-			</script>";
-		}
-			
-			$newPwd=md5($_POST['newPwrd']);
-			var_dump($_POST['currentPwrd']);
-			var_dump($newPwd);
-			$objdb->update("admin",array("password"),array($newPwd),array("password",md5($_POST['currentPwrd'])) );
-			header("location:admin.php");
-	}
-	else
-		{
-			"<script type='text/javascript'>
-				alert('confirm password incorrect.please try again!');
-			</script>";
-		}	
-}
-
-?>

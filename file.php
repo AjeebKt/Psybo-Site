@@ -1,4 +1,5 @@
 <?php 
+	error_reporting(0);
 	class File
 	{
 		public function list_files($directory)//its return the result an array.

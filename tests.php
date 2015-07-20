@@ -3,12 +3,22 @@
  require_once "/var/www/psybo_site/psybo/Psybo-Site/file.php";
  $objdb=new Database('localhost','root','asd','psybo-db');
  $objfile=new File();
+ // $result=$objdb->select("admin",array(),array("id",1));
+ // var_dump($result);
+ // foreach ($result as $key => $value) {
+ // 	foreach ($value as $key => $value) {
+ // 		if (is_string($key) and $key=="username") {
+ // 		echo $value."<br>";
+ // 			# code...
+ // 		}
+ // 	}
+ // }
 
-/*$id=1;
-$result=$objdb->select_row_emp($id);
-echo "result";
-var_dump($result);
-$tst=$objdb->num_row();
+// $id=1;
+// $result=$objdb->select_row_emp($id);
+// echo "result";
+// var_dump($result);
+/*$tst=$objdb->num_row();
 echo "tst";
 var_dump($tst);	
 var_dump($tst[0]);
@@ -113,54 +123,54 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // $string = 'foo';
 
 
-$string = "a.<>=bc  123vj$%^&*--";
-$regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$%^&]).*$/";
-// if ( preg_match($regex, $string)) 
-// {
-// var_dump("succes");
-// }
-var_dump("befor strip :  ".$string);
+// $string = "a.<>=bc  123vj$%^&*--";
+// $regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$%^&]).*$/";
+// // if ( preg_match($regex, $string)) 
+// // {
+// // var_dump("succes");
+// // }
+// var_dump("befor strip :  ".$string);
 
-// var_dump( preg_match($regex, $string));	
-$string=strip_tags($string);
-echo "after strip  ".$string."<br>";
-$string = preg_replace('/[^A-Za-z0-9\s.]/','',$string); 
-var_dump("after preg rplc  :  ".$string);
-echo $string = str_replace( array( '-', '.' ), '', $string);
+// // var_dump( preg_match($regex, $string));	
+// $string=strip_tags($string);
+// echo "after strip  ".$string."<br>";
+// $string = preg_replace('/[^A-Za-z0-9\s.]/','',$string); 
+// var_dump("after preg rplc  :  ".$string);
+// echo $string = str_replace( array( '-', '.' ), '', $string);
 
+///////////////////////PASSWORD//////////////////////////
+					// $pass="abc1";
 
-$pass="abc1";
+					// $ucl = preg_match('/[A-Z]/', $pass); // Uppercase Letter
+					// $lcl = preg_match('/[a-z]/', $pass); // Lowercase Letter
+					// $dig = preg_match('/\d/', $pass); // Numeral
+					// $nos = preg_match('/\W/', $pass); // Non-alpha/num characters (allows underscore)
 
-$ucl = preg_match('/[A-Z]/', $pass); // Uppercase Letter
-$lcl = preg_match('/[a-z]/', $pass); // Lowercase Letter
-$dig = preg_match('/\d/', $pass); // Numeral
-$nos = preg_match('/\W/', $pass); // Non-alpha/num characters (allows underscore)
+					// if($ucl) {
+					//     echo "Contains upper case!<br>";
+					// }
 
-// if($ucl) {
-//     echo "Contains upper case!<br>";
-// }
+					// if($lcl) {
+					//     echo "Contains lower case!<br>";
+					// }
 
-// if($lcl) {
-//     echo "Contains lower case!<br>";
-// }
+					// if($dig) {
+					//     echo "Contains a numeral!<br>";
+					// }
 
-// if($dig) {
-//     echo "Contains a numeral!<br>";
-// }
+					// // I negated this if you want to dis-allow non-alphas/num:
+					// if(!$nos) {
+					//     echo "Contains no Symbols!<br>"; 
+					// }
 
-// // I negated this if you want to dis-allow non-alphas/num:
-// if(!$nos) {
-//     echo "Contains no Symbols!<br>"; 
-// }
+					// if ($ucl && $lcl && $dig && !$nos) { // Negated on $nos here as well
+					// if($lcl and $dig and !$nos){
+					//     echo "<br>All Four Pass!!!";
 
-// if ($ucl && $lcl && $dig && !$nos) { // Negated on $nos here as well
-if($lcl and $dig and !$nos){
-    echo "<br>All Four Pass!!!";
-
-} else {
-    echo "<br>Failure...";
-}
-
+					// } else {
+					//     echo "<br>Failure...";
+					// }
+///////////////////////////////////////////////////////////////////////////////
 // $str1="dfghjkl!@#$%^&*34567890;";
 // // $str1=strip_tags($str1);
 // // 	preg_replace('/[^A-Za-z0-9\s.]/', '', $str1);
@@ -169,10 +179,49 @@ if($lcl and $dig and !$nos){
 
 
 // echo strrchr("Hello world!",101);
-$a='how are you';
-if (strpos($a,'are') !== false) {
-    echo 'true';
-}
+// $url="://www.google.net";
+// if ( filter_var($url,FILTER_VALIDATE_URL) )
+// {
+// 	echo "is url";
+// }
+// else
+// 	echo "is not url";
+
+// $url1 = preg_replace(
+//   '#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i',
+//   "'<a href=\"$1\" target=\"_blank\">$3</a>$4'",
+//   $url
+// );
+// echo $url;
+
+///////////////////////////URL STRONG VALIDATION///////////////////// 
+			// $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+			//             if(preg_match($preg, 'http://www.google.net') == False)
+			//             {
+			//              var_dump('URL is not valid.');
+			//             }
+			//             else
+			//             	echo "url is valid";
+// ///////////////////////////////////
+// // $str="dummy text dummy text .&^<>dummy text dummy text dummy text dummy text ";
+// // if(preg_match(  '/[^A-Za-z0-9\d\.\ ]/',$str))
+// // 	echo "is correct";
+// // else
+// 	echo "not string";
+
+			/////////////////////STRING VALIDATION/////////
+			// $yourString = "blahbhhl kjjkha.,h";
+			// if (preg_match('/^[A-Za-z0-9., _-]*$/', $yourString)) {
+			//     echo "your string is good";
+			// }
+			// else
+			// 	echo "string is not good";
+
+/////////////////////////////////////////////////
+
+// $dir=getcwd()."/upload-image/";
+// unlink($dir."aaaaa.jpg");
 
 
 ?>
+

@@ -1,11 +1,166 @@
 <?php 
+	error_reporting(0);
 	include 'Database.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$num_ptf=$objdb->num_row_ptf();
-	// var_dump($num_ptf);
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
- ?>
+	
+	if (isset($_POST['btnPortfolioSubmit']) ) 
+	{	
+		$title=$_POST['txtTitle'];
+		// $title=filter_var($title,FILTER_SANITIZE_ENCODED);
+		// $title=str_replace("%20", " ", $title);
+		// $title=strip_tags($title);
+
+		$description=$_POST['portfolioDescription'];
+		// $description=filter_var($_POST['portfolioDescription'],FILTER_SANITIZE_ENCODED);
+		// $discription=strip_tags($description)	;
+		// $description=str_replace("%20", " ", $description);
+		
+
+		$rand=rand();
+
+		$target_dir=getcwd()."/upload-image/";
+		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
+		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
+
+		$fields_ptf=array();
+		$values_ptf=array();
+		$values_ptf_file=array($file_name,$file_type);
+
+		if ( !empty($title) and isset($_FILES['uploadPortfolio']['tmp_name']) ) 
+		{
+			if (preg_match('/^[A-Za-z0-9., _-]*$/', $title))
+			{
+				$error=1;
+				$values_ptf=array($title);
+				$fields_ptf=array("name");	
+			}
+			else
+			{
+				$error=0;
+				$message="<script type='text/javascript'>
+							alert(' please enter Correct title!');
+						</script>";
+			}
+			
+			if (!empty($description) and $error == 1) 
+			{
+				// if(strpos($description,'%') == FALSE)# or strpos($title,'%') !== FALSE)
+				if (preg_match('/^[A-Za-z0-9., _-]*$/', $description))
+				{
+					$error = 1;
+					array_push($values_ptf, $description);
+					array_push($fields_ptf, "about");
+				}
+				else
+				{
+					$error=0;
+					$message= "<script type='text/javascript'>
+							alert(' please enter Correct description!');
+						</script>";
+				}
+			}
+			
+		
+			if (!empty($_POST['txtLink']) and $error = 1) 
+			{
+
+				$preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+				if (preg_match($preg, $_POST['txtLink']) != FALSE ) 
+				{
+					$valid_url=$_POST['txtLink'];
+					if (filter_var($valid_url , FILTER_VALIDATE_URL))
+					{ 
+						array_push($values_ptf, $valid_url );
+						array_push($fields_ptf, "link");
+					}
+					else
+					{
+						$link="https://".$valid_url;
+						// filter_var($link , FILTER_SANITIZE_URL );
+						array_push($values_ptf, $link);
+						array_push($fields_ptf, "link");
+					
+					}
+
+				}
+				
+				else
+				{
+					$error = 0;
+					$message= "<script type='text/javascript'>
+						alert('The link has not valid .Please Enter the correct link.!');
+					</script>";	
+				}
+			}	
+				//uplaod file 
+			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
+			if ($check !== FALSE) 
+			{
+				// echo "File is an image :" .$check["mime"].".";
+				$uploadok=1;
+			}
+			else
+			{
+				$message= "<script type='text/javascript'>
+						alert('Please select onether image!');
+					</script>";	
+				$uploadok=0;
+			}
+			if ($_FILES["uploadPortfolio"]["size"] > 30000000 and $uploadok == 1)
+			{
+				$message="<script type='text/javascript'>
+						alert('Sorry file to be large .please select onether file!');
+					</script>";	
+				$uploadok=0;
+			}
+			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg" and $uploadok == 1)  
+			{
+				$mesage ="<script type='text/javascript'>
+						alert('PLease select jpg or png or jpeg file!');
+					</script>";
+				$uploadok=0;
+			}
+			if ($uploadok == 0) 
+			{
+				$message= "<script type='text/javascript'>
+						alert('Upload failed try again later!');
+					</script>";			
+			}
+			else 
+			{
+				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
+				if ($upload == TRUE) 
+				{
+					$values_ptf_files=array($rand.".".$file_type,$file_type);
+					$objdb->insert_mul_ptf($values_ptf_files,$fields_ptf,$values_ptf);
+					if ($upload == TRUE and $objdb == TRUE) 
+					{
+						$message = "<script type='text/javascript'>
+								alert('Adding succesfull');
+								window.location.replace('tabPortfolio.php');
+							</script>";
+					}			
+					
+				}
+				else
+				{
+					$message= "<script type='text/javascript'>
+						alert('Upload failed try again later!');
+					</script>";
+				}
+			}
+		}
+		else
+		{
+			$message= "<script type='text/javascript'>
+					alert('Adding failed try again later!');
+				</script>";
+		}
+	}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,152 +193,13 @@
 					<label>Portfolio Image</label><br>
 					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
 				</div>
-				<button class="submit" name="btnPortfolioSubmit">Submit</button>
+				<button class="submit" name="btnPortfolioSubmit">Add</button>
 			</div>
 		</form>
 		<form action="tabPortfolio.php" method="POST">
 			<button name="btnReset" class="reset">Cancel</button>
 		</form>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>
-
-<?php 
-	
-	
-	if (isset($_POST['btnPortfolioSubmit']) and !empty($title) ) 
-	{	
-		$title=filter_var($_POST['txtTitle'],FILTER_SANITIZE_ENCODED);
-		// $title=str_replace("%20", " ", $title);
-
-		// $Description="";
-		$Description=filter_var($_POST['portfolioDescription'],FILTER_SANITIZE_ENCODED);
-		// $Description=str_replace("%20", " ", $Description);
-		if (!empty($Description)) 
-		{
-			if(strpos($Description,'%') !== false)
-			{
-				echo "<script type='text/javascript'>
-						alert(' please enter Correct information!');
-					</script>";
-				exit();
-			}
-		}
-		// echo "string";
-		$rand=rand();
-
-		$target_dir=getcwd()."/upload-image/";
-		// var_dump("Target dir :  ".$target_dir);
-		$target_file=$target_dir ;
-		// var_dump("Target file  : ".$target_file);
-		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
-		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
-		// var_dump("image file type  :   ".$file_type);
-
-
-		if ( !empty($title) and $_FILES['uploadPortfolio']['tmp_name'] ) 
-		{
-			$fields_ptf=array();
-			$values_ptf=array();
-			$values_ptf_file=array($file_name,$file_type);
-			if( isset($title))
-			{
-				$values_ptf=array($title);
-				$fields_ptf=array("name");
-			}
-		if (!empty($txtLink)) 
-		{
-			if (filter_var($_POST['txtLink'] , FILTER_VALIDATE_URL)) 
-			{
-				filter_var($_POST['txtLink'] , FILTER_SANITIZE_URL );
-				array_push($values_ptf, $_POST['txtLink'] );
-				array_push($fields_ptf, "link");
-			}
-			
-			else
-			{
-				$link="https://".$_POST['txtLink'];
-				if(filter_var($link,FILTER_VALIDATE_URL))
-				{
-					filter_var($link , FILTER_SANITIZE_URL );
-					array_push($values_ptf, $link);
-					array_push($fields_ptf, "link");
-				}
-			}
-		}	
-			// if( filter_var($_POST['portfolioDescription'] , FILTER_SANITIZE_ENCODED) ) 
-			if (!empty($Description))
-			{
-				// array_push($values_ptf, $_POST['portfolioDescription']);
-				array_push($values_ptf, $Description);
-				array_push($fields_ptf, "about");
-			}
-			
-			$check=getimagesize($_FILES["uploadPortfolio"]["tmp_name"]);
-			// var_dump($check);
-			if ($check !== FALSE) 
-			{
-				// echo "File is an image :" .$check["mime"].".";
-				$uploadok=1;
-			}
-			else
-			{
-				echo "<script type='text/javascript'>
-						alert('Please select onether image!');
-					</script>";	
-				return;
-			}
-			if ($_FILES["uploadPortfolio"]["size"] > 30000000)
-			{
-				echo "<script type='text/javascript'>
-						alert('Sorry file to be large .please select onether file!');
-					</script>";	
-				$uploadok=0;
-			}
-			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg") 
-			{
-				echo "<script type='text/javascript'>
-						alert('PLease select jpg or png or jpeg file!');
-					</script>";
-				$uploadok=0;
-			}
-			if ($uploadok == 0) 
-			{
-				echo "<script type='text/javascript'>
-						alert('Upload failed try again later!');
-					</script>";			
-			}
-			else 
-			{
-				$upload=move_uploaded_file($_FILES["uploadPortfolio"]["tmp_name"], $target_file .$rand.".".$file_type ); 
-				if ($upload == TRUE) 
-				{
-					// var_dump($values_ptf);
-					// var_dump($fields_ptf);	
-					$values_ptf_files=array($rand.".".$file_type,$file_type);
-					// var_dump($fields_ptf);
-					$objdb->insert_mul_ptf($values_ptf_files,$fields_ptf,$values_ptf);
-					
-					// header("location:tabPortfolio.php");
-					echo "<script type='text/javascript'>
-							alert('Update succesfull');
-							window.location.replace('tabTeam.php');
-						</script>";
-				}
-				else
-				{
-					echo "<script type='text/javascript'>
-						alert('Upload failed try again later!');
-					</script>";
-				}
-			}
-		}
-		else
-		{
-			echo "<script type='text/javascript'>
-					alert('Upload failed try again later!');
-				</script>";
-		}
-	}
-
-?>	

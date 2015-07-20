@@ -1,9 +1,9 @@
 <?php 
+	error_reporting(0);
 	include 'Database.php';
 	include 'file.php';
 	$objdb=new Database("localhost","root","asd","psybo-db");
 	$num_ptf=$objdb->num_row_ptf();
-	// var_dump($num_ptf);
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
  ?>
@@ -94,7 +94,25 @@
 </html>
 <?php if (isset($_GET['delete_id'])) 
 {
+	$ptf_id=$_GET['delete_id'];
+	$result=$objdb->select("portfolio",array("files_id"),array("id",$ptf_id));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == "files_id")  
+		{
+			$files_id=$value;
+		}
+	}
+	$result=$objdb->select("files",array("file_name"),array("id",$files_id));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key== "file_name") 
+		{
+			$file_name=$value;
+		}
+	}
 	$objdb->delete_portfolio($_GET['delete_id']);
+	unlink(getcwd().$actdir.$file_name);
 	header("location:tabPortfolio.php");
 	
 }

@@ -1,7 +1,8 @@
 <?php 
+	error_reporting(0);
 	require_once("Database.php");
-	// $objdb=new Database("localhost","root","asd","psybo-db");
 	$condb=new mysqli("localhost","root","asd","psybo-db");
+	$message="";
 	session_start();
 	if (isset($_SESSION['username']))
 	{
@@ -10,42 +11,32 @@
 
 	else if (isset($_POST['loginButton'])) 
 	{
-		$username=filter_var($_POST['txtusername'],FILTER_SANITIZE_ENCODED);
-		$username=str_replace("%20", " ", $username);
-		$password=md5($_POST['txtpassword']);
-		// $password=strip_tags($password);
-		// $password=preg_replace('/[^A-Za-z0-9\s.\s-]/', '', '$password');
-		// $password=str_replace(array('-','.'), '' , $password);
-
-		// if(filter_var($_POST['txtusername'] , FILTER_SANITIZE_ENCODED));
-		// 	{
-		// 		var_dump($passwo)
-		// 		echo "please enter correct password";
-
-		// 	}// exit();
-		// // $Password=str_replace("%20", " ", $Password);
-		$query="SELECT username,password FROM admin WHERE username = '".$username."' AND password = '".md5($_POST['txtpassword'])."'";
-		// var_dump($query);
-		$result=mysqli_query($condb,$query);
-		if ($result==FALSE) 
+		$username=$_POST['txtusername'];
+		$password=$_POST['txtpassword'];
+		if ( preg_match('/^[A-Za-z0-9., _-]*$/', $username) and preg_match('/^[A-Za-z0-9., _-]*$/', $password) )
 		{
-			"<script type='text/javascript'>
-				alert('login failed.please try agian later !');
-			</script>";		}
-		if ($result->num_rows==1) 
-		{
-			
-			$_SESSION['login']='YES';
-			$_SESSION['username']=$_POST['txtusername'];
-			$_SESSION['password']=md5($_POST['txtpassword']);
-			// var_dump($_SESSION['username']);	
-			header("location:tabPortfolio.php");
-		}
-		else
-		{
-			echo "<script type='text/javascript'>
-				alert('Please enter valid username and password');
-			</script>";
+			$password=md5($_POST['txtpassword']);
+			$query="SELECT username,password FROM admin WHERE username = '".$username."' AND password = '".$password."'";
+			$result=mysqli_query($condb,$query);
+			if ($result==FALSE) 
+			{
+				$message="<script type='text/javascript'>
+							alert('login failed.please try agian later !');
+						</script>";		}
+			if ($result->num_rows==1) 
+			{
+				
+				$_SESSION['login']='YES';
+				$_SESSION['username']=$_POST['txtusername'];
+				$_SESSION['password']=md5($_POST['txtpassword']);
+				header("location:tabPortfolio.php");
+			}
+			else
+			{
+				$message= "<script type='text/javascript'>
+					alert('Please enter valid username and password');
+				</script>";
+			}
 		}
 	}
  ?>
@@ -71,7 +62,7 @@
 					</div>
 					<div>
 						<a class="lock"></a>
-						<input id="Password" name="txtpassword" placeholder="Password" required type="password"><?php//echo $msg; ?>
+						<input id="Password" name="txtpassword" placeholder="Password" required type="password">
 					</div>
 					<div class="remember-me">
 						<input id="checkBox" type="checkbox">
@@ -82,5 +73,6 @@
 		<button class="login-button" name="loginButton">Login</button>
 		</div>
 	</form>
+	<?php echo $message; ?>
 </body>
 </html>

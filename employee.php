@@ -1,4 +1,5 @@
-<?php 
+<?php
+	error_reporting(0); 
 	include "file.php";
     require_once 'Database.php';
 	
