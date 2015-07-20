@@ -88,7 +88,7 @@ p
 	/*font-weight: lighter;*/
 	font-size: 12pt;
 	line-height: 18pt;
-	font-weight: 300;
+	font-weight: 300ss;
 	/*word-spacing: 1px;*/
 	/*letter-spacing: 1px;*/
 }
@@ -100,6 +100,8 @@ header
 	top: 0;
 	float: left;
 	width: 100%;
+	z-index: 10;
+	background-color: #008a67;
 }
 .logo
 {
@@ -166,7 +168,7 @@ header
 	.navigation-links li a.active
 	{
 		text-decoration: none;
-		color: #008a67;
+		color: #A5FCD9;
 	}
 .container
 {
