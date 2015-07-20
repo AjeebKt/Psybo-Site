@@ -49,7 +49,6 @@ h2
 {
 	font-family: Lato-light;
 	color: #000;
-	font-weight: bold;
 	font-size: 36pt;
 	opacity: 0.7;
 	margin-top: 2%;
@@ -89,6 +88,7 @@ p
 	/*font-weight: lighter;*/
 	font-size: 12pt;
 	line-height: 18pt;
+	font-weight: 300;
 	/*word-spacing: 1px;*/
 	/*letter-spacing: 1px;*/
 }
@@ -121,7 +121,7 @@ header
 }
 .div-center
 {
-	width: 450px;
+	/*width: 450px;*/
 	margin: 40px 0px auto;
 	float: right;
 }
@@ -270,7 +270,8 @@ footer
 }
 	footer p
 	{
-		font-size: 12pt;
+		font-family: Lato-light;
+		font-size: 10pt;
 		text-align: center;
 		margin: 0;
 	}
@@ -407,6 +408,7 @@ footer
 	{
 		float: left;
 		margin: 0;
+		width: 25%;
 	}
 	.center-ul
 	{
@@ -416,8 +418,8 @@ footer
 		.personal-links li a
 		{
 			display: block;
-			width: 36px;
-			height: 36px;
+			width: 30px;
+			height: 30px;
 			background-position: center;
 			background-repeat: no-repeat;
 			-webkit-background-size: 100%;
@@ -552,12 +554,6 @@ footer
 .tab-show a
 {
 	font-family: Lato;
-}
-.show-first
-{
-	/*display: none;*/
-	position: absolute;
-	bottom: 0;
 }
 .show-tab
 {

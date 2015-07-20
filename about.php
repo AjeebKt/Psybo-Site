@@ -26,12 +26,10 @@
 				</nav>
 			</div>
 		</header>
-	</div>
-	<div class="container">
 		<aside class="about-tabs">
 			<ul class="about-links">
 				<li>
-					<a href="#">
+					<a href="#as1">
 						<div class="tab-items ">
 							<h4>Work hard</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
@@ -39,7 +37,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="#as2">
 						<div class="tab-items">
 							<h4>Amaze people</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
@@ -47,7 +45,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="#as3">
 						<div class="tab-items">
 							<h4>taste the cake</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
@@ -57,29 +55,29 @@
 			</ul>
 		</aside>
 		<section class="tab-show">
-			<div class="show-tab">
+			<div id="as1" class="show-tab">
 				<h2>Work Hard</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
 					chetta.as
 				</p>
 			</div>
-			<!-- <div class="show-tab">
+			<div id="as2" class="show-tab">
 				<h2>AMAZE PEOPLE</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
 					chetta.as
 				</p>
 			</div>
-			<div class="show-tab">
+			<div id="as3" class="show-tab">
 				<h2>TASTE THE CAKE</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
 					chetta.as
 				</p>
-			</div> -->
+			</div>
 		</section>
 	</div>
-		<?php include 'footer.php'; ?>
+	<?php include 'footer.php'; ?>
 </body>
 </html>

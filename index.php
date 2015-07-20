@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<!-- <link rel="stylesheet" href="css/css.css"> -->
-    <script src="js/js-image-slider.js" type="text/javascript"></script>
+    <script src="js/js-image-slider.js" type="text/javascript"
+    ></script>
     <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/theme.css">
 	<title>PSYBO Home</title>
@@ -40,6 +41,5 @@
    		</div>
 	</div>
 	<?php include 'footer.php'; ?>
-
 </body>
 </html>
