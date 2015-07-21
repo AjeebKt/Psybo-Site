@@ -10,16 +10,21 @@
 	$where=array("id",$ptf_id);
 	// var_dump($where);
 	$result=$objdb->select("portfolio",$fields,$where);
-	error_reporting();
 	// ini_set('display_errors', 1);
-
-
-
 	foreach ($result[0] as $key => $value) 
 	{
-		if (is_string($key) and $key='files_id') 
+		if (is_string($key) and $key=='files_id') 
 		{
 			$files_id=$value;
+		}
+	}
+
+	$result_files=$objdb->select("files",array(),array("id",$files_id));
+	foreach ($result_files[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == "file_name") 
+		{
+			$image_name=$value;
 		}
 	}
 	$files_id=(int)$files_id;
@@ -184,6 +189,7 @@
  					$values=array($rand.".".$file_type,$file_type);
 					$fields=array("file_name","type");
 					$where=array("id",$files_id);
+					unlink($target_dir.$image_name);
 					$objdb->update("files",$fields , $values , $where);
 				}
 				else

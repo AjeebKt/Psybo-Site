@@ -16,18 +16,32 @@
 	}
 
 	$result_add=$objdb->select("address", array(),array("id",$add_id));
+	$result_file=$objdb->select("files",array(),array("id",$file_id));
+	foreach ($result_file[0] as $key => $value)
+	{
+		// if (is_string($key) and $key == 'type') 
+		// {
+		// 	$image_type=$value;
+		// }
+		if (is_string($key) and $key == 'file_name') 
+		{
+			$image_name=$value;
+		}
+	}
+
 
 	if (isset($_POST['btnTeamSubmit'])) 
 	{
 		//upload file details
-
-		$rand=rand();
-		$file_name=basename($_FILES["uploadTeam"]["name"]);
-		$file_type=pathinfo(basename($_FILES["uploadTeam"]["name"]),PATHINFO_EXTENSION);
-		$target_dir=getcwd()."/upload-image/";
+		if ($_FILES['uploadTeam']['tmp_name']) 
+		{
+			
+			$file_name=basename($_FILES["uploadTeam"]["name"]);
+			$file_type=pathinfo(basename($_FILES["uploadTeam"]["name"]),PATHINFO_EXTENSION);
+			$target_dir=getcwd()."/upload-image/";
+		}
 
 		$name=$_POST['txtName'];
-
 		$designation=$_POST['txtDesignation'];
 		// $designation=strip_tags($_POST['txtDesignation']);
 		// preg_replace('/[^A-Za-z0-9\s.]/', '', $designation);
@@ -202,6 +216,7 @@
 			$uploadok=1;
 			if (!empty($file_name)) 
 			{
+				$rand=rand();
 				$check=getimagesize($_FILES["uploadTeam"]["tmp_name"]);
 				// echo curl_errno($check);
 				if ($check !== FALSE) 
@@ -246,8 +261,10 @@
 						$values=array($file_type,$rand.".".$file_type);
 						$where=array("id" , $file_id);
 						// var_dump($values);
+						$actdir="/upload-image/";
+						unlink(getcwd().$actdir.$image_name );
+						$objdb->update("files",array("type","file_name"),array("",""),array("id",$file_id));
 						$objdb->update("files",$fields,$values,$where );
-						
 					}
 					else
 					{
@@ -258,6 +275,13 @@
 					}
 				}
 			}
+			// delete photo
+			// else
+			// {
+			// 	$actdir="/upload-image/";
+			// 	unlink(getcwd().$actdir.$image_name );
+			// 	$objdb->update("files",array("type","file_name"),array("",""),array("id",$file_id));
+			// }
 			
 			if ($error == 1 and $uploadok == 1) 
 			{

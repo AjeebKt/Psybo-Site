@@ -42,52 +42,74 @@
 		<section class="team">
 			<h2>TEAM PSYBO</h2>
 			<ul class="team-member">
+
 			<?php for ($j=0; $j<$count_emp ;$j++)
-			{ $result=$objdb->select_row_emp($emp_id[$j][0]);?>
+			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
 					<img src=<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="file_name") {
-							// var_dump($actdir.$value);
-							echo "\"".$actdir.$value."\"";
-						}
-					}; ?> class="display-img" alt="">
-					<h4><?php foreach ($result as $key => $value) {
+							if (!empty($value)) 
+								echo "\"".$actdir.$value."\"";
+							else
+							{
+								echo "\"".$actdir."default-pic.png"."\"";	
+							}
+					}}; ?> class="display-img" alt="" >
+
+					<h4> <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {
 							echo $value;
 						}
-					} ?></h4>
-					<h4 class="dev-small"><?php foreach ($result as $key => $value) {
+					} ?> </h4> 
+
+					<h4 class="dev-small"> <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="designation") {
 							echo $value;
 						}
-					} ?></h4>
+					} ?> </h4>
+
 					<div class="center-ul">
-						<ul class="personal-links">
-							<li>
-								<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
+						<ul class="personal-links" >
+
+						<?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key=="fb") {
-								echo ("href=\"".$value."\"");}}?> ></a>
-							</li>
+							if (!empty($value)) { ?>
+
 							<li>
-								<a class="twitter" <?php foreach ($result as $key => $value) {
-							if (is_string($key) and $key=="twiter") {
-								echo ("href=\"".$value."\"");}}?>></a>
+								<a class="facebook" target="_blank" <?php 
+								echo ("href=\"".$value."\"");?> ></a>
 							</li>
+							<?php }}}  ?>
+
+							<?php foreach ($result as $key => $value) {
+							if (is_string($key) and $key=="twiter") {
+								if (!empty($value)) {?>
+							<li>
+								<a class="twitter" <?php 
+								echo ("href=\"".$value."\"");?> ></a>
+							</li>
+							<?php }}}  ?>
+
+							<?php foreach ($result as $key => $value) {
+									if (is_string($key) and $key=="linkedin") {
+										if (!empty($value)){?>
 							<li>
 								<a class="linkedin" 
-								<?php foreach ($result as $key => $value) {
-									if (is_string($key) and $key=="linkedin") {
+								<?php 
 										echo ("href=\"".$value."\"");
-									}
-								} ?>  ></a>
+								?>> </a>
 							</li>
-							<li>
-								<a class="gplus" <?php foreach ($result as $key => $value) {
+							<?php }}}  ?>		
+
+							 <?php foreach ($result as $key => $value) {
 									if (is_string($key) and $key=="google_plus") {
-										echo ("href=\"".$value."\"");
-									}
-								} ?>  \></a>
+										if (!empty($value)) { ?>
+							<li>
+								<a class="gplus"
+										<?php echo ("href=\"".$value."\"");
+								 ?> ></a>
 							</li>
+							<?php }}}  ?>		
 						</ul>
 					</div>
 				</li>
