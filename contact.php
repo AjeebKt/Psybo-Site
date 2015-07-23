@@ -1,3 +1,4 @@
+
 <?php 
 error_reporting(0);
 
@@ -64,8 +65,8 @@ if (isset($_POST['buttonmail']) )
 			</div>
 		</div>
 	</div>
-	<div class="contact">
-		<div class="container">
+	<div class="container">
+		<div class="contact">
 			<div class="message">
 				<form id="message-form" class="msg-form" method="POST" action="">
 					<label for="msgName">Name</label>
