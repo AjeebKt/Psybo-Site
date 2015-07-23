@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
  require_once '/var/www/psybo_site/psybo/Psybo-Site/Database.php';
  require_once "/var/www/psybo_site/psybo/Psybo-Site/file.php";
@@ -221,8 +223,22 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 
 // $dir=getcwd()."/upload-image/";
 // unlink($dir."aaaaa.jpg");
+// $pass=crypt("admin");
+// var_dump($pass);
+
+$pass1=md5("admin");
+
+// var_dump($pass1);
 
 
+// echo "sha-256      :     ".hash('sha256','admin')."<br>";
+// echo "sha-512      :     ".hash('sha512','admin');
 
+$a=hash('sha256', 'aa');
+var_dump($a);
+$hash = password_hash("admin",PASSWORD_DEFUALT,['cost' =>12]);
 ?>
+
+</body>
+</html>
 

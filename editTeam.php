@@ -1,7 +1,7 @@
 <?php 
 	error_reporting(0);
 	include 'Database.php';
-	$objdb=new Database("localhost","root","asd","psybo-db");
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 	$emp_id=(int)$_GET['editid'];
 	$result_emp=$objdb->select("employee",array(),array("id",$emp_id));
 	foreach ($result_emp[0] as $key => $value) 

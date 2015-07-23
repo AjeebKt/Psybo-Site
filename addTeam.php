@@ -1,7 +1,8 @@
 <?php 
     error_reporting(0);
     include 'Database.php';
-    $objdb=new Database("localhost","root","asd","psybo-db");
+    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    $objdb= new Database ('localhost','root','asd','psybo-db');
     $num_ptf=$objdb->num_row_ptf();
     $count_ptf=count($num_ptf);
     $actdir="/upload-image/";
@@ -219,6 +220,7 @@
                 if ( $error == 1 )#and $upload == TRUE) 
                 {
                     $values_emp_file=array($rand.$file_type,$file_type);
+                    var_dump($values_emp);
                     $objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
                     if ($objdb == TRUE) 
                     {
