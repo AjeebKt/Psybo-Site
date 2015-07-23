@@ -323,6 +323,14 @@ footer
 		{
 			background-image: url(../img/google2.png);			
 		}
+		@media screen and (max-width: 500px) {
+			.social-links li a {
+				width:20px;
+				height: 20px;
+				transition: all 0.5s ease;
+			}
+			
+		}
 
 .portfolio
 {
@@ -573,7 +581,7 @@ footer
 	position: relative;
 	background-color: #0B0B0B;
 	float: left;
-	font-family: Lato;
+	font-family: Lato-Light;
 }
 .cap-full{
 	width: 100%;
