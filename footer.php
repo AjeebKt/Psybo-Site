@@ -1,4 +1,3 @@
-<div class="container">
 	<footer>
 		<div class="footer-details">
 			<ul class="social-links">
@@ -21,4 +20,3 @@
 			</div>
 		</div>
 	</footer>
-</div>
