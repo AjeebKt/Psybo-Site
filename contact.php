@@ -66,6 +66,7 @@ if (isset($_POST['buttonmail']) )
 		</div>
 		<div class="contact">
 			<div class="message">
+				<h3>Message</h3>
 				<form id="message-form" class="msg-form" method="POST" action="">
 					<label for="msgName">Name</label>
 					<br>
@@ -76,7 +77,7 @@ if (isset($_POST['buttonmail']) )
 					<label for="msgComments">Comments</label>
 					<br>
 					<textarea id="msgComments" name="comments" cols="30" rows="5" class="msg" required></textarea>
-					<button class="button" id="buttonmail" name="buttonmail">SEND</button>
+					<button id="buttonmail" name="buttonmail">SEND</button>
 				</form>
 			</div>
 			<div class="black-img">

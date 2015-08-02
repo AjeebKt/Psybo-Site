@@ -156,12 +156,12 @@ header
 	}
 	.navigation-links li:hover
 	{
-		background-color: #ddd;
+		background-color: #16A07D;
 		color: #008a67;
 	}
 		.navigation-links li:hover a
 		{
-			color: #008a67;
+			color: #fff;
 		}
 	.navigation-links li.active
 	{
@@ -360,6 +360,16 @@ footer
 	max-width: 260px;
 	max-height: 320px;
 }
+.team-dp {
+	width: 250px;
+	height: 250px;
+	float: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 100% 20%;
+	overflow: hidden;
+	border-radius: 125px;
+}
 .personal-links
 {
 	list-style: none;
@@ -532,7 +542,6 @@ footer
 {
 	width: 100%;
 	position: relative;
-	background-color: #0B0B0B;
 	float: left;
 	font-family: Lato-Light;
 }
@@ -560,43 +569,43 @@ footer
 {
 	width: 250px;
 	padding: 10px;
-	float: left;
+	border: 3px solid #eee;
+	float: right;
 }
-.message label{
-	color: #fff;
+.message h3{
+	text-align: center;
 }
 .message input{
 	width: 95%;
 	padding: 5px;
-	margin: 2% 1%;
+	margin: 2% 0%;
 	border: 1px solid #fff;
-	background-color: #000;
 	color: #fff;
 }
 .message textarea{
 	width: 95%;
-	margin: 2% 1%;
+	margin: 2% 0%;
 	padding: 5px;
 	border: 1px solid #fff;
-	background-color: #000;
 	color: #fff;
 }
 .message button{
 	float: right;
 	width: 100px;
 	height: 30px;
-	margin: 2% -2%;
+	margin: 2% 0%;
 	border: 1px solid #fff;
+	background-color: #008a67;
 	transition: background-color 0.4s ease, color 0.4s ease, border 0.2s ease;
 }
 .message button:hover{
 	background-color: #008a67;
 	color: #fff;
-	border: 0;
 }
 .black-img{
-	position: absolute;
-	right: 10%;
+/*	position: absolute;
+	right: 10%;*/
+	float: left;
 }
 .black-img img{
 	max-width: 350px;

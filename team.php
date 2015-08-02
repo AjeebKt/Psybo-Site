@@ -47,12 +47,13 @@
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);?>
 				<li>
-					<img src=<?php foreach ($result as $key => $value) {
+					<a href="#" class="team-dp" style="background-image: url(upload-image/843987581.jpg);"></a>
+<!-- 					<img src=<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="file_name") {
 							// var_dump($actdir.$value);
 							echo "\"".$actdir.$value."\"";
 						}
-					}; ?> class="display-img" alt="">
+					}; ?> class="display-img" alt=""> -->
 					<h4><?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {
 							echo $value;
@@ -90,6 +91,7 @@
 									}
 								} ?>  \></a>
 							</li>
+							
 						</ul>
 					</div>
 				</li>
