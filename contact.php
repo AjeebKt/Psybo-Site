@@ -39,8 +39,8 @@ if (isset($_POST['buttonmail']) )
 </head>
 <body>
 <!-- Logo -->
-	<div class="container">
-		<header>
+	<header>
+		<div class="container">
 			<div class="logo">
 				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
@@ -52,22 +52,21 @@ if (isset($_POST['buttonmail']) )
 						<li><a href="team.php">TEAM</a></li>
 						<li><a href="service.php">SERVICE</a></li>
 						<li><a href="about.php">ABOUT</a></li>
-						<li><a class="active" href="contact.php">CONTACT</a></li>
+						<li class="active"><a href="contact.php">CONTACT</a></li>
 					</ul>
 				</nav>
 			</div>
-		</header>
-	</div>
+		</div>
+	</header>
 	<div class="container">
 		<div class="cap-full">
 			<div class="caption1">
 				<h3>Let us Hear from <br><b>"You"</b></h3>
 			</div>
 		</div>
-	</div>
-	<div class="container">
 		<div class="contact">
 			<div class="message">
+				<h3>Message</h3>
 				<form id="message-form" class="msg-form" method="POST" action="">
 					<label for="msgName">Name</label>
 					<br>
@@ -78,7 +77,7 @@ if (isset($_POST['buttonmail']) )
 					<label for="msgComments">Comments</label>
 					<br>
 					<textarea id="msgComments" name="comments" cols="30" rows="5" class="msg" required></textarea>
-					<button class="button" id="buttonmail" name="buttonmail">SEND</button>
+					<button id="buttonmail" name="buttonmail">SEND</button>
 				</form>
 			</div>
 			<div class="black-img">

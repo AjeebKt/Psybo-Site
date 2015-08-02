@@ -64,7 +64,7 @@
 
             if (!empty($_POST['txtLinkedin']) and $error == 1) 
             {
-                $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+                $preg = "/^(((https?)\:\/\/\/?)|www\.)([a-zA-Z0-9-.]*)\.([a-z]{2,3})(\/([a-zA-Z0-9+\$_-]\.?)+)*\/?$/";
                 if (preg_match($preg, $_POST['txtLinkedin']) != FALSE ) 
                 {
                     $valid_url=$_POST['txtLinkedin'];
@@ -142,8 +142,6 @@
                     </script>"; 
                 }
             }
-            // "www.plus.google.com/+AjeebKTajb/about"
-            // www.facebook.com/moushid
             if (!empty($_POST['txtGplus']) and $error == 1) 
             {
                 $preg = "/^((http(s?):\/\/)|www\.\.?)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\+]*)?$/";

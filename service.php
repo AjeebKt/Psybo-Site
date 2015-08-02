@@ -9,8 +9,8 @@
 </head>
 <body>
 <!-- Logo -->
-	<div class="container">
-		<header>
+	<header>
+		<div class="container">
 			<div class="logo">
 				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
@@ -20,13 +20,15 @@
 						<li><a href="index.php">HOME</a></li>
 						<li><a href="portfolio.php">PORTFOLIO</a></li>
 						<li><a href="team.php">TEAM</a></li>
-						<li><a class="active" href="service.php">SERVICE</a></li>
+						<li class="active"><a href="service.php">SERVICE</a></li>
 						<li><a href="about.php">ABOUT</a></li>
 						<li><a href="contact.php">CONTACT</a></li>
 					</ul>
 				</nav>
 			</div>
-		</header>
+		</div>
+	</header>
+	<div class="container">
 		<section class="we-do">
 			<div class="left-title">
 				<h5>THE <br><b>HARD</b><br>WORK</h5>

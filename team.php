@@ -1,9 +1,10 @@
 <?php 
-	error_reporting(0);
+	error_reporting(1);
 	include "file.php";
     require_once 'Database.php';
 	// use app\Database;
-    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
     $count_emp=count($emp_id);
@@ -46,15 +47,16 @@
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
-					<img src=<?php foreach ($result as $key => $value) {
+					<!-- <a href="#" class="team-dp" style="background-image: url(upload-image/default-pic.png);"></a> -->
+					<a href="#" class="team-dp" style="background-image: url(<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="file_name") {
 							if (!empty($value)) 
-								echo "\"".$actdir.$value."\"";
+								echo $actdir.$value.");";
 							else
 							{
-								echo "\"".$actdir."default-pic.png"."\"";	
+								echo $actdir.'default-pic.png'.");";
 							}
-					}}; ?> class="display-img" alt="" >
+					}}; ?>" ></a>
 
 					<h4> <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {

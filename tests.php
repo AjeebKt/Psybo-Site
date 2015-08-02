@@ -324,3 +324,13 @@ echo 'test';
 </body>
 </html>
 
+<img src=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key=="file_name") {
+
+							if (!empty($value)) 
+								echo "\"".$actdir.$value."\"";
+							else
+							{
+								echo "\"".$actdir."default-pic.png"."\"";	
+							}
+					}}; ?> class="display-img" alt="" >

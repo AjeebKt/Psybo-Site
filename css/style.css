@@ -19,7 +19,7 @@ h4
 {
  	width: 25%;
  	position: relative;
-	height: 330px;
+	height: 370px;
 	margin: 0% auto 0;
 	background-color: #fff;
 	margin-top: 5%;
@@ -71,7 +71,7 @@ h4
 {	
 	width: 100%;
 	float: left;
-	margin-top: 7%;
+	margin: 10% 0;
 }
 .remember-me input
 {
