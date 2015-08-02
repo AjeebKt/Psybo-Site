@@ -116,7 +116,7 @@
             }
 
 
-             if (!empty($_POST['txtTwitter']) and $error == 1) 
+            if (!empty($_POST['txtTwitter']) and $error == 1) 
             {
                 $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
                 if (preg_match($preg, $_POST['txtTwitter']) != FALSE ) 
@@ -142,10 +142,11 @@
                     </script>"; 
                 }
             }
-
+            // "www.plus.google.com/+AjeebKTajb/about"
+            // www.facebook.com/moushid
             if (!empty($_POST['txtGplus']) and $error == 1) 
             {
-                $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+                $preg = "/^((http(s?):\/\/)|www\.\.?)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\+]*)?$/";
                 if (preg_match($preg, $_POST['txtGplus']) != FALSE ) 
                 {
                     $valid_url=$_POST['txtGplus'];
@@ -172,8 +173,7 @@
 
             if ($error == 1 and $_FILES['uploadTeam']['tmp_name'] ) 
             {
-            $uploadok=1;
-            
+                $uploadok=1;
                 $check=getimagesize($_FILES["uploadTeam"]["tmp_name"]);
                 if ($check !== FALSE) 
                 {
@@ -201,48 +201,45 @@
                             </script>";
                     $uploadok=0;
                 }
-                // if ($uploadok == 0)
-                // { 
-                //     $message= "<script type='text/javascript'>
-                //             alert('Upload failed try again later!');
-                //         </script>"; 
-                // }
             }
             else
                 $uploadok=0;
 
-            if ($uploadok == 1) 
+            if ($uploadok == 1 and $error == 1) 
             {
                 $rand=rand();
                 $rand.=".";
                 $upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_dir .$rand.$file_type ); 
-            }
-                if ( $error == 1 )#and $upload == TRUE) 
-                {
-                    $values_emp_file=array($rand.$file_type,$file_type);
-                    var_dump($values_emp);
-                    $objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
-                    if ($objdb == TRUE) 
-                    {
-                        $message= "<script type='text/javascript'>
-                                    alert('Adding succesfull');
-                                    window.location.replace('tabTeam.php');
-                            </script>";
-                    }
-                }
-                else
+            // }
+                // if ( $error == 1 )
+                // {
+                $values_emp_file=array($rand.$file_type,$file_type);
+                $objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
+                if ($objdb == TRUE) 
                 {
                     $message= "<script type='text/javascript'>
-                                alert('cano Upload filed try again later!');
-                            </script>"; 
+                                alert('Adding succesfull');
+                                window.location.replace('tabTeam.php');
+                        </script>";
                 }
-            
-            // }
+            }
+            else if ($error == 1) 
+            {
+                $values_emp_file=array($rand.$file_type,$file_type);
+                $objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
+                if ($objdb == TRUE) 
+                {
+                    $message= "<script type='text/javascript'>
+                                alert('Adding succesfull');
+                                window.location.replace('tabTeam.php');
+                        </script>";
+                } 
+            }
             // else
-            //     $message="<script type='text/javascript'>
-            //         alert('fghjk');
-            //     </script>"; 
-        }
+            // $message= "<script type='text/javascript'>
+            //         alert('Please Enter Correct Information!');
+            //     </script>";     
+        }    
         else
         {
             $message= "<script type='text/javascript'>
@@ -250,7 +247,7 @@
                 </script>"; 
         }
     }       
-?>
+?> 
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -305,10 +302,7 @@
         </form>
     </section>
     <?php echo $message; ?>
- </body>
- </html>
+</body>
+</html>
 
-<?php 
-    
 
-?>

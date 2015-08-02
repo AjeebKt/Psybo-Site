@@ -2,6 +2,7 @@
 	error_reporting(0);
 	include 'Database.php';
     $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    // $objdb=new Database('localhost','root','asd','psybo-db');
 	$emp_id=(int)$_GET['editid'];
 	$result_emp=$objdb->select("employee",array(),array("id",$emp_id));
 	foreach ($result_emp[0] as $key => $value) 
@@ -19,10 +20,7 @@
 	$result_file=$objdb->select("files",array(),array("id",$file_id));
 	foreach ($result_file[0] as $key => $value)
 	{
-		// if (is_string($key) and $key == 'type') 
-		// {
-		// 	$image_type=$value;
-		// }
+		
 		if (is_string($key) and $key == 'file_name') 
 		{
 			$image_name=$value;
@@ -181,7 +179,7 @@
 			}
 			if (!empty($_POST['txtGplus']) and $error == 1) 
 			{
-				$preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+				$preg = "/^((http(s?):\/\/)|www\.\.?)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\+]*)?$/";
 			  	if (preg_match($preg, $_POST['txtGplus']) != FALSE ) 
 			  	{
 			  		$error=1;

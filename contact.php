@@ -12,10 +12,10 @@ if (isset($_POST['buttonmail']) )
 		$from = $_POST['msgEmail'];
 		$name = $_POST['msgName'];
 		$subject="comments from ".$name;
-		$message=$_POST['txtcomments'];
+		$message=$_POST['comments'];
 		$message=wordwrap($message,70,"<br>");
 		$message=str_replace("\n.","\n..",$message);
-		$headers='From: '.$from;
+		$headers='From: info@psybotechnologies.com';
 		$mail=mail($to, $subject, $message);
 		if ($mail==TRUE)
 			$message="<script type='text/javascript'	
@@ -86,8 +86,9 @@ if (isset($_POST['buttonmail']) )
 			</div>
 		</div>
 	</div>
-	<?php include 'footer.php'; 
+	<?php  
 		echo $message;
+		include 'footer.php';
 	?>
 </body>
 </html>
