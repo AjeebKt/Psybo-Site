@@ -47,7 +47,7 @@
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);?>
 				<li>
-					<a href="#" class="team-dp" style="background-image: url(upload-image/843987581.jpg);"></a>
+					<a href="#" class="team-dp" style="background-image: url(upload-image/643876244.jpg);"></a>
 <!-- 					<img src=<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="file_name") {
 							// var_dump($actdir.$value);

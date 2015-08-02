@@ -84,13 +84,18 @@ h5 b{
 }
 p
 {
-	font-family: open-sans;
+	font-family: Lato-light;
 	/*font-weight: lighter;*/
 	font-size: 12pt;
 	line-height: 18pt;
-	font-weight: 300ss;
+	font-weight: 300;
 	/*word-spacing: 1px;*/
 	/*letter-spacing: 1px;*/
+}
+section {
+	width: 100%;
+	float: left;
+	margin-bottom: 2%;
 }
 
 /*------Index Page-----*/
@@ -188,18 +193,15 @@ header
 }
 /*--Content---*/
 
-.slider
-{
-	width: 100%;
-	float: left;
+.testimonial {
+	margin-top: 4%;
+	font-weight: lighter;
 	text-align: center;
-	position: relative;
-  -webkit-animation: top-move 5s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -2s; /* Chrome, Safari, Opera */
-  animation: top-move 5s;
-  animation-delay: -2s;
 }
-
+.testimonial p {
+	width: 70%;
+	margin: 0 auto ;
+}
 /*---Footer---*/
 footer
 {
@@ -289,7 +291,6 @@ footer
 	width: 100%;
 	float: left;
 	padding-top: 3%;
-	background-color: #080808;
 }
 .portfolio img
 {
@@ -297,14 +298,13 @@ footer
 }
 .folio-caption p{
 	font-family: Lato-Light;
-
 	padding-left: 2%;
 	text-align: left;
-	color: #fff;
+	color: #333;
 }
 	.portfolio figure
 	{
-		width: 28%;
+		width: 25%;
 		float: left;
 		margin: 0% 1% 1% 1%;
 		border: 1px solid #ccc;
@@ -342,14 +342,15 @@ footer
 	width: 100%;
 	list-style: none;
 	float: left;
-	margin: 0;
+	text-align: center;
+	margin: 0px 0 5% 0;
 	padding: 0;
 }
 	.team-member li
 	{
 		width: 20%;
 		float: left;
-		margin: 1%;
+		margin: 3% 0 auto;
 		display: inline-block;
 	}
 .dev-small{
@@ -357,18 +358,19 @@ footer
 }
 .display-img
 {
+	float: left;
 	max-width: 260px;
 	max-height: 320px;
 }
 .team-dp {
-	width: 250px;
-	height: 250px;
-	float: left;
+	display: inline-block;
+	width: 200px;
+	height: 200px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 100% 20%;
 	overflow: hidden;
-	border-radius: 125px;
+	border-radius: 100px;
 }
 .personal-links
 {
@@ -579,24 +581,26 @@ footer
 	width: 95%;
 	padding: 5px;
 	margin: 2% 0%;
-	border: 1px solid #fff;
-	color: #fff;
+	background-color: #fff;
+	border: 1px solid #008a67;
+	color: #000;
 }
 .message textarea{
 	width: 95%;
 	margin: 2% 0%;
 	padding: 5px;
-	border: 1px solid #fff;
-	color: #fff;
+	background-color: #fff;
+	border: 1px solid #008a67;
+	color: #000;
 }
 .message button{
 	float: right;
 	width: 100px;
 	height: 30px;
 	margin: 2% 0%;
-	border: 1px solid #fff;
-	background-color: #008a67;
-	transition: background-color 0.4s ease, color 0.4s ease, border 0.2s ease;
+	border: 1px solid #008a67;
+	background-color: #fff;
+	transition: background-color 0.35s ease, color 0.35s ease, border 0.2s ease;
 }
 .message button:hover{
 	background-color: #008a67;

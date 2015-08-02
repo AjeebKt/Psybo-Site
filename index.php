@@ -33,13 +33,17 @@
 	</header>
 <!-- Slides -->
 	<div class="container">
-		<div id="sliderFrame">
+		<section id="sliderFrame">
 	        <div id="slider" style="background-size: 100% auto;">
 	            <img src="img/bg.png" alt="Welcome to Psybo Technologies" />
 	            <img src="img/bg2.jpg" alt="We get Started" />
 	            <img src="img/bg1.jpg" alt="The Final Software Destination" />
 	        </div>
-   		</div>
+   		</section>
+   		<section class="testimonial">
+   			<h3>HAPPY CLIENTS</h3>
+   			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eveniet, ex, facere nam quis tempora minima voluptate impedit eius quod reiciendis excepturi labore est officia inventore hic. Autem, odit!</p>
+   		</section>
 	</div>
 	<?php include 'footer.php'; ?>
 </body>
