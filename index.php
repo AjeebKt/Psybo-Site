@@ -17,18 +17,16 @@
 			<div class="logo">
 				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
-			<div class="div-center">
-				<nav class="nav-menu">
-					<ul class="navigation-links">
-						<li class="active"><a href="index.php">HOME</a></li>
-						<li><a href="portfolio.php">PORTFOLIO</a></li>
-						<li><a href="team.php">TEAM</a></li>
-						<li><a href="service.php">SERVICE</a></li>
-						<li><a href="about.php">ABOUT</a></li>
-						<li><a href="contact.php">CONTACT</a></li>
-					</ul>
-				</nav>
-			</div>
+			<nav class="nav-menu">
+				<ul class="navigation-links">
+					<li class="active"><a href="index.php">HOME</a></li>
+					<li><a href="portfolio.php">PORTFOLIO</a></li>
+					<li><a href="team.php">TEAM</a></li>
+					<li><a href="service.php">SERVICE</a></li>
+					<li><a href="about.php">ABOUT</a></li>
+					<li><a href="contact.php">CONTACT</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
 <!-- Slides -->

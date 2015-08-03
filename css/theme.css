@@ -41,6 +41,7 @@ h1
 	font-weight: normal;
 	font-size: 42pt;
 	margin-top: 2%;
+	font-weight: normal;
 	opacity: 0.7;
 	line-height: 50px;
 	padding: 5% 0px 10px; 
@@ -50,6 +51,7 @@ h2
 	font-family: Lato-light;
 	color: #000;
 	font-size: 36pt;
+	font-weight: normal;
 	opacity: 0.7;
 	margin-top: 2%;
 	padding: 0;
@@ -57,6 +59,7 @@ h2
 h3
 {
 	font-family: Lato-light;
+	font-weight: normal;
 	font-size: 20pt;
 	margin: 10px 0;
 	padding: 0;
@@ -65,6 +68,7 @@ h4
 {
 	font-family: Lato-light;
 	font-size: 14pt;
+	font-weight: normal;
 	margin: 10px 0;
 	text-align: center;
 }
@@ -72,12 +76,12 @@ h5{
 	text-align: center;
 	font-family: Lato;
 	font-size: 70pt;
-	font-weight: bolder;
+	/*font-weight: bolder;*/
 }
 h5 b{
 	font-family: Lato;
 	font-size: 70pt;
-	font-weight: bolder;
+	/*font-weight: bolder;*/
 	color: #f23;
 	margin: 0;
 	padding: 0;
@@ -129,6 +133,7 @@ header
 {
 	margin: 0px auto;
 	float: right;
+	padding-top: 1%;
 	/*background-color: rgba(204, 204, 204, 0.5);*/
 }
 .navigation-links
@@ -137,24 +142,28 @@ header
 	margin: 0;
 	padding: 0;
 	background-color: transparent;
+	text-align: center;
 }
 	.navigation-links li
 	{
+		width: 100px;
+		height: 100px;
 		cursor: pointer;
 		list-style: none;
+		margin-right: 5px;
 		float: left;
+		border-radius: 50px;
 		-webkit-transition: background-color 0.3s ease, color 0.3s ease;
 		-o-transition: background-color 0.3s ease, color 0.3s ease;
 		transition: background-color 0.3s ease, color.3s ease;
 	}
 	.navigation-links li a
 	{
+		height: 60px;
 		display: block;
 		font-family: Lato;
-		height: 40px;
-		padding: 90px 8px 0px;
+		padding-top: 40px;
 		font-size: 13pt;
-		border-top: 5px solid transparent;
 		text-decoration: none;
 		color: #fff;
 		/*letter-spacing: 1px;*/
@@ -200,7 +209,8 @@ header
 }
 .testimonial p {
 	width: 70%;
-	margin: 0 auto ;
+	color: #333;
+	margin: 0 auto;
 }
 /*---Footer---*/
 footer
@@ -349,7 +359,7 @@ footer
 	.team-member li
 	{
 		width: 20%;
-		float: left;
+		/*float: left;*/
 		margin: 3% 0 auto;
 		display: inline-block;
 	}
@@ -378,16 +388,16 @@ footer
 	padding-left: 0;
 	width: 100%;
 }
-	.personal-links li
-	{
-		float: left;
-		margin: 0;
-		width: 25%;
-	}
 	.center-ul
 	{
 		width: 50%;
 		margin: 0 auto;
+	}
+	.personal-links li
+	{
+		/*float: left;*/
+		margin: 0 auto;
+		width: 25%;
 	}
 		.personal-links li a
 		{

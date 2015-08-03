@@ -1,8 +1,9 @@
 <?php 
-	error_reporting(0);
+	error_reporting(1);
 	include "file.php";
     require_once 'Database.php';
 	// use app\Database;
+    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
     $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
@@ -26,18 +27,16 @@
 			<div class="logo">
 				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
-			<div class="div-center">
-				<nav class="nav-menu">
-					<ul class="navigation-links">
-						<li><a href="index.php">HOME</a></li>
-						<li><a href="portfolio.php">PORTFOLIO</a></li>
-						<li class="active"><a href="team.php">TEAM</a></li>
-						<li><a href="service.php">SERVICE</a></li>
-						<li><a href="about.php">ABOUT</a></li>
-						<li><a href="contact.php">CONTACT</a></li>
-					</ul>
-				</nav>
-			</div>
+			<nav class="nav-menu">
+				<ul class="navigation-links">
+					<li><a href="index.php">HOME</a></li>
+					<li><a href="portfolio.php">PORTFOLIO</a></li>
+					<li class="active"><a href="team.php">TEAM</a></li>
+					<li><a href="service.php">SERVICE</a></li>
+					<li><a href="about.php">ABOUT</a></li>
+					<li><a href="contact.php">CONTACT</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
 	<div class="container">
@@ -45,53 +44,74 @@
 			<h2>TEAM PSYBO</h2>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)
-			{ $result=$objdb->select_row_emp($emp_id[$j][0]);?>
+			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
-					<a href="#" class="team-dp" style="background-image: url(upload-image/643876244.jpg);"></a>
-<!-- 					<img src=<?php foreach ($result as $key => $value) {
+					<!-- <a href="#" class="team-dp" style="background-image: url(upload-image/643876244.jpg);"></a> -->
+					<!-- <a href="#" class="team-dp" style="background-image: url(upload-image/default-pic.png);"></a> -->
+					<a href="#" class="team-dp" style="background-image: url(<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="file_name") {
-							// var_dump($actdir.$value);
-							echo "\"".$actdir.$value."\"";
-						}
-					}; ?> class="display-img" alt=""> -->
-					<h4><?php foreach ($result as $key => $value) {
+							if (!empty($value)) 
+								echo $actdir.$value.");";
+							else
+							{
+								echo $actdir.'default-pic.png'.");";
+							}
+					}}; ?>" ></a>
+
+					<h4> <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {
 							echo $value;
 						}
-					} ?></h4>
-					<h4 class="dev-small"><?php foreach ($result as $key => $value) {
+					} ?> </h4> 
+
+					<h4 class="dev-small"> <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="designation") {
 							echo $value;
 						}
-					} ?></h4>
+					} ?> </h4>
+
 					<div class="center-ul">
-						<ul class="personal-links">
-							<li>
-								<a class="facebook" target="_blank" <?php foreach ($result as $key => $value) {
+						<ul class="personal-links" >
+
+						<?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key=="fb") {
-								echo ("href=\"".$value."\"");}}?> ></a>
-							</li>
+							if (!empty($value)) { ?>
+
 							<li>
-								<a class="twitter" <?php foreach ($result as $key => $value) {
-							if (is_string($key) and $key=="twiter") {
-								echo ("href=\"".$value."\"");}}?>></a>
+								<a class="facebook" target="_blank" <?php 
+								echo ("href=\"".$value."\"");?> ></a>
 							</li>
+							<?php }}}  ?>
+
+							<?php foreach ($result as $key => $value) {
+							if (is_string($key) and $key=="twiter") {
+								if (!empty($value)) {?>
+							<li>
+								<a class="twitter" <?php 
+								echo ("href=\"".$value."\"");?> ></a>
+							</li>
+							<?php }}}  ?>
+
+							<?php foreach ($result as $key => $value) {
+									if (is_string($key) and $key=="linkedin") {
+										if (!empty($value)){?>
 							<li>
 								<a class="linkedin" 
-								<?php foreach ($result as $key => $value) {
-									if (is_string($key) and $key=="linkedin") {
+								<?php 
 										echo ("href=\"".$value."\"");
-									}
-								} ?>  ></a>
+								?>> </a>
 							</li>
-							<li>
-								<a class="gplus" <?php foreach ($result as $key => $value) {
+							<?php }}}  ?>		
+
+							 <?php foreach ($result as $key => $value) {
 									if (is_string($key) and $key=="google_plus") {
-										echo ("href=\"".$value."\"");
-									}
-								} ?>  \></a>
+										if (!empty($value)) { ?>
+							<li>
+								<a class="gplus"
+										<?php echo ("href=\"".$value."\"");
+								 ?> ></a>
 							</li>
-							
+							<?php }}}  ?>		
 						</ul>
 					</div>
 				</li>

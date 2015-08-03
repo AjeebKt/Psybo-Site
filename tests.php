@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
  require_once '/var/www/psybo_site/psybo/Psybo-Site/Database.php';
  require_once "/var/www/psybo_site/psybo/Psybo-Site/file.php";
@@ -221,7 +223,114 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 
 // $dir=getcwd()."/upload-image/";
 // unlink($dir."aaaaa.jpg");
+// $pass=crypt("admin");
+// var_dump($pass);
 
+//$pass1=md5("admin");
+
+// var_dump($pass1);
+
+
+// echo "sha-256      :     ".hash('sha256','admin')."<br>";
+// echo "sha-512      :     ".hash('sha512','admin');
+
+// $a=hash('sha256', 'aa');
+// var_dump($a);
+// $hash = password_hash("admin",PASSWORD_DEFUALT,['cost' =>12]);
+
+
+/////////////////////////////  fghjklfghjk/////////////////////
+// $dir    = '/home/noushi/Desktop/Untitled Folder 2';
+// var_dump($dir);
+// // var_dump($_POST['filenames'] );
+// // if( $_SERVER['REQUEST_METHOD']  == 'POST' ) {
+// //         if( isset( $_POST['filenames'] ) ) {
+// //                 foreach( $_POST['filenames'] as $key => $file ) {
+// //                         unlink( $dir . '\\' . $file );
+// //                 }
+// //                 echo 'Files deleted';
+// //         }
+// //         else {
+// //                 echo 'No files selected';
+// //         }
+// // }
+// unlink("/home/noushi/Desktop/Untitled Folder 2/road-sign-361513_640.jpg");
+// $files1 = scandir($dir);
+// var_dump($files1);
+// // $cnt = count($files1);
+// //var_dump($cnt);
+// echo "<h1><u> delete files from directory </u></h1>";
+// echo "<div class='container'>";
+// echo "<form action='".$_SERVER['PHP_SELF']."' method='post'>";
+// // for($n=0; $n< $cnt; $n++)
+// // var_dump($files1[3]);
+// foreach ($files1 as $key => $value) 
+// {
+// 	if ( $value!= '.'  && $value != '..')
+//     {
+
+//     	print_r("<input name='filenames[]' value='".($value)."' type='checkbox' />".($value)."<br/> ");       
+//     }
+// }
+// if( $_SERVER['REQUEST_METHOD']  == 'POST' ) 
+// {
+//     if( isset( $_POST['filenames'] ) ) 
+//     {
+//         foreach( $_POST['filenames'] as $key => $file )
+//         {
+//             $delet=unset($dir.$file );
+//             if ($delet == true) 
+//             {
+//             	  echo 'Files deleted';
+//             }
+//             else
+//             	echo "error";
+//         }
+          
+//     }
+//     else {
+//             echo 'No files selected';
+//         }
+// }
+// echo "</br>";
+// echo "<input type='submit' value='Delete'>";
+// echo "</form>";
+
+// echo "</div>";
+
+/////////////////////////////////////////////////////////////////
+// https://plus.google.com/+AjeebKTajb/about
+// $preg2 = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+// $preg1 = "/^(http(s?):\/\/(www.?))+[a-zA-Z0-9\.\-\_]+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\+\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=])+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+$preg = "/^((http(s?):\/\/)|www\.\.?)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\+]*)?$/";
+// "         (((https?)\:\/\/?)|www\.)"
+ // $preg = "/^(http(s?):\/\/)?(www\.)+([a-zA-Z0-9\.\-\_]*)?$/";
+// if(preg_match($preg, 'https://google.com/+AjeebKTajb/about') !=False )
+// if(preg_match($preg, 'www.ihbjhn.linkedin.com/in/noushid') !=False )
+// {
+// 	echo "match";
+// }
+// else
+// 	echo "canot match";
+	// print_r($matches);
+
+// var_dump(phpinfo());
+//////////////////////////////////////////////////////////////////////////////
+echo 'hollow world<br>';
+echo 'test';
 
 ?>
 
+</body>
+</html>
+
+<img src=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key=="file_name") {
+
+							if (!empty($value)) 
+								echo "\"".$actdir.$value."\"";
+							else
+							{
+								echo "\"".$actdir."default-pic.png"."\"";	
+							}
+					}}; ?> class="display-img" alt="" >

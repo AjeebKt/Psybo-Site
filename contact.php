@@ -12,10 +12,10 @@ if (isset($_POST['buttonmail']) )
 		$from = $_POST['msgEmail'];
 		$name = $_POST['msgName'];
 		$subject="comments from ".$name;
-		$message=$_POST['txtcomments'];
+		$message=$_POST['comments'];
 		$message=wordwrap($message,70,"<br>");
 		$message=str_replace("\n.","\n..",$message);
-		$headers='From: '.$from;
+		$headers='From: info@psybotechnologies.com';
 		$mail=mail($to, $subject, $message);
 		if ($mail==TRUE)
 			$message="<script type='text/javascript'	
@@ -44,18 +44,16 @@ if (isset($_POST['buttonmail']) )
 			<div class="logo">
 				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
-			<div class="div-center">
-				<nav class="nav-menu">
-					<ul class="navigation-links">
-						<li><a href="index.php">HOME</a></li>
-						<li><a href="portfolio.php">PORTFOLIO</a></li>
-						<li><a href="team.php">TEAM</a></li>
-						<li><a href="service.php">SERVICE</a></li>
-						<li><a href="about.php">ABOUT</a></li>
-						<li class="active"><a href="contact.php">CONTACT</a></li>
-					</ul>
-				</nav>
-			</div>
+			<nav class="nav-menu">
+				<ul class="navigation-links">
+					<li><a href="index.php">HOME</a></li>
+					<li><a href="portfolio.php">PORTFOLIO</a></li>
+					<li><a href="team.php">TEAM</a></li>
+					<li><a href="service.php">SERVICE</a></li>
+					<li><a href="about.php">ABOUT</a></li>
+					<li class="active"><a href="contact.php">CONTACT</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
 	<div class="container">
@@ -85,8 +83,9 @@ if (isset($_POST['buttonmail']) )
 			</div>
 		</div>
 	</div>
-	<?php include 'footer.php'; 
+	<?php  
 		echo $message;
+		include 'footer.php';
 	?>
 </body>
 </html>

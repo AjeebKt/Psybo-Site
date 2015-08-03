@@ -5,7 +5,7 @@
 	
 	// use app\Database;
 
-    $objdb=new Database('localhost','root','asd','psybo-db');
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
     $count_emp=count($emp_id);

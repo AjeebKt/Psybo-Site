@@ -1,6 +1,7 @@
 
 <?php 
 error_reporting(0);
+ini_set('display_errors', true);
 class Database
 {              
 	private $host='';
@@ -52,13 +53,10 @@ class Database
 		
 		if($this->condb->connect_error)
 		{
-			die('conect error('.$this->condb->connect_errno.')'.$this->condb->connect_errno);
+			die('conect error('.$this->condb->connect_errno.')'.$this->condb->connect_error);
 
 		}
-		else
-		{
-			//echo "connection success from function";	
-		}
+		
 	}
 
 	//Database disconnect
@@ -77,7 +75,6 @@ class Database
 		{
 			return trigger_error($this->condb->error);
 		}
-		var_dump($create);
 	}
 
 	// delete table
@@ -127,14 +124,12 @@ class Database
 		$insert="INSERT INTO ".$table;
 		if ($fields!=null)
 		{
-			// echo var_dump($fields);
-			$fields='`'.implode('`, `', $fields).'`';
+			// $fields='`'.implode('`, `', $fields).'`';
+			$fields=implode(', ', $fields);
 			$insert .= " (".$fields.")"; 
-				// echo $fields;
 		}
 		$val=str_repeat("?,", count($values)-1).'?';
 		$value_type="";
-		// for ($i=0; $i <count($values) ; $i++)
 		foreach ($values as $key => $value)
 		{ 
 			if (is_string($values[$key]))
@@ -148,26 +143,20 @@ class Database
 			}		
 		}
 		$insert.="VALUES(".$val.")";
-		// var_dump($insert);
 		$stmt=$this->condb->prepare($insert);
 		$params[0] =  &$value_type;
-		foreach ($values as $key => $value) {
-			// array_push($params,&$values[$key]);
+		foreach ($values as $key => $value) 
+		{
 			$params[$key+1] = &$values[$key];
 		}
 		call_user_func_array(array(&$stmt ,'bind_param'), $params);
-		// $stmt->bind_param($value_type,$values[0],$values[1]);
-		// $stmt->bind_param($value_type,{$values[]});
 		$stmt->execute();
 		if ($stmt===FALSE)	
-		 {
+		{
 			trigger_error("error");
-		 }
-		 else
+		}
+		else
 		 	return true;
-
-		 
-
 	}
 
 	//select data
@@ -362,6 +351,7 @@ class Database
 
 	public function insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add) // 3 tables
 	{
+		
 		$this->insert("files",array("file_name","type"),$values_emp_file);
 		$last_id_fl=mysqli_insert_id($this->condb);
 		$this->insert("address",$fields_emp_add,$values_emp_add);

@@ -2,7 +2,7 @@
 	error_reporting(0);
 	include 'Database.php';
 	include 'file.php';
-	$objdb=new Database("localhost","root","asd","psybo-db");
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 	$num_ptf=$objdb->num_row_ptf();
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
@@ -24,18 +24,16 @@
 			<div class="logo">
 				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
 			</div>
-			<div class="div-center">
-				<nav class="nav-menu">
-					<ul class="navigation-links">
-						<li><a href="index.php">HOME</a></li>
-						<li class="active"><a href="portfolio.php">PORTFOLIO</a></li>
-						<li><a href="team.php">TEAM</a></li>
-						<li><a href="service.php">SERVICE</a></li>
-						<li><a href="about.php">ABOUT</a></li>
-						<li><a href="contact.php">CONTACT</a></li>
-					</ul>
-				</nav>
-			</div>
+			<nav class="nav-menu">
+				<ul class="navigation-links">
+					<li><a href="index.php">HOME</a></li>
+					<li class="active"><a href="portfolio.php">PORTFOLIO</a></li>
+					<li><a href="team.php">TEAM</a></li>
+					<li><a href="service.php">SERVICE</a></li>
+					<li><a href="about.php">ABOUT</a></li>
+					<li><a href="contact.php">CONTACT</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
 	<div class="container">

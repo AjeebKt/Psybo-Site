@@ -2,8 +2,7 @@
 error_reporting(0);
 include 'Database.php';
 $objdb=new Database("localhost","root","asd","psybo-db");
-$condb=new mysqli("localhost","root","asd","psybo-db");
-
+$objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 $message="";
 session_start();
 session_destroy();

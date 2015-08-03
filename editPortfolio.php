@@ -1,7 +1,8 @@
 <?php 
 	error_reporting(0);
 	include 'Database.php' ;
-	$objdb=new Database("localhost","root","asd","psybo-db");
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    // $objdb=new Database('localhost','root','asd','psybo-db');
 	$ptf_id=$_GET['edit_id'];
 	$ptf_id=(int)$ptf_id;
 	// echo $ptf_id;
@@ -10,16 +11,21 @@
 	$where=array("id",$ptf_id);
 	// var_dump($where);
 	$result=$objdb->select("portfolio",$fields,$where);
-	error_reporting();
 	// ini_set('display_errors', 1);
-
-
-
 	foreach ($result[0] as $key => $value) 
 	{
-		if (is_string($key) and $key='files_id') 
+		if (is_string($key) and $key=='files_id') 
 		{
 			$files_id=$value;
+		}
+	}
+
+	$result_files=$objdb->select("files",array(),array("id",$files_id));
+	foreach ($result_files[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == "file_name") 
+		{
+			$image_name=$value;
 		}
 	}
 	$files_id=(int)$files_id;
@@ -184,6 +190,7 @@
  					$values=array($rand.".".$file_type,$file_type);
 					$fields=array("file_name","type");
 					$where=array("id",$files_id);
+					unlink($target_dir.$image_name);
 					$objdb->update("files",$fields , $values , $where);
 				}
 				else
