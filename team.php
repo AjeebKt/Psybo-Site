@@ -41,13 +41,17 @@
 	</header>
 	<div class="container">
 		<section class="team">
+			<h2>Our Team
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi distinctio, officia dignissimos, aut libero reiciendis veniam. Porro doloremque, ut eveniet praesentium repellat rerum error vero, ex, repudiandae soluta harum illum.</p>
+			</h2>
 			<h2>TEAM PSYBO</h2>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
-					<!-- <a href="#" class="team-dp" style="background-image: url(upload-image/643876244.jpg);"></a> -->
-					<!-- <a href="#" class="team-dp" style="background-image: url(upload-image/default-pic.png);"></a> -->
+					<a href="#" class="team-dp">
+						<img src="upload-image/default-pic.png" alt="" class="team-dp">
+					</a>
 					<a href="#" class="team-dp" style="background-image: url(<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="file_name") {
 							if (!empty($value)) 
@@ -56,7 +60,8 @@
 							{
 								echo $actdir.'default-pic.png'.");";
 							}
-					}}; ?>" ></a>
+					}}; ?>" >
+					</a>
 
 					<h4> <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {

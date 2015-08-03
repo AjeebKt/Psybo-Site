@@ -67,7 +67,7 @@ h3
 h4
 {
 	font-family: Lato-light;
-	font-size: 14pt;
+	font-size: 18pt;
 	font-weight: normal;
 	margin: 10px 0;
 	text-align: center;
@@ -201,7 +201,41 @@ header
 	width: 0;
 }
 /*--Content---*/
-
+.disply-frame {
+	width: 100%;
+	height: 450px;
+}
+.div-span {
+	width: 50%;
+	float: left;
+}
+.node {
+	padding: 0 20px;
+}
+.node img {
+	max-width: 470px;
+}
+.grid {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	float: none;
+}
+.what-wedo {
+	margin: 10px auto 5px;
+	text-align: center;
+	width: 30%;
+}
+.div-wedo {
+	width: 100%;
+	padding: 0 20px;
+}
+.div-wedo a {
+	text-decoration: none;
+	padding: 25px;
+	display: block;
+	color: #333;
+}
 .testimonial {
 	margin-top: 4%;
 	font-weight: lighter;
@@ -346,6 +380,9 @@ footer
 {
 	width: 100%;
 	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 100px;
 }
 .team-member
 {
@@ -358,10 +395,14 @@ footer
 }
 	.team-member li
 	{
-		width: 20%;
-		/*float: left;*/
-		margin: 3% 0 auto;
+		width: 25%;
+		float: left;
+		margin: 0;
 		display: inline-block;
+	}
+	.team-member li img:first-child
+	{
+		max-width: 100%;
 	}
 .dev-small{
 	font-size: 12pt;

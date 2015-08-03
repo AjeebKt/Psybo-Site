@@ -26,6 +26,7 @@ if (isset($_POST['buttonmail']) )
 			$message= "<script type='text/javascript'>
 					alert('Comments are not send at this time!.thanks');
 				</script>";
+		}
 	}
 }
 ?>
