@@ -210,7 +210,7 @@ header
 	float: left;
 }
 .node {
-	padding: 0 20px;
+	padding: 90px;
 }
 .node img {
 	max-width: 470px;
@@ -220,17 +220,21 @@ header
 	width: 100%;
 	margin: 0 auto;
 	float: none;
+	box-sizing: border-box;
+	padding: 30px;
 }
 .what-wedo {
-	margin: 10px auto 5px;
 	text-align: center;
 	width: 30%;
+	margin: 10px;
 }
 .div-wedo {
 	width: 100%;
-	padding: 0 20px;
+	border: 1px solid #333;
+	margin: 10px;
 }
 .div-wedo a {
+	height: 325px;
 	text-decoration: none;
 	padding: 25px;
 	display: block;

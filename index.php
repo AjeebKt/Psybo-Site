@@ -5,8 +5,6 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<!-- <link rel="stylesheet" href="css/css.css"> -->
-    <script src="js/js-image-slider.js" type="text/javascript"></script>
-    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/theme.css">
 	<title>PSYBO Home</title>
 </head>
@@ -34,7 +32,7 @@
 		<section id="sliderFrame" class="disply-frame">
 			<div class="div-span">
 				<div class="node">
-					<h2>WE WILL MAKE FOR YOU </h2>
+					<h2>We Will Either Find a Way or Make One</h2>
 					<p>Lorem neque architecto, delectus provident nisi fugiat reiciendis enim quae cum eum.
 					Lorem neque architecto, delectus provident nisi fugiat reiciendis enim quae cum eum.</p>
 				</div>
@@ -44,11 +42,6 @@
 					<img src="img/design.png" alt="">
 				</div>
 			</div>
-	        <!-- <div id="slider1" style="background-size: 100% auto;">
-	            <img src="img/bg.png" alt="Welcome to Psybo Technologies" />
-	            <img src="img/bg2.jpg" alt="We get Started" />
-	            <img src="img/bg1.jpg" alt="The Final Software Destination" />
-	        </div> -->
    		</section>
    		<section class="grid">
 	   		<section class="what-wedo">
@@ -62,7 +55,7 @@
 	   		<section class="what-wedo">
 	   			<div class="div-wedo">
 	   				<a href="#">
-		   				<h3>What We Do</h3>
+		   				<h3>How We Do</h3>
 		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
 	   				</a>
 	   			</div>
@@ -70,7 +63,7 @@
 	   		<section class="what-wedo">
 	   			<div class="div-wedo">
 	   				<a href="#">
-		   				<h3>What We Do</h3>
+		   				<h3>Get Connected</h3>
 		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
 	   				</a>
 	   			</div>
