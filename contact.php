@@ -12,7 +12,8 @@ if (isset($_POST['buttonmail']) )
 		$from = $_POST['msgEmail'];
 		$name = $_POST['msgName'];
 		$subject="comments from : ".$name;
-		$message=$_POST['comments'];
+		$message = "Comment from  :  ".$from."\r\n";
+		$message.=$_POST['comments'];
 		$message=wordwrap($message,70,"<br>");
 		$message=str_replace("\n.","\n..",$message);
 		$headers='From: info@psybotechnologies.com';

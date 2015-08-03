@@ -31,12 +31,50 @@
 	</header>
 <!-- Slides -->
 	<div class="container">
-		<section id="sliderFrame">
-	        <div id="slider" style="background-size: 100% auto;">
+		<section id="sliderFrame" class="disply-frame">
+			<div class="div-span">
+				<div class="node">
+					<h2>WE WILL MAKE FOR YOU </h2>
+					<p>Lorem neque architecto, delectus provident nisi fugiat reiciendis enim quae cum eum.
+					Lorem neque architecto, delectus provident nisi fugiat reiciendis enim quae cum eum.</p>
+				</div>
+			</div>
+			<div class="div-span">
+				<div class="node">
+					<img src="img/design.png" alt="">
+				</div>
+			</div>
+	        <!-- <div id="slider1" style="background-size: 100% auto;">
 	            <img src="img/bg.png" alt="Welcome to Psybo Technologies" />
 	            <img src="img/bg2.jpg" alt="We get Started" />
 	            <img src="img/bg1.jpg" alt="The Final Software Destination" />
-	        </div>
+	        </div> -->
+   		</section>
+   		<section class="grid">
+	   		<section class="what-wedo">
+	   			<div class="div-wedo">
+	   				<a href="service.php">
+		   				<h3>What We Do</h3>
+		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+	   				</a>
+	   			</div>
+	   		</section>
+	   		<section class="what-wedo">
+	   			<div class="div-wedo">
+	   				<a href="#">
+		   				<h3>What We Do</h3>
+		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+	   				</a>
+	   			</div>
+	   		</section>
+	   		<section class="what-wedo">
+	   			<div class="div-wedo">
+	   				<a href="#">
+		   				<h3>What We Do</h3>
+		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+	   				</a>
+	   			</div>
+	   		</section>
    		</section>
    		<section class="testimonial">
    			<h3>HAPPY CLIENTS</h3>
