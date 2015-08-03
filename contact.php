@@ -11,18 +11,22 @@ if (isset($_POST['buttonmail']) )
 		$to="pnoushid@gmail.com";
 		$from = $_POST['msgEmail'];
 		$name = $_POST['msgName'];
-		$subject="comments from ".$name;
-		$message=$_POST['comments'];
+		$subject="comments from : ".$name;
+		$message = "Comment from  :  ".$from."\r\n";
+		$message.=$_POST['comments'];
 		$message=wordwrap($message,70,"<br>");
 		$message=str_replace("\n.","\n..",$message);
 		$headers='From: info@psybotechnologies.com';
-		$mail=mail($to, $subject, $message);
-		if ($mail==TRUE)
-			$message="<script type='text/javascript'	
+		$mail=mail($to, $subject, $message , $headers);
+		if ($mail==true)
+		{
+			$message="<script type='text/javascript'>	
 						alert('comment has been sent');
 						</script>";
+		}
 
 		else
+		{
 			$message= "<script type='text/javascript'>
 					alert('Comments are not send at this time!.thanks');
 				</script>";

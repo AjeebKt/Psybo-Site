@@ -1,10 +1,10 @@
 <?php 
-	error_reporting(1);
+	error_reporting(0);
 	include "file.php";
     require_once 'Database.php';
 	// use app\Database;
-    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    $objdb=new Database('localhost','root','asd','psybo-db');
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    // $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
     $count_emp=count($emp_id);
@@ -50,6 +50,7 @@
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
 					<a href="#" class="team-dp">
+<<<<<<< HEAD
 						<img src="upload-image/1876174154.jpg" alt="">
 					</a>
 					<!-- <a href="#" class="team-dp" style="background-image: url(<?php foreach ($result as $key => $value) {
@@ -62,7 +63,19 @@
 							}
 					}}; ?>" >
 					</a> -->
+=======
+						<!-- <img src="upload-image/default-pic.png" alt="" class="team-dp"> -->
+						<img <?php foreach ($result as $key => $value) {
+							if (is_string($key) and $key == "file_name") {
+								if (!empty($value)) 
+									echo "src=\"".$actdir.$value."\"";
+								else
+									echo "src=\"".$actdi."default-pic.png\"";
+>>>>>>> 1aaf8141750eb2c0bbc2a06ffcf5dd9b70436297
 
+							}
+						} ?> alt="" class="team-dp">
+					</a>
 					<h4> <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {
 							echo $value;
