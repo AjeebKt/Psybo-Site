@@ -49,22 +49,25 @@
 	   				<a href="service.php">
 		   				<h3>What We Do</h3>
 		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+		   				<!-- <button>View More</button> -->
 	   				</a>
 	   			</div>
 	   		</section>
 	   		<section class="what-wedo">
 	   			<div class="div-wedo">
-	   				<a href="#">
+	   				<a href="about.php">
 		   				<h3>How We Do</h3>
 		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+		   				<!-- <button>View More</button> -->
 	   				</a>
 	   			</div>
 	   		</section>
 	   		<section class="what-wedo">
 	   			<div class="div-wedo">
-	   				<a href="#">
+	   				<a href="contact.php">
 		   				<h3>Get Connected</h3>
 		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+		   				<!-- <button>View More</button> -->
 	   				</a>
 	   			</div>
 	   		</section>
