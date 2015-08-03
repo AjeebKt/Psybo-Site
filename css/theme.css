@@ -106,11 +106,10 @@ section {
 header
 {
 	position: relative;
-	/*top: 0;*/
 	float: left;
 	width: 100%;
-	/*z-index: 10;*/
-	background-color: #008a67;
+	border-top: 5px solid #008a67;
+	border-bottom: 1px solid #008a67;
 }
 .logo
 {
@@ -118,7 +117,7 @@ header
 	float: left;
 	width: 120px;
 	background-color: #008a67;
-	padding-top: 45px;
+	padding-top: 40px;
 	/*margin-left: 5%;*/
 }
 .div-menu
@@ -146,26 +145,26 @@ header
 }
 	.navigation-links li
 	{
-		width: 100px;
-		height: 100px;
+		width: 90px;
+		height: 90px;
 		cursor: pointer;
 		list-style: none;
 		margin-right: 5px;
 		float: left;
-		border-radius: 50px;
+		border-radius: 45px;
 		-webkit-transition: background-color 0.3s ease, color 0.3s ease;
 		-o-transition: background-color 0.3s ease, color 0.3s ease;
 		transition: background-color 0.3s ease, color.3s ease;
 	}
 	.navigation-links li a
 	{
-		height: 60px;
+		height: 55px;
 		display: block;
 		font-family: Lato;
-		padding-top: 40px;
-		font-size: 13pt;
+		padding-top: 35px;
+		font-size: 15px;
 		text-decoration: none;
-		color: #fff;
+		color: #008a67;
 		/*letter-spacing: 1px;*/
 	}
 	.navigation-links li:hover
@@ -179,12 +178,12 @@ header
 		}
 	.navigation-links li.active
 	{
-		background-color: #fff;
+		background-color: #008a67;
 		/*border-top: 5px solid #fff;*/
 	}
 		.navigation-links li.active a
 		{
-			color: #008a67;
+			color: #fff;
 		}
 .container
 {
@@ -192,8 +191,8 @@ header
 	margin: 0 auto;
 	/*overflow: hidden;*/
 	/*position: relative;*/
-	border-right: 2px solid #222;
-	border-left: 2px solid #222;
+/*	border-right: 2px solid #222;
+	border-left: 2px solid #222;*/
 }
 .picture
 {
@@ -210,7 +209,7 @@ header
 	float: left;
 }
 .node {
-	padding: 0 20px;
+	padding: 90px;
 }
 .node img {
 	max-width: 470px;
@@ -220,21 +219,30 @@ header
 	width: 100%;
 	margin: 0 auto;
 	float: none;
+	box-sizing: border-box;
+	padding: 30px;
 }
 .what-wedo {
-	margin: 10px auto 5px;
 	text-align: center;
 	width: 30%;
+	margin: 10px;
 }
 .div-wedo {
 	width: 100%;
-	padding: 0 20px;
+	border: 1px solid #ccc;
+	margin: 10px;
 }
 .div-wedo a {
+	height: 290px;
 	text-decoration: none;
-	padding: 25px;
+	padding: 80px 25px 0;
 	display: block;
 	color: #333;
+}
+.div-wedo a button {
+	border: 1px solid #008a67;
+	height: 40px;
+	background-color: #fff;
 }
 .testimonial {
 	margin-top: 4%;
@@ -506,7 +514,6 @@ footer
 .features p{
 	width: 60%;
 	float: left;
-	font-family: Lato;
 	font-weight: normal;
 	font-size: 10pt;
 	margin-left: 20px;

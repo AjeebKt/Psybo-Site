@@ -56,7 +56,7 @@
 								if (!empty($value)) 
 									echo "src=\"".$actdir.$value."\"";
 								else
-									echo "src=\"".$actdi."default-pic\"";
+									echo "src=\"".$actdi."default-pic.png\"";
 
 							}
 						} ?> alt="" class="team-dp">
