@@ -50,7 +50,7 @@
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
 					<a href="#" class="team-dp">
-						<img src="upload-image/default-pic.png" alt="">
+						<img src="upload-image/1876174154.jpg" alt="">
 					</a>
 					<!-- <a href="#" class="team-dp" style="background-image: url(<?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="file_name") {
