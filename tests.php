@@ -317,6 +317,7 @@ $preg = "/^((http(s?):\/\/)|www\.\.?)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[
 // var_dump(phpinfo());
 //////////////////////////////////////////////////////////////////////////////
 echo 'hollow world<br>';
+
 echo 'test';
 
 ?>
@@ -331,6 +332,6 @@ echo 'test';
 								echo "\"".$actdir.$value."\"";
 							else
 							{
-								echo "\"".$actdir."default-pic.png"."\"";	
+								echo "\"".$actdir."default-pic.png"."\"";
 							}
 					}}; ?> class="display-img" alt="" >
