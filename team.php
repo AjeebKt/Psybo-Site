@@ -50,8 +50,7 @@
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
 					<a href="#" class="team-dp">
-						<img src="upload-image/1876174154.jpg" alt="">
-					</a>
+						<!-- <img src="upload-image/27707464.JPG" alt="">  blaaaaa -->
 						<img <?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key == "file_name") {
 								if (!empty($value)) 
@@ -60,6 +59,7 @@
 									echo "src=\"".$actdi."default-pic.png\"";
 							}
 						} ?> alt="" class="team-dp">
+					</a>
 					<h4> <?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {
 							echo $value;

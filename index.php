@@ -28,8 +28,8 @@
 		</div>
 	</header>
 <!-- Slides -->
-	<div class="container">
-		<section id="sliderFrame" class="disply-frame">
+	<section id="frame" class="disply-frame">
+		<div class="container">
 			<div class="div-span">
 				<div class="node">
 					<h2>We Will Either Find a Way or Make One</h2>
@@ -42,7 +42,13 @@
 					<img src="img/design.png" alt="">
 				</div>
 			</div>
-   		</section>
+			<div class="link-page">
+				<!-- <button class="link-button">What We Do</button> -->
+				<a href="portfolio.php" class="link-button">View Portfolio</a>
+			</div>
+		</div>
+	</section>
+   	<div class="container">
    		<section class="grid">
 	   		<section class="what-wedo">
 	   			<div class="div-wedo">
