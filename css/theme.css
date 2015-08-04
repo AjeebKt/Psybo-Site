@@ -97,6 +97,7 @@ p
 	/*letter-spacing: 1px;*/
 }
 section {
+	position: relative;
 	width: 100%;
 	float: left;
 	margin-bottom: 2%;
@@ -108,8 +109,8 @@ header
 	position: relative;
 	float: left;
 	width: 100%;
-	border-top: 5px solid #008a67;
-	border-bottom: 1px solid #008a67;
+	/*border-top: 5px solid #008a67;*/
+	/*border-bottom: 1px solid #008a67;*/
 }
 .logo
 {
@@ -138,6 +139,7 @@ header
 .navigation-links
 {
 	width: 100%;
+	float: left;
 	margin: 0;
 	padding: 0;
 	background-color: transparent;
@@ -145,45 +147,39 @@ header
 }
 	.navigation-links li
 	{
-		width: 90px;
-		height: 90px;
 		cursor: pointer;
 		list-style: none;
-		margin-right: 5px;
+		margin: 5px 10px;
 		float: left;
-		border-radius: 45px;
 		-webkit-transition: background-color 0.3s ease, color 0.3s ease;
 		-o-transition: background-color 0.3s ease, color 0.3s ease;
 		transition: background-color 0.3s ease, color.3s ease;
 	}
 	.navigation-links li a
 	{
-		height: 55px;
 		display: block;
 		font-family: Lato;
 		padding-top: 35px;
 		font-size: 15px;
 		text-decoration: none;
 		color: #008a67;
-		/*letter-spacing: 1px;*/
 	}
 	.navigation-links li:hover
 	{
-		background-color: #16A07D;
+		border-bottom:5px solid #008a67;
 		color: #008a67;
 	}
 		.navigation-links li:hover a
 		{
-			color: #fff;
+			color: #008a67;
 		}
 	.navigation-links li.active
 	{
-		background-color: #008a67;
-		/*border-top: 5px solid #fff;*/
+		border-bottom:5px solid #008a67;
 	}
 		.navigation-links li.active a
 		{
-			color: #fff;
+			color: #008a67;
 		}
 .container
 {

@@ -29,7 +29,7 @@
 	</header>
 <!-- Slides -->
 	<div class="container">
-		<section id="sliderFrame" class="disply-frame">
+		<section id="frame" class="disply-frame">
 			<div class="div-span">
 				<div class="node">
 					<h2>We Will Either Find a Way or Make One</h2>
