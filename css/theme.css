@@ -49,7 +49,7 @@ h1
 h2
 {
 	font-family: Lato-light;
-	color: #000;
+	color: #333;
 	font-size: 36pt;
 	font-weight: normal;
 	opacity: 0.7;
@@ -63,6 +63,7 @@ h3
 	font-size: 20pt;
 	margin: 10px 0;
 	padding: 0;
+	color: #333;
 }
 h4
 {
@@ -89,10 +90,10 @@ h5 b{
 p
 {
 	font-family: Lato-light;
-	/*font-weight: lighter;*/
 	font-size: 12pt;
 	line-height: 18pt;
 	font-weight: 300;
+	color: #333;
 	/*word-spacing: 1px;*/
 	/*letter-spacing: 1px;*/
 }
@@ -151,15 +152,16 @@ header
 		list-style: none;
 		margin: 5px 10px;
 		float: left;
-		-webkit-transition: background-color 0.3s ease, color 0.3s ease;
-		-o-transition: background-color 0.3s ease, color 0.3s ease;
-		transition: background-color 0.3s ease, color.3s ease;
+		/*-webkit-transition: color 0.3s ease;
+		-o-transition: color 0.3s ease;
+		transition: color 0.3s ease;*/
 	}
 	.navigation-links li a
 	{
 		display: block;
 		font-family: Lato;
 		padding-top: 35px;
+		padding-bottom: 5px;
 		font-size: 15px;
 		text-decoration: none;
 		color: #008a67;
@@ -167,7 +169,7 @@ header
 	.navigation-links li:hover
 	{
 		border-bottom:5px solid #008a67;
-		color: #008a67;
+		/*color: #008a67;*/
 	}
 		.navigation-links li:hover a
 		{
@@ -187,8 +189,6 @@ header
 	margin: 0 auto;
 	/*overflow: hidden;*/
 	/*position: relative;*/
-/*	border-right: 2px solid #222;
-	border-left: 2px solid #222;*/
 }
 .picture
 {
@@ -268,38 +268,24 @@ header
 footer
 {
 	position: relative;
-	text-align: center;
+	/*text-align: center;*/
 	width: 100%;
 	float: left;
-	background-color: #008a67;
+	background-color: #333;
 }
 .footer-details
 {
-	width: 40%;
-	margin: 0 auto;
-	margin-top: 2%;
+	float: left;
+	width: 100%;
+	margin: 2% 0 0;
 }
-.site-details
-{
-	width: 80%;
-	margin: 0 auto;
-	border-top: 1px solid #fff;
-	padding: 4% 0;
-}
-	footer p
-	{
-		font-family: Lato-light;
-		font-size: 10pt;
-		text-align: center;
-		margin: 0;
-	}
 .social-links
 {
+	float: right;
 	display: inline-block;
 	list-style: none;
 	margin: 0;
-	padding: 0;
-	margin-bottom: 2%;
+	padding: 4% 0;
 }
 	.social-links li
 	{
@@ -347,6 +333,24 @@ footer
 			}
 			
 		}
+.site-details
+{
+	/*width: 80%;*/
+	float: left;
+	/*margin: 0 auto;*/
+	/*border-top: 1px solid #fff;*/
+	padding: 4% 0;
+}
+	.site-details p
+	{
+		font-family: Lato-light;
+		font-size: 14px;
+		color: #008a67;
+		/*text-align: center;*/
+		margin: 0;
+	}
+
+/* Portfolio */
 
 .portfolio
 {
@@ -400,7 +404,7 @@ footer
 	float: left;
 	text-align: center;
 	box-sizing: border-box;
-	padding: 100px;
+	padding: 0 60px 60px;
 }
 .team-member
 {
@@ -416,11 +420,15 @@ footer
 		width: 25%;
 		float: left;
 		margin: 0;
+		padding: 0 10px;
+		box-sizing: border-box;
 		display: inline-block;
 	}
 	.team-member li img:first-child
 	{
 		max-width: 100%;
+		border-radius: 50%;
+
 	}
 .dev-small{
 	font-size: 12pt;
@@ -432,14 +440,9 @@ footer
 	max-height: 320px;
 }
 .team-dp {
-	display: inline-block;
-	width: 200px;
-	height: 200px;
-	background-repeat: no-repeat;
+	width: 100%;
+	float: left;
 	background-size: cover;
-	background-position: 100% 20%;
-	overflow: hidden;
-	border-radius: 100px;
 }
 .personal-links
 {
@@ -492,71 +495,35 @@ footer
 			}
 .we-do
 {
-	padding: 3% 0;
 	width: 100%;
 	float: left;
-	display: block;
-	overflow: hidden;
+	box-sizing: border-box;
 }
-.left-title
+/*.left-title
 {
 	width: 30%;
 	float: left;
 	padding-top: 5%;
-}
+}*/
 .right-side{
-	width: 70%;
-	float: right;
+	width: 100%;
 	position: relative;
+	box-sizing: border-box;
+	float: left;
+	list-style: none;
 }
 .features{
-	margin: 2% 0 2% 10%;
 	display: inline-block;
-	width: 80%;
-	list-style: none;
-
+	width: 33.33%;
+	box-sizing: border-box;
+	padding: 20px;
+	float: left;
+	text-align: center;
 }
 .features img{
 	max-width: 100px;
 	opacity: 0.7;
-	float: left;
 }
-.features p{
-	width: 60%;
-	float: left;
-	font-weight: normal;
-	font-size: 10pt;
-	margin-left: 20px;
-}
-.one{
-	position: relative;
-  -webkit-animation: left-move 2s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -2s; /* Chrome, Safari, Opera */
-  animation: left-move 4s;
-  animation-delay: -2s;
-}
-.two{
-	position: relative;
-  -webkit-animation: left-move 2s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -1.5s; /* Chrome, Safari, Opera */
-  animation: left-move 4s;
-  animation-delay: -1.5s;
-}
-.three{
-	position: relative;
-  -webkit-animation: left-move 2s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -1s; /* Chrome, Safari, Opera */
-  animation: left-move 4s;
-  animation-delay: -1s;
-}
-.four{
-	position: relative;
-  -webkit-animation: left-move 2s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -0.5s; /* Chrome, Safari, Opera */
-  animation: left-move 4s;
-  animation-delay: -0.5s;
-}
-
 .about-tabs
 {
 	width: 30%;
@@ -588,12 +555,13 @@ footer
 	font-weight: normal;
 	font-size: 6pt;
 }
-.tab-show
-{	width: 65%;
+/*.tab-show
+{
+	width: 65%;
 	float: left;
-	/*background-color: #aaa;*/
+	background-color: #aaa;
 	position: relative;
-}
+}*/
 .tab-show a
 {
 	font-family: Lato;

@@ -26,7 +26,7 @@
 		</div>
 	</header>
 	<div class="container">
-		<aside class="about-tabs">
+		<!-- <aside class="about-tabs">
 			<ul class="about-links">
 				<li>
 					<a href="#as1">
@@ -53,8 +53,8 @@
 					</a>
 				</li>
 			</ul>
-		</aside>
-		<section class="tab-show">
+		</aside> -->
+		<section>
 			<div id="as1" class="show-tab">
 				<h2>Work Hard</h2>
 				<p>

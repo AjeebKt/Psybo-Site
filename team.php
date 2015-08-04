@@ -3,8 +3,8 @@
 	include "file.php";
     require_once 'Database.php';
 	// use app\Database;
-    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    // $objdb=new Database('localhost','root','asd','psybo-db');
+    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
     $count_emp=count($emp_id);
@@ -41,16 +41,13 @@
 	</header>
 	<div class="container">
 		<section class="team">
-			<h2>Our Team
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi distinctio, officia dignissimos, aut libero reiciendis veniam. Porro doloremque, ut eveniet praesentium repellat rerum error vero, ex, repudiandae soluta harum illum.</p>
-			</h2>
-			<h2>TEAM PSYBO</h2>
+			<h2>Meet Our Team</h2>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
 					<a href="#" class="team-dp">
-						<!-- <img src="upload-image/27707464.JPG" alt="">  blaaaaa -->
+						<img src="upload-image/default-pic.png" alt="">
 						<img <?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key == "file_name") {
 								if (!empty($value)) 

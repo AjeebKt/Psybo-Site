@@ -33,8 +33,7 @@
 			<div class="div-span">
 				<div class="node">
 					<h2>We Will Either Find a Way or Make One</h2>
-					<p>Lorem neque architecto, delectus provident nisi fugiat reiciendis enim quae cum eum.
-					Lorem neque architecto, delectus provident nisi fugiat reiciendis enim quae cum eum.</p>
+					<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 				</div>
 			</div>
 			<div class="div-span">
@@ -54,7 +53,7 @@
 	   			<div class="div-wedo">
 	   				<a href="service.php">
 		   				<h3>What We Do</h3>
-		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+		   				<p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p>
 		   				<!-- <button>View More</button> -->
 	   				</a>
 	   			</div>
@@ -62,8 +61,8 @@
 	   		<section class="what-wedo">
 	   			<div class="div-wedo">
 	   				<a href="about.php">
-		   				<h3>How We Do</h3>
-		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+		   				<h3>What Make Us Different</h3>
+		   				<p>We are a close-knit team of experienced strategists, designers and builders with complementary, often overlapping skill sets. We can take your project from genesis to launch to dedicated follow-through and maintenance.</p>
 		   				<!-- <button>View More</button> -->
 	   				</a>
 	   			</div>
@@ -72,16 +71,16 @@
 	   			<div class="div-wedo">
 	   				<a href="contact.php">
 		   				<h3>Get Connected</h3>
-		   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem beatae quaerat labore totam dicta fuga optio voluptatibus incidunt, neque quisquam blanditiis eveniet, dolorem voluptate, nisi aliquid ad quia cum odio.</p>
+		   				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 		   				<!-- <button>View More</button> -->
 	   				</a>
 	   			</div>
 	   		</section>
    		</section>
-   		<section class="testimonial">
-   			<h3>HAPPY CLIENTS</h3>
-   			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eveniet, ex, facere nam quis tempora minima voluptate impedit eius quod reiciendis excepturi labore est officia inventore hic. Autem, odit!</p>
-   		</section>
+		<!-- <section class="testimonial">
+			<h3>HAPPY CLIENTS</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eveniet, ex, facere nam quis tempora minima voluptate impedit eius quod reiciendis excepturi labore est officia inventore hic. Autem, odit!</p>
+		</section> -->
 	</div>
 	<?php include 'footer.php'; ?>
 </body>
