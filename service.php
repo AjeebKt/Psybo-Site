@@ -31,6 +31,10 @@
 			<!-- <div class="left-title">
 				<h5>THE <br><b>HARD</b><br>WORK</h5>
 			</div> -->
+			<div class="service-title">
+				<h2>Our Services</h2>
+				<p><b>Psybo technologies</b> is a technology wise creative company doing extensive projects in the field of Website Designing, Website Development and Software Development. Our mission to develop the clients performance in their business, our company is sincerely working harder for showing profit oriented results to their clients all over the World.“Together we build lasting relationships with the power of technology and our passion for extreme quality“</p>
+			</div>
 			<ul class="right-side">
 				<li class="features">
 					<img src="img/plugin.png" alt="">
