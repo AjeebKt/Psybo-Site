@@ -198,10 +198,12 @@ header
 /*--Content---*/
 .disply-frame {
 	width: 100%;
-	height: 450px;
+	height: 500px;
+	background-color: rgba(0, 138, 103, 0.7);
 }
 .div-span {
 	width: 50%;
+	height: 400px;
 	float: left;
 }
 .node {
@@ -209,6 +211,18 @@ header
 }
 .node img {
 	max-width: 470px;
+}
+.link-page {
+	width: 150px;
+	margin: 0 auto;
+	/*float:left;*/
+}
+.link-button {
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 15px;
+	background-color: transparent;
+	border: 1px solid #fff;
 }
 .grid {
 	max-width: 1200px;
