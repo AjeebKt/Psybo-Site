@@ -53,7 +53,7 @@
 								if (!empty($value)) 
 									echo "src=\"".$actdir.$value."\"";
 								else
-									echo "src=\"".$actdi."default-pic.png\"";
+									echo "src=\"".$actdir."default-pic.png\"";
 							}
 						} ?> alt="">
 					</a>
