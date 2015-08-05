@@ -59,13 +59,13 @@
     
 
 		$target_dir=getcwd()."/upload-image/";
-$imagepath="phpimages/dog.jpg";
+// $imagepath="phpimages/dog.jpg";
 
-$image=imagecreatefromjpeg( $target_dir.'/18802.jpg');
+// $image=imagecreatefromjpeg( $target_dir.'/18802.jpg');
 
-header('Content-Type: image/jpeg');
+// header('Content-Type: image/jpeg');
 
-imagejpeg($image);
+// imagejpeg($image);
 
 
 
@@ -89,10 +89,19 @@ imagejpeg($image);
 		}
 		
 
-	if ($_FILES["fileToUpload"]["size"] > 30000000)
+	if ($_FILES["fileToUpload"]["size"] > 10000)
 	{
-		echo("sorry files is to large<br>");	
-		$uploadok=0;
+		// echo("sorry files is to large<br>");	
+		// $uploadok=0;
+		if ($check['mime'] == 'image/jpeg') 
+			$image = imagecreatefromjpeg($_FILES["fileToUpload"]["size"]);
+		else if ($check['mime'] == 'image/png') 
+			$image = imagecreatefrompng($_FILES["fileToUpload"]["size"]);
+		imagejpeg($image);
+		$source_img = 'source.jpeg';
+		$destination_img = 'destination.jpeg';
+		$d = compress($source_img , $destination_img , 90);
+		
 	}
 	// echo "string";
 	// echo "is an image ".$check["mime"].".";
@@ -178,12 +187,12 @@ imagejpeg($image);
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
-</form>
-<!-- <form action="my_upload.php" enctype="multipart/form-data" method="post">Photo <input name="image" size="30" type="file" /> <input name="upload" type="submit" value="Upload" /></form> -->
+<!-- </form>
+<form action="my_upload.php" enctype="multipart/form-data" method="post">Photo <input name="image" size="30" type="file" /> <input name="upload" type="submit" value="Upload" /></form>
 
 
-<!-- <form action="" method="post" enctype="multipart/form-data"> -->
-	<!-- <img <?php echo "\"src=".$_FILES['fileToUpload']['tmp_name']."\""; ?> > -->
+ <form action="" method="post" enctype="multipart/form-data"> -->
+	<!-- <img <?php //echo "\"src=".$_FILES['fileToUpload']['tmp_name']."\""; ?> > -->
 <!-- </form> -->
 </body>
 </html> 
