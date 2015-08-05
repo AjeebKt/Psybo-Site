@@ -38,11 +38,6 @@
 	</header>
 	<div class="container">
 		<section class="portfolio">
-		<!-- <div class="folio-caption">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores voluptates fuga suscipit, quam perspiciatis sapiente voluptatum. Earum recusandae aperiam, ad voluptate deleniti eaque. Velit, placeat cum esse dolorum et architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo assumenda veniam, dolorem animi commodi, quod quo totam consequuntur odio ratione! Impedit cupiditate sed, amet odit molestias, in delectus modi a?
-			</p>
-		</div> -->
 		<?php
 			for ($i=0; $i <$count_ptf ; $i++) { 
 			 	$result=$objdb->select_row_ptf($num_ptf[$i][0]);
@@ -59,13 +54,15 @@
 								echo "\"".$actdir.$value."\"";
 							}	
 					} ?> alt="">
-				<figcaption>
-						<?php foreach ($result as $key => $value) {
-							if (is_string($key) and $key == 'name') {
-								echo $value;
-							}
-						} ?>
-				</figcaption>
+				<div class="fig-caption">
+					<figcaption>
+							<?php foreach ($result as $key => $value) {
+								if (is_string($key) and $key == 'name') {
+									echo $value;
+								}
+							} ?>
+					</figcaption>
+				</div>
 				</a>
 			</figure> 
 			<?php } ?>

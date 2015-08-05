@@ -96,10 +96,9 @@ header
 	background-color: rgba(235, 235, 235, 1);
 	position: fixed;
 	left: 0;
-	/*bottom: 0;*/
 	top: 0;
 	z-index: 999;
-	border-bottom: 1px solid #008a67;
+	/*border-bottom: 1px solid #008a67;*/
 }
 header img:first-child
 {

@@ -1,5 +1,10 @@
-	<footer>
+<footer>
+	<div class="container">
 		<div class="footer-details">
+			<div class="site-details">
+				<p>All Right Recieved @ PSYBO Technologies PVT.LTD</p>
+				<p>PSYBO Technologies <?php echo(date("Y")); ?></p>
+			</div>
 			<ul class="social-links">
 				<li>
 					<a class="facebook" href="https://www.facebook.com/psybotechnologies"></a>
@@ -14,9 +19,6 @@
 					<a class="gplus" href="https://plus.google.com/u/0/"></a>
 				</li>
 			</ul>	
-			<div class="site-details">
-				<p>All Right Recieved @ PSYBO Technologies PVT.LTD</p>
-				<p>PSYBO Technologies <?php echo(date("Y")); ?></p>
-			</div>
 		</div>
-	</footer>
+	</div>
+</footer>

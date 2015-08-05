@@ -14,45 +14,34 @@
 
 @-webkit-keyframes top-move
 {
-    from {top: -2000px;}
+    from {top: 50px;}
     to {top: 0px;}
 }
 @keyframes top-move
 {
-    from {top: -2000px;}
+    from {top: 50px;}
     to {top: 0px;}
 }
-@-webkit-keyframes left-move
+body
 {
-    from {left: 2000px;}
-    to {left: 0px;}
-}
-@keyframes left-move
-{
-    from {left: 2000px;}
-    to {left: 0px;}
+	font-family: Lato-Light;
 }
 h1
 {
 	text-align: center;
-	/*text-shadow: 1px 2px 4px #000;*/
 	font-family: Lato-light;
-	color: #008a67;
+	/*color: #008a67;*/
+	color: #333;
+	font-size: 50pt;
 	font-weight: normal;
-	font-size: 42pt;
-	margin-top: 2%;
-	font-weight: normal;
-	opacity: 0.7;
-	line-height: 50px;
-	padding: 5% 0px 10px; 
+	padding: 0% 0px 10px; 
 }
 h2
 {
 	font-family: Lato-light;
-	color: #000;
+	color: #333;
 	font-size: 36pt;
 	font-weight: normal;
-	opacity: 0.7;
 	margin-top: 2%;
 	padding: 0;
 }
@@ -63,6 +52,7 @@ h3
 	font-size: 20pt;
 	margin: 10px 0;
 	padding: 0;
+	color: #333;
 }
 h4
 {
@@ -89,12 +79,10 @@ h5 b{
 p
 {
 	font-family: Lato-light;
-	/*font-weight: lighter;*/
-	font-size: 12pt;
+	font-size: 14pt;
 	line-height: 18pt;
 	font-weight: 300;
-	/*word-spacing: 1px;*/
-	/*letter-spacing: 1px;*/
+	color: #333;
 }
 section {
 	position: relative;
@@ -109,17 +97,17 @@ header
 	position: relative;
 	float: left;
 	width: 100%;
-	/*border-top: 5px solid #008a67;*/
-	/*border-bottom: 1px solid #008a67;*/
 }
 .logo
 {
 	position: relative;
 	float: left;
 	width: 120px;
-	background-color: #008a67;
-	padding-top: 40px;
-	/*margin-left: 5%;*/
+	/*background-color: #008a67;*/
+	padding-top: 10px;
+}
+.logo a {
+	float: left;
 }
 .div-menu
 {
@@ -134,7 +122,6 @@ header
 	margin: 0px auto;
 	float: right;
 	padding-top: 1%;
-	/*background-color: rgba(204, 204, 204, 0.5);*/
 }
 .navigation-links
 {
@@ -151,15 +138,16 @@ header
 		list-style: none;
 		margin: 5px 10px;
 		float: left;
-		-webkit-transition: background-color 0.3s ease, color 0.3s ease;
-		-o-transition: background-color 0.3s ease, color 0.3s ease;
-		transition: background-color 0.3s ease, color.3s ease;
+		/*-webkit-transition: color 0.3s ease;
+		-o-transition: color 0.3s ease;
+		transition: color 0.3s ease;*/
 	}
 	.navigation-links li a
 	{
 		display: block;
 		font-family: Lato;
 		padding-top: 35px;
+		padding-bottom: 5px;
 		font-size: 15px;
 		text-decoration: none;
 		color: #008a67;
@@ -167,7 +155,6 @@ header
 	.navigation-links li:hover
 	{
 		border-bottom:5px solid #008a67;
-		color: #008a67;
 	}
 		.navigation-links li:hover a
 		{
@@ -187,8 +174,6 @@ header
 	margin: 0 auto;
 	/*overflow: hidden;*/
 	/*position: relative;*/
-/*	border-right: 2px solid #222;
-	border-left: 2px solid #222;*/
 }
 .picture
 {
@@ -218,6 +203,7 @@ header
 	/*float:left;*/
 }
 .link-button {
+	float: left;
 	text-decoration: none;
 	color: #fff;
 	padding: 10px 15px;
@@ -268,38 +254,23 @@ header
 footer
 {
 	position: relative;
-	text-align: center;
 	width: 100%;
 	float: left;
-	background-color: #008a67;
+	background-color: #333;
 }
 .footer-details
 {
-	width: 40%;
-	margin: 0 auto;
-	margin-top: 2%;
+	float: left;
+	width: 100%;
+	margin: 2% 0 0;
 }
-.site-details
-{
-	width: 80%;
-	margin: 0 auto;
-	border-top: 1px solid #fff;
-	padding: 4% 0;
-}
-	footer p
-	{
-		font-family: Lato-light;
-		font-size: 10pt;
-		text-align: center;
-		margin: 0;
-	}
 .social-links
 {
+	float: right;
 	display: inline-block;
 	list-style: none;
 	margin: 0;
-	padding: 0;
-	margin-bottom: 2%;
+	padding: 4% 0;
 }
 	.social-links li
 	{
@@ -339,14 +310,28 @@ footer
 		{
 			background-image: url(../img/google2.png);			
 		}
-		@media screen and (max-width: 500px) {
+/*		@media screen and (max-width: 500px) {
 			.social-links li a {
 				width:20px;
 				height: 20px;
 				transition: all 0.5s ease;
 			}
 			
-		}
+		}*/
+.site-details
+{
+	float: left;
+	padding: 4% 0;
+}
+	.site-details p
+	{
+		font-family: Lato-light;
+		font-size: 14px;
+		color: #fff;
+		margin: 0;
+	}
+
+/* Portfolio */
 
 .portfolio
 {
@@ -357,12 +342,6 @@ footer
 .portfolio img
 {
 	max-width: 100%;
-}
-.folio-caption p{
-	font-family: Lato-Light;
-	padding-left: 2%;
-	text-align: left;
-	color: #333;
 }
 	.portfolio figure
 	{
@@ -376,22 +355,24 @@ footer
 		overflow: hidden;
 		position: relative;
 	}
-	.portfolio figure figcaption
+	.fig-caption
 	{
 		width: 100%;
-		height: 30px;
-		background: rgba(10, 10, 10, 0.6) none repeat scroll 0 0;
-		color: #fff;
+		height: 75%;
+		background: rgba(0, 138, 103, 0.35) none repeat scroll 0 0;
+		color: #000;
 		text-align: center;
 		padding: 10px 0;
 		position: absolute;
-		top: 0px;
+		bottom: -50px;
 		opacity: 0;
-		transition: top 0.4s ease 0s, opacity 0.3s ease 0s;
+		transition: bottom 0.4s ease 0s, opacity 0.3s ease 0s;
+		font-family: Lato;
+		font-size: 16pt;
 	}
-	.portfolio figure:hover figcaption
+	.portfolio figure:hover .fig-caption
 	{
-		top: 0;
+		bottom: 0;
 		opacity: 1;
 	}
 .team
@@ -400,7 +381,7 @@ footer
 	float: left;
 	text-align: center;
 	box-sizing: border-box;
-	padding: 100px;
+	padding: 0 60px 60px;
 }
 .team-member
 {
@@ -416,11 +397,14 @@ footer
 		width: 25%;
 		float: left;
 		margin: 0;
+		padding: 0 10px;
+		box-sizing: border-box;
 		display: inline-block;
 	}
 	.team-member li img:first-child
 	{
 		max-width: 100%;
+		border-radius: 50%;
 	}
 .dev-small{
 	font-size: 12pt;
@@ -432,14 +416,9 @@ footer
 	max-height: 320px;
 }
 .team-dp {
-	display: inline-block;
-	width: 200px;
-	height: 200px;
-	background-repeat: no-repeat;
+	width: 100%;
+	float: left;
 	background-size: cover;
-	background-position: 100% 20%;
-	overflow: hidden;
-	border-radius: 100px;
 }
 .personal-links
 {
@@ -454,7 +433,7 @@ footer
 	}
 	.personal-links li
 	{
-		/*float: left;*/
+		padding: 0;
 		margin: 0 auto;
 		width: 25%;
 	}
@@ -492,71 +471,45 @@ footer
 			}
 .we-do
 {
-	padding: 3% 0;
 	width: 100%;
 	float: left;
-	display: block;
-	overflow: hidden;
+	box-sizing: border-box;
 }
-.left-title
+.service-title
 {
-	width: 30%;
+	width: 100%;
 	float: left;
 	padding-top: 5%;
+	text-align: center;
 }
-.right-side{
-	width: 70%;
-	float: right;
+.move-up
+{
+  position: relative;
+  -webkit-animation: top-move 0.4s; /* Chrome, Safari, Opera */
+  -webkit-animation-delay: 0s; /* Chrome, Safari, Opera */
+  animation: top-move 0.4s;
+  animation-delay: 0s;
+}
+.service-feature{
+	width: 100%;
 	position: relative;
+	margin-top: 5%;
+	box-sizing: border-box;
+	float: left;
+	list-style: none;
 }
 .features{
-	margin: 2% 0 2% 10%;
 	display: inline-block;
-	width: 80%;
-	list-style: none;
-
+	width: 33.33%;
+	box-sizing: border-box;
+	padding: 20px;
+	float: left;
+	text-align: center;
 }
 .features img{
 	max-width: 100px;
 	opacity: 0.7;
-	float: left;
 }
-.features p{
-	width: 60%;
-	float: left;
-	font-weight: normal;
-	font-size: 10pt;
-	margin-left: 20px;
-}
-.one{
-	position: relative;
-  -webkit-animation: left-move 2s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -2s; /* Chrome, Safari, Opera */
-  animation: left-move 4s;
-  animation-delay: -2s;
-}
-.two{
-	position: relative;
-  -webkit-animation: left-move 2s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -1.5s; /* Chrome, Safari, Opera */
-  animation: left-move 4s;
-  animation-delay: -1.5s;
-}
-.three{
-	position: relative;
-  -webkit-animation: left-move 2s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -1s; /* Chrome, Safari, Opera */
-  animation: left-move 4s;
-  animation-delay: -1s;
-}
-.four{
-	position: relative;
-  -webkit-animation: left-move 2s; /* Chrome, Safari, Opera */
-  -webkit-animation-delay: -0.5s; /* Chrome, Safari, Opera */
-  animation: left-move 4s;
-  animation-delay: -0.5s;
-}
-
 .about-tabs
 {
 	width: 30%;
@@ -588,99 +541,100 @@ footer
 	font-weight: normal;
 	font-size: 6pt;
 }
-.tab-show
-{	width: 65%;
-	float: left;
-	/*background-color: #aaa;*/
-	position: relative;
-}
-.tab-show a
-{
-	font-family: Lato;
-}
 .show-tab
 {
-	display: block;
-	position: absolute;
-	/*left: -2000%;*/
-	/*background-color: #F46;*/
+	width: 100%;	
+	box-sizing: border-box;
+	padding: 0 40px 20px;
 }
-
-
-
-.contact
-{
-	width: 100%;
-	position: relative;
+.left, .right {
+	width: 50%;
 	float: left;
-	font-family: Lato-Light;
+	box-sizing: border-box;
+	padding: 40px;
 }
-.cap-full{
-	width: 100%;
-	height: 150px;
-	float: left;
-}
-.caption1{
-	width: 25%;
-	float: left ;
-}
-.caption1 h3{
-	padding-top: 10%;
+.left p {
 	font-family: Lato;
-	font-weight: normal;
-	font-size: 26pt;
-	text-align: right;
+	font-size: 16pt;
+	letter-spacing: 3px;
 }
-.caption1 h3 b{
-	color: #008a67;
-	font-size: 32pt;
+.map {
+	width: 100%;
+	height: 420px;
+	overflow: hidden;
+}
+.map-box {
+	overflow:hidden;
+	height:420px;
+	width:1550px;
+}
+.map-canvas {
+	height:420px;
+	width:1550px;
+}
+#gmap-canvas img {
+	max-width:none!important;
+	background:none!important;
+}
+.contact {
+	margin-top: 270px;
 }
 .message
 {
-	width: 250px;
+	position: absolute;
+	width: 50%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	/*border: 1px solid #000;*/
 	padding: 10px;
-	border: 3px solid #eee;
-	float: right;
+	background-color: #fff;
+	/*position: absolute;*/
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/*top: 0;*/
+	/*padding: 10px;*/
+	/*float: right;*/
 }
 .message h3{
 	text-align: center;
 }
+.msg-form {
+	width: 90%;
+	margin: 0 auto;
+}
 .message input{
-	width: 95%;
-	padding: 5px;
-	margin: 2% 0%;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 5px 0%;
 	background-color: #fff;
-	border: 1px solid #008a67;
 	color: #000;
+	border: 0;
+	border-bottom: 2px solid #008a67;
 }
 .message textarea{
-	width: 95%;
-	margin: 2% 0%;
-	padding: 5px;
+	width: 100%;
+	margin: 5px 0%;
+	box-sizing: border-box;
+	padding: 10px;
 	background-color: #fff;
-	border: 1px solid #008a67;
 	color: #000;
+	border: 0;
+	border-bottom: 2px solid #008a67;
 }
 .message button{
-	float: right;
 	width: 100px;
 	height: 30px;
-	margin: 2% 0%;
-	border: 1px solid #008a67;
-	background-color: #fff;
+	margin: 10px 0%;
+	padding: 0;
+	border: 0px;
+	background-color: #309E7B;
 	transition: background-color 0.35s ease, color 0.35s ease, border 0.2s ease;
+	color: #fff;
 }
 .message button:hover{
 	background-color: #008a67;
-	color: #fff;
-}
-.black-img{
-/*	position: absolute;
-	right: 10%;*/
-	float: left;
-}
-.black-img img{
-	max-width: 350px;
 }
 .change-pwrd{
 	width: 400px;

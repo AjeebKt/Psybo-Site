@@ -26,57 +26,24 @@
 		</div>
 	</header>
 	<div class="container">
-		<aside class="about-tabs">
-			<ul class="about-links">
-				<li>
-					<a href="#as1">
-						<div class="tab-items ">
-							<h4>Work hard</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#as2">
-						<div class="tab-items">
-							<h4>Amaze people</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#as3">
-						<div class="tab-items">
-							<h4>taste the cake</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi uod unde nostrum fuga nihil! Accusantium.</p>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</aside>
-		<section class="tab-show">
-			<div id="as1" class="show-tab">
-				<h2>Work Hard</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
-					chetta.as
-				</p>
+		<section>
+			<h1>About Us</h1>
+			<div class="show-tab">
+				<div class="left">
+					<p>
+						Psybo technologies is a technology wise creative company doing extensive projects in the field of Website Designing, Website Development and Software Development.
+					</p>
+				</div>
+				<div class="right">
+					<p>
+						Our goal is simple, to create excellent websites that make your business shine. Our team has been delivering innovative, cost effective and timely solutions that drive the growth of small and medium-sized businesses worldwide.
+					</p>
+				</div>
 			</div>
-			<!-- <div id="as2" class="show-tab">
-				<h2>AMAZE PEOPLE</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
-					chetta.as
-				</p>
-			</div>
-			<div id="as3" class="show-tab">
-				<h2>TASTE THE CAKE</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem incidunt id perferendis repellat quibusdam, doloribus necessitatibus laudantium, aliquam perspiciatis quam laborum aperiam veritatis minima iusto, eum tempore culpa sed mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis quasi culpa, aliquam cumque neque ut, inventore minus delectus earum illum adipisci, sit. Fuga omnis eum distinctio deserunt ex ut.
-					chetta.as
-				</p>
-			</div> -->
 		</section>
+		<!-- <div class="link-page">
+			<a href="contact.php" class="bgc link-button">Get in Touch</a>
+		</div> -->
 	</div>
 	<?php include 'footer.php'; ?>
 </body>
