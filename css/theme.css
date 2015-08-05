@@ -403,7 +403,7 @@ footer
 	}
 	.team-member li img:first-child
 	{
-		max-width: 100%;
+		max-width: 200px;
 		border-radius: 50%;
 	}
 .dev-small{
