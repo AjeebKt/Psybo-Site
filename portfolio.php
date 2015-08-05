@@ -54,13 +54,15 @@
 								echo "\"".$actdir.$value."\"";
 							}	
 					} ?> alt="">
-				<figcaption>
-						<?php foreach ($result as $key => $value) {
-							if (is_string($key) and $key == 'name') {
-								echo $value;
-							}
-						} ?>
-				</figcaption>
+				<div class="fig-caption">
+					<figcaption>
+							<?php foreach ($result as $key => $value) {
+								if (is_string($key) and $key == 'name') {
+									echo $value;
+								}
+							} ?>
+					</figcaption>
+				</div>
 				</a>
 			</figure> 
 			<?php } ?>

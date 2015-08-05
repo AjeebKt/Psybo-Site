@@ -45,13 +45,13 @@ if (isset($_POST['buttonmail']) )
 	<script type="text/javascript">
 		function init_map(){
 			var myOptions = {
-				zoom:17,
-				center:new google.maps.LatLng(11.1202984,76.11996769999996),
+				zoom:18,
+				center:new google.maps.LatLng(11.120228, 76.120368),
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
 			map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
-			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.1202984, 76.11996769999996)});
-			infowindow = new google.maps.InfoWindow({content:"<b>psybo technologies</b><br/>manjeri<br/> India" });
+			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.120228, 76.120368)});
+			// infowindow = new google.maps.InfoWindow({content:"<b>psybo technologies</b><br/>manjeri<br/> India" });
 			google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
 			infowindow.open(map,marker);
 		}
@@ -81,36 +81,21 @@ if (isset($_POST['buttonmail']) )
 			<div class="map-box">
 				<div id="gmap-canvas" class="map-canvas"></div>
 			</div>
-			<script type="text/javascript">
-				function init_map(){
-					var myOptions = {
-						zoom:17,
-						center:new google.maps.LatLng(11.1202984,76.11996769999996),
-						mapTypeId: google.maps.MapTypeId.ROADMAP
-					};
-					map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
-					marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.1202984, 76.11996769999996)});
-					infowindow = new google.maps.InfoWindow({content:"<b>psybo technologies</b><br/>manjeri<br/> India" });
-					google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
-					infowindow.open(map,marker);
-				}
-					google.maps.event.addDomListener(window, 'load', init_map);
-			</script>
-	</section>
+			</section>
 	<div class="container">
 		<section class="contact">
 			<div class="message">
 				<h3>Message</h3>
 				<form id="message-form" class="msg-form" method="POST" action="">
-					<label for="msgName">Name</label>
+					<!-- <label for="msgName">Name</label> -->
 					<br>
-					<input id="msgName" name="msgName" type="text" class="name" required>
-					<label for="msgEmail">Email</label>
+					<input id="msgName" name="msgName" type="text" placeholder="Name" required>
+					<!-- <label for="msgEmail">Email</label> -->
 					<br>
-					<input id="msgEmail" name="msgEmail" type="email" class="mail" required>
-					<label for="msgComments">Comments</label>
+					<input id="msgEmail" name="msgEmail" type="email" placeholder="Email" required>
+					<!-- <label for="msgComments">Comments</label> -->
 					<br>
-					<textarea id="msgComments" name="comments" cols="30" rows="5" class="msg" required></textarea>
+					<textarea id="msgComments" name="comments" cols="30" rows="5" placeholder="Comments" required></textarea>
 					<button id="buttonmail" name="buttonmail">SEND</button>
 				</form>
 			</div>

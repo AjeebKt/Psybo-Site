@@ -103,8 +103,11 @@ header
 	position: relative;
 	float: left;
 	width: 120px;
-	background-color: #008a67;
-	padding-top: 40px;
+	/*background-color: #008a67;*/
+	padding-top: 10px;
+}
+.logo a {
+	float: left;
 }
 .div-menu
 {
@@ -352,24 +355,24 @@ footer
 		overflow: hidden;
 		position: relative;
 	}
-	.portfolio figure figcaption
+	.fig-caption
 	{
 		width: 100%;
-		height: 30px;
-		background: rgba(10, 10, 10, 0.6) none repeat scroll 0 0;
-		color: #fff;
+		height: 75%;
+		background: rgba(0, 138, 103, 0.35) none repeat scroll 0 0;
+		color: #000;
 		text-align: center;
 		padding: 10px 0;
 		position: absolute;
-		top: 0px;
+		bottom: -50px;
 		opacity: 0;
-		transition: top 0.4s ease 0s, opacity 0.3s ease 0s;
+		transition: bottom 0.4s ease 0s, opacity 0.3s ease 0s;
 		font-family: Lato;
 		font-size: 16pt;
 	}
-	.portfolio figure:hover figcaption
+	.portfolio figure:hover .fig-caption
 	{
-		top: 0;
+		bottom: 0;
 		opacity: 1;
 	}
 .team
@@ -574,7 +577,7 @@ footer
 	background:none!important;
 }
 .contact {
-	margin-top: 300px;
+	margin-top: 270px;
 }
 .message
 {
@@ -589,6 +592,7 @@ footer
 	left: 0;
 	right: 0;
 	bottom: 0;
+	/*top: 0;*/
 	/*padding: 10px;*/
 	/*float: right;*/
 }
@@ -606,7 +610,8 @@ footer
 	margin: 5px 0%;
 	background-color: #fff;
 	color: #000;
-	border: 1px solid #008a67;
+	border: 0;
+	border-bottom: 2px solid #008a67;
 }
 .message textarea{
 	width: 100%;
@@ -615,20 +620,21 @@ footer
 	padding: 10px;
 	background-color: #fff;
 	color: #000;
-	border: 1px solid #008a67;
+	border: 0;
+	border-bottom: 2px solid #008a67;
 }
 .message button{
 	width: 100px;
 	height: 30px;
 	margin: 10px 0%;
 	padding: 0;
-	border: 1px solid #008a67;
-	background-color: #fff;
+	border: 0px;
+	background-color: #309E7B;
 	transition: background-color 0.35s ease, color 0.35s ease, border 0.2s ease;
+	color: #fff;
 }
 .message button:hover{
 	background-color: #008a67;
-	color: #fff;
 }
 .change-pwrd{
 	width: 400px;
