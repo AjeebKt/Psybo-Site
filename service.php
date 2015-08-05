@@ -26,11 +26,8 @@
 			</nav>
 		</div>
 	</header>
-	<div class="container">
-		<section class="we-do">
-			<!-- <div class="left-title">
-				<h5>THE <br><b>HARD</b><br>WORK</h5>
-			</div> -->
+	<section class="we-do">
+		<div class="container">
 			<div class="service-title">
 				<h2>Our Services</h2>
 				<p><b>Psybo technologies</b> is a technology wise creative company doing extensive projects in the field of Website Designing, Website Development and Software Development. Our mission to develop the clients performance in their business, our company is sincerely working harder for showing profit oriented results to their clients all over the World.“Together we build lasting relationships with the power of technology and our passion for extreme quality“</p>
@@ -67,8 +64,8 @@
 					<p>We provide assistance and guidance to students in doing their academic projects. Training division also renders the service of campus training where our technology experts handle training sessions for students inside our company.</p>
 				</li>
 			</ul>
-		</section>
-	</div>
+		</div>
+	</section>
 	<?php include 'footer.php'; ?>
 </body>
 </html>

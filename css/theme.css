@@ -88,7 +88,8 @@ section {
 	position: relative;
 	width: 100%;
 	float: left;
-	margin-bottom: 2%;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
 }
 
 /*------Index Page-----*/
@@ -97,6 +98,8 @@ header
 	position: relative;
 	float: left;
 	width: 100%;
+	border: 1px solid #ccc;
+	/*padding-top: 10px;*/
 }
 .logo
 {
@@ -104,7 +107,6 @@ header
 	float: left;
 	width: 120px;
 	/*background-color: #008a67;*/
-	padding-top: 10px;
 }
 .logo a {
 	float: left;
@@ -121,7 +123,7 @@ header
 {
 	margin: 0px auto;
 	float: right;
-	padding-top: 1%;
+	/*padding-top: 1%;*/
 }
 .navigation-links
 {
@@ -136,8 +138,11 @@ header
 	{
 		cursor: pointer;
 		list-style: none;
-		margin: 5px 10px;
 		float: left;
+		box-sizing: border-box;
+		display: inline-block;
+		padding: 0 10px;
+		/*margin: 5px 10px;*/
 		/*-webkit-transition: color 0.3s ease;
 		-o-transition: color 0.3s ease;
 		transition: color 0.3s ease;*/
@@ -146,15 +151,17 @@ header
 	{
 		display: block;
 		font-family: Lato;
-		padding-top: 35px;
+		padding-top: 0 10px;
 		padding-bottom: 5px;
 		font-size: 15px;
 		text-decoration: none;
 		color: #008a67;
+		height: 80px;
+		line-height: 90px;
 	}
 	.navigation-links li:hover
 	{
-		border-bottom:5px solid #008a67;
+		border-bottom:3px solid #008a67;
 	}
 		.navigation-links li:hover a
 		{
@@ -162,7 +169,7 @@ header
 		}
 	.navigation-links li.active
 	{
-		border-bottom:5px solid #008a67;
+		border-bottom:3px solid #008a67;
 	}
 		.navigation-links li.active a
 		{
@@ -181,10 +188,10 @@ header
 	width: 0;
 }
 /*--Content---*/
-.disply-frame {
+.display-frame {
 	width: 100%;
 	height: 500px;
-	background-color: rgba(0, 138, 103, 0.7);
+	/*background-color: rgba(0, 138, 103, 0.7);*/
 }
 .div-span {
 	width: 50%;
@@ -205,21 +212,28 @@ header
 .link-button {
 	float: left;
 	text-decoration: none;
-	color: #fff;
+	color: #008a67;
 	padding: 10px 15px;
 	background-color: transparent;
-	border: 1px solid #fff;
+	border: 1px solid #008a67;
+	transition: color 0.3s ease, background-color 0.3s ease;
+}
+.link-button:hover {
+	color: #fff;
+	background-color: #008a67;
 }
 .grid {
+	/*float: left;*/
 	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
-	float: none;
+	/*float: none;*/
 	box-sizing: border-box;
 	padding: 30px;
 }
 .what-wedo {
 	text-align: center;
+	float: left;
 	width: 30%;
 	margin: 10px;
 }
@@ -257,6 +271,7 @@ footer
 	width: 100%;
 	float: left;
 	background-color: #333;
+	margin-top: 10px;
 }
 .footer-details
 {
@@ -358,7 +373,7 @@ footer
 	.fig-caption
 	{
 		width: 100%;
-		height: 75%;
+		height: 25%;
 		background: rgba(0, 138, 103, 0.35) none repeat scroll 0 0;
 		color: #000;
 		text-align: center;
