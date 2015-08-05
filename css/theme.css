@@ -14,23 +14,17 @@
 
 @-webkit-keyframes top-move
 {
-    from {top: -2000px;}
+    from {top: 50px;}
     to {top: 0px;}
 }
 @keyframes top-move
 {
-    from {top: -2000px;}
+    from {top: 50px;}
     to {top: 0px;}
 }
-@-webkit-keyframes left-move
+body
 {
-    from {left: 2000px;}
-    to {left: 0px;}
-}
-@keyframes left-move
-{
-    from {left: 2000px;}
-    to {left: 0px;}
+	font-family: Lato-Light;
 }
 h1
 {
@@ -85,12 +79,10 @@ h5 b{
 p
 {
 	font-family: Lato-light;
-	font-size: 12pt;
+	font-size: 14pt;
 	line-height: 18pt;
 	font-weight: 300;
 	color: #333;
-	/*word-spacing: 1px;*/
-	/*letter-spacing: 1px;*/
 }
 section {
 	position: relative;
@@ -105,8 +97,6 @@ header
 	position: relative;
 	float: left;
 	width: 100%;
-	/*border-top: 5px solid #008a67;*/
-	/*border-bottom: 1px solid #008a67;*/
 }
 .logo
 {
@@ -115,7 +105,6 @@ header
 	width: 120px;
 	background-color: #008a67;
 	padding-top: 40px;
-	/*margin-left: 5%;*/
 }
 .div-menu
 {
@@ -130,7 +119,6 @@ header
 	margin: 0px auto;
 	float: right;
 	padding-top: 1%;
-	/*background-color: rgba(204, 204, 204, 0.5);*/
 }
 .navigation-links
 {
@@ -164,7 +152,6 @@ header
 	.navigation-links li:hover
 	{
 		border-bottom:5px solid #008a67;
-		/*color: #008a67;*/
 	}
 		.navigation-links li:hover a
 		{
@@ -264,7 +251,6 @@ header
 footer
 {
 	position: relative;
-	/*text-align: center;*/
 	width: 100%;
 	float: left;
 	background-color: #333;
@@ -321,20 +307,17 @@ footer
 		{
 			background-image: url(../img/google2.png);			
 		}
-		@media screen and (max-width: 500px) {
+/*		@media screen and (max-width: 500px) {
 			.social-links li a {
 				width:20px;
 				height: 20px;
 				transition: all 0.5s ease;
 			}
 			
-		}
+		}*/
 .site-details
 {
-	/*width: 80%;*/
 	float: left;
-	/*margin: 0 auto;*/
-	/*border-top: 1px solid #fff;*/
 	padding: 4% 0;
 }
 	.site-details p
@@ -342,7 +325,6 @@ footer
 		font-family: Lato-light;
 		font-size: 14px;
 		color: #fff;
-		/*text-align: center;*/
 		margin: 0;
 	}
 
@@ -357,12 +339,6 @@ footer
 .portfolio img
 {
 	max-width: 100%;
-}
-.folio-caption p{
-	font-family: Lato-Light;
-	padding-left: 2%;
-	text-align: left;
-	color: #333;
 }
 	.portfolio figure
 	{
@@ -388,6 +364,8 @@ footer
 		top: 0px;
 		opacity: 0;
 		transition: top 0.4s ease 0s, opacity 0.3s ease 0s;
+		font-family: Lato;
+		font-size: 16pt;
 	}
 	.portfolio figure:hover figcaption
 	{
@@ -424,7 +402,6 @@ footer
 	{
 		max-width: 100%;
 		border-radius: 50%;
-
 	}
 .dev-small{
 	font-size: 12pt;
@@ -453,7 +430,7 @@ footer
 	}
 	.personal-links li
 	{
-		/*float: left;*/
+		padding: 0;
 		margin: 0 auto;
 		width: 25%;
 	}
@@ -502,7 +479,15 @@ footer
 	padding-top: 5%;
 	text-align: center;
 }
-.right-side{
+.move-up
+{
+  position: relative;
+  -webkit-animation: top-move 0.4s; /* Chrome, Safari, Opera */
+  -webkit-animation-delay: 0s; /* Chrome, Safari, Opera */
+  animation: top-move 0.4s;
+  animation-delay: 0s;
+}
+.service-feature{
 	width: 100%;
 	position: relative;
 	margin-top: 5%;
@@ -570,55 +555,73 @@ footer
 	font-size: 16pt;
 	letter-spacing: 3px;
 }
-.contact
-{
-	font-family: Lato-Light;
-}
 .map {
 	width: 100%;
 	height: 420px;
 	overflow: hidden;
 }
+.map-box {
+	overflow:hidden;
+	height:420px;
+	width:1550px;
+}
+.map-canvas {
+	height:420px;
+	width:1550px;
+}
+#gmap-canvas img {
+	max-width:none!important;
+	background:none!important;
+}
+.contact {
+	margin-top: 300px;
+}
 .message
 {
+	position: absolute;
 	width: 50%;
 	margin: 0 auto;
+	box-sizing: border-box;
+	/*border: 1px solid #000;*/
+	padding: 10px;
+	background-color: #fff;
 	/*position: absolute;*/
-	/*left: 0;*/
-	/*right: 0;*/
-	/*bottom: 0;*/
+	left: 0;
+	right: 0;
+	bottom: 0;
 	/*padding: 10px;*/
-	/*border: 3px solid #eee;*/
 	/*float: right;*/
 }
 .message h3{
 	text-align: center;
 }
 .msg-form {
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 }
 .message input{
 	width: 100%;
-	padding: 5px;
-	margin: 2% 0%;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 5px 0%;
 	background-color: #fff;
-	border: 1px solid #008a67;
 	color: #000;
+	border: 1px solid #008a67;
 }
 .message textarea{
 	width: 100%;
-	margin: 2% 0%;
-	padding: 5px;
+	margin: 5px 0%;
+	box-sizing: border-box;
+	padding: 10px;
 	background-color: #fff;
-	border: 1px solid #008a67;
 	color: #000;
+	border: 1px solid #008a67;
 }
 .message button{
-	float: right;
 	width: 100px;
 	height: 30px;
-	margin: 2% 0%;
+	margin: 10px 0%;
+	padding: 0;
 	border: 1px solid #008a67;
 	background-color: #fff;
 	transition: background-color 0.35s ease, color 0.35s ease, border 0.2s ease;
@@ -626,14 +629,6 @@ footer
 .message button:hover{
 	background-color: #008a67;
 	color: #fff;
-}
-.black-img{
-/*	position: absolute;
-	right: 10%;*/
-	float: left;
-}
-.black-img img{
-	max-width: 350px;
 }
 .change-pwrd{
 	width: 400px;

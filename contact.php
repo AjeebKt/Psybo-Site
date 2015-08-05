@@ -38,9 +38,25 @@ if (isset($_POST['buttonmail']) )
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<title>CONTACT US</title>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
-	<title>CONTACT US</title>
+	<script type="text/javascript">
+		function init_map(){
+			var myOptions = {
+				zoom:17,
+				center:new google.maps.LatLng(11.1202984,76.11996769999996),
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
+			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.1202984, 76.11996769999996)});
+			infowindow = new google.maps.InfoWindow({content:"<b>psybo technologies</b><br/>manjeri<br/> India" });
+			google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+			infowindow.open(map,marker);
+		}
+			google.maps.event.addDomListener(window, 'load', init_map);
+	</script>
 </head>
 <body>
 <!-- Logo -->
@@ -62,12 +78,24 @@ if (isset($_POST['buttonmail']) )
 		</div>
 	</header>
 	<section class="map">
-		<div>
-			<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-			<div style="overflow:hidden;height:420px;width:1550px;">
-				<div id="gmap_canvas" style="height:420px;width:1550px;"></div>
-			<style>#gmap_canvas img{max-width:none!important;background:none!important;}</style><a class="google-map-code" href="http://wpzio.com" id="get-map-data">http://wpzio.com</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(11.1202984,76.11996769999996),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.1202984, 76.11996769999996)});infowindow = new google.maps.InfoWindow({content:"<b>psybo technologies</b><br/>manjeri<br/> India" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-		</div>
+			<div class="map-box">
+				<div id="gmap-canvas" class="map-canvas"></div>
+			</div>
+			<script type="text/javascript">
+				function init_map(){
+					var myOptions = {
+						zoom:17,
+						center:new google.maps.LatLng(11.1202984,76.11996769999996),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
+					marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.1202984, 76.11996769999996)});
+					infowindow = new google.maps.InfoWindow({content:"<b>psybo technologies</b><br/>manjeri<br/> India" });
+					google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+					infowindow.open(map,marker);
+				}
+					google.maps.event.addDomListener(window, 'load', init_map);
+			</script>
 	</section>
 	<div class="container">
 		<section class="contact">
