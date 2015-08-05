@@ -78,14 +78,14 @@ if (isset($_POST['buttonmail']) )
 		</div>
 	</header>
 	<section class="map">
-			<div class="map-box">
-				<div id="gmap-canvas" class="map-canvas"></div>
-			</div>
-			</section>
+		<div class="map-box">
+		<div id="gmap-canvas" class="map-canvas"></div>
+		</div>
+	</section>
 	<div class="container">
 		<section class="contact">
 			<div class="message">
-				<h3>Message</h3>
+				<h3>Get In Touch</h3>
 				<form id="message-form" class="msg-form" method="POST" action="">
 					<!-- <label for="msgName">Name</label> -->
 					<br>
@@ -100,6 +100,42 @@ if (isset($_POST['buttonmail']) )
 				</form>
 			</div>
 		</section>
+		<!-- <section>
+			<div class="company-details">
+				<div class="detail-box">
+					<h3>Contact Info</h3>
+					<div class="company-adress">
+						<ul>
+							<li>
+								<p><b>Address :</b></p>
+							</li>
+							<li>
+								<p>V2 Tower</p>
+								<p>Opposit Old Bus Stand,</p>
+								<p>Pandikkad Road</p>
+								<p>Manjeri</p>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<p><b>Phone :</b></p>
+							</li>
+							<li>
+								<p>+04932-222222</p>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<p><b>Email :</b></p>
+							</li>
+							<li>
+								<p>info@psybotechnologies.com</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section> -->
 	</div>
 	<?php  
 		echo $message;
