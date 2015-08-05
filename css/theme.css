@@ -88,8 +88,8 @@ section {
 	position: relative;
 	width: 100%;
 	float: left;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 20px;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 20px;
 }
 
 /*------Index Page-----*/
@@ -98,7 +98,7 @@ header
 	position: relative;
 	float: left;
 	width: 100%;
-	border: 1px solid #ccc;
+	border-bottom: 1px solid #eee;
 	/*padding-top: 10px;*/
 }
 .logo
@@ -142,7 +142,7 @@ header
 		box-sizing: border-box;
 		display: inline-block;
 		padding: 0 10px;
-		/*margin: 5px 10px;*/
+		/*margin: 0px 3px;*/
 		/*-webkit-transition: color 0.3s ease;
 		-o-transition: color 0.3s ease;
 		transition: color 0.3s ease;*/
@@ -161,20 +161,17 @@ header
 	}
 	.navigation-links li:hover
 	{
-		border-bottom:3px solid #008a67;
+		/*border-bottom:3px solid #008a67;*/
 	}
 		.navigation-links li:hover a
 		{
-			color: #008a67;
+			border-bottom:3px solid #008a67;
+			/*color: #008a67;*/
 		}
-	.navigation-links li.active
+	.navigation-links li.active a
 	{
 		border-bottom:3px solid #008a67;
 	}
-		.navigation-links li.active a
-		{
-			color: #008a67;
-		}
 .container
 {
 	width: 1280px;
@@ -271,7 +268,6 @@ footer
 	width: 100%;
 	float: left;
 	background-color: #333;
-	margin-top: 10px;
 }
 .footer-details
 {
@@ -297,34 +293,42 @@ footer
 		.social-links li a
 		{
 			display: block;
-			width: 32px;
-			height: 32px;
+			width: 47px;
+			height: 47px;
 			background-position: center;
 			background-repeat: no-repeat;
 			-webkit-background-size: 100%;
 			background-size: 100%;
-			transition: opacity 0.5s ease-in-out;
-		}
-		.social-links li:hover a
-		{
-			opacity: 0.5;
+			transition: background-color 0.3s ease-in-out;
 		}
 		.social-links li a.facebook
 		{
-			background-image: url(../img/facebook2.png);
+			background-image: url(../img/facebook.png);
 		}
+			.facebook:hover{
+				background-color: #008a67;
+			}
 		.social-links li a.twitter
 		{
-			background-image: url(../img/twitter2.png);
+			background-image: url(../img/twitter.png);
 		}
+			.twitter:hover {
+				background-color: #008a67;
+			}
 		.social-links li a.linkedin
 		{
-			background-image: url(../img/linkedin2.png);			
+			background-image: url(../img/linkedin.png);			
 		}
+			.linkedin:hover {
+				background-color: #008a67;
+			}
 		.social-links li a.gplus
 		{
-			background-image: url(../img/google2.png);			
+			background-image: url(../img/google-plus.png);			
 		}
+			.gplus:hover {
+				background-color: #008a67;
+			}
 /*		@media screen and (max-width: 500px) {
 			.social-links li a {
 				width:20px;
