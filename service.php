@@ -49,7 +49,7 @@
 					<p>We make sure that the candidates get a good exposure on the various aspects of the Technologies currently in use.</p>
 				</li>
 				<li class="features move-up">
-					<img src="img/plugin.png" alt="">
+					<img src="img/web.png" alt="">
 					<h3>Web Development</h3>
 					<p>We make your web vision a reality. Whether you want an attractive traditional, ecommerce, static , dynamic ,responsive web site - we can do it.</p>
 				</li>
