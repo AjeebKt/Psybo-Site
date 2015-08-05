@@ -34,7 +34,7 @@
 			</div>
 			<ul class="service-feature">
 				<li class="features move-up">
-					<img src="img/plugin.png" alt="">
+					<img src="img/inspiration.png" alt="">
 					<h3>Software Consultancy</h3>
 					<p>consultants with innovative strategies help customers transform their businesses, processes and operations.</p>
 				</li>
