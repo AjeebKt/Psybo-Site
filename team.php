@@ -39,8 +39,8 @@
 			</nav>
 		</div>
 	</header>
-	<div class="container">
-		<section class="team">
+	<section class="team">
+		<div class="container">
 			<h2>Meet Our Team</h2>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)
@@ -116,8 +116,8 @@
 				</li>
 				<?php } ?>
 			</ul>
-		</section>
-	</div>
+		</div>
+	</section>
 	<?php include 'footer.php'; ?>
 </body>
 </html>

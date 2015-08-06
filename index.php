@@ -9,7 +9,6 @@
 	<title>PSYBO Home</title>
 </head>
 <body>
-<!-- Logo -->
 	<header>
 		<div class="container">
 			<div class="logo">
@@ -27,8 +26,7 @@
 			</nav>
 		</div>
 	</header>
-<!-- Slides -->
-	<section id="frame" class="disply-frame">
+	<section id="frame" class="display-frame">
 		<div class="container">
 			<div class="div-span">
 				<div class="node">
@@ -42,40 +40,36 @@
 				</div>
 			</div>
 			<div class="link-page">
-				<!-- <button class="link-button">What We Do</button> -->
 				<a href="portfolio.php" class="link-button">View Portfolio</a>
 			</div>
-		</div>
 	</section>
-   	<div class="container">
-   		<section class="grid">
-	   		<section class="what-wedo">
-	   			<div class="div-wedo">
-	   				<a href="service.php">
-		   				<h3>What We Do</h3>
-		   				<p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p>
-		   				<!-- <button>View More</button> -->
-	   				</a>
-	   			</div>
-	   		</section>
-	   		<section class="what-wedo">
-	   			<div class="div-wedo">
-	   				<a href="about.php">
-		   				<h3>What Make Us Different</h3>
-		   				<p>We are a close-knit team of experienced strategists, designers and builders with complementary, often overlapping skill sets. We can take your project from genesis to launch to dedicated follow-through and maintenance.</p>
-		   				<!-- <button>View More</button> -->
-	   				</a>
-	   			</div>
-	   		</section>
-	   		<section class="what-wedo">
-	   			<div class="div-wedo">
-	   				<a href="contact.php">
-		   				<h3>Get Connected</h3>
-		   				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
-		   				<!-- <button>View More</button> -->
-	   				</a>
-	   			</div>
-	   		</section>
+   		<section>
+	   		<div class="grid">
+		   		<div class="what-wedo">
+		   			<div class="div-wedo">
+		   				<a href="service.php">
+			   				<h3>What We Do</h3>
+			   				<p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p>
+		   				</a>
+		   			</div>
+		   		</div>
+		   		<div class="what-wedo">
+		   			<div class="div-wedo">
+		   				<a href="about.php">
+			   				<h3>What Make Us Different</h3>
+			   				<p>We are a close-knit team of experienced strategists, designers and builders with complementary, often overlapping skill sets. We can take your project from genesis to launch to dedicated follow-through and maintenance.</p>
+		   				</a>
+		   			</div>
+		   		</div>
+		   		<div class="what-wedo">
+		   			<div class="div-wedo">
+		   				<a href="contact.php">
+			   				<h3>Get Connected</h3>
+			   				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
+		   				</a>
+		   			</div>
+		   		</div>
+		   	</div>
    		</section>
 		<!-- <section class="testimonial">
 			<h3>HAPPY CLIENTS</h3>

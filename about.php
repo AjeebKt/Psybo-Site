@@ -25,8 +25,8 @@
 			</nav>
 		</div>
 	</header>
-	<div class="container">
-		<section>
+	<section>
+		<div class="container">
 			<h1>About Us</h1>
 			<div class="show-tab">
 				<div class="left">
@@ -40,11 +40,8 @@
 					</p>
 				</div>
 			</div>
-		</section>
-		<!-- <div class="link-page">
-			<a href="contact.php" class="bgc link-button">Get in Touch</a>
-		</div> -->
-	</div>
+		</div>
+	</section>
 	<?php include 'footer.php'; ?>
 </body>
 </html>

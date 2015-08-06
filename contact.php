@@ -82,61 +82,22 @@ if (isset($_POST['buttonmail']) )
 		<div id="gmap-canvas" class="map-canvas"></div>
 		</div>
 	</section>
-	<div class="container">
-		<section class="contact">
+	<section class="contact">
+		<div class="container">
 			<div class="message">
 				<h3>Get In Touch</h3>
 				<form id="message-form" class="msg-form" method="POST" action="">
-					<!-- <label for="msgName">Name</label> -->
 					<br>
 					<input id="msgName" name="msgName" type="text" placeholder="Name" required>
-					<!-- <label for="msgEmail">Email</label> -->
 					<br>
 					<input id="msgEmail" name="msgEmail" type="email" placeholder="Email" required>
-					<!-- <label for="msgComments">Comments</label> -->
 					<br>
 					<textarea id="msgComments" name="comments" cols="30" rows="5" placeholder="Comments" required></textarea>
 					<button id="buttonmail" name="buttonmail">SEND</button>
 				</form>
 			</div>
-		</section>
-		<!-- <section>
-			<div class="company-details">
-				<div class="detail-box">
-					<h3>Contact Info</h3>
-					<div class="company-adress">
-						<ul>
-							<li>
-								<p><b>Address :</b></p>
-							</li>
-							<li>
-								<p>V2 Tower</p>
-								<p>Opposit Old Bus Stand,</p>
-								<p>Pandikkad Road</p>
-								<p>Manjeri</p>
-							</li>
-						</ul>
-						<ul>
-							<li>
-								<p><b>Phone :</b></p>
-							</li>
-							<li>
-								<p>+04932-222222</p>
-							</li>
-						</ul>
-						<ul>
-							<li>
-								<p><b>Email :</b></p>
-							</li>
-							<li>
-								<p>info@psybotechnologies.com</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section> -->
-	</div>
+		</div>
+	</section>
 	<?php  
 		echo $message;
 		include 'footer.php';

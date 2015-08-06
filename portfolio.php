@@ -36,8 +36,8 @@
 			</nav>
 		</div>
 	</header>
-	<div class="container">
-		<section class="portfolio">
+	<section class="portfolio">
+		<div class="container">
 		<?php
 			for ($i=0; $i <$count_ptf ; $i++) { 
 			 	$result=$objdb->select_row_ptf($num_ptf[$i][0]);
@@ -66,8 +66,8 @@
 				</a>
 			</figure> 
 			<?php } ?>
-		</section>		
-	</div>
+		</div>
+	</section>		
 	<?php include 'footer.php'; ?>
 </body>
 </html>
