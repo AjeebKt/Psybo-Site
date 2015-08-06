@@ -19,13 +19,12 @@
 
 
 <?php 
-
-function reduce_size($img , $source , $dest , $maxw , $maxh)
+////////////////////////////rdeuce image size///////////////////
+function reduce_image_size($img , $source , $dest , $maxw , $maxh)
 {
 	$jpg = $source.$img;
 	if ($jpg) 
 	{
-		var_dump(getimagesize($jpg));
 		list($width , $height ) = getimagesize($jpg);//$type will return the type of the image
 		// var_dump($widkjoth);
 		$source = imagecreatefromjpeg($jpg);
@@ -50,8 +49,8 @@ function reduce_size($img , $source , $dest , $maxw , $maxh)
 		$thumb = imagecreatetruecolor($thumb_width, $thumb_height );
 		imagecopyresampled($thumb, $source, 0, 0, 0, 0, $thumb_width, $thumb_height, $width, $height);
 
-		$path = $dest.$img."_thumb.image";
-		imagejpeg($thumb , $path ,50);
+		$path = $dest.$img.rand();
+		imagejpeg($thumb , $path ,35);
 	}
 	imagedestroy($thumb);
 	imagedestroy($source);
@@ -60,17 +59,21 @@ if (isset($_POST['submit']))
 {
 	// $check1 = getimagesize($img);
 	// var_dump($check1);
-	if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], getcwd().'/test/'.basename($_FILES["fileToUpload"]["name"])) ) 
+	$rand = rand();
+	if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], getcwd().'/test/'.$rand) )#basename($_FILES["fileToUpload"]["name"])) ) 
 	{
 		// var_dump($img);
 		$source = getcwd().'/test/';
 		$dest = getcwd().'/test/' ;
-		$img = basename($_FILES['fileToUpload']['name'] );
-		var_dump($img)	;
-		reduce_size($img , $source , $dest , 200 ,200 );
+		$img = $rand;
+		// var_dump($img)	;
+		reduce_image_size($img , $source , $dest , 200 ,200 );
+		unlink($source.$img);
+		imagejpeg($source.$rand , $source , 35);
 		echo "success";
 	}
 }
+//////////////////////////////////////////////////////////////////////////////
  ?>
 
 
