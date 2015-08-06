@@ -34,24 +34,24 @@
 			</div>
 			<ul class="service-feature">
 				<li class="features move-up">
+					<img src="img/plugin.png" alt="">
+					<h3>Software Development</h3>
+					<p>Offer you complete end-to-end and cost-effective software solutions to your business requirements.</p>
+				</li>
+				<li class="features move-up">
+					<img src="img/web.png" alt="">
+					<h3>Web Development</h3>
+					<p>We make your web vision a reality. Whether you want an attractive traditional, ecommerce, static , dynamic ,responsive web site - we can do it.</p>
+				</li>
+				<li class="features move-up">
 					<img src="img/inspiration.png" alt="">
 					<h3>Software Consultancy</h3>
 					<p>consultants with innovative strategies help customers transform their businesses, processes and operations.</p>
 				</li>
 				<li class="features move-up">
 					<img src="img/plugin.png" alt="">
-					<h3>Software Development</h3>
-					<p>Offer you complete end-to-end and cost-effective software solutions to your business requirements.</p>
-				</li>
-				<li class="features move-up">
-					<img src="img/plugin.png" alt="">
 					<h3>On The Job Training</h3>
 					<p>We make sure that the candidates get a good exposure on the various aspects of the Technologies currently in use.</p>
-				</li>
-				<li class="features move-up">
-					<img src="img/web.png" alt="">
-					<h3>Web Development</h3>
-					<p>We make your web vision a reality. Whether you want an attractive traditional, ecommerce, static , dynamic ,responsive web site - we can do it.</p>
 				</li>
 				<li class="features move-up">
 					<img src="img/plugin.png" alt="">

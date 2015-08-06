@@ -42,34 +42,39 @@
 				<a href="portfolio.php" class="link-button">View Portfolio</a>
 			</div>
 	</section>
-   		<section>
-	   		<div class="grid">
-		   		<div class="what-wedo">
-		   			<div class="div-wedo">
+ 		<section>
+			<div class="container">
+	   		<ul class="what-wedo">
+	   			<li class="list-wedo">
+			   		<div class="grid">
 		   				<a href="service.php">
+		   					<img src="img/Conference-100.png" alt="">
 			   				<h3>What We Do</h3>
 			   				<p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p>
 		   				</a>
-		   			</div>
-		   		</div>
-		   		<div class="what-wedo">
-		   			<div class="div-wedo">
+				   	</div>
+	   			</li>
+	   			<li class="list-wedo">
+			   		<div class="grid">
 		   				<a href="about.php">
+		   					<img src="img/Conference-100.png" alt="">
 			   				<h3>What Make Us Different</h3>
-			   				<p>We are a close-knit team of experienced strategists, designers and builders with complementary, often overlapping skill sets. We can take your project from genesis to launch to dedicated follow-through and maintenance.</p>
+			   				<p>We are a close-knit team of experienced strategists, designers and builders with complementary, often overlapping skill sets.</p>
 		   				</a>
-		   			</div>
-		   		</div>
-		   		<div class="what-wedo">
-		   			<div class="div-wedo">
+				   	</div>
+	   			</li>
+	   			<li class="list-wedo">
+			   		<div class="grid">
 		   				<a href="contact.php">
+		   					<img src="img/Conference-100.png" alt="">
 			   				<h3>Get Connected</h3>
 			   				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 		   				</a>
-		   			</div>
-		   		</div>
-		   	</div>
-   		</section>
+				   	</div>
+	   			</li>
+	   		</ul>
+ 			</div>
+ 		</section>
 		<!-- <section class="testimonial">
 			<h3>HAPPY CLIENTS</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eveniet, ex, facere nam quis tempora minima voluptate impedit eius quod reiciendis excepturi labore est officia inventore hic. Autem, odit!</p>
