@@ -30,7 +30,6 @@ h1
 {
 	text-align: center;
 	font-family: Lato-light;
-	/*color: #008a67;*/
 	color: #333;
 	font-size: 50pt;
 	font-weight: normal;
@@ -66,12 +65,10 @@ h5{
 	text-align: center;
 	font-family: Lato;
 	font-size: 70pt;
-	/*font-weight: bolder;*/
 }
 h5 b{
 	font-family: Lato;
 	font-size: 70pt;
-	/*font-weight: bolder;*/
 	color: #f23;
 	margin: 0;
 	padding: 0;
@@ -99,14 +96,12 @@ header
 	float: left;
 	width: 100%;
 	border-bottom: 1px solid #eee;
-	/*padding-top: 10px;*/
 }
 .logo
 {
 	position: relative;
 	float: left;
 	width: 120px;
-	/*background-color: #008a67;*/
 }
 .logo a {
 	float: left;
@@ -123,7 +118,6 @@ header
 {
 	margin: 0px auto;
 	float: right;
-	/*padding-top: 1%;*/
 }
 .navigation-links
 {
@@ -142,10 +136,6 @@ header
 		box-sizing: border-box;
 		display: inline-block;
 		padding: 0 10px;
-		/*margin: 0px 3px;*/
-		/*-webkit-transition: color 0.3s ease;
-		-o-transition: color 0.3s ease;
-		transition: color 0.3s ease;*/
 	}
 	.navigation-links li a
 	{
@@ -159,14 +149,9 @@ header
 		height: 80px;
 		line-height: 90px;
 	}
-	.navigation-links li:hover
-	{
-		/*border-bottom:3px solid #008a67;*/
-	}
 		.navigation-links li:hover a
 		{
 			border-bottom:3px solid #008a67;
-			/*color: #008a67;*/
 		}
 	.navigation-links li.active a
 	{
@@ -188,7 +173,6 @@ header
 .display-frame {
 	width: 100%;
 	height: 500px;
-	/*background-color: rgba(0, 138, 103, 0.7);*/
 }
 .div-span {
 	width: 50%;
@@ -204,7 +188,6 @@ header
 .link-page {
 	width: 150px;
 	margin: 0 auto;
-	/*float:left;*/
 }
 .link-button {
 	float: left;
@@ -220,11 +203,9 @@ header
 	background-color: #008a67;
 }
 .grid {
-	/*float: left;*/
 	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
-	/*float: none;*/
 	box-sizing: border-box;
 	padding: 30px;
 }
@@ -305,28 +286,19 @@ footer
 		{
 			background-image: url(../img/facebook.png);
 		}
-			.facebook:hover{
-				background-color: #008a67;
-			}
 		.social-links li a.twitter
 		{
 			background-image: url(../img/twitter.png);
 		}
-			.twitter:hover {
-				background-color: #008a67;
-			}
 		.social-links li a.linkedin
 		{
 			background-image: url(../img/linkedin.png);			
 		}
-			.linkedin:hover {
-				background-color: #008a67;
-			}
 		.social-links li a.gplus
 		{
 			background-image: url(../img/google-plus.png);			
 		}
-			.gplus:hover {
+			.social-links li a:hover {
 				background-color: #008a67;
 			}
 /*		@media screen and (max-width: 500px) {

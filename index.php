@@ -4,7 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
-	<!-- <link rel="stylesheet" href="css/css.css"> -->
 	<link rel="stylesheet" href="css/theme.css">
 	<title>PSYBO Home</title>
 </head>
