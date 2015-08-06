@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
-	<title>About PSYBO</title>
+	<title>About PSYBO Technologies</title>
 </head>
 <body>
 <!-- Logo -->

@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<!-- <link rel="stylesheet" href="css/css.css"> -->
 	<link rel="stylesheet" href="css/theme.css">
-	<title>About PSYBO</title>
+	<title>Our Team</title>
 </head>
 <body>
 <!-- Logo -->
