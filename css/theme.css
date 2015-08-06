@@ -669,6 +669,7 @@ footer
 	width: 261px;
 	padding: 0;
 	list-style: none;
+	text-align: right;
 }
 .company-adress ul {
 	width: 100%;
@@ -678,7 +679,7 @@ footer
 	padding: 0;
 }
 .company-adress ul li {
-	float: left;
+	float: right;
 	margin: 10px 0;
 }
 .company-adress p{
