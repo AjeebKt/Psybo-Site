@@ -79,7 +79,7 @@ if (isset($_POST['cancel']) )
 	<link rel="stylesheet" href="css/theme.css">
 	<title>Change Password</title>
 </head>
-<body style="background-color:#008060;">
+<body>
 	<div class="change-pwrd">
 		<h3>Change Password</h3>
 		<form action="" method="POST">
