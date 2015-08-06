@@ -185,7 +185,7 @@
                             </script>"; 
                     $uploadok=0;
                 }
-                if ($_FILES["uploadTeam"]["size"] > 30000000 and $uploadok == 1)
+                if ($_FILES["uploadTeam"]["size"] > 10000000 and $uploadok == 1)
                 {
                     $message="<script type='text/javascript'>
                                 alert('Sorry file to be large .please select onether file!');
