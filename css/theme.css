@@ -491,14 +491,14 @@ footer
 	box-sizing: border-box;
 	float: left;
 	padding: 0;
-	list-style: none;
+	list-style: nones;
 }
 .features{
 	display: inline-block;
-	width: 33.33%;
+	width: 33%;
 	box-sizing: border-box;
 	padding: 20px;
-	float: left;
+	/*float: left;*/
 	text-align: center;
 }
 .features img{

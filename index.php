@@ -48,7 +48,7 @@
 	   			<li class="list-wedo">
 			   		<div class="grid">
 		   				<a href="service.php">
-		   					<img src="img/Conference-100.png" alt="">
+		   					<!-- <img src="img/Conference-100.png" alt=""> -->
 			   				<h3>What We Do</h3>
 			   				<p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p>
 		   				</a>
@@ -57,7 +57,7 @@
 	   			<li class="list-wedo">
 			   		<div class="grid">
 		   				<a href="about.php">
-		   					<img src="img/Conference-100.png" alt="">
+		   					<!-- <img src="img/Conference-100.png" alt=""> -->
 			   				<h3>What Make Us Different</h3>
 			   				<p>We are a close-knit team of experienced strategists, designers and builders with complementary, often overlapping skill sets.</p>
 		   				</a>
@@ -66,7 +66,7 @@
 	   			<li class="list-wedo">
 			   		<div class="grid">
 		   				<a href="contact.php">
-		   					<img src="img/Conference-100.png" alt="">
+		   					<!-- <img src="img/Conference-100.png" alt=""> -->
 			   				<h3>Get Connected</h3>
 			   				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 		   				</a>
