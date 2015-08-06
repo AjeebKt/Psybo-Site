@@ -46,7 +46,7 @@
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
-					<a href="#" class="team-dp">
+					<a class="team-dp">
 						<!-- <img src="upload-image/default-pic.png" alt=""> -->
 						<img <?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key == "file_name") {
