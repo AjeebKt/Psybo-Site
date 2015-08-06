@@ -103,8 +103,8 @@
 		$d = compress($source_img , $destination_img , 90);
 		
 	}
-	// echo "string";
-	// echo "is an image ".$check["mime"].".";
+	// echo "string"
+;	// echo "is an image ".$check["mime"].".";
 	if (file_exists($target_file)) 
 	{
 		echo "sorry file already exist .please select onother file<br>";

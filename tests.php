@@ -369,7 +369,8 @@ function compress_image($source_url, $destination_url, $quality)
 		// header("Content-Disposition: attachment;
 		// filename=$url");
 
-		/* Send our file... */ echo $buffer;
+		/* Send our file... */ 
+		echo $buffer;
 	}
 	else 
 	{
