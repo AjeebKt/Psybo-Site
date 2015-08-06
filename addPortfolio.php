@@ -25,7 +25,7 @@
 
 		if ( !empty($title) and isset($_FILES['uploadPortfolio']['tmp_name']) ) 
 		{
-			if (preg_match('/^[A-Za-z0-9., _-]*$/', $title))
+			if (preg_match('/^[A-Za-z0-9., _-&]*$/', $title))
 			{
 				$error=1;
 				$values_ptf=array($title);
