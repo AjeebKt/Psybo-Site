@@ -49,7 +49,7 @@
 
 		if ( !empty($name) and !empty($designation) )
 		{
-	    	if (preg_match('/^[A-Za-z0-9., _-]*$/', $name))
+	    	if (preg_match('/^[A-Za-z0-9., _-&]*$/', $name))
 	      	{
 	      		$error=1;
 				$values_emp_add=array($name);
