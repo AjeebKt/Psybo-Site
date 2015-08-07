@@ -85,7 +85,7 @@ section {
 	position: relative;
 	width: 100%;
 	float: left;
-	border-bottom: 1px solid #eee;
+	/*border-bottom: 1px solid #eee;*/
 	padding-bottom: 20px;
 }
 
@@ -173,6 +173,8 @@ header
 .display-frame {
 	width: 100%;
 	height: 500px;
+	background-color: #f4f2ed;
+	border-bottom: #d9d9de;
 }
 .div-span {
 	width: 50%;
@@ -196,7 +198,10 @@ header
 	padding: 10px 15px;
 	background-color: transparent;
 	border: 1px solid #008a67;
-	transition: color 0.3s ease, background-color 0.3s ease;
+	/*transition: color 0.3s ease, background-color 0.3s ease;*/
+	font-weight: bold;
+	transition: all 0.3s ease;
+	border-radius: 2px;
 }
 .link-button:hover {
 	color: #fff;
@@ -277,12 +282,13 @@ footer
 		.social-links li a
 		{
 			display: block;
-			width: 47px;
-			height: 47px;
+			width: 32px;
+			height: 32px;
 			background-position: center;
 			background-repeat: no-repeat;
 			-webkit-background-size: 100%;
 			background-size: 100%;
+			background-color: #fff;
 			transition: background-color 0.3s ease-in-out;
 		}
 		.social-links li a.facebook
