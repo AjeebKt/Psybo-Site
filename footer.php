@@ -15,16 +15,16 @@
 			</div>
 				<ul class="social-links">
 					<li>
-						<a class="facebook" href="https://www.facebook.com/psybotechnologies"></a>
+						<a class="facebook" href="https://www.facebook.com/psybotechnologies" target="_blank"></a>
 					</li>
 					<li>
-						<a class="twitter" href="https://twitter.com/psybotech"></a>
+						<a class="twitter" href="https://twitter.com/psybotech" target="_blank"></a>
 					</li>
 					<li>
-						<a class="linkedin" href="https://www.linkedin.coms"></a>
+						<a class="linkedin" href="https://www.linkedin.com" target="_blank"></a>
 					</li>
 					<li>
-						<a class="gplus" href="https://plus.google.com/u/0/"></a>
+						<a class="gplus" href="https://plus.google.com/u/0/" target="_blank"></a>
 					</li>
 				</ul>	
 		<div class="footer-details">

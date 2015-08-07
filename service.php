@@ -41,7 +41,7 @@
 				<li class="features move-up">
 					<img src="img/web.png" alt="">
 					<h3>Web Development</h3>
-					<p>We make your web vision a reality. Whether you want an attractive traditional, ecommerce, static , dynamic ,responsive web site - we can do it.</p>
+					<p>We make your web vision a reality. we create traditional, ecommerce, static , dynamic ,responsive web site.</p>
 				</li>
 				<li class="features move-up">
 					<img src="img/inspiration.png" alt="">
