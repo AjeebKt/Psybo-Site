@@ -43,7 +43,7 @@
 			 	$result=$objdb->select_row_ptf($num_ptf[$i][0]);
 			?>
 			 <figure>
-				<a target="_blank" href=<?php foreach ($result as $key => $value) {
+				<span href=<?php foreach ($result as $key => $value) {
 				if (is_string($key) and $key == 'link' )
 				{
 					echo "\"".$value."\"";	
@@ -63,7 +63,7 @@
 							} ?>
 					</figcaption>
 				</div>
-				</a>
+				</span>
 			</figure> 
 			<?php } ?>
 		</div>

@@ -47,7 +47,8 @@ if (isset($_POST['buttonmail']) )
 			var myOptions = {
 				zoom:18,
 				center:new google.maps.LatLng(11.120228, 76.120368),
-				mapTypeId: google.maps.MapTypeId.ROADMAP
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				scrollwheel: false
 			};
 			map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
 			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.120228, 76.120368)});
