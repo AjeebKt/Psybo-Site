@@ -360,6 +360,8 @@ footer
 		position: absolute;
 		bottom: -50px;
 		opacity: 0;
+		-webkit-transition: bottom 0.4s ease 0s, opacity 0.3s ease 0s;
+		-moz-transition: bottom 0.4s ease 0s, opacity 0.3s ease 0s;
 		transition: bottom 0.4s ease 0s, opacity 0.3s ease 0s;
 		font-family: Lato;
 		font-size: 16pt;
@@ -463,6 +465,9 @@ footer
 			{
 				background-image: url(../img/G-black.png);			
 			}
+
+/*-- Service --*/
+
 .we-do
 {
 	width: 100%;
@@ -495,10 +500,10 @@ footer
 }
 .features{
 	display: inline-block;
-	width: 33%;
+	width: 33.33%;
 	box-sizing: border-box;
 	padding: 20px;
-	/*float: left;*/
+	float: left;
 	text-align: center;
 }
 .features img{
@@ -536,8 +541,12 @@ footer
 	font-weight: normal;
 	font-size: 6pt;
 }
+
+/*-- About --*/
+
 .show-tab
 {
+	float: left;
 	width: 100%;	
 	box-sizing: border-box;
 	padding: 0 40px 20px;

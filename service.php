@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
-	<!-- <link rel="stylesheet" href="css/css.css"> -->
 	<link rel="stylesheet" href="css/theme.css">
 	<title>Our Service</title>
 </head>
@@ -34,14 +33,14 @@
 			</div>
 			<ul class="service-feature">
 				<li class="features move-up">
-					<img src="img/plugin.png" alt="">
+					<img src="img/software-development.png" alt="">
 					<h3>Software Development</h3>
 					<p>Offer you complete end-to-end and cost-effective software solutions to your business requirements.</p>
 				</li>
 				<li class="features move-up">
 					<img src="img/web.png" alt="">
 					<h3>Web Development</h3>
-					<p>We make your web vision a reality. Whether you want an attractive traditional, ecommerce, static , dynamic ,responsive web site - we can do it.</p>
+					<p>We make your web vision a reality. we create traditional, ecommerce, static , dynamic ,responsive web site.</p>
 				</li>
 				<li class="features move-up">
 					<img src="img/inspiration.png" alt="">
@@ -49,17 +48,17 @@
 					<p>consultants with innovative strategies help customers transform their businesses, processes and operations.</p>
 				</li>
 				<li class="features move-up">
-					<img src="img/plugin.png" alt="">
+					<img src="img/ojt.jpg" alt="">
 					<h3>On The Job Training</h3>
 					<p>We make sure that the candidates get a good exposure on the various aspects of the Technologies currently in use.</p>
 				</li>
 				<li class="features move-up">
-					<img src="img/plugin.png" alt="">
+					<img src="img/obp.png" alt="">
 					<h3>Online Business Promotion</h3>
 					<p>We aim to transform Business Performance, Strategic Perspective on Process Improvement and enabling Technology as per the requirements to deliver Performance oriented tools.</p>
 				</li>
 				<li class="features move-up">
-					<img src="img/plugin.png" alt="">
+					<img src="img/academic-project.png" alt="">
 					<h3>Live Academic Project Training</h3>
 					<p>We provide assistance and guidance to students in doing their academic projects. Training division also renders the service of campus training where our technology experts handle training sessions for students inside our company.</p>
 				</li>
