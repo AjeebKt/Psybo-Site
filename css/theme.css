@@ -211,7 +211,7 @@ header
 	float: left;
 	box-sizing: border-box;
 	padding: 0 60px;
-}
+} 
 .who-we-are p {
 	line-height: 1.5;
 }
@@ -667,12 +667,12 @@ footer
 	margin: 10px 0%;
 	padding: 0;
 	border: 0px;
-	background-color: #309E7B;
+	background-color: #008a67;
 	transition: background-color 0.35s ease, color 0.35s ease, border 0.2s ease;
 	color: #fff;
 }
 .message button:hover{
-	background-color: #008a67;
+	background-color: #309E7B;
 }
 .company-contact {
 	width: 50%;
