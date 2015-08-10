@@ -1,12 +1,47 @@
 <?php 
     error_reporting(0);
     include 'Database.php';
-    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    // $objdb= new Database ('localhost','root','asd','psybo-db');
+    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    $objdb= new Database ('localhost','root','asd','psybo-db');
     $num_ptf=$objdb->num_row_ptf();
     $count_ptf=count($num_ptf);
     $actdir="/upload-image/";
     // error_reporting(0);
+    function reduce_image_size($img , $source , $dest , $maxw , $maxh ,$file_type)
+    {
+        $jpg = $source.$img;
+        if ($jpg) 
+        {
+            list($width , $height ) = getimagesize($jpg);//$type will return the type of the image
+            // var_dump($widkjoth);
+            $source = imagecreatefromjpeg($jpg);
+            if ( $maxw >= $width and $mxh >= $height) 
+            {
+                $ratio = 1;
+            } 
+            else if ($width > $height)
+            {
+                $ratio = $maxw / $maxh;
+
+            }
+            else
+            {
+                $ratio =$maxh / $maxw;
+
+            }
+
+            $thumb_width =round($width * $ratio);
+            $thumb_height = round($height * $ratio);
+
+            $thumb = imagecreatetruecolor($thumb_width, $thumb_height );
+            imagecopyresampled($thumb, $source, 0, 0, 0, 0, $thumb_width, $thumb_height, $width, $height);
+
+            $path = $dest.$img.$rand.".".$file_type;
+            imagejpeg($thumb , $path ,35);
+        }
+        imagedestroy($thumb);
+        imagedestroy($source);
+    }
     if (isset($_POST['btnTeamSubmit'])) 
     {   
         $name=$_POST['txtName'];
@@ -181,7 +216,7 @@
                 else
                 {
                     $message="<script type='text/javascript'>
-                                alert('Please select onother image!');
+                                alert('Please select onother image!');  
                             </script>"; 
                     $uploadok=0;
                 }
@@ -206,12 +241,14 @@
             if ($uploadok == 1 and $error == 1) 
             {
                 $rand=rand();
-                $rand.=".";
-                $upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_dir .$rand.$file_type ); 
-            // }
-                // if ( $error == 1 )
-                // {
-                $values_emp_file=array($rand.$file_type,$file_type);
+                // $rand.=".";
+                $upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_dir .$rand );
+                if ($upload == true) 
+                {
+                    reduce_image_size($rand ,$target_dir ,$target_dir ,200 ,200 ,$file_type  );
+                    unlink($target_dir.$rand);
+                } 
+                $values_emp_file=array($rand.".".$file_type,$file_type);
                 $objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
                 if ($objdb == TRUE) 
                 {
