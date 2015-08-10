@@ -3,8 +3,8 @@
 	include "file.php";
     require_once 'Database.php';
 	// use app\Database;
-    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    // $objdb= new Database ('localhost','root','asd','psybo-db');
+    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    $objdb= new Database ('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
     $count_emp=count($emp_id);
@@ -58,6 +58,12 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/css.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script language="javascript" type="text/javascript">
+	function DeleteCheck()
+	{
+		return confirm('Are you sure to delete this record?')
+	}
+	</script>
 </head>
 <body>
 	<?php include 'dash.php' ?>
@@ -125,7 +131,7 @@
 					if (is_string($key) and $key == 'id' )
 					{
 
-						echo "\"?deleteid=".$value."\"";	
+						echo "\"?deleteid=".$value."\" onclick=\"return DeleteCheck()\"";	
 					}
 					} ?> class="delete"></a></td>
 				</tr>

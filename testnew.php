@@ -69,7 +69,6 @@ if (isset($_POST['submit']))
 		// var_dump($img)	;
 		reduce_image_size($img , $source , $dest , 200 ,200 );
 		unlink($source.$img);
-		imagejpeg($source.$rand , $source , 35);
 		echo "success";
 	}
 }
