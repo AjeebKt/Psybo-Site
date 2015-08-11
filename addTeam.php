@@ -289,15 +289,15 @@
     <meta charset="UTF-8">
     <title>Add team member</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/css.css">
+    <!-- <link rel="stylesheet" href="css/css.css"> -->
     <link rel="stylesheet" href="css/style.css">
  </head>
  <body>
 
 <?php include 'dash.php';  ?>
     <section>
-        <form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">  
-            <div id="tabTeam" class="tab-team">
+        <div id="tabTeam" class="tab-team">
+            <form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">  
             <h3>ADD TEAM MEMBERS</h3>
                 <div class="div-align-team">
                     <label for="txtName">Name</label><br>
@@ -306,6 +306,13 @@
                 <div class="div-align-team">
                     <label for="txtDesignation">Designation</label><br>
                     <input id="txtDesignation" name="txtDesignation" type="text" required><br>
+                </div>
+                <div class="div-align-team">
+                    <label for="txtDesignation">Gender</label><br>
+                     <select>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select> 
                 </div>
                 <div class="div-align-team">
                     <label for="txtFacebook">Facebook</label><br>
@@ -329,11 +336,9 @@
                     <!-- <input name="uploadTeam" type="file" > -->
                 </div>
                 <button name="btnTeamSubmit" class="submit">Add</button>
-            </div>
-        </form>
-        <form action="tabTeam.php" method="POST">
-            <button name="btnCancel" class="reset">Cancel</button>
-        </form>
+                <button name="btnCancel" class="reset">Cancel</button>
+            </form>
+        </div>
     </section>
     <?php echo $message; ?>
 </body>

@@ -33,17 +33,17 @@
 			</div>
 			<ul class="service-feature">
 				<li class="features move-up">
-					<img src="img/software-development.png" alt="">
+					<img src="img/software-dev.png" alt="">
 					<h3>Software Development</h3>
 					<p>Offer you complete end-to-end and cost-effective software solutions to your business requirements.</p>
 				</li>
 				<li class="features move-up">
-					<img src="img/web.png" alt="">
+					<img src="img/html-coding.png" alt="">
 					<h3>Web Development</h3>
 					<p>We make your web vision a reality. we create traditional, ecommerce, static , dynamic ,responsive web site.</p>
 				</li>
 				<li class="features move-up">
-					<img src="img/inspiration.png" alt="">
+					<img src="img/software-consult.png" alt="">
 					<h3>Software Consultancy</h3>
 					<p>consultants with innovative strategies help customers transform their businesses, processes and operations.</p>
 				</li>
@@ -53,7 +53,7 @@
 					<p>We make sure that the candidates get a good exposure on the various aspects of the Technologies currently in use.</p>
 				</li>
 				<li class="features move-up">
-					<img src="img/obp.png" alt="">
+					<img src="img/online-BP.png" alt="">
 					<h3>Online Business Promotion</h3>
 					<p>We aim to transform Business Performance, Strategic Perspective on Process Improvement and enabling Technology as per the requirements to deliver Performance oriented tools.</p>
 				</li>

@@ -264,10 +264,8 @@
 					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" ><br>
 				</div>
 				<button class="submit" name="btnPortfolioSubmit">Update</button>
+				<button name="btnReset" class="reset">Cancel</button>
 			</div>
-		</form>
-		<form action="tabPortfolio.php" method="POST">
-			<button name="btnReset" class="reset">Cancel</button>
 		</form>
 	</section>
 	<?php echo $errormsg; ?>

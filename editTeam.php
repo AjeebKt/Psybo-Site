@@ -312,8 +312,8 @@
 <body>
 	<?php include 'dash.php';?>
  	<section>
-		<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
-			<div id="tabTeam" class="tab-team">
+		<div id="tabTeam" class="tab-team">
+			<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
 			<h3>EDIT TEAM MEMBERS</h3>
 				<div class="div-align-team">
 					<label for="txtName">Name</label><br>
@@ -329,6 +329,13 @@
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
+				<div class="div-align-team">
+                    <label for="txtDesignation">Gender</label><br>
+                     <select>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select> 
+                </div>
 				<div class="div-align-team">
 					<label for="txtFacebook">Facebook</label><br>
 					<input id="txtFacebook" name="txtFacebook" <?php foreach ($result_add[0] as $key => $value) {
@@ -362,11 +369,9 @@
 					<input id="uploadTeam" name="uploadTeam" type="file" ><br>
 				</div>
 				<button name="btnTeamSubmit" class="submit">Update</button>
-			</div>
-		</form>
-		<form action="tabTeam.php" method="POST">
-			<button name="btnReset" class="reset">Cancel</button>
-		</form>
+				<button name="btnReset" class="reset">Cancel</button>
+			</form>
+		</div>
 	</section>
 	<?php echo $message; ?>
 </body>
