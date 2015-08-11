@@ -8,7 +8,7 @@ if (isset($_POST['buttonmail']) )
 
 	if ( filter_var($_POST['msgEmail'] , FILTER_VALIDATE_EMAIL))
 	{
-		$to="pnoushid@gmail.com";
+		$to="psybotechnologies@gmail.com";
 		$from = $_POST['msgEmail'];
 		$name = $_POST['msgName'];
 		$subject="comments from : ".$name;
