@@ -1,8 +1,76 @@
 
+@font-face
+{
+	font-family: Lato-Light;
+	src: url('../fonts/Lato-Light.ttf');
+}
+@font-face
+{
+	font-family: Lato;
+	src: url('../fonts/Lato-Regular.ttf');
+}
+
 body
 {
+	font-family: Lato;
 	padding-top: 80px;
 	font-size: 12pt;
+}
+h1
+{
+	text-align: center;
+	font-family: Lato-light;
+	color: #333;
+	font-size: 50pt;
+	/*font-weight: normal;*/
+	padding: 0% 0px 10px; 
+}
+h2
+{
+	font-family: Lato-light;
+	color: #333;
+	font-size: 36pt;
+	/*font-weight: normal;*/
+	margin-top: 2%;
+	padding: 0;
+}
+h3
+{
+	font-family: Lato-light;
+	/*font-weight: normal;*/
+	font-size: 20pt;
+	margin: 10px 0;
+	padding: 0;
+	color: #333;
+}
+h4
+{
+	font-family: Lato-light;
+	font-size: 18pt;
+	/*font-weight: normal;*/
+	margin: 10px 0;
+	color: #333;
+	text-align: center;
+}
+h5{
+	text-align: center;
+	font-family: Lato;
+	font-size: 70pt;
+}
+h5 b{
+	font-family: Lato;
+	font-size: 70pt;
+	color: #f23;
+	margin: 0;
+	padding: 0;
+}
+p
+{
+	font-family: Lato-light;
+	font-size: 14pt;
+	line-height: 18pt;
+	font-weight: 300;
+	color: #333;
 }
 h4
 {
@@ -182,14 +250,14 @@ section
 }
 .div-align-team
 {
-	width: 50%;
-	float: left;
-	margin-top: 2%;
-}
-.div-align-team select
-{
 	width: 45%;
-	
+	float: left;
+	margin: 20px 0 10px 20px;
+	/*margin-top: 20px;*/
+}
+.div-align-team select {
+	background-color: #fff;
+	border: 1px solid #aaa;
 }
 .left
 {
@@ -233,12 +301,6 @@ section
 {
 	width: 100%;
 }
-input[type="file"]
-{
-	border: 0;
-	padding: 0;
-	height: 30px;
-}
 .submit, .reset
 {
 	width: 10%;
@@ -268,10 +330,6 @@ input[type="file"]
 	background-color: #464646;
 	color: #fff;
 }
-.tab-portfolio input,label, .tab-team input, label
-{
-	margin: 0 0 1% 2%;
-}
 .tab-team
 {
 	transition: all 0.4s ease;
@@ -280,10 +338,17 @@ input[type="file"]
 
 .tab-team input
 {
-	border: 2px solid #aaa;
+	border: 1px solid #aaa;
 	height: 30px;
-	width: 80%;
+	width: 90%;
+	padding: 5px 10px;
 	background-color: transparent;
+}
+input[type="file"]
+{
+	border: 0;
+	padding: 0;
+	height: 30px;
 }
 
 /*-----Add Portfolio----*/

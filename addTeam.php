@@ -289,7 +289,7 @@
     <meta charset="UTF-8">
     <title>Add team member</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/css.css">
+    <!-- <link rel="stylesheet" href="css/css.css"> -->
     <link rel="stylesheet" href="css/style.css">
  </head>
  <body>
@@ -306,6 +306,13 @@
                 <div class="div-align-team">
                     <label for="txtDesignation">Designation</label><br>
                     <input id="txtDesignation" name="txtDesignation" type="text" required><br>
+                </div>
+                <div class="div-align-team">
+                    <label for="txtDesignation">Gender</label><br>
+                     <select>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select> 
                 </div>
                 <div class="div-align-team">
                     <label for="txtFacebook">Facebook</label><br>
