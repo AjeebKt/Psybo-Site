@@ -289,7 +289,6 @@
     <meta charset="UTF-8">
     <title>Add team member</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/css.css"> -->
     <link rel="stylesheet" href="css/style.css">
  </head>
  <body>

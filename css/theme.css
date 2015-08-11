@@ -58,7 +58,7 @@ h4
 	font-family: Lato-light;
 	font-size: 18pt;
 	/*font-weight: normal;*/
-	margin: 10px 0;
+	margin: 5px 0;
 	color: #333;
 	text-align: center;
 }
@@ -103,6 +103,7 @@ header
 	position: relative;
 	float: left;
 	width: 120px;
+	margin-top: 10px;
 }
 .logo a {
 	float: left;
@@ -152,11 +153,11 @@ header
 	}
 		.navigation-links li:hover a
 		{
-			border-bottom:3px solid #008a67;
+			border-bottom:2px solid #008a67;
 		}
 	.navigation-links li.active a
 	{
-		border-bottom:3px solid #008a67;
+		border-bottom: 2px solid #008a67;
 	}
 .container
 {
@@ -254,6 +255,12 @@ header
 	border: 1px solid #ccc;
 	margin: 0 auto;
 }
+.grid h3 {
+	margin: 40px 0 0;
+}
+.grid p {
+	margin: 40px 0 0;
+}
 .testimonial p {
 	width: 70%;
 	color: #333;
@@ -266,7 +273,7 @@ footer
 	width: 100%;
 	float: left;
 	background-color: #333;
-	margin-top: 20px;
+	margin-top: 50px;
 }
 .footer-details
 {
@@ -393,7 +400,7 @@ footer
 	float: left;
 	text-align: center;
 	box-sizing: border-box;
-	padding: 0 60px 60px;
+	padding: 0px 30px;
 }
 .team-member
 {
@@ -401,7 +408,7 @@ footer
 	list-style: none;
 	float: left;
 	text-align: center;
-	margin: 0px 0 5% 0;
+	margin: 60px 0 0;
 	padding: 0;
 }
 	.team-member li
@@ -412,6 +419,7 @@ footer
 		padding: 10px 10px;
 		box-sizing: border-box;
 		display: inline-block;
+		margin-bottom: 20px;
 	}
 	.team-member li img:first-child
 	{
@@ -622,7 +630,7 @@ footer
 	background:none!important;
 }
 .contact {
-	margin-top: 270px;
+	margin-top: 350px;
 }
 .message
 {
@@ -644,9 +652,13 @@ footer
 .message h3{
 	text-align: center;
 }
-.msg-form {
+.message-box {
 	width: 90%;
 	margin: 0 auto;
+}
+.msg-form {
+	width: 100%;
+	margin-top: 30px;
 }
 .message input{
 	width: 100%;

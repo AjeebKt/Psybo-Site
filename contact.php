@@ -70,8 +70,8 @@ if (isset($_POST['buttonmail']) )
 				<ul class="navigation-links">
 					<li><a href="index.php">HOME</a></li>
 					<!-- <li><a href="portfolio.php">PORTFOLIO</a></li> -->
-					<li><a href="team.php">TEAM</a></li>
 					<li><a href="service.php">SERVICE</a></li>
+					<li><a href="team.php">TEAM</a></li>
 					<li><a href="about.php">ABOUT</a></li>
 					<li class="active"><a href="contact.php">CONTACT</a></li>
 				</ul>
@@ -86,16 +86,19 @@ if (isset($_POST['buttonmail']) )
 	<section class="contact">
 		<div class="container">
 			<div class="message">
-				<h3>Get In Touch</h3>
-				<form id="message-form" class="msg-form" method="POST" action="">
-					<br>
-					<input id="msgName" name="msgName" type="text" placeholder="Name" required>
-					<br>
-					<input id="msgEmail" name="msgEmail" type="email" placeholder="Email" required>
-					<br>
-					<textarea id="msgComments" name="comments" cols="30" rows="5" placeholder="Comments" required></textarea>
-					<button id="buttonmail" name="buttonmail">SEND</button>
-				</form>
+				<div class="message-box">
+					<h3>Get In Touch</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, quae. Ad facere provident molestias. Ducimus quasi labore, quas obcaecati vero ea ab saepe perspiciatis soluta? Maiores minima aut pariatur iste!</p>
+					<form id="message-form" class="msg-form" method="POST" action="">
+						<br>
+						<input id="msgName" name="msgName" type="text" placeholder="Name" required>
+						<br>
+						<input id="msgEmail" name="msgEmail" type="email" placeholder="Email" required>
+						<br>
+						<textarea id="msgComments" name="comments" cols="30" rows="5" placeholder="Comments" required></textarea>
+						<button id="buttonmail" name="buttonmail">SEND</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>

@@ -31,8 +31,8 @@
 				<ul class="navigation-links">
 					<li><a href="index.php">HOME</a></li>
 					<!-- <li><a href="portfolio.php">PORTFOLIO</a></li> -->
-					<li class="active"><a href="team.php">TEAM</a></li>
 					<li><a href="service.php">SERVICE</a></li>
+					<li class="active"><a href="team.php">TEAM</a></li>
 					<li><a href="about.php">ABOUT</a></li>
 					<li><a href="contact.php">CONTACT</a></li>
 				</ul>
@@ -42,6 +42,7 @@
 	<section class="team">
 		<div class="container">
 			<h2>Meet Our Team</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque consequuntur laudantium repellendus minus eius, dicta nam voluptates modi eveniet hic deserunt voluptate doloremque earum odit quasi expedita sit aliquid atque!</p>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
