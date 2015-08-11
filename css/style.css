@@ -392,7 +392,7 @@ input[type="file"]
 	border-bottom: 1px solid #ccc;
 }
 .show-item tr td:first-child {
-	padding-left: 10px;
+	padding-left: 15px;
 }
 .show-item tr td img
 {
