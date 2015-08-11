@@ -296,8 +296,8 @@
 
 <?php include 'dash.php';  ?>
     <section>
-        <form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">  
-            <div id="tabTeam" class="tab-team">
+        <div id="tabTeam" class="tab-team">
+            <form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">  
             <h3>ADD TEAM MEMBERS</h3>
                 <div class="div-align-team">
                     <label for="txtName">Name</label><br>
@@ -336,11 +336,9 @@
                     <!-- <input name="uploadTeam" type="file" > -->
                 </div>
                 <button name="btnTeamSubmit" class="submit">Add</button>
-            </div>
-        </form>
-        <form action="tabTeam.php" method="POST">
-            <button name="btnCancel" class="reset">Cancel</button>
-        </form>
+                <button name="btnCancel" class="reset">Cancel</button>
+            </form>
+        </div>
     </section>
     <?php echo $message; ?>
 </body>

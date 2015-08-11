@@ -159,14 +159,13 @@
 	<meta charset="UTF-8">
 	<title>Add Portfolio</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/css.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section>
-		<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
-			<div id="tabPortfolio" class="tab-portfolio">
+		<div id="tabPortfolio" class="tab-portfolio">
+			<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
 			<h3>ADD PORTFLIOS</h3>
 				<div class="div-align">
 					<label>Title</label><br>
@@ -185,11 +184,9 @@
 					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
 				</div>
 				<button class="submit" name="btnPortfolioSubmit">Add</button>
-			</div>
-		</form>
-		<form action="tabPortfolio.php" method="POST">
-			<button name="btnReset" class="reset">Cancel</button>
-		</form>
+				<button name="btnReset" class="reset">Cancel</button>
+			</form>
+		</div>
 	</section>
 	<?php echo $message; ?>
 </body>

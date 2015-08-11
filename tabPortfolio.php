@@ -69,8 +69,8 @@
 			<table class="show-item">
 				<tr>
 					<td>Name</td>
-					<td>description</td>
-					<td>link</td>
+					<td>Description</td>
+					<td>Link</td>
 					<td>Image</td>
 					<td>Edit</td>
 					<td>Delete</td>

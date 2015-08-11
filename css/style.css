@@ -246,26 +246,23 @@ section
 {
 	width: 45%;
 	float: left;
-	margin-top: 2%;
+	margin-top: 20px;
 }
 .div-align-team
 {
 	width: 45%;
 	float: left;
-	margin: 20px 0 10px 20px;
+	margin: 20px 0 10px 0px;
 	/*margin-top: 20px;*/
 }
 .div-align-team select {
 	background-color: #fff;
 	border: 1px solid #aaa;
 }
-.left
-{
-	margin-left: 1%;
-}
 .tab-portfolio
 {
 	width: 100%;
+	padding-left: 20px;
 }
 .tab-portfolio input
 {
@@ -334,6 +331,7 @@ section
 {
 	transition: all 0.4s ease;
 	width: 100%;
+	margin-left: 20px;
 }
 
 .tab-team input
@@ -352,6 +350,11 @@ input[type="file"]
 }
 
 /*-----Add Portfolio----*/
+.show-item
+{
+	width: 100%;
+	margin: 30px 0 0 0;
+}
 .show-item a.edit
 {
 	width: 20px;
@@ -374,15 +377,22 @@ input[type="file"]
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
-.show-item
-{
-	width: 100%;
-	margin: 3% 0 0 0;
+.show-item tr:first-child {
+	border-top: 1px solid #ccc;
+	font-weight: bold;
+	color: #008a67;
+	/*background-color: #008a67;*/
 }
-.show-item tr td
+.show-item tr
 {
-	/*border-right: 1px solid #aaa;*/
-	border-bottom: 2px solid #ccc;
+	height: 40px;
+	margin-left: 10px;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.show-item tr td:first-child {
+	padding-left: 10px;
 }
 .show-item tr td img
 {
@@ -397,4 +407,3 @@ input[type="file"]
 	height: 250px;
 	background-color: rgba(243, 122, 14, 0.7);
 }
-
