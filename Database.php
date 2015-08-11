@@ -312,7 +312,7 @@ class Database
 // NUMBER OF COLOMN
 	public function num_row_emp()
 	{
-		$count="SELECT id FROM employee";
+		$count="SELECT id FROM employee order by rand()";
 		$query=mysqli_query($this->condb,$count);
 		if ($query== FALSE) 
 			trigger_error($this->condb->error);

@@ -400,19 +400,29 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // list($bar) = "abcde";
 // var_dump($bar); // is_null(var)
 
-$check=getimagesize(getcwd().'/test/watermark_Your_Natural_Beauty_wallpaper.jpg');
-var_dump($check);
-list($aaa) = $check;
-var_dump($aaa);
+
+///////////////////////////SELECT BY RANDOM/////////////////////
+
+
+ $condb = new mysqli("localhost","root","asd","psybo-db");
+ // var_dump($condb);
+		
+		$select="SELECT employee.id,employee.designation,address.name,address.fb,address.linkedin,address.address,address.email,address.twiter,address.google_plus,files.file_name,files.type FROM employee JOIN address ON employee.address_id = address.id join files ON files.id=employee.files_id where employee.id=176";
+		var_dump($select);
+		$query=mysqli_query($condb,$select);
+		if ($query==FALSE) 
+		
+			return trigger_error($condb->error);
+		
+		$recset=array();
+		while ($rec=mysqli_fetch_array($query))
+			array_push($recset, $rec);
+		var_dump($recset);
+
+		$emp_id=$objdb->num_row_emp();
+		var_dump($emp_id);
+			
+	
 
 ?> 
-<html>
-	
-	<head>
-		
-	</head>
-	<body>
-		<input type="submit" name="button" value="ok" onclick="return alert('hghj');" />
-	</body>
-</html>
 

@@ -48,7 +48,7 @@
 	<script language="javascript" type="text/javascript">
 	function DeleteCheck()
 	{
-		return confirm('Are you sure to delete this record?')
+		return confirm('Are you sure to delete this record?');
 	}
 	</script>
 </head>
