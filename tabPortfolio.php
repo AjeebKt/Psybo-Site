@@ -43,7 +43,7 @@
 	<meta charset="UTF-8">
 	<title>Tab-Portfolio</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/css.css">
+	<!-- <link rel="stylesheet" href="css/css.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 	<script language="javascript" type="text/javascript">
 	function DeleteCheck()
@@ -53,7 +53,7 @@
 	</script>
 </head>
 <body>
-	<?php include 'dash.php' ?>
+	<?php include 'dash.php'; ?>
 	<section>
 	<div class="edit-form">
 	<h3>Edit Portfolio</h3>
@@ -125,7 +125,6 @@
 	</div>
 	</section>
 	<?php echo $message;
-	include 'dash.php';
 	 ?>
 </body>
 </html>
