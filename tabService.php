@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tab-Portfolio</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script language="javascript" type="text/javascript">
+	function DeleteCheck() {
+		return confirm('Are you sure to delete this record?');
+	}
+	</script>
+</head>
+<body>
+	<?php include 'dash.php'; ?>
+	<section>
+		<div class="show-table">
+			<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
+				<a href="addService.php">Add Service</a>
+				<table class="show-item">
+					<tr>
+						<td>Main Head</td>
+						<td>Description</td>
+						<td>Service</td>
+						<td>Description</td>
+						<td>Image</td>
+						<td>Edit</td>
+						<td>Delete</td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+							<a href="editService.php" class="edit"></a>
+						</td>
+						<td>
+							<a href="" class="delete" onclick="DeleteCheck()"></a>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</section>
+</body>
+</html>
+
