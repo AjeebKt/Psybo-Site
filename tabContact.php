@@ -16,33 +16,11 @@
 	<?php  include 'dash.php'; ?>
 	<section>
 		<div class="show-table">
-			<form id="formShowAbout" name="formShowAbout" action="" method="POST">
-				<a href="addAboutHead.php">Add Main Head</a><br><br>
-				<a href="addAboutItem.php">Add Item</a>
-
+			<form id="formShowContact" name="formShowContact" action="" method="POST">
+				<a href="addContactMessage.php">Add Main Head</a><br><br>
 				<table class="show-item">
 					<tr>
-						<td>Mian Head</td>
-						<td>First Column Des.</td>
-						<td>Second Column Des.</td>
-						<td>Edit</td>
-						<td>Delete</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>
-							<a href="editAboutHead.php" class="edit"></a>
-						</td>
-						<td>
-							<a href="" class="delete" onclick="DeleteCheck()"></a>
-						</td>
-					</tr>
-				</table>
-				<table class="show-item">
-					<tr>
-						<td>Headding</td>
+						<td>Message Headding</td>
 						<td>Description</td>
 						<td>Edit</td>
 						<td>Delete</td>
@@ -51,7 +29,7 @@
 						<td></td>
 						<td></td>
 						<td>
-							<a href="editaboutItem.php" class="edit"></a>
+							<a href="editContactMessage.php" class="edit"></a>
 						</td>
 						<td>
 							<a href="" class="delete" onclick="DeleteCheck()"></a>

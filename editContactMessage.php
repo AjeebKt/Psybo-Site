@@ -11,16 +11,16 @@
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h2>Add Item</h2>
+				<h2>Edit in Message</h2>
 				<div class="group">
-					<label for="aboutHeadding">Headding</label><br>
-					<input type="text" id="aboutHeadding">
+					<label for="MsgContactHeadding">Headding</label><br>
+					<input type="text" id="MsgContactHeadding">
 				</div>
 				<div class="group">
-					<label for="txtAbout">Description</label><br>
-					<textarea name="txtAbout" id="txtAbout" cols="30" rows="10"></textarea>
+					<label for="txtMsgContact">Description</label><br>
+					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="10"></textarea>
 				</div>
-				<button>Add</button>
+				<button>Update</button>
 				<button>Cancel</button>
 			</div>
 		</form>
