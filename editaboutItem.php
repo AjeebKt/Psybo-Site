@@ -20,8 +20,8 @@
 					<label for="txtAbout">Description</label><br>
 					<textarea name="txtAbout" id="txtAbout" cols="30" rows="10"></textarea>
 				</div>
-				<button>Update</button>
-				<button>Cancel</button>
+				<button id="btnUpdate" name="btnUpdate">Update</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
 	</section>

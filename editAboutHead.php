@@ -9,7 +9,7 @@
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
-		<form action="" method="POST" id="firstServiceForm">
+		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
 				<h2>Edit Head</h2>
 				<div class="group">
@@ -24,8 +24,8 @@
 					<label for="txtService">Second Description</label><br>
 					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
 				</div>
-				<button>Update</button>
-				<button>Cancel</button>
+				<button id="btnUpdate" name="btnUpdate">Update</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
 	</section>

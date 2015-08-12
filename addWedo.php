@@ -26,8 +26,8 @@
 					<input type="text" id="wedoLink" name="wedoLink">
 					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>
-				<button>Add</button>
-				<button>Cancel</button>
+				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
 	</section>

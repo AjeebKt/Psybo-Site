@@ -17,7 +17,7 @@
 	<?php include 'dash.php'; ?>
 	<section>
 	<div class="show-table">
-		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
+		<form id="formShowHome" name="formShowHome" action="" method="POST">
 			<a href="addHome.php">Add Main Head</a><br><br>
 			<a href="addWedo.php">Add we-Do</a>
 			<table class="show-item">

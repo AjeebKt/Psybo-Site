@@ -21,8 +21,8 @@
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeDescription" id="mainDescription" cols="30" rows="10"></textarea>
 				</div>
-				<button>Add</button>
-				<button>Cancel</button>
+				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
 	</section>

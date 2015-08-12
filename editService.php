@@ -21,8 +21,8 @@
 					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="10"></textarea>
 					<input type="file" id="serviceImg">
 				</div>
-				<button>Update</button>
-				<button>Cancel</button>
+				<button id="btnUpdate" name="btnUpdate">Update</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
 	</section>

@@ -10,7 +10,7 @@
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
-		<form action="" method="POST" id="secondServiceForm">
+		<form action="" method="POST" id="secondForm">
 			<div class="service">
 				<h2>Edit We do Item</h2>
 				<div class="group">
@@ -26,8 +26,8 @@
 					<input type="text" id="wedoLink" name="wedoLink">
 					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>
-				<button>Update</button>
-				<button>Cancel</button>
+				<button id="btnUpdate" name="btnUpdate">Update</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
 	</section>
