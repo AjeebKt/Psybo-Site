@@ -56,61 +56,64 @@
 	<section>
 	<div class="show-table">
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
-			<a href="addPortfolio.php" class="page-button">Add Portfolio</a>
+			<h3>Portfolio</h3>
 			<table class="show-item">
-				<tr>
-					<td>Name</td>
-					<td>Description</td>
-					<td>Link</td>
-					<td>Image</td>
-					<td>Edit</td>
-					<td>Delete</td>
-				</tr>
-				<?php 
-				for ($i=0; $i < $count_ptf; $i++) { 
-				$result=$objdb->select_row_ptf($num_ptf[$i][0]);
-				?>
-				<tr>
-					<td><?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'name' )
-					{
-						echo $value;	
-					}
-					} ?></td>
-					<td><?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'about' )
-					{
-						echo $value;	
-					}
-					} ?></td>
-					<td><?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'link' )
-					{
-						echo $value;	
-					}
-					} ?></td>
-					<td><img src=<?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'file_name' )
-					{
-						echo "\"".$actdir.$value."\"";	
-					}
-					} ?> alt=""></td>
-					<td><a href=<?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'id' )
-					{
+				<tbody>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Link</th>
+						<th>Image</th>
+						<th>
+							<a href="addPortfolio.php" class="page-button">+ Add</a>
+						</th>
+					</tr>
+					<?php 
+					for ($i=0; $i < $count_ptf; $i++) { 
+					$result=$objdb->select_row_ptf($num_ptf[$i][0]);
+					?>
+					<tr>
+						<td><?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key == 'name' )
+						{
+							echo $value;	
+						}
+						} ?></td>
+						<td><?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key == 'about' )
+						{
+							echo $value;	
+						}
+						} ?></td>
+						<td><?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key == 'link' )
+						{
+							echo $value;	
+						}
+						} ?></td>
+						<td><img src=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key == 'file_name' )
+						{
+							echo "\"".$actdir.$value."\"";	
+						}
+						} ?> alt=""></td>
+						<td><a href=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key == 'id' )
+						{
 
-						echo "\"editPortfolio.php?edit_id=".$value."\"";	
-					}
-					} ?> class="edit"></a></td>
-					<td><a href=<?php foreach ($result as $key => $value) {
-					if (is_string($key) and $key == 'id' )
-					{
+							echo "\"editPortfolio.php?edit_id=".$value."\"";	
+						}
+						} ?> class="edit"></a>
+						<a href=<?php foreach ($result as $key => $value) {
+						if (is_string($key) and $key == 'id' )
+						{
 
-						echo "\"?delete_id=".$value."\" onclick=\"return DeleteCheck();\"";	
-					}
-					} ?> class="delete"></a></td>
-				</tr>
-				<?php } ?>
+							echo "\"?delete_id=".$value."\" onclick=\"return DeleteCheck();\"";	
+						}
+						} ?> class="delete"></a></td>
+					</tr>
+					<?php } ?>
+				</tbody>
 			</table>
 		</form>
 	</div>

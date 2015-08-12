@@ -16,48 +16,54 @@
 	<?php include 'dash.php'; ?>
 	<section>
 		<div class="show-table">
+			<h3>Main Head</h3>
 			<form id="formShowService" name="formShowService" action="" method="POST">
-				<a href="addServiceHead.php" class="page-button">Add Mian Headding</a>
-				<a href="addService.php" class="page-button">Add Service</a>
 				<table class="show-item">
-					<tr>
-						<td>Main Head</td>
-						<td>Description</td>
-						<td>Edit</td>
-						<td>Delete</td>
-
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td>
-							<a href="editServiceHead.php" class="edit"></a>
-						</td>
-						<td>
-							<a href="" class="delete" onclick="DeleteCheck()"></a>
-						</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>Main Head</th>
+							<th>Description</th>
+							<th>
+								<a href="addServiceHead.php" class="page-button">+ Add</a>
+							</th>
+						</tr>
+						<tr>
+							<td>Headding</td>
+							<td>
+								<p>jaba jaba</p>
+							</td>
+							<td>
+								<a href="editServiceHead.php" class="edit"></a>
+								<a href="" class="delete" onclick="DeleteCheck()"></a>
+							</td>
+						</tr>
+					</tbody>
 				</table>
+				<h3>Service</h3>
 				<table class="show-item">
-					<tr>
-						<td>Service</td>
-						<td>Description</td>
-						<td>Image</td>
-						<td>Edit</td>
-						<td>Delete</td>
-
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>
-							<a href="editService.php" class="edit"></a>
-						</td>
-						<td>
-							<a href="" class="delete" onclick="DeleteCheck()"></a>
-						</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>Service</th>
+							<th>Description</th>
+							<th>Image</th>
+							<th>
+								<a href="addService.php" class="page-button">Add Service</a>
+							</th>
+						</tr>
+						<tr>
+							<td>Service</td>
+							<td>
+								<p>jaba jaba</p>
+							</td>
+							<td>
+								<img src="" alt="">
+							</td>
+							<td>
+								<a href="editService.php" class="edit"></a>
+								<a href="" class="delete" onclick="DeleteCheck()"></a>
+							</td>
+						</tr>
+					</tbody>
 				</table>
 			</form>
 		</div>
