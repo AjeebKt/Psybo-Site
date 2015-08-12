@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Our Service</title>
+	<title>Add Service</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
