@@ -231,7 +231,7 @@ nav
 	float: left;
 	padding-left: 20px;
 }
-#serviceHeadding, #serviceItem {
+#serviceHeadding, #serviceItem, #mainHead {
 	width: 500px;
 	height: 30px;
 	padding: 10px;
@@ -240,7 +240,7 @@ nav
 	float: left;
 	background-color: #fff;
 }
-#txtService, #serviceDescription {
+#txtService, #serviceDescription, #mainDescription {
 	width: 500px;
 	padding: 10px;
 	border: 1px solid #333;

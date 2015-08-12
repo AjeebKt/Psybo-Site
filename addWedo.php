@@ -12,14 +12,15 @@
 	<section class="add-service">
 		<form action="" method="POST" id="secondServiceForm">
 			<div class="service">
-				<h2>Add Home Head</h2>
+				<h2>Add We do Item</h2>
 				<div class="group">
 					<label for="mainHead">Haedding</label><br>
-					<input id="mainHead" type="text" name="homeHead">
+					<input id="mainHead" type="text" name="homeWedo">
 				</div>
 				<div class="group">
 					<label for="mainDescription">Description</label><br>
-					<textarea name="homeDescription" id="mainDescription" cols="30" rows="10"></textarea>
+					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="10"></textarea>
+					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>
 				<button>Add</button>
 				<button>Cancel</button>
