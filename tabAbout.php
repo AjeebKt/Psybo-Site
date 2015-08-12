@@ -7,31 +7,33 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
 	<script language="javascript" type="text/javascript">
-	function DeleteCheck() {
+	function DeleteCheck()	{
 		return confirm('Are you sure to delete this record?');
 	}
 	</script>
 </head>
 <body>
-	<?php include 'dash.php'; ?>
+	<?php  include 'dash.php'; ?>
 	<section>
 		<div class="show-table">
-			<form id="formShowService" name="formShowService" action="" method="POST">
-				<a href="addServiceHead.php">Add Mian Headding</a><br><br>
-				<a href="addService.php">Add Service</a>
+			<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
+				<a href="addAboutHead.php">Add Main Head</a><br><br>
+				<a href="addAboutItem.php">Add Item</a>
+
 				<table class="show-item">
 					<tr>
-						<td>Main Head</td>
-						<td>Description</td>
+						<td>Mian Head</td>
+						<td>First Column Des.</td>
+						<td>Second Column Des.</td>
 						<td>Edit</td>
 						<td>Delete</td>
-
 					</tr>
 					<tr>
 						<td></td>
 						<td></td>
+						<td></td>
 						<td>
-							<a href="editServiceHead.php" class="edit"></a>
+							<a href="editAboutHead.php" class="edit"></a>
 						</td>
 						<td>
 							<a href="" class="delete" onclick="DeleteCheck()"></a>
@@ -40,19 +42,16 @@
 				</table>
 				<table class="show-item">
 					<tr>
-						<td>Service</td>
+						<td>Headding</td>
 						<td>Description</td>
-						<td>Image</td>
 						<td>Edit</td>
 						<td>Delete</td>
-
 					</tr>
 					<tr>
 						<td></td>
 						<td></td>
-						<td></td>
 						<td>
-							<a href="editService.php" class="edit"></a>
+							<a href="editaboutItem.php" class="edit"></a>
 						</td>
 						<td>
 							<a href="" class="delete" onclick="DeleteCheck()"></a>
