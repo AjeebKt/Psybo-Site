@@ -224,17 +224,15 @@
 	<meta charset="UTF-8">
 	<title>edit Portfolio</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/admin-style.css">
 </head>
 <body>
 	<?php include 'dash.php';?>
-	<section>
-	<div class="edit-form">
-	</div>
+	<section class="add-service">
 		<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
-			<div id="tabPortfolio" class="tab-portfolio">
+			<div class="first-content">
 			<h3>EDIT PORTFLIO</h3>
-				<div class="div-align">
+				<div class="group">
 					<label for="txtTitle">Title</label><br>
 					<input id="txtTitle" name="txtTitle" type="text" <?php foreach ($result[0] as $key => $value) {
 					if (is_string($key) and $key == 'name') {
@@ -242,7 +240,7 @@
 						}	
 					}?> required>
 				</div>
-				<div class="div-align">
+				<div class="group">
 					<label for="txtLink">Link</label><br>
 					<input id="txtLink" name="txtLink" type="text" <?php foreach ($result[0] as $key => $value) {
 					if (is_string($key) and $key == 'link') {
@@ -250,15 +248,15 @@
 						}	
 					}?> >
 				</div>
-				<div class="div-align left">
+				<div class="group">
 					<label for="portfolioDescription">Description</label><br>
-					<textarea name="portfolioDescription" optional id="portfolioDescription" cols="40" rows="2"><?php foreach ($result[0] as $key => $value) {
+					<textarea name="portfolioDescription" optional id="portfolioDescription" cols="30" rows="10"><?php foreach ($result[0] as $key => $value) {
 					if (is_string($key) and $key == 'about') {
 							echo $value;	
 						}	
 					}?></textarea><br>
 				</div>
-				<div class="div-align">
+				<div class="group">
 					<label for="uploadPortfolio">Portfolio Image</label><br>
 					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" ><br>
 				</div>

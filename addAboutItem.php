@@ -11,7 +11,7 @@
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h2>Add Item</h2>
+				<h3>Add Item</h3>
 				<div class="group">
 					<label for="aboutHeadding">Headding</label><br>
 					<input type="text" id="aboutHeadding">
