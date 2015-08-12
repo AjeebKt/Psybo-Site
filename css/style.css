@@ -199,7 +199,7 @@ nav
 section
 {
 	padding-left: 15%;
-	width: 85%;
+	width: 80%;
 	background-color: #FBFBFB;
 }
 .side-links
@@ -244,7 +244,7 @@ section
 }
 .div-align
 {
-	width: 45%;
+	width: 100%;
 	float: left;
 	margin-top: 20px;
 }

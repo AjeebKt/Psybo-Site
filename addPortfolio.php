@@ -159,27 +159,27 @@
 	<meta charset="UTF-8">
 	<title>Add Portfolio</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/admin-style.css">
 </head>
 <body>
 	<?php include 'dash.php'; ?>
-	<section>
-		<div id="tabPortfolio" class="tab-portfolio">
+	<section class="add-service">
+		<div id="tabPortfolio" class="first-content">
 			<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
 			<h3>ADD PORTFLIOS</h3>
-				<div class="div-align">
+				<div class="group">
 					<label>Title</label><br>
 					<input name="txtTitle" type="text" required>
 				</div>
-				<div class="div-align">
+				<div class="group">
 					<label>Link</label><br>
 					<input name="txtLink" type="text" >
 				</div>
-				<div class="div-align left">
+				<div class="group left">
 					<label>Description</label><br>
-					<textarea name="portfolioDescription" id="portfolioDescription" cols="40" rows="2" optional></textarea><br>
+					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="10" optional></textarea><br>
 				</div>
-				<div class="div-align">
+				<div class="group">
 					<label>Portfolio Image</label><br>
 					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
 				</div>

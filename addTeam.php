@@ -289,50 +289,49 @@
     <meta charset="UTF-8">
     <title>Add team member</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-style.css">
  </head>
  <body>
 
 <?php include 'dash.php';  ?>
-    <section>
-        <div id="tabTeam" class="tab-team">
+    <section class="add-service">
+        <div id="tabTeam" class="first-content">
             <form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">  
             <h3>ADD TEAM MEMBERS</h3>
-                <div class="div-align-team">
+                <div class="group">
                     <label for="txtName">Name</label><br>
                     <input id="txtName" name="txtName" type="name" required><br>
                 </div>
-                <div class="div-align-team">
+                <div class="group">
                     <label for="txtDesignation">Designation</label><br>
                     <input id="txtDesignation" name="txtDesignation" type="text" required><br>
                 </div>
-                <div class="div-align-team">
-                    <label for="txtDesignation">Gender</label><br>
-                     <select>
+                <div class="group">
+                    <label for="txtDesignation">Gender</label>
+                     <select class="gender-selection">
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                     </select> 
                 </div>
-                <div class="div-align-team">
+                <div class="group">
                     <label for="txtFacebook">Facebook</label><br>
                     <input id="txtFacebook" name="txtFacebook" type="text" optional><br>
                 </div>                  
-                <div class="div-align-team">
+                <div class="group">
                     <label for="txtTwitter">Twitter</label><br>
                     <input id="txtTwitter" name="txtTwitter" type="text" optional><br>
                 </div>
-                <div class="div-align-team">
+                <div class="group">
                     <label for="txtLinkedin">LinkedIn</label><br>
                     <input id="txtLinkedin" name="txtLinkedin" type="text" optional><br>
                 </div>
-                <div class="div-align-team">
+                <div class="group">
                     <label for="txtGplus">Google+</label><br>
                     <input id="txtGplus" name="txtGplus" type="text" optional><br>
                 </div>
-                <div class="div-align-team">
-                    <!-- <label for="uploadTeam">Employee Image  (Image Must be in W:260px X H:320px)</label><br> -->
+                <div class="group">
                     <input id="uploadTeam" name="uploadTeam" type="file" ><br>
-                    <!-- <input name="uploadTeam" type="file" > -->
+                    <span>Image Must be in W:200px X H:200px</span>
                 </div>
                 <button name="btnTeamSubmit" class="submit">Add</button>
                 <button name="btnCancel" class="reset">Cancel</button>

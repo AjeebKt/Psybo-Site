@@ -66,6 +66,7 @@ if (isset($_POST['btnAdd']))
 	<section class="add-service">
 		<form action="" method="POST" id="firstServiceForm" name="firstServiceForm">
 			<div class="first-content">
+				<h2>Add Head</h2>
 				<div class="group">
 					<label for="serviceHeadding">Headding</label><br>
 					<input type="text" name="serviceHeadding" id="serviceHeadding">

@@ -10,18 +10,23 @@
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
-		<form action="" method="POST" id="secondServiceForm">
+		<form action="" method="POST" id="secondForm">
 			<div class="service">
-				<h2>Add Home Head</h2>
+				<h2>Edit We do Item</h2>
 				<div class="group">
 					<label for="mainHead">Haedding</label><br>
-					<input id="mainHead" type="text" name="homeHead">
+					<input id="mainHead" type="text" name="homeWedo">
 				</div>
 				<div class="group">
 					<label for="mainDescription">Description</label><br>
-					<textarea name="homeDescription" id="mainDescription" cols="30" rows="10"></textarea>
+					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="10"></textarea>
 				</div>
-				<button id="btnAdd" name="btnAdd">Add</button>
+				<div class="group">
+					<label for="wedoLink">Link</label><br>
+					<input type="text" id="wedoLink" name="wedoLink">
+					<input type="file" id="uploadWedo" name="homeWedoImg">
+				</div>
+				<button id="btnUpdate" name="btnUpdate">Update</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>

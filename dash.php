@@ -13,7 +13,7 @@ error_reporting(0);
 	}
  ?>
 <header class="header-fix">
-	<img src="img/logo.png" alt="">
+	<img src="img/logo-admin.png" alt="">
 	<form id="form1" name="form1" method="POST" action="">
 		<button class="logout" name="logout">Logout </button>
 	</form>
@@ -24,6 +24,9 @@ error_reporting(0);
 		<li><a href="tabPortfolio.php">Portfolio</a></li>
 		<li><a href="tabService.php">Service</a></li>
 		<li><a href="tabTeam.php">Team</a></li>
+		<li><a href="tabAbout.php">About</a></li>
+		<li><a href="tabContact.php">Contact</a></li>
+		<li><a href="tabFooter.php">Footer</a></li>
 		<li><a href="changePassword.php">Change Password</a></li>
 	</ul>
 </nav>

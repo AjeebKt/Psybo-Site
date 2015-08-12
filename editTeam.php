@@ -306,64 +306,64 @@
 	<meta charset="UTF-8">
 	<title>Edit Team</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/admin-style.css">
 </head>
 <body>
 	<?php include 'dash.php';?>
- 	<section>
-		<div id="tabTeam" class="tab-team">
+ 	<section class="add-service">
+		<div id="tabTeam" class="first-content">
 			<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
 			<h3>EDIT TEAM MEMBERS</h3>
-				<div class="div-align-team">
+				<div class="group">
 					<label for="txtName">Name</label><br>
 					<input id="txtName" name="txtName" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'name')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
-				<div class="div-align-team">
+				<div class="group">
 					<label for="txtDesignation">Designation</label><br>
 					<input id="txtDesignation" name="txtDesignation" <?php foreach ($result_emp[0] as $key => $value) {
 						if (is_string($key) and $key == 'designation')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
-				<div class="div-align-team">
+				<div class="group">
                     <label for="txtDesignation">Gender</label><br>
                      <select>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                     </select> 
                 </div>
-				<div class="div-align-team">
+				<div class="group">
 					<label for="txtFacebook">Facebook</label><br>
 					<input id="txtFacebook" name="txtFacebook" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'fb')
 							echo "value=\"".$value."\"";
 					} ?>><br>
 				</div>					
-				<div class="div-align-team">
+				<div class="group">
 					<label for="txtTwitter">Twitter</label><br>
 					<input id="txtTwitter" name="txtTwitter" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'twiter')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
-				<div class="div-align-team">
+				<div class="group">
 					<label for="txtLinkedin">LinkedIn</label><br>
 					<input id="txtLinkedin" name="txtLinkedin" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'linkedin')
 							echo "value=\"".$value."\"";
 					} ?> ><br>
 				</div>
-				<div class="div-align-team">
+				<div class="group">
 					<label for="txtGplus">Google+</label><br>
 					<input id="txtGplus" name="txtGplus" <?php foreach ($result_add[0] as $key => $value) {
 						if (is_string($key) and $key == 'google_plus')
 							echo "value=\"".$value."\"";
 					} ?>  ><br>
 				</div>
-				<div class="div-align-team">
+				<div class="group">
 					<label for="uploadTeam">Employee Image</label><br>
 					<input id="uploadTeam" name="uploadTeam" type="file" ><br>
 				</div>

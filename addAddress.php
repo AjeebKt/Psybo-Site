@@ -9,18 +9,22 @@
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
-		<form action="" method="POST" id="firstServiceForm">
+		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h2>Edit Head</h2>
+				<h2>Add Address</h2>
 				<div class="group">
-					<label for="serviceHeadding">Headding</label><br>
-					<input type="text" id="serviceHeadding">
+					<label for="footerAddress">Address</label><br>
+					<textarea type="text" id="footerAddress" cols="30" rows="10"></textarea>
 				</div>
 				<div class="group">
-					<label for="txtService">Description</label><br>
-					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
+					<label for="txtPhoneNo">Phone Number</label><br>
+					<input name="txtPhoneNo" id="txtPhoneNo">
 				</div>
-				<button id="btnUpdate" name="btnUpdate">Update</button>
+				<div class="group">
+					<label for="txtEmail">Email</label><br>
+					<input name="txtEmail" id="txtEmail">
+				</div>
+				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>

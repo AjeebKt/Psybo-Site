@@ -4,20 +4,24 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Add Service</title>
+	<title>About PSYBO Technologies</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
-		<form action="" method="POST" id="firstServiceForm">
+		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
 				<h2>Edit Head</h2>
 				<div class="group">
 					<label for="serviceHeadding">Headding</label><br>
-					<input type="text" id="serviceHeadding">
+					<input type="text" id="serviceHeadding" name="headAbout">
 				</div>
 				<div class="group">
-					<label for="txtService">Description</label><br>
+					<label for="txtService">First Description</label><br>
+					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
+				</div>
+				<div class="group">
+					<label for="txtService">Second Description</label><br>
 					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
 				</div>
 				<button id="btnUpdate" name="btnUpdate">Update</button>

@@ -129,7 +129,7 @@ if (isset($_POST['btnAdd']) )
 	<section class="add-service">
 		<form action="" method="POST" id="secondServiceForm" name="secondServiceForm" enctype="multipart/form-data">
 			<div class="service">
-				<h2>Add Service</h2>
+				<h3>Add Service</h3>
 				<div class="group">
 					<label for="serviceItem">Service</label><br>
 					<input id="serviceItem" name="serviceItem" type="text">
