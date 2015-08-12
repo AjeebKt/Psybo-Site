@@ -48,22 +48,14 @@
 	<script language="javascript" type="text/javascript">
 	function DeleteCheck()
 	{
-		return confirm('Are you sure to delete this record?')
+		return confirm('Are you sure to delete this record?');
 	}
 	</script>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section>
-	<div class="edit-form">
-	<h3>Edit Portfolio</h3>
-		<div class="edit-hidden">
-			<form id="editForm" name="editForm" action="" method="POST">
-				sa
-			</form>
-		</div>
-	</div>
-	<div class="form-add-portfolio">
+	<div class="show-table">
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
 			<a href="addPortfolio.php">Add Portfolio</a>
 			<table class="show-item">
@@ -74,7 +66,7 @@
 					<td>Image</td>
 					<td>Edit</td>
 					<td>Delete</td>
-					</tr>
+				</tr>
 				<?php 
 				for ($i=0; $i < $count_ptf; $i++) { 
 				$result=$objdb->select_row_ptf($num_ptf[$i][0]);
