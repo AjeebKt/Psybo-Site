@@ -1,3 +1,10 @@
+<?php 
+error_reporting(1);
+include_once 'Database.php';
+$objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +26,8 @@
 					<label for="txtService">Description</label><br>
 					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
 				</div>
-				<button>Add</button>
-				<button>Cancel</button>
+				<button name="btnAddHeading">Add</button>
+				<button name="btnCanselHeading" >Cancel</button>
 			</div>
 		</form>
 		<form action="" method="POST" id="secondServiceForm">
@@ -35,8 +42,8 @@
 					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="10"></textarea>
 					<input type="file" id="serviceImg">
 				</div>
-				<button>Add</button>
-				<button>Cancel</button>
+				<button name="btnAddService" >Add</button>
+				<button name="btnCanselService">Cancel</button>
 			</div>
 		</form>
 	</section>
