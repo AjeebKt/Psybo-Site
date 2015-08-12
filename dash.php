@@ -21,6 +21,7 @@ error_reporting(0);
 <nav>
 	<ul class="side-links">
 		<li><a href="tabPortfolio.php">Portfolio</a></li>
+		<li><a href="tabService.php">Service</a></li>
 		<li><a href="tabTeam.php">Team</a></li>
 		<li><a href="changePassword.php">Change Password</a></li>
 	</ul>

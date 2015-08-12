@@ -297,9 +297,11 @@ section
 	background-color: #4f5;
 	/*display: none;*/
 }
-.form-add-portfolio
+.show-table
 {
-	width: 100%;
+	width: 95%;
+	padding-top: 10px;
+	margin-left: 30px;
 }
 .submit, .reset
 {
