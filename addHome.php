@@ -4,27 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<title>PSYBO Technologies</title>
+	<link rel="stylesheet" href="css/admin-style.css">
+	<title>PSYBO Technologies Home</title>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div class="logo">
-				<a href="index.php"><img src="img/logo.png" alt="Psybo Logo"></a>
-			</div>
-			<nav class="nav-menu">
-				<ul class="navigation-links">
-					<li class="active"><a href="index.php">HOME</a></li>
-					<!-- <li><a href="portfolio.php">PORTFOLIO</a></li> -->
-					<li><a href="service.php">SERVICE</a></li>
-					<li><a href="team.php">TEAM</a></li>
-					<li><a href="about.php">ABOUT</a></li>
-					<li><a href="contact.php">CONTACT</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
 	<section id="frame" class="display-frame">
 		<div class="container">
 			<div class="div-span">
@@ -84,6 +67,5 @@
 			<h3>HAPPY CLIENTS</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eveniet, ex, facere nam quis tempora minima voluptate impedit eius quod reiciendis excepturi labore est officia inventore hic. Autem, odit!</p>
 		</section> -->
-	<?php include 'footer.php'; ?>
 </body>
 </html>
