@@ -56,7 +56,7 @@
 	<meta charset="UTF-8">
 	<title>Tab Team</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/admin-style.css">
 	<script language="javascript" type="text/javascript">
 	function DeleteCheck()
 	{
@@ -68,8 +68,8 @@
 	<?php include 'dash.php' ?>
 	<section>
 		<div class="show-table">
-			<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
-				<a href="addTeam.php">Add Team member</a>
+			<form id="formShowTeam" name="formShowTeam" action="" method="POST">
+				<a href="addTeam.php" class="page-button">Add Team member</a>
 				<table class="show-item">
 					<tr>
 						<td>Name</td>
