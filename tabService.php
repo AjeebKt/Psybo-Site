@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Tab-Portfolio</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/admin-style.css">
 	<script language="javascript" type="text/javascript">
 	function DeleteCheck() {
 		return confirm('Are you sure to delete this record?');
@@ -17,11 +17,29 @@
 	<section>
 		<div class="show-table">
 			<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
+				<a href="addServiceHead.php">Add Mian Headding</a><br><br>
 				<a href="addService.php">Add Service</a>
 				<table class="show-item">
 					<tr>
 						<td>Main Head</td>
 						<td>Description</td>
+						<td>Edit</td>
+						<td>Delete</td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>
+							<a href="editServiceHead.php" class="edit"></a>
+						</td>
+						<td>
+							<a href="" class="delete" onclick="DeleteCheck()"></a>
+						</td>
+					</tr>
+				</table>
+				<table class="show-item">
+					<tr>
 						<td>Service</td>
 						<td>Description</td>
 						<td>Image</td>
@@ -30,8 +48,6 @@
 
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>

@@ -9,17 +9,15 @@
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
-		<form action="" method="POST" id="secondServiceForm">
-			<div class="service">
-				<h2>Add Service</h2>
+		<form action="" method="POST" id="firstServiceForm">
+			<div class="first-content">
 				<div class="group">
-					<label for="serviceItem">Service</label><br>
-					<input id="serviceItem" type="text">
+					<label for="serviceHeadding">Headding</label><br>
+					<input type="text" id="serviceHeadding">
 				</div>
 				<div class="group">
-					<label for="serviceDescription">Description</label><br>
-					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="10"></textarea>
-					<input type="file" id="serviceImg">
+					<label for="txtService">Description</label><br>
+					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
 				</div>
 				<button>Add</button>
 				<button>Cancel</button>

@@ -149,6 +149,63 @@ nav
 	display: block;
 }
 
+.show-table
+{
+	width: 95%;
+	padding-top: 10px;
+	margin-left: 30px;
+}
+.show-item
+{
+	width: 100%;
+	margin: 30px 0 0 0;
+}
+.show-item a.edit
+{
+	width: 20px;
+	height: 20px;
+	display: block;
+	background-image: url(../img/edit.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.show-item a.delete
+{
+	width: 20px;
+	height: 20px;
+	display: block;
+	background-image: url(../img/delete.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.show-item tr:first-child {
+	border-top: 1px solid #ccc;
+	font-weight: bold;
+	color: #008a67;
+	/*background-color: #008a67;*/
+}
+.show-item tr
+{
+	height: 40px;
+	margin-left: 10px;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.show-item tr td:first-child {
+	padding-left: 15px;
+}
+.show-item tr td img
+{
+	width: 30px;
+	height: 30px;
+}
+
+
 .add-service {
 	width: 85%;
 	padding-top: 10px;
