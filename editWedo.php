@@ -20,6 +20,10 @@
 				<div class="group">
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="10"></textarea>
+				</div>
+				<div class="group">
+					<label for="wedoLink">Link</label><br>
+					<input type="text" id="wedoLink" name="wedoLink">
 					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>
 				<button>Update</button>

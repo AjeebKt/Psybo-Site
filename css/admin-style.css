@@ -231,7 +231,7 @@ nav
 	float: left;
 	padding-left: 20px;
 }
-#serviceHeadding, #serviceItem, #mainHead {
+/*#serviceHeadding, #serviceItem, #mainHead*/.group input {
 	width: 500px;
 	height: 30px;
 	padding: 10px;
@@ -240,7 +240,7 @@ nav
 	float: left;
 	background-color: #fff;
 }
-#txtService, #serviceDescription, #mainDescription {
+/*#txtService, #serviceDescription, #mainDescription*/.group textarea {
 	width: 500px;
 	padding: 10px;
 	border: 1px solid #333;
@@ -250,6 +250,7 @@ nav
 }
 input[type="file"] {
 	width: 100%;
+	border: 0;
 }
 .add-service button {
 	width: 100px;

@@ -1,42 +1,4 @@
-<?php 
-	error_reporting(0);
-	include 'Database.php';
-	include 'file.php';
-    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    $objdb= new Database ('localhost','root','asd','psybo-db');
-	$num_ptf=$objdb->num_row_ptf();
-	$count_ptf=count($num_ptf);
-	$actdir="/upload-image/";
-	if (isset($_GET['delete_id'])) 
-	{
-		$ptf_id=$_GET['delete_id'];
-		$result=$objdb->select("portfolio",array("files_id"),array("id",$ptf_id));
-		foreach ($result[0] as $key => $value) 
-		{
-			if (is_string($key) and $key == "files_id")  
-			{
-				$files_id=$value;
-			}
-		}
-		$result=$objdb->select("files",array("file_name"),array("id",$files_id));
-		foreach ($result[0] as $key => $value) 
-		{
-			if (is_string($key) and $key== "file_name") 
-			{
-				$file_name=$value;
-			}
-		}
-		$objdb->delete_portfolio($_GET['delete_id']);
-		unlink(getcwd().$actdir.$file_name);
-		if ($objdb == true) 
-		{
-			$message="<script type='text/javascript'>alert('Deleted!');
-							window.location.replace('tabPortfolio.php');
-						</script>";	
-			$objdb->delete("files",array("id",$files_id));
-		}
-	}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
