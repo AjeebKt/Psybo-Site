@@ -17,8 +17,8 @@
 	<section>
 		<div class="show-table">
 			<form id="formShowService" name="formShowService" action="" method="POST">
-				<a href="addServiceHead.php">Add Mian Headding</a><br><br>
-				<a href="addService.php">Add Service</a>
+				<a href="addServiceHead.php" class="page-button">Add Mian Headding</a>
+				<a href="addService.php" class="page-button">Add Service</a>
 				<table class="show-item">
 					<tr>
 						<td>Main Head</td>

@@ -17,8 +17,8 @@
 	<section>
 		<div class="show-table">
 			<form id="formShowAbout" name="formShowAbout" action="" method="POST">
-				<a href="addAddress.php">Add Address</a><br><br>
-				<a href="addSocialLinks.php">Add Social Links</a>
+				<a href="addAddress.php" class="page-button">Add Address</a>
+				<a href="addSocialLinks.php" class="page-button">Add Social Links</a>
 
 				<table class="show-item">
 					<tr>

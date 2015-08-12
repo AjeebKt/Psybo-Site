@@ -18,8 +18,8 @@
 	<section>
 	<div class="show-table">
 		<form id="formShowHome" name="formShowHome" action="" method="POST">
-			<a href="addHome.php">Add Main Head</a><br><br>
-			<a href="addWedo.php">Add we-Do</a>
+			<a href="addHome.php" class="page-button">Add Main Head</a>
+			<a href="addWedo.php" class="page-button">Add we-Do</a>
 			<table class="show-item">
 				<tr>
 					<td>Head</td>

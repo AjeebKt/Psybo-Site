@@ -17,7 +17,7 @@
 	<section>
 		<div class="show-table">
 			<form id="formShowContact" name="formShowContact" action="" method="POST">
-				<a href="addContactMessage.php">Add Main Head</a><br><br>
+				<a href="addContactMessage.php" class="page-button">Add Main Head</a>
 				<table class="show-item">
 					<tr>
 						<td>Message Headding</td>

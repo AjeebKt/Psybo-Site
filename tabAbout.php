@@ -17,8 +17,8 @@
 	<section>
 		<div class="show-table">
 			<form id="formShowAbout" name="formShowAbout" action="" method="POST">
-				<a href="addAboutHead.php">Add Main Head</a><br><br>
-				<a href="addAboutItem.php">Add Item</a>
+				<a href="addAboutHead.php" class="page-button">Add Main Head</a>
+				<a href="addAboutItem.php" class="page-button">Add Item</a>
 
 				<table class="show-item">
 					<tr>

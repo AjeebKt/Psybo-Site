@@ -43,8 +43,7 @@
 	<meta charset="UTF-8">
 	<title>Tab-Portfolio</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<!-- <link rel="stylesheet" href="css/css.css"> -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/admin-style.css">
 	<script language="javascript" type="text/javascript">
 	function DeleteCheck()
 	{
@@ -57,7 +56,7 @@
 	<section>
 	<div class="show-table">
 		<form id="formShowportfolio" name="formShowportfolio" action="" method="POST">
-			<a href="addPortfolio.php">Add Portfolio</a>
+			<a href="addPortfolio.php" class="page-button">Add Portfolio</a>
 			<table class="show-item">
 				<tr>
 					<td>Name</td>
