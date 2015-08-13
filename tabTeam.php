@@ -3,7 +3,7 @@
 	include "file.php";
     require_once 'Database.php';
 	// use app\Database;
-    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
     $objdb= new Database ('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
@@ -54,7 +54,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tab Team</title>
+	<title>Team - Dashboard</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
 	<script language="javascript" type="text/javascript">
