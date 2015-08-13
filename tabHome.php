@@ -40,7 +40,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<h3>Sub Head</h3>
+			<h3>We Do Items</h3>
 			<table class="show-item">
 				<tbody>
 					<tr>
@@ -53,7 +53,7 @@
 						</th>
 					</tr>
 					<tr>
-						<td>Sub Headding</td>
+						<td>We Do Item</td>
 						<td>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fugit provident! Cum, consectetur excepturi velit totam nisi non molestiae corrupti iure, dolore deserunt repellat iste rerum nam, voluptas accusantium enim!</p>
 						</td>

@@ -329,8 +329,8 @@
 					} ?> ><br>
 				</div>
 				<div class="group">
-                    <label for="txtDesignation">Gender</label><br>
-                     <select>
+                    <label for="txtDesignation">Gender</label>
+                     <select class="selection">
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                     </select> 

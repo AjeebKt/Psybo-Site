@@ -11,7 +11,7 @@
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h2>Edit Social Links</h2>
+				<h3>Edit Social Links</h3>
 				<div class="group">
 					<label for="fbLink">Facebook</label><br>
 					<input type="text" id="fbLink">

@@ -11,7 +11,7 @@
 	<section class="add-service">
 		<form action="" method="POST" id="secondServiceForm">
 			<div class="service">
-				<h2>Edit Service</h2>
+				<h3>Edit Service</h3>
 				<div class="group">
 					<label for="serviceItem">Service</label><br>
 					<input id="serviceItem" type="text">

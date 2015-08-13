@@ -11,7 +11,7 @@
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h2>Add in Message</h2>
+				<h3>Add in Message</h3>
 				<div class="group">
 					<label for="MsgContactHeadding">Headding</label><br>
 					<input type="text" id="MsgContactHeadding">

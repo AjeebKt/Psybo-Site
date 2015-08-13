@@ -12,7 +12,7 @@
 	<section class="add-service">
 		<form action="" method="POST" id="secondForm">
 			<div class="service">
-				<h2>Edit Home Head</h2>
+				<h3>Edit Home Head</h3>
 				<div class="group">
 					<label for="mainHead">Haedding</label><br>
 					<input id="mainHead" type="text" name="homeHead">

@@ -12,7 +12,7 @@
 	<section class="add-service">
 		<form action="" method="POST" id="secondForm">
 			<div class="service">
-				<h2>Edit We do Item</h2>
+				<h3>Edit We do Item</h3>
 				<div class="group">
 					<label for="mainHead">Haedding</label><br>
 					<input id="mainHead" type="text" name="homeWedo">
@@ -23,7 +23,13 @@
 				</div>
 				<div class="group">
 					<label for="wedoLink">Link</label><br>
-					<input type="text" id="wedoLink" name="wedoLink">
+					<select class="selection" id="wedoLink" name="wedoLink">
+						<option value="portfolio.php">Portfolio</option>
+						<option value="service.php">Service</option>
+						<option value="team.php">Team</option>
+						<option value="about.php">About</option>
+						<option value="contact.php">Contact</option>
+					</select>
 					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>
 				<button id="btnUpdate" name="btnUpdate">Update</button>

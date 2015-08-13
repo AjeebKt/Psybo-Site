@@ -1,11 +1,10 @@
+
 <footer>
 	<div class="container">
 			<div class="company-adress">
 				<ul>
 					<li>
-						<p>V2 Tower</p>
-						<p>Opposit Old Bus Stand,</p>
-						<p>Pandikkad Road, Manjeri</p>
+						<p>V2 Tower, Opposit Old Bus Stand, Pandikkad Road, Manjeri</p>
 					</li>
 					<li>
 						<p>Phone: +04932-222222</p>
