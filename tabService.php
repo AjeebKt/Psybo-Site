@@ -1,3 +1,50 @@
+<?php 
+error_reporting(1);
+include_once 'Database.php';
+$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'service',));
+$resultService = $objdb->select('subHeadings', array('title', 'description', 'id'), array('name', 'service'));
+$actdir = getcwd().'/upload-image/';
+if (isset($_GET['deleteid'])) 
+{
+	$serviceId=$_GET['deleteid'];
+	$result = $objdb->select('subHeadings', array('files_id'), array('id', $serviceId));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == 'files_id') 
+		{
+			$resultfile = $objdb->select('files',array('file_name'),array('id', $value));
+			foreach ($resultfile[0] as $key => $val) 
+			{
+				if (is_string($key) and $key == 'file_name') 
+				{
+					$file_name = $val;
+				}
+			}
+			$objdb->delete('subHeadings', array('id',$serviceId));
+			$objdb->delete('files', array('id', $value));
+			unlink($actdir.$file_name);
+			if ($objdb == true) 
+			{
+				$message = "<script type='text/javascript'>
+							window.location.replace('tabService.php');
+						</script>";
+			}
+		}
+	}
+}
+if (isset($_GET['hdeleteid']) )
+{
+	$headId = $_GET['hdeleteid']; 
+	$objdb->delete('headings', array('id', $headId));
+	if ($objdb == true) 
+	{
+		$message = "<script type='text/javascript'>
+					window.location.replace('tabService.php');
+				</script>";
+	}
+}	
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,16 +74,45 @@
 								<a href="addServiceHead.php" class="page-button">+ Add</a>
 							</th>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td>Headding</td>
 							<td>
 								<p>jaba jaba</p>
 							</td>
 							<td>
 								<a href="editServiceHead.php" class="edit"></a>
-								<a href="" class="delete" onclick="DeleteCheck()"></a>
+								<a href="" class="delete" onclick="return DeleteCheck()"></a>
 							</td>
-						</tr>
+						</tr> -->
+						<?php foreach ($resultHead as $key => $value) {
+					 ?>
+					<tr>
+						<td><?php  foreach ($value as $key	 => $val) {
+							if ($key == 'title' and is_string($key) ) {
+								echo $val;
+							} }?>
+						</td>
+						<td>
+							<p><?php  foreach ($value as $key	 => $val) {
+							if ($key == 'description' and is_string($key) ) {
+								echo $val;
+							} }?>
+							</p>
+						</td>
+						<td>
+							<a href=<?php foreach ($value as $key => $val) {
+										if ($key == 'id' and is_string($key)) {
+											echo "\"editServiceHead.php?id=".$val."\"";
+										}
+							} ?> class="edit"></a>
+							<a href=<?php foreach ($value as $key => $val) {
+									if ($key == 'id' and is_string($key)) {
+										echo "\"?hdeleteid=".$val."\"";
+									}
+							} ?> class="delete" onclick="return DeleteCheck()"></a>
+						</td>
+					</tr>
+						<?php }; ?>
 					</tbody>
 				</table>
 				<h3>Service</h3>
@@ -47,10 +123,10 @@
 							<th>Description</th>
 							<th>Image</th>
 							<th>
-								<a href="addService.php" class="page-button">Add Service</a>
+								<a href="addService.php" class="page-button">+ Add</a>
 							</th>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td>Service</td>
 							<td>
 								<p>jaba jaba</p>
@@ -62,12 +138,50 @@
 								<a href="editService.php" class="edit"></a>
 								<a href="" class="delete" onclick="DeleteCheck()"></a>
 							</td>
+						</tr> -->
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<?php foreach ($resultService as $key => $value) {
+
+						 ?>
+						<tr>
+							<td><?php foreach ($value as $key => $val) {
+									if ($key == 'title' and is_string($key)) 
+									{
+										echo $val;
+									}
+								} ?>
+							</td>
+							<td><?php foreach ($value as $key => $val) {
+									if ($key == 'description' and is_string($key)) 
+									{
+										echo $val;
+									}
+								} ?>
+							</td>
+							<td>img</td>
+							<td>
+								<a href=<?php foreach ($value as $key => $val) {
+											if ($key == 'id' and is_string($key)) {
+												echo "\"editServiceHead.php?id=".$val."\"";
+											}
+								} ?> class="edit"></a>
+								<a href=<?php foreach ($value as $key => $val) {
+											if ($key == 'id' and is_string($key)) {
+												echo "\"?deleteid=".$val."\"";
+											}
+								} ?>  class="delete" onclick="return DeleteCheck()"></a>
+							</td>
 						</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 			</form>
 		</div>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>
 

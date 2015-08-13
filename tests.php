@@ -400,19 +400,57 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // list($bar) = "abcde";
 // var_dump($bar); // is_null(var)
 
-$check=getimagesize(getcwd().'/test/watermark_Your_Natural_Beauty_wallpaper.jpg');
-var_dump($check);
-list($aaa) = $check;
-var_dump($aaa);
 
-?> 
-<html>
-	
-	<head>
+///////////////////////////SELECT BY RANDOM/////////////////////
+
+
+ $condb = new mysqli("localhost","root","asd","psybo-db");
+ // var_dump($condb);
 		
-	</head>
-	<body>
-		<input type="submit" name="button" value="ok" onclick="return alert('hghj');" />
-	</body>
-</html>
+		// $select="SELECT employee.id,employee.designation,address.name,address.fb,address.linkedin,address.address,address.email,address.twiter,address.google_plus,files.file_name,files.type FROM employee JOIN address ON employee.address_id = address.id join files ON files.id=employee.files_id where employee.id=176";
+		// var_dump($select);
+		// $query=mysqli_query($condb,$select);
+		// if ($query==FALSE) 
+		
+		// 	return trigger_error($condb->error);
+		
+		// $recset=array();
+		// while ($rec=mysqli_fetch_array($query))
+		// 	array_push($recset, $rec);
+		// var_dump($recset);
+
+		// $emp_id=$objdb->num_row_emp();
+		// var_dump($emp_id);
+
+
+
+			
+	$result = $objdb->select('subHeadings', array('title', 'description'), array('name', 'service'));
+	// var_dump($result);
+
+?>
+<html>	
+<table border="1px">
+					<tr>
+						<td>Main Head</td>
+						<td>Description</td>
+						<td>Edit</td>
+						<td>Delete</td>
+
+					</tr>
+<?php foreach ($result as $key => $value) {
+	// var_dump($value);
+?>
+					<tr>
+						<td><?php foreach ($value as $key => $val) { if ($key == 'title' and is_string($key)) {echo $val;?></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<?php }}} ?>
+					</table>
+
+
+</html> 
 

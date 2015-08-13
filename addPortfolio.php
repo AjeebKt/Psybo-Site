@@ -1,8 +1,8 @@
 <?php 
 	error_reporting(0);
 	include 'Database.php';
-	$objdb=new Database("psybotechnologies.com","psyboysg_test","psybotest","psyboysg_psybo-db");
-    // $objdb= new Database ('localhost','root','asd','psybo-db');
+	// $objdb=new Database("psybotechnologies.com","psyboysg_test","psybotest","psyboysg_psybo-db");
+    $objdb= new Database ('localhost','root','asd','psybo-db');
 	$num_ptf=$objdb->num_row_ptf();
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";

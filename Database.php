@@ -143,12 +143,15 @@ class Database
 			}		
 		}
 		$insert.="VALUES(".$val.")";
+		// var_dump($insert);
 		$stmt=$this->condb->prepare($insert);
 		$params[0] =  &$value_type;
 		foreach ($values as $key => $value) 
 		{
 			$params[$key+1] = &$values[$key];
 		}
+		// var_dump($insert);
+		// var_dump($params);
 		call_user_func_array(array(&$stmt ,'bind_param'), $params);
 		$stmt->execute();
 		if ($stmt===FALSE)	
@@ -260,6 +263,10 @@ class Database
 		$fields=implode(',', $fields);
 		$delete="DELETE FROM ".$table." WHERE ".$where[0]." = ".$where[1];
 		$query=mysqli_query($this->condb,$delete) or die(mysqli_error());
+		if ($query == true) 
+		{
+			return true;
+		}
 	}
 //	update data
 	
@@ -312,7 +319,7 @@ class Database
 // NUMBER OF COLOMN
 	public function num_row_emp()
 	{
-		$count="SELECT id FROM employee";
+		$count="SELECT id FROM employee order by rand()";
 		$query=mysqli_query($this->condb,$count);
 		if ($query== FALSE) 
 			trigger_error($this->condb->error);
@@ -363,7 +370,16 @@ class Database
 		// var_dump($fields);
 		// var_dump($values);
 		$this->insert("employee",$fields,$values_emp);
-		
+	}
+
+	public function insert_mul_srvc($values_files,$fields_srv,$values_srv)
+	{	
+		// var_dump($values_files);
+		$this->insert("files",array("file_name","type"),$values_files);
+		$last_id_fl=mysqli_insert_id($this->condb);
+		array_push($values_srv,$last_id_fl);
+		array_push($fields_srv, "files_id");		
+		$this->insert("subHeadings",$fields_srv,$values_srv);
 	}
 
 	public function delete_portfolio($id)
