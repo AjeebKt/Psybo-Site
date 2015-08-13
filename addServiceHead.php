@@ -1,5 +1,5 @@
 <?php 
-// error_reporting(1);
+error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 if (isset($_POST['btnAdd'])) 
@@ -20,11 +20,11 @@ if (isset($_POST['btnAdd']))
 					</script>";
 		if (!empty($description) and $error == 1) 
 		{
-		if (preg_match('/^[A-Za-z0-9., _-]*$/', $description) and $error == 1 )
-		{
-			array_push($values, $_POST['txtService']);
+			if (preg_match('/^[A-Za-z0-9., _-]*$/', $description) )
+			{
+				array_push($values, $_POST['txtService']);
+			}
 		}
-
 		else
 		{
 			$error = 0;
@@ -32,8 +32,6 @@ if (isset($_POST['btnAdd']))
 						alert('Please re-enter!');
 					</script>";
 		}
-	}
-
 		if ($error == 1) 
 		{
 			$fields = array('name', 'title', 'description');
@@ -53,10 +51,10 @@ if (isset($_POST['btnAdd']))
 					</script>";
 }
 if (isset($_POST['btnCancel'])) 
-{
 	header('location:tabService.php');
-}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

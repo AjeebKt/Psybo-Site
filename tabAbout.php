@@ -2,8 +2,9 @@
 error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
-$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'about',));
-
+$resultHead = $objdb->select('subHeadings', array('title', 'description','id'), array('name', 'about',));
+// $resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'about',));
+// var_dump($resultHead);
 if (isset($_GET['hdeleteid']) )
 {
 	$headId = $_GET['hdeleteid']; 

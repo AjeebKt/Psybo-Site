@@ -374,11 +374,10 @@ class Database
 
 	public function insert_mul_srvc($values_files,$fields_srv,$values_srv)
 	{	
-		// var_dump($values_files);
 		$this->insert("files",array("file_name","type"),$values_files);
 		$last_id_fl=mysqli_insert_id($this->condb);
 		array_push($values_srv,$last_id_fl);
-		array_push($fields_srv, "files_id");		
+		array_push($fields_srv, "files_id");	
 		$this->insert("subHeadings",$fields_srv,$values_srv);
 	}
 
