@@ -263,6 +263,10 @@ class Database
 		$fields=implode(',', $fields);
 		$delete="DELETE FROM ".$table." WHERE ".$where[0]." = ".$where[1];
 		$query=mysqli_query($this->condb,$delete) or die(mysqli_error());
+		if ($query == true) 
+		{
+			return true;
+		}
 	}
 //	update data
 	
@@ -405,7 +409,6 @@ class Database
 		$where=array("id",$emp_id);
 		$this->update("employee",$fields_emp,$values_emp,$where);
 	}
-
 }
 
 

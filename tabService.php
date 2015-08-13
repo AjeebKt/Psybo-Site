@@ -4,7 +4,47 @@ include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 $resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'service',));
 $resultService = $objdb->select('subHeadings', array('title', 'description', 'id'), array('name', 'service'));
- ?>
+$actdir = getcwd().'/upload-image/';
+if (isset($_GET['deleteid'])) 
+{
+	$serviceId=$_GET['deleteid'];
+	$result = $objdb->select('subHeadings', array('files_id'), array('id', $serviceId));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == 'files_id') 
+		{
+			$resultfile = $objdb->select('files',array('file_name'),array('id', $value));
+			foreach ($resultfile[0] as $key => $val) 
+			{
+				if (is_string($key) and $key == 'file_name') 
+				{
+					$file_name = $val;
+				}
+			}
+			$objdb->delete('subHeadings', array('id',$serviceId));
+			$objdb->delete('files', array('id', $value));
+			unlink($actdir.$file_name);
+			if ($objdb == true) 
+			{
+				$message = "<script type='text/javascript'>
+							window.location.replace('tabService.php');
+						</script>";
+			}
+		}
+	}
+}
+if (isset($_GET['hdeleteid']) )
+{
+	$headId = $_GET['hdeleteid']; 
+	$objdb->delete('headings', array('id', $headId));
+	if ($objdb == true) 
+	{
+		$message = "<script type='text/javascript'>
+					window.location.replace('tabService.php');
+				</script>";
+	}
+}	
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +93,11 @@ $resultService = $objdb->select('subHeadings', array('title', 'description', 'id
 							} ?> class="edit"></a>
 						</td>
 						<td>
-							<a href="" class="delete" onclick="DeleteCheck()"></a>
+							<a href=<?php foreach ($value as $key => $val) {
+									if ($key == 'id' and is_string($key)) {
+										echo "\"?hdeleteid=".$val."\"";
+									}
+							} ?> class="delete" onclick="return DeleteCheck()"></a>
 						</td>
 					</tr>
 						<?php }; ?>
@@ -94,7 +138,11 @@ $resultService = $objdb->select('subHeadings', array('title', 'description', 'id
 							} ?> class="edit"></a>
 						</td>
 						<td>
-							<a href="" class="delete" onclick="DeleteCheck()"></a>
+							<a href=<?php foreach ($value as $key => $val) {
+										if ($key == 'id' and is_string($key)) {
+											echo "\"?deleteid=".$val."\"";
+										}
+							} ?>  class="delete" onclick="return DeleteCheck()"></a>
 						</td>
 					</tr>
 					<?php } ?>
@@ -102,6 +150,7 @@ $resultService = $objdb->select('subHeadings', array('title', 'description', 'id
 			</form>
 		</div>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>
 
