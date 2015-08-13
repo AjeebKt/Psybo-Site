@@ -9,7 +9,7 @@ if (isset($_POST['btnAdd']))
 	if (!empty($heading) and !empty($description)) 
 	{
 		$values = array('service');
-		if (preg_match('/^[A-Za-z0-9., _-]*$/',$heading) )
+		if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$heading) )
 		{
 			$error = 1;
 			array_push($values, $_POST['serviceHeadding']); 
@@ -20,7 +20,7 @@ if (isset($_POST['btnAdd']))
 					</script>";
 		if (!empty($description) and $error == 1) 
 		{
-			if (preg_match('/^[A-Za-z0-9., _-]*$/', $description) )
+			if (preg_match('/^[A-Za-z0-9., \'_-]*$/', $description) )
 			{
 				array_push($values, $_POST['txtService']);
 			}
