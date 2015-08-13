@@ -74,16 +74,6 @@ if (isset($_GET['hdeleteid']) )
 								<a href="addServiceHead.php" class="page-button">+ Add</a>
 							</th>
 						</tr>
-						<!-- <tr>
-							<td>Headding</td>
-							<td>
-								<p>jaba jaba</p>
-							</td>
-							<td>
-								<a href="editServiceHead.php" class="edit"></a>
-								<a href="" class="delete" onclick="return DeleteCheck()"></a>
-							</td>
-						</tr> -->
 						<?php foreach ($resultHead as $key => $value) {
 					 ?>
 					<tr>
@@ -126,23 +116,6 @@ if (isset($_GET['hdeleteid']) )
 								<a href="addService.php" class="page-button">+ Add</a>
 							</th>
 						</tr>
-						<!-- <tr>
-							<td>Service</td>
-							<td>
-								<p>jaba jaba</p>
-							</td>
-							<td>
-								<img src="" alt="">
-							</td>
-							<td>
-								<a href="editService.php" class="edit"></a>
-								<a href="" class="delete" onclick="DeleteCheck()"></a>
-							</td>
-						</tr> -->
-					</tbody>
-				</table>
-				<table>
-					<tbody>
 						<?php foreach ($resultService as $key => $value) {
 
 						 ?>
@@ -161,7 +134,9 @@ if (isset($_GET['hdeleteid']) )
 									}
 								} ?>
 							</td>
-							<td>img</td>
+							<td>
+								<img src="" alt="">
+							</td>
 							<td>
 								<a href=<?php foreach ($value as $key => $val) {
 											if ($key == 'id' and is_string($key)) {
