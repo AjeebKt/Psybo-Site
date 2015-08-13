@@ -1,4 +1,20 @@
-
+<?php 
+	error_reporting(1);
+	include_once 'Database.php';
+	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'contact',));
+	if (isset($_GET['hdeleteid']) )
+	{
+		$headId = $_GET['hdeleteid']; 
+		$objdb->delete('headings', array('id', $headId));
+		if ($objdb == true) 
+		{
+			$message = "<script type='text/javascript'>
+						window.location.replace('tabContact.php');
+					</script>";
+		}
+	}	
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,16 +43,33 @@
 								<a href="addContactMessage.php" class="page-button">+ Add</a>
 							</th>
 						</tr>
+						<?php foreach ($resultHead as $key => $value) {
+					 	?>
 						<tr>
-							<td>Message</td>
 							<td>
-								<p>jaba jaba</p>
+							<?php  foreach ($value as $key	 => $val) {
+								if ($key == 'title' and is_string($key) ) {
+								echo $val;
+							} }?>
+							</td>
+							<td>
+								<p>
+									<?php  foreach ($value as $key	 => $val) {
+										if ($key == 'title' and is_string($key) ) {
+										echo $val;
+									} }?>
+								</p>
 							</td>
 							<td>
 								<a href="editContactMessage.php" class="edit"></a>
-								<a href="" class="delete" onclick="DeleteCheck()"></a>
+								<a href=<?php foreach ($value as $key => $val) {
+									if ($key == 'id' and is_string($key)) {
+										echo "\"?hdeleteid=".$val."\"";
+									}
+							} ?> class="delete" onclick="return DeleteCheck()"></a>
 							</td>
 						</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 			</form>

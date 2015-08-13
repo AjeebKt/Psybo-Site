@@ -2,7 +2,20 @@
 error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
- ?>
+$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'about',));
+
+if (isset($_GET['hdeleteid']) )
+{
+	$headId = $_GET['hdeleteid']; 
+	$objdb->delete('headings', array('id', $headId));
+	if ($objdb == true) 
+	{
+		$message = "<script type='text/javascript'>
+					window.location.replace('tabAbout.php');
+				</script>";
+	}
+}	
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +46,7 @@ $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 							</th>
 						</tr>
 						<tr>
-							<td>Main Head</td>
+							<td>Main ead</td>
 							<td>
 								<p>jaba jaba</p>
 							</td>
@@ -41,7 +54,7 @@ $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 								<p>jaba jaba</p>
 							</td>
 							<td>
-								<a href="editAboutHead.php" class="edit"></a>
+								<a href="" class="edit"></a>
 								<a href="" class="delete" onclick="DeleteCheck()"></a>
 							</td>
 						</tr>
@@ -57,21 +70,35 @@ $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 								<a href="addAboutItem.php" class="page-button">+ Add</a>
 							</th>
 						</tr>
+						<?php foreach ($resultHead as $key => $value) {
+					 ?>
 						<tr>
-							<td>Headding</td>
+							<td><?php  foreach ($value as $key	 => $val) {
+							if ($key == 'title' and is_string($key) ) {
+								echo $val;
+							} }?></td>
 							<td>
-								<p>Jaba jaba</p>
+								<p><?php  foreach ($value as $key	 => $val) {
+							if ($key == 'description' and is_string($key) ) {
+								echo $val;
+							} }?></p>
 							</td>
 							<td>
 								<a href="editaboutItem.php" class="edit"></a>
-								<a href="" class="delete" onclick="DeleteCheck()"></a>
+								<a href=<?php foreach ($value as $key => $val) {
+									if ($key == 'id' and is_string($key)) {
+										echo "\"?hdeleteid=".$val."\"";
+									}
+							} ?> class="delete" onclick="return DeleteCheck()"></a>
 							</td>
 						</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 			</form>
 		</div>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>
 

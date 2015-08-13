@@ -156,7 +156,7 @@ class Database
 		$stmt->execute();
 		if ($stmt===FALSE)	
 		{
-			trigger_error("error");
+			return trigger_error("error");
 		}
 		else
 		 	return true;
