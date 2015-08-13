@@ -1,5 +1,5 @@
 <?php 
-// error_reporting(1);
+error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
 if (isset($_POST['btnAdd']) )
