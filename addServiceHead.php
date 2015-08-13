@@ -52,7 +52,11 @@ if (isset($_POST['btnAdd']))
 						alert('Please enter full information!');
 					</script>";
 }
- ?>
+if (isset($_POST['btnCancel'])) 
+{
+	header('location:tabService.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

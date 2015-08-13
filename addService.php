@@ -4,7 +4,7 @@ include_once 'Database.php';
 $objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
 if (isset($_POST['btnAdd']) )
 {
-	$heading = $_POST['serviceItem'];
+	$heading = $_POST['serviceItem'];	
 	$description = $_POST['serviceDescription'];
 
 	$rand=rand();
@@ -95,7 +95,13 @@ if (isset($_POST['btnAdd']) )
 									alert('Adding succesfull');
 									window.location.replace('/tabService.php');
 								</script>";
-						}			
+						}	
+						else	
+						{
+							$message = "<script type='text/javascript'>
+									alert('Adding failed! please try again.');
+								</script>";
+						}
 					}
 					else
 					{
@@ -114,6 +120,10 @@ if (isset($_POST['btnAdd']) )
 		}
 	}
 }	
+if (isset($_POST['btnCancel'])) 
+{
+	header('location:tabService.php');
+}
 ?>
 
 <!DOCTYPE html>

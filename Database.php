@@ -154,7 +154,7 @@ class Database
 		// var_dump($params);
 		call_user_func_array(array(&$stmt ,'bind_param'), $params);
 		$stmt->execute();
-		if ($stmt===FALSE)	
+		if ($stmt== FALSE)	
 		{
 			return trigger_error("error");
 		}

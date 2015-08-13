@@ -1,4 +1,21 @@
+<?php 
+error_reporting(1);
+include_once 'Database.php';
+$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'home',));
 
+if (isset($_GET['hdeleteid']) )
+{
+	$headId = $_GET['hdeleteid']; 
+	$objdb->delete('headings', array('id', $headId));
+	if ($objdb == true) 
+	{
+		$message = "<script type='text/javascript'>
+					window.location.replace('tabHome.php');
+				</script>";
+	}
+}	
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,16 +45,31 @@
 							<a href="addHome.php" class="page-button">+ Add</a>
 						</th>
 					</tr>
+					<?php foreach ($resultHead as $key => $value) {
+					 ?>
 					<tr>
-						<td>Headding</td>
 						<td>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga, nemo magni ea nulla maxime tempora eligendi fugiat quod quo adipisci ipsa in temporibus. Laboriosam commodi nesciunt ipsum, reprehenderit blanditiis.</p>
+							<?php  foreach ($value as $key	 => $val) {
+							if ($key == 'title' and is_string($key) ) {
+								echo $val;
+							} }?>						
 						</td>
 						<td>
-							<a href="editHome.php" class="edit"></a>
-							<a href="" class="delete" onclick="DeleteCheck()"></a>
+							<p><?php  foreach ($value as $key	 => $val) {
+							if ($key == 'description' and is_string($key) ) {
+								echo $val;
+							} }?></p>
+						</td>
+						<td>
+							<a href="" class="edit"></a>
+							<a href=<?php foreach ($value as $key => $val) {
+									if ($key == 'id' and is_string($key)) {
+										echo "\"?hdeleteid=".$val."\"";
+									}
+							} ?> class="delete" onclick="return DeleteCheck()"></a>
 						</td>
 					</tr>
+					<?php } ?>
 				</tbody>
 			</table>
 			<h3>Sub Head</h3>
@@ -73,6 +105,7 @@
 		</form>
 	</div>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>
 
