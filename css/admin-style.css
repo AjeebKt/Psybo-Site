@@ -35,6 +35,7 @@ h3
 	font-size: 20pt;
 	margin: 10px 0;
 	padding: 0;
+	float: left;
 	color: #333;
 }
 h4
@@ -74,6 +75,7 @@ h4
 section {
 	padding-left: 15%;
 	width: 85%;
+	float: left;
 }
 header
 {
@@ -84,7 +86,6 @@ header
 	left: 0;
 	top: 0;
 	z-index: 999;
-	/*border-bottom: 1px solid #008a67;*/
 }
 header img:first-child
 {
@@ -93,11 +94,10 @@ header img:first-child
 }
 .logout
 {
-	float: right;
-	width: 100px;
-	height: 30px;
-	margin: 30px 10px;
+	width: 190px;
 	border: 0;
+	padding-left: 40px;
+	text-align: left;
 	color: #fff;
 	background: transparent;
 	transition: color 0.4s ease;
@@ -122,7 +122,6 @@ nav
 	color: #FFF;
 	padding: 5px 0 0 0;
 	margin: 0 auto;
-	text-align: center;
 	
 }
 .side-links li
@@ -144,22 +143,23 @@ nav
 }
 .side-links li a
 {
-	width: 100%;
-	height: 100%;
+	width: 150px;
 	text-decoration: none;
+	padding-left: 40px;
 	color: #fff;
 	display: block;
 }
 .page-button {
-	width: 150px;
-	height: 40px;
-	float: left;
-	background-color: #aaa;
+	width: 60px;
+	height: 35px;
+	float: right;
+	background-color: #008a67;
 	text-decoration: none;
-	color: rgb(255, 255, 255);
+	color: #fff;
+	border-radius: 3px;
 	text-align: center;
-	line-height: 40px;
-	margin-right: 15px;
+	line-height: 35px;
+	margin-right: 2px;
 	-webkit-transition: background-color 0.3s ease;
 	-moz-transition: background-color 0.3s ease;
 	-ms-transition: background-color 0.3s ease;
@@ -168,26 +168,26 @@ nav
 	
 }
 .page-button:hover {
-	background-color: #008a67;
+	background-color: #159F7C;
 }
 .show-table
 {
 	width: 95%;
-	padding-top: 10px;
-	margin-left: 30px;
+	margin: 0 auto;
 }
 .show-item
 {
 	width: 100%;
-	margin: 30px 0 0 0;
+	margin: 10px 0px 0px;
 	float: left;
 	border: 1px solid #ccc;
-	border-radius: 5px;
 }
 .show-item a.edit
 {
 	width: 20px;
 	height: 20px;
+	float: right;
+	margin-right: 10px;
 	display: block;
 	background-image: url(../img/edit.png);
 	background-size: 100%;
@@ -200,6 +200,8 @@ nav
 {
 	width: 20px;
 	height: 20px;
+	float: right;
+	margin-right: 10px;
 	display: block;
 	background-image: url(../img/delete.png);
 	background-size: 100%;
@@ -218,7 +220,11 @@ nav
 	margin-left: 10px;
 	border-bottom: 1px solid #ccc;
 }
-.show-item tr td:first-child {
+.show-item tr th {
+	padding-left: 15px;
+	text-align: left;
+}
+.show-item tr td {
 	padding-left: 15px;
 }
 .show-item tr td img

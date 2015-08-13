@@ -50,7 +50,7 @@ if (isset($_GET['hdeleteid']) )
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tab-Service</title>
+	<title>Service - Dashboard</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
 	<script language="javascript" type="text/javascript">
@@ -63,17 +63,28 @@ if (isset($_GET['hdeleteid']) )
 	<?php include 'dash.php'; ?>
 	<section>
 		<div class="show-table">
+			<h3>Main Head</h3>
 			<form id="formShowService" name="formShowService" action="" method="POST">
-				<a href="addServiceHead.php" class="page-button">Add Mian Headding</a>
-				<a href="addService.php" class="page-button">Add Service</a>
 				<table class="show-item">
-					<tr>
-						<td>Main Head</td>
-						<td>Description</td>
-						<td>Edit</td>
-						<td>Delete</td>
-					</tr>
-					<?php foreach ($resultHead as $key => $value) {
+					<tbody>
+						<tr>
+							<th>Main Head</th>
+							<th>Description</th>
+							<th>
+								<a href="addServiceHead.php" class="page-button">+ Add</a>
+							</th>
+						</tr>
+						<!-- <tr>
+							<td>Headding</td>
+							<td>
+								<p>jaba jaba</p>
+							</td>
+							<td>
+								<a href="editServiceHead.php" class="edit"></a>
+								<a href="" class="delete" onclick="return DeleteCheck()"></a>
+							</td>
+						</tr> -->
+						<?php foreach ($resultHead as $key => $value) {
 					 ?>
 					<tr>
 						<td><?php  foreach ($value as $key	 => $val) {
@@ -81,18 +92,19 @@ if (isset($_GET['hdeleteid']) )
 								echo $val;
 							} }?>
 						</td>
-						<td><?php  foreach ($value as $key	 => $val) {
+						<td>
+							<p><?php  foreach ($value as $key	 => $val) {
 							if ($key == 'description' and is_string($key) ) {
 								echo $val;
-							} }?></td>
+							} }?>
+							</p>
+						</td>
 						<td>
 							<a href=<?php foreach ($value as $key => $val) {
 										if ($key == 'id' and is_string($key)) {
 											echo "\"editServiceHead.php?id=".$val."\"";
 										}
 							} ?> class="edit"></a>
-						</td>
-						<td>
 							<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
 										echo "\"?hdeleteid=".$val."\"";
@@ -101,51 +113,70 @@ if (isset($_GET['hdeleteid']) )
 						</td>
 					</tr>
 						<?php }; ?>
+					</tbody>
 				</table>
+				<h3>Service</h3>
 				<table class="show-item">
-					<tr>
-						<td>Service</td>
-						<td>Description</td>
-						<td>Image</td>
-						<td>Edit</td>
-						<td>Delete</td>
+					<tbody>
+						<tr>
+							<th>Service</th>
+							<th>Description</th>
+							<th>Image</th>
+							<th>
+								<a href="addService.php" class="page-button">+ Add</a>
+							</th>
+						</tr>
+						<!-- <tr>
+							<td>Service</td>
+							<td>
+								<p>jaba jaba</p>
+							</td>
+							<td>
+								<img src="" alt="">
+							</td>
+							<td>
+								<a href="editService.php" class="edit"></a>
+								<a href="" class="delete" onclick="DeleteCheck()"></a>
+							</td>
+						</tr> -->
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<?php foreach ($resultService as $key => $value) {
 
-					</tr>
-					<?php foreach ($resultService as $key => $value) {
-
-					 ?>
-					<tr>
-						<td><?php foreach ($value as $key => $val) {
-								if ($key == 'title' and is_string($key)) 
-								{
-									echo $val;
-								}
-							} ?>
-						</td>
-						<td><?php foreach ($value as $key => $val) {
-								if ($key == 'description' and is_string($key)) 
-								{
-									echo $val;
-								}
-							} ?>
-						</td>
-						<td>img</td>
-						<td>
-							<a href=<?php foreach ($value as $key => $val) {
-										if ($key == 'id' and is_string($key)) {
-											echo "\"editServiceHead.php?id=".$val."\"";
-										}
-							} ?> class="edit"></a>
-						</td>
-						<td>
-							<a href=<?php foreach ($value as $key => $val) {
-										if ($key == 'id' and is_string($key)) {
-											echo "\"?deleteid=".$val."\"";
-										}
-							} ?>  class="delete" onclick="return DeleteCheck()"></a>
-						</td>
-					</tr>
-					<?php } ?>
+						 ?>
+						<tr>
+							<td><?php foreach ($value as $key => $val) {
+									if ($key == 'title' and is_string($key)) 
+									{
+										echo $val;
+									}
+								} ?>
+							</td>
+							<td><?php foreach ($value as $key => $val) {
+									if ($key == 'description' and is_string($key)) 
+									{
+										echo $val;
+									}
+								} ?>
+							</td>
+							<td>img</td>
+							<td>
+								<a href=<?php foreach ($value as $key => $val) {
+											if ($key == 'id' and is_string($key)) {
+												echo "\"editServiceHead.php?id=".$val."\"";
+											}
+								} ?> class="edit"></a>
+								<a href=<?php foreach ($value as $key => $val) {
+											if ($key == 'id' and is_string($key)) {
+												echo "\"?deleteid=".$val."\"";
+											}
+								} ?>  class="delete" onclick="return DeleteCheck()"></a>
+							</td>
+						</tr>
+						<?php } ?>
+					</tbody>
 				</table>
 			</form>
 		</div>

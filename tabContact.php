@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tab-Portfolio</title>
+	<title>Contact - Dashboard</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
 	<script language="javascript" type="text/javascript">
@@ -17,24 +17,27 @@
 	<section>
 		<div class="show-table">
 			<form id="formShowContact" name="formShowContact" action="" method="POST">
-				<a href="addContactMessage.php" class="page-button">Add Main Head</a>
+				<h3>Message</h3>
 				<table class="show-item">
-					<tr>
-						<td>Message Headding</td>
-						<td>Description</td>
-						<td>Edit</td>
-						<td>Delete</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td>
-							<a href="editContactMessage.php" class="edit"></a>
-						</td>
-						<td>
-							<a href="" class="delete" onclick="DeleteCheck()"></a>
-						</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>Message Headding</th>
+							<th>Description</th>
+							<th>
+								<a href="addContactMessage.php" class="page-button">+ Add</a>
+							</th>
+						</tr>
+						<tr>
+							<td>Message</td>
+							<td>
+								<p>jaba jaba</p>
+							</td>
+							<td>
+								<a href="editContactMessage.php" class="edit"></a>
+								<a href="" class="delete" onclick="DeleteCheck()"></a>
+							</td>
+						</tr>
+					</tbody>
 				</table>
 			</form>
 		</div>
