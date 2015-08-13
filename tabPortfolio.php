@@ -2,7 +2,7 @@
 	error_reporting(0);
 	include 'Database.php';
 	include 'file.php';
-    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
     $objdb= new Database ('localhost','root','asd','psybo-db');
 	$num_ptf=$objdb->num_row_ptf();
 	$count_ptf=count($num_ptf);
@@ -30,7 +30,7 @@
 		unlink(getcwd().$actdir.$file_name);
 		if ($objdb == true) 
 		{
-			$message="<script type='text/javascript'>alert('Deleted!');
+			$message="<script type='text/javascript'>;
 							window.location.replace('tabPortfolio.php');
 						</script>";	
 			$objdb->delete("files",array("id",$files_id));

@@ -1,4 +1,11 @@
-	
+<?php 
+	error_reporting(1);
+	include_once 'Database.php';
+	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$result = $objdb->select('headings',array(),array('name', 'home'));
+	$resultWedo = $objdb->select('subHeadings', array(), array('name', 'wedo'));
+	// var_dump($resultWedo);
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,23 +53,55 @@
 	<section>
 		<div class="container">
 			<div class="who-we-are">
-				<h2>Who We Are</h2>
-				<p><b>Psybo Technologies</b> is a young enterprise powered by young engineers with a goal of adding values. It is a company providing consultancy services and development in various domains like Software development, Web design and Web hosting, etc. Software development mainly concentrated in ERP, CRM and MIS in .Net Framwork 4.0 and J2EE. We provides web solutions & services to help customer reach to a wider customer base. The web is a new and different medium for communication and requires a different viewpoint and skill set to use it in the most effective way. We also provide Internship and On Job Training (OJT) for fresher’s software engineers to improve their skill and knowledge and get a good opportunity in IT industry.</p>
+				<h2><?php  foreach ($result[0] as $key => $value) {
+						if ($key == 'title' and is_string($key)) 
+						{
+							echo $value;
+						}
+					}?>
+				</h2>
+				<!-- <p><b>Psybo Technologies</b> is a young enterprise powered by young engineers with a goal of adding values. It is a company providing consultancy services and development in various domains like Software development, Web design and Web hosting, etc. Software development mainly concentrated in ERP, CRM and MIS in .Net Framwork 4.0 and J2EE. We provides web solutions & services to help customer reach to a wider customer base. The web is a new and different medium for communication and requires a different viewpoint and skill set to use it in the most effective way. We also provide Internship and On Job Training (OJT) for fresher’s software engineers to improve their skill and knowledge and get a good opportunity in IT industry.</p> -->
+				<p>
+					<?php foreach ($result[0] as $key => $value) {
+						if ($key == 'description' and is_string($key)) 
+						{
+							echo $value;
+						}
+					} ?>
+				</p>
 			</div>
 	   		<ul class="what-wedo">
+	   		<?php  foreach ($resultWedo as $key => $value){
+	   		?>
 	   			<li class="list-wedo">
 			   		<div class="grid">
 		   				<a href="service.php">
 		   					<!-- <img src="img/Conference-100.png" alt=""> -->
-			   				<h3>What We Do</h3>
-			   				<p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p>
+			   				<h3>
+			   					<?php  foreach ($value as $key => $val) {
+									if ($key == 'title' and is_string($key)) 
+									 	{
+									 	echo $val;
+									 }
+								}?>
+			   				</h3>
+			   				<!-- <p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p> -->
+			   				<p>
+			   					<?php  foreach ($value as $key => $val) {
+									if ($key == 'description' and is_string($key)) 
+										{
+										echo $val;
+									}
+								}?>
+			   				</p>
 		   				</a>
 				   	</div>
 	   			</li>
-	   			<li class="list-wedo">
+	   			<?php } ?>
+	   			<!-- <li class="list-wedo">
 			   		<div class="grid">
 		   				<a href="about.php">
-		   					<!-- <img src="img/Conference-100.png" alt=""> -->
+		   					<img src="img/Conference-100.png" alt=""> 
 			   				<h3>What Make Us Different</h3>
 			   				<p>We are a close-knit team of experienced strategists, designers and builders with complementary, often overlapping skill sets.</p>
 		   				</a>
@@ -71,12 +110,12 @@
 	   			<li class="list-wedo">
 			   		<div class="grid">
 		   				<a href="contact.php">
-		   					<!-- <img src="img/Conference-100.png" alt=""> -->
+		   					<img src="img/Conference-100.png" alt="">
 			   				<h3>Get Connected</h3>
 			   				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 		   				</a>
 				   	</div>
-	   			</li>
+	   			</li> -->
 	   		</ul>
 		</div>
 	</section>

@@ -9,7 +9,7 @@
 		if (!empty($heading) and !empty($description)) 
 		{
 			$values = array('home');
-			if (preg_match('/^[A-Za-z0-9., _-]*$/',$heading) )
+			if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$heading) )
 			{
 				$error = 1;
 				array_push($values,$heading); 
@@ -20,7 +20,7 @@
 						</script>";
 			if (!empty($description) and $error == 1) 
 			{
-			if (preg_match('/^[A-Za-z0-9., _-]*$/', $description) and $error == 1 )
+			if (preg_match('/^[A-Za-z0-9., \'_-]*$/', $description) and $error == 1 )
 			{
 				array_push($values, $description);
 			}

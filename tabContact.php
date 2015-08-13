@@ -75,6 +75,7 @@
 			</form>
 		</div>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>
 

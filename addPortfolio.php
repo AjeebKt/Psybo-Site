@@ -10,10 +10,8 @@
 	if (isset($_POST['btnPortfolioSubmit']) ) 
 	{	
 		$title=$_POST['txtTitle'];
-		
-
 		$description=$_POST['portfolioDescription'];
-		
+
 		$rand=rand();
 		$target_dir=getcwd()."/upload-image/";
 		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
@@ -25,7 +23,8 @@
 
 		if ( !empty($title) and isset($_FILES['uploadPortfolio']['tmp_name']) ) 
 		{
-			if (preg_match('/^[A-Za-z0-9., _-&]*$/', $title))
+			var_dump($title);
+			if (preg_match('/^[A-Za-z0-9., _&-]*$/', $title))
 			{
 				$error=1;
 				$values_ptf=array($title);
@@ -126,6 +125,8 @@
 				if ($upload == TRUE) 
 				{
 					$values_ptf_files=array($rand.".".$file_type,$file_type);
+					var_dump($values_ptf);
+
 					$objdb->insert_mul_ptf($values_ptf_files,$fields_ptf,$values_ptf);
 					if ($upload == TRUE and $objdb == TRUE) 
 					{

@@ -19,7 +19,7 @@
 
 		if (!empty($heading) and !empty($description) and !empty($file_name) )
 		{
-			if (preg_match('/^[A-Za-z0-9., _-]*$/',$heading) )
+			if (preg_match('/^[A-Za-z0-9., _\'-]*$/',$heading) )
 			{
 				$error = 1;
 				array_push($valueSrv, $heading);
@@ -34,7 +34,7 @@
 			}
 			if (!empty($description) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9., _-]*$/',$description) )
+				if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$description) )
 				{
 					$error = 1;
 					array_push($valueSrv, $description);
@@ -48,11 +48,12 @@
 				}
 				if (!empty($link) and $error == 1) 
 				{
-					if (preg_match('/^[A-Za-z0-9., _-]*$/',$description) )
+					if (preg_match('/^[A-Za-z0-9., _-]*$/',$link) )
 					{
 						$error = 1;
 						array_push($valueSrv, $link);
 						array_push($fieldSrv, 'link');
+
 					}
 					else
 					{
@@ -102,7 +103,6 @@
 						$upload=move_uploaded_file($_FILES["homeWedoImg"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
 						if ($upload == TRUE) 
 						{
-							var_dump('gvgh ');
 							$valueFiles=array($rand.".".$file_type,$file_type);
 							$objdb->insert_mul_srvc($valueFiles,$fieldSrv,$valueSrv);
 							if ($upload == TRUE and $objdb == TRUE) 
