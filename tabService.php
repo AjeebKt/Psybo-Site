@@ -91,15 +91,15 @@ if (isset($_GET['hdeleteid']) )
 						</td>
 						<td>
 							<a href=<?php foreach ($value as $key => $val) {
-										if ($key == 'id' and is_string($key)) {
-											echo "\"editServiceHead.php?id=".$val."\"";
-										}
-							} ?> class="edit"></a>
-							<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
 										echo "\"?hdeleteid=".$val."\"";
 									}
 							} ?> class="delete" onclick="return DeleteCheck()"></a>
+							<a href=<?php foreach ($value as $key => $val) {
+										if ($key == 'id' and is_string($key)) {
+											echo "\"editServiceHead.php?id=".$val."\"";
+										}
+							} ?> class="edit"></a>
 						</td>
 					</tr>
 						<?php }; ?>
@@ -140,14 +140,14 @@ if (isset($_GET['hdeleteid']) )
 							<td>
 								<a href=<?php foreach ($value as $key => $val) {
 											if ($key == 'id' and is_string($key)) {
-												echo "\"editServiceHead.php?id=".$val."\"";
-											}
-								} ?> class="edit"></a>
-								<a href=<?php foreach ($value as $key => $val) {
-											if ($key == 'id' and is_string($key)) {
 												echo "\"?deleteid=".$val."\"";
 											}
 								} ?>  class="delete" onclick="return DeleteCheck()"></a>
+								<a href=<?php foreach ($value as $key => $val) {
+											if ($key == 'id' and is_string($key)) {
+												echo "\"editServiceHead.php?id=".$val."\"";
+											}
+								} ?> class="edit"></a>
 							</td>
 						</tr>
 						<?php } ?>

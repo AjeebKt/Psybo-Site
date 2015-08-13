@@ -11,7 +11,7 @@
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h2>Edit Address</h2>
+				<h3>Edit Address</h3>
 				<div class="group">
 					<label for="footerAddress">Address</label><br>
 					<textarea type="text" id="footerAddress" cols="30" rows="10"></textarea>

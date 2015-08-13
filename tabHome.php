@@ -104,7 +104,7 @@ if (isset($_GET['hdeleteid']) )
 					<?php } ?>
 				</tbody>
 			</table>
-			<h3>Sub Head</h3>
+			<h3>We Do Items</h3>
 			<table class="show-item">
 				<tbody>
 					<tr>
