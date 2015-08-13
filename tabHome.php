@@ -3,6 +3,38 @@ error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 $resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'home',));
+$resultWedo = $objdb->select('subHeadings', array('title', 'description', 'id', 'link'), array('name', 'wedo'));
+$actdir = getcwd().'/upload-image/';
+
+
+if (isset($_GET['deleteid'])) 
+{
+	$wedoid=$_GET['deleteid'];
+	$result = $objdb->select('subHeadings', array('files_id'), array('id', $wedoid));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == 'files_id') 
+		{
+			$resultfile = $objdb->select('files',array('file_name'),array('id', $value));
+			foreach ($resultfile[0] as $key => $val) 
+			{
+				if (is_string($key) and $key == 'file_name') 
+				{
+					$file_name = $val;
+				}
+			}
+			$objdb->delete('subHeadings', array('id',$wedoid));
+			$objdb->delete('files', array('id', $value));
+			unlink($actdir.$file_name);
+			if ($objdb == true) 
+			{
+				$message = "<script type='text/javascript'>
+							window.location.replace('tabHome.php');
+						</script>";
+			}
+		}
+	}
+}
 
 if (isset($_GET['hdeleteid']) )
 {
@@ -84,22 +116,39 @@ if (isset($_GET['hdeleteid']) )
 							<a href="addWedo.php" class="page-button">+ Add</a>
 						</th>
 					</tr>
+					<?php foreach ($resultWedo as $key => $value) {
+					 ?>
 					<tr>
-						<td>Sub Headding</td>
+						<td><?php  foreach ($value as $key	 => $val) {
+							if ($key == 'title' and is_string($key) ) {
+								echo $val;
+							} }?></td>
 						<td>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fugit provident! Cum, consectetur excepturi velit totam nisi non molestiae corrupti iure, dolore deserunt repellat iste rerum nam, voluptas accusantium enim!</p>
+							<p><?php  foreach ($value as $key	 => $val) {
+							if ($key == 'description' and is_string($key) ) {
+								echo $val;
+							} }?></p>
 						</td>
 						<td>
 							<img src="" alt="">
 						</td>
 						<td>
 							<a href="#">link</a>
+							<p><?php  foreach ($value as $key	 => $val) {
+							if ($key == 'link' and is_string($key) ) {
+								echo $val;
+							} }?></p>
 						</td>
 						<td>
 							<a href="editWedo.php" class="edit"></a>
-							<a href="" class="delete" onclick="DeleteCheck()"></a>
+							<a href=<?php foreach ($value as $key => $val) {
+									if ($key == 'id' and is_string($key)) {
+										echo "\"?deleteid=".$val."\"";
+									}
+							} ?> class="delete" onclick="return DeleteCheck()"></a>
 						</td>
 					</tr>
+					<?php } ?>
 				</tbody>
 			</table>
 		</form>
