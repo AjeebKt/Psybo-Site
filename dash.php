@@ -17,13 +17,12 @@ error_reporting(0);
 </header>
 <nav>
 	<ul class="side-links">
-		<li><a href="tabHome.php" onclick="active()">Home</a></li>
+		<li><a href="tabHome.php">Home</a></li>
 		<li><a href="tabPortfolio.php">Portfolio</a></li>
 		<li><a href="tabService.php">Service</a></li>
 		<li><a href="tabTeam.php">Team</a></li>
 		<li><a href="tabAbout.php">About</a></li>
 		<li><a href="tabContact.php">Contact</a></li>
-		<li><a href="tabFooter.php">Footer</a></li>
 		<li><a href="changePassword.php">Change Password</a></li>
 		<li>
 			<form id="form1" name="form1" method="POST" action="">
