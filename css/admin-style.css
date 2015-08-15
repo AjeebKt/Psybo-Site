@@ -76,6 +76,9 @@ section {
 	width: 85%;
 	float: left;
 }
+.pad-left {
+	padding-left: 20px;
+}
 header
 {
 	width: 100%;
@@ -84,7 +87,7 @@ header
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 999;
+	z-index: 999;F
 }
 header img:first-child
 {
@@ -140,6 +143,9 @@ nav
 .side-links li:hover
 {
 	background-color: #777;
+}
+.side-links li.active {
+	background-color: #555;
 }
 .side-links li a
 {
@@ -241,7 +247,7 @@ nav
 }
 
 .add-service {
-	width: 85%;
+	width: 80%;
 	padding-top: 10px;
 	float: left;
 	margin-bottom: 100px;
@@ -257,18 +263,20 @@ nav
 }
 .group {
 	float: left;
+	margin: 10px 20px 0 0;
+}
+.width-100 {
 	width: 100%;
-	margin: 10px 0;
 }
 .service {
-	width: 90%;
+	width: 80%;
 	float: left;
 	padding-left: 20px;
 }
 .group input {
-	width: 450px;
-	height: 25px;
-	padding: 10px;
+	width: 330px;
+	height: 20px;
+	padding: 5px;
 	border: 1px solid #333;
 	margin: 10px 0;
 	float: left;
@@ -276,8 +284,8 @@ nav
 	border-radius: 3px;
 }
 .group textarea {
-	width: 450px;
-	padding: 10px;
+	width: 330px;
+	padding: 5px;
 	border: 1px solid #333;
 	margin: 10px 0;
 	float: left;
@@ -297,6 +305,8 @@ input[type="file"] {
 	padding: 5px;
 	color: #fff;
 	border: 0;
+	margin-right: 10px;
+	background-color: #008a67;
 	border-radius: 3px;
 	-webkit-transition: background-color 0.3s ease;
 	-moz-transition: background-color 0.3s ease;
@@ -305,14 +315,16 @@ input[type="file"] {
 	transition: background-color 0.3s ease;
 	
 }
+	.add-service button:hover {
+		background-color: #159F7C;
+	}
 .selection {
 	width: 110px;
+	float: left;
 	height: 30px;
-	margin: 0 50px;
+	margin: 10px 0px;
 	border: 1px solid #333;
+	border-radius: 3px;
 	background-color: #fff;
 	border-radius: ;
-}
-.add-service button:hover {
-	background-color: #008a67;
 }

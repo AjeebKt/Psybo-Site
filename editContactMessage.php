@@ -18,9 +18,11 @@
 				</div>
 				<div class="group">
 					<label for="txtMsgContact">Description</label><br>
-					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="10"></textarea>
+					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="5"></textarea>
 				</div>
-				<button id="btnUpdate" name="btnUpdate">Update</button>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>

@@ -167,20 +167,26 @@
 					<input id="mainHead" type="text" name="homeWedo">
 				</div>
 				<div class="group">
-					<label for="mainDescription">Description</label><br>
-					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="10"></textarea>
-				</div>
-				<div class="group">
-					<label for="wedoLink">Link</label>
-					<select class="selection" id="wedoLink" name="wedoLink">
+					<label for="wedoLink">Link</label><br>
+					<select class="selection" id="wedoLink" name="wedoLink" >
+						<!-- <option value="" placeholder="select"></option> -->
 						<option value="portfolio.php">Portfolio</option>
 						<option value="service.php">Service</option>
 						<option value="team.php">Team</option>
 						<option value="about.php">About</option>
 						<option value="contact.php">Contact</option>
 					</select>
+				</div>
+				<div class="group">
+					<label for="mainDescription">Description</label><br>
+					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5"></textarea>
+				</div>
+				<div class="group">
+					<label for="uploadWedo">Select Image</label>
 					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>
+			</div>
+			<div class="group pad-left width-100">
 				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>

@@ -97,12 +97,14 @@
 				</div>
 				<div class="group">
 					<label for="firstTxtAbout">First Description</label><br>
-					<textarea name="firstTxtAbout" id="firstTxtAbout" cols="30" rows="10"></textarea>
+					<textarea name="firstTxtAbout" id="firstTxtAbout" cols="30" rows="5"></textarea>
 				</div>
 				<div class="group">
 					<label for="SecondTxtAbout">Second Description</label><br>
-					<textarea name="SecondTxtAbout" id="SecondTxtAbout" cols="30" rows="10"></textarea>
+					<textarea name="SecondTxtAbout" id="SecondTxtAbout" cols="30" rows="5"></textarea>
 				</div>
+			</div>
+			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>

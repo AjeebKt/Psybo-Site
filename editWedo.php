@@ -18,10 +18,6 @@
 					<input id="mainHead" type="text" name="homeWedo">
 				</div>
 				<div class="group">
-					<label for="mainDescription">Description</label><br>
-					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="10"></textarea>
-				</div>
-				<div class="group">
 					<label for="wedoLink">Link</label><br>
 					<select class="selection" id="wedoLink" name="wedoLink">
 						<option value="portfolio.php">Portfolio</option>
@@ -30,9 +26,18 @@
 						<option value="about.php">About</option>
 						<option value="contact.php">Contact</option>
 					</select>
+				</div>
+				<div class="group">
+					<label for="mainDescription">Description</label><br>
+					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5"></textarea>
+				</div>
+				<div class="group">
+					<label for="uploadWedo">Select Image</label>
 					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>
-				<button id="btnUpdate" name="btnUpdate">Update</button>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
