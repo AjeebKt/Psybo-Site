@@ -33,7 +33,7 @@ if (isset($_POST['btnAdd']) )
 		}
 		if (!empty($description) and $error == 1) 
 		{
-			if (preg_match('/^[A-Za-z0-9., \'?()"_-]*$/',$description) )
+			if (preg_match('/^[A-Za-z0-9., ]*$/',$description) )
 			{
 				$error = 1;
 				array_push($valueSrv, $description);
@@ -41,6 +41,7 @@ if (isset($_POST['btnAdd']) )
 			}
 			else
 			{
+				$error =0 ;
 				$message ="<script type='text/javascript'>
 								alert(' please enter Correct Description!');
 							</script>";
@@ -48,41 +49,41 @@ if (isset($_POST['btnAdd']) )
 			if ($error == 1) 
 			{
 				$uploadok=1;
-            $check=getimagesize($_FILES["serviceImg"]["tmp_name"]);
-            if ($check !== FALSE) 
-            {
-            	 // echo "File is an image :" .$check["mime"].".";
-               $uploadok=1;
-            }
-            else
-            {
-               $message="<script type='text/javascript'>
-                           alert('Please select onother image!');  
-                        </script>"; 
-               $uploadok=0;
-            }
-            if ($_FILES["serviceImg"]["size"] > 10000000 and $uploadok == 1)
-            {
-               $message="<script type='text/javascript'>
-                           alert('Sorry file to be large .please select onether file!');
-                        </script>"; 
-               $uploadok=0;
-            }
-            if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg" and $uploadok == 1) 
-            {
-               $message= "<script type='text/javascript'>
+	            $check=getimagesize($_FILES["serviceImg"]["tmp_name"]);
+	            if ($check !== FALSE) 
+	            {
+	            	 // echo "File is an image :" .$check["mime"].".";
+	               $uploadok=1;
+	            }
+	            else
+	            {
+	               $message="<script type='text/javascript'>
+	                           alert('Please select onother image!');  
+	                        </script>"; 
+	               $uploadok=0;
+	            }
+	            if ($_FILES["serviceImg"]["size"] > 10000000 and $uploadok == 1)
+	            {
+	               $message="<script type='text/javascript'>
+	                           alert('Sorry file to be large .please select onether file!');
+	                        </script>"; 
+	               $uploadok=0;
+	            }
+	            if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg" and $uploadok == 1) 
+	            {
+	               $message= "<script type='text/javascript'>
                            alert('PLease select jpg or png or jpeg file!');
                         </script>";
-               $uploadok=0;
-            }
-            if ($uploadok == 0) 
-            {
-            	$message= "<script type='text/javascript'>
-						alert('Upload failed try again later!');
-					</script>";
-            }
-            else
-            {
+	                $uploadok=0;
+	            }
+	            if ($uploadok == 0) 
+	            {
+	            	$message= "<script type='text/javascript'>
+							alert('Upload failed try again later!');
+						</script>";
+	            }
+	            else
+	            {
 					$upload=move_uploaded_file($_FILES["serviceImg"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
 					if ($upload == TRUE) 
 					{
@@ -111,12 +112,12 @@ if (isset($_POST['btnAdd']) )
 					}
 				}
 			}
-			else
-			{
-				$message= "<script type='text/javascript'>
-						alert('Adding failed try again later!');
-					</script>";
-			}
+			// else
+			// {
+			// 	$message= "<script type='text/javascript'>
+			// 			alert('Adding failed try again later!');
+			// 		</script>";
+			// }
 		}
 	}
 }	

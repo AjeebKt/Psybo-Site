@@ -11,7 +11,7 @@
 		if(!empty($heading) and !empty($description) and !empty($secDescription) ) 
 		{
 			$values = array('about');
-			if (preg_match('/^[A-Za-z0-9.,;\' _-]*$/',$heading) )
+			if (preg_match('/^[A-Za-z0-9.,;\' ?_-]*$/',$heading) )
 			{
 				$error = 1;
 				array_push($values, $heading); 
@@ -25,7 +25,7 @@
 			}
 			if (!empty($description) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9., _-]*$/', $description) )
+				if (preg_match('/^[A-Za-z0-9., \'()"_-?]*$/', $description) )
 				{
 					$error =1;
 					array_push($values, $_POST['firstTxtAbout']);
@@ -34,16 +34,16 @@
 				{
 					$error = 0;
 					$message = "<script type='text/javascript'>
-								alert('Please re-enter!');
+								alert('Please re-enter first description!');
 							</script>";
 				}
 			}
 			if (!empty($secDescription) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9., _-]*$/', $secDescription) )
+				if (preg_match('/^[A-Za-z0-9., \'?()"_-]*$/', $secDescription) )
 				{
 					$error =1;
-					array_push($values, $_POST['SecondTxtAbout']);
+					array_push($values, $secDescription);
 				}
 				else
 				{

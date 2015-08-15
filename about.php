@@ -1,3 +1,10 @@
+<?php 
+error_reporting(1);
+include_once 'Database.php';
+$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+$resulthead = $objdb->select('headings', array(), array('name', 'about'));
+$resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,11 +34,22 @@
 	</header>
 	<section>
 		<div class="container">
-			<h1>About Us</h1>
+			<h1>
+				<?php foreach ($resulthead[0] as $key => $value) {
+				if ($key == 'title' and is_string($key)) {
+					echo $value;
+				}
+			} ?>
+			</h1>
 			<div class="about-us">
 				<div class="left">
 					<p class="p-bold">
-						Psybo technologies is a technology wise creative company doing extensive projects in the field of Website Designing, Website Development and Software Development.
+						<!-- Psybo technologies is a technology wise creative company doing extensive projects in the field of Website Designing, Website Development and Software Development. -->
+						<?php foreach ($resulthead[0] as $key => $value) {
+							if (is_string($key) and $key == 'description') {
+								echo $value;
+							}
+						} ?>
 					</p>
 				</div>
 				<div class="right">
