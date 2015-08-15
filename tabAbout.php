@@ -34,7 +34,6 @@ if (isset($_GET['subHeadDeleteid']))
 					$file_name = $val;
 				}
 			}
-			var_dump($file_name);
 			$objdb->delete('subHeadings', array('id',$serviceId));
 			$objdb->delete('files', array('id', $value));
 			unlink($actdir.$file_name);
@@ -123,6 +122,7 @@ if (isset($_GET['subHeadDeleteid']))
 							</th>
 						</tr>
 						<?php foreach ($resultHead as $key => $value) {
+							// var_dump($resultHead);
 					 ?>
 						<tr>
 							<td><?php  foreach ($value as $key	 => $val) {

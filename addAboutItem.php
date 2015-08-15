@@ -9,9 +9,10 @@ if (isset($_POST['btnAdd']))
 
 	$fieldAbout = array('name');
 	$valueAbout = array('about');
-	if (!empty($headding) and !empty($description)) 
+	if (!empty($headding) and !empty($description) ) 
+	
 	{
-		if (preg_match('/^[A-Za-z0-9., _-]*$/',$heading) )
+		if (preg_match('/^[A-Za-z0-9., \'()-_?]*$/',$headding) )
 		{
 			$error = 1;
 			array_push($fieldAbout, 'title');
@@ -21,10 +22,10 @@ if (isset($_POST['btnAdd']))
 		{
 			$error = 0;
 			$message ="<script type='text/javascript'>
-							alert(' please enter Correct Heading!');
+							alert(' please re-enter Heading!');
 						</script>";
 		}
-		if (preg_match('/^[A-Za-z0-9., _-]*$/',$description) )
+		if (preg_match('/^ [A-Za-z0-9.:,\'()-_?]+[\n]*$/',$description) and $error == 1)
 		{
 			$error = 1;
 			array_push($fieldAbout, 'description');
@@ -34,7 +35,7 @@ if (isset($_POST['btnAdd']))
 		{
 			$error = 0;
 			$message ="<script type='text/javascript'>
-							alert(' please enter Correct Heading!');
+							alert(' please re-enter description!');
 						</script>";
 		}
 		if ($error == 1) 
@@ -51,6 +52,10 @@ if (isset($_POST['btnAdd']))
 			}
 		}	
 	}
+	else
+		$message = "<script type='text/javascript'>
+								alert('Please Complete !');
+							</script>";
 }
 
 ?>

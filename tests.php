@@ -425,32 +425,18 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 
 
 			
-	$result = $objdb->select('subHeadings', array('title', 'description'), array('name', 'service'));
 	// var_dump($result);
+ // $description = "Lorem Ipsum is simply<script>alert('uh')</script> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";
+ $description='gfvhhjbghj<';
+		// if (preg_match('/^[A-Za-z0-9., _-]*$/',$description) )
+		if (preg_match('/^[A-Za-z0-9]*$/',$description) )
+ 	 echo $description;
+
+
+$name = 'hgh>j';
+if (preg_match('/^[A-Za-z0-9., _-]*$/', $name))
+ 	echo $name;
 
 ?>
-<html>	
-<table border="1px">
-					<tr>
-						<td>Main Head</td>
-						<td>Description</td>
-						<td>Edit</td>
-						<td>Delete</td>
-
-					</tr>
-<?php foreach ($result as $key => $value) {
-	// var_dump($value);
-?>
-					<tr>
-						<td><?php foreach ($value as $key => $val) { if ($key == 'title' and is_string($key)) {echo $val;?></td>
-						<td></td>
-						<td></td>
-						<td></td>
-
-					</tr>
-					<?php }}} ?>
-					</table>
-
-
-</html> 
+ 
 

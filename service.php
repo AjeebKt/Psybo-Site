@@ -11,9 +11,8 @@
 		if (is_string($key) and $key =='files_id' ) 
 		{
 			$file_id = $value;
-			var_dump($file_id)
-;		}
-	} 
+		} 
+	}
  ?>
 
 
@@ -86,7 +85,7 @@
 					<!-- <img src="img/html-coding.png" alt=""> -->
 					<img <?php foreach ($resultimg[0] as $key => $image) {
 								if (is_string($key) and $key == 'file_name') {
-									echo "src=\"".$actdir.$image."\"";
+									echo "src=\"upload-image/".$image."\"";
 								}
 					} ?> alt="">
 					<!-- <h3>Software Development</h3> -->
