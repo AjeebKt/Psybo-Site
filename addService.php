@@ -18,7 +18,7 @@ if (isset($_POST['btnAdd']) )
 
 	if (!empty($heading) and !empty($description) and !empty($file_name) )
 	{
-		if (preg_match('/^[A-Za-z0-9., _-]*$/',$heading) )
+		if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$heading) )
 		{
 			$error = 1;
 			array_push($valueSrv, $heading);
@@ -33,7 +33,7 @@ if (isset($_POST['btnAdd']) )
 		}
 		if (!empty($description) and $error == 1) 
 		{
-			if (preg_match('/^[A-Za-z0-9., _-]*$/',$description) )
+			if (preg_match('/^[A-Za-z0-9., \'?()"_-]*$/',$description) )
 			{
 				$error = 1;
 				array_push($valueSrv, $description);

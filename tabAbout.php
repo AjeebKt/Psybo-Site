@@ -3,11 +3,11 @@ error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 $resultHead = $objdb->select('subHeadings', array('title', 'description','id'), array('name', 'about',));
-// $resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'about',));
-// var_dump($resultHead);
-if (isset($_GET['hdeleteid']) )
+$resultMainHead = $objdb->select('headings', array('title', 'description', 'secDescription', 'id'), array('name', 'about',));
+// var_dump($resultMainHead);
+if (isset($_GET['hDeleteid']) )
 {
-	$headId = $_GET['hdeleteid']; 
+	$headId = $_GET['hDeleteid']; 
 	$objdb->delete('headings', array('id', $headId));
 	if ($objdb == true) 
 	{
@@ -15,7 +15,38 @@ if (isset($_GET['hdeleteid']) )
 					window.location.replace('tabAbout.php');
 				</script>";
 	}
-}	
+}
+
+
+if (isset($_GET['subHeadDeleteid'])) 
+{
+	$serviceId=$_GET['subHeadDeleteid'];
+	$result = $objdb->select('subHeadings', array('files_id'), array('id', $serviceId));
+	foreach ($result[0] as $key => $value) 
+	{
+		if (is_string($key) and $key == 'files_id') 
+		{
+			$resultfile = $objdb->select('files',array('file_name'),array('id', $value));
+			foreach ($resultfile[0] as $key => $val) 
+			{
+				if (is_string($key) and $key == 'file_name') 
+				{
+					$file_name = $val;
+				}
+			}
+			var_dump($file_name);
+			$objdb->delete('subHeadings', array('id',$serviceId));
+			$objdb->delete('files', array('id', $value));
+			unlink($actdir.$file_name);
+			if ($objdb == true) 
+			{
+				$message = "<script type='text/javascript'>
+							window.location.replace('tabAbout.php');
+						</script>";
+			}
+		}
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,19 +77,39 @@ if (isset($_GET['hdeleteid']) )
 								<a href="addAboutHead.php" class="page-button">+ Add</a>
 							</th>
 						</tr>
+						<?php foreach ($resultMainHead as $key => $value) {
+					 ?>
 						<tr>
-							<td>Main ead</td>
-							<td>
-								<p>jaba jaba</p>
+							<td><?php  foreach ($value as $key	 => $val) {
+									if ($key == 'title' and is_string($key) ) {
+										echo $val;
+								} }?>
+							</td>
+								<td>
+									<p>
+									<?php  foreach ($value as $key	 => $val) {
+										if ($key == 'description' and is_string($key) ) {
+										echo $val;
+									} }?>
+								</p>
 							</td>
 							<td>
-								<p>jaba jaba</p>
+								<p><?php  foreach ($value as $key	 => $val) {
+									if ($key == 'title' and is_string($key) ) {
+									echo $val;
+									} }?>
+								</p>
 							</td>
 							<td>
 								<a href="" class="edit"></a>
-								<a href="" class="delete" onclick="DeleteCheck()"></a>
+							 	<a href=<?php foreach ($value as $key => $val) {
+							 		if ($key == 'id' and is_string($key)) {
+							 			echo "\"?hDeleteid=".$val."\"";
+							 		}
+							 } ?> class="delete" onclick="return DeleteCheck()"></a>
 							</td>
 						</tr>
+						<?php }	 ?>
 					</tbody>
 				</table>
 				<h3>About Us</h3>
@@ -88,7 +139,7 @@ if (isset($_GET['hdeleteid']) )
 								<a href="editaboutItem.php" class="edit"></a>
 								<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
-										echo "\"?hdeleteid=".$val."\"";
+										echo "\"?subHeadDeleteid=".$val."\"";
 									}
 							} ?> class="delete" onclick="return DeleteCheck()"></a>
 							</td>
