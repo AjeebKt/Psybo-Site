@@ -181,7 +181,7 @@
 					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" optional></textarea><br>
 				</div>
 				<div class="group">
-					<label>Portfolio Image</label><br>
+					<label>Select Portfolio Image</label><br>
 					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
 				</div>
 			</div>

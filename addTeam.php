@@ -330,11 +330,12 @@
                     <input id="txtGplus" name="txtGplus" type="text" optional><br>
                 </div>
                 <div class="group">
+                    <label for="uploadTeam">Select Image</label>
+                    <span>&nbsp;(Image Must be in W:200px X H:200px)</span>
                     <input id="uploadTeam" name="uploadTeam" type="file" ><br>
-                    <span>Image Must be in W:200px X H:200px</span>
                 </div>
             </form>
-            <div class="group pad-left">
+            <div class="group width-100">
                 <button id="btnAdd" name="btnAdd">Add</button>
                 <button id="btnCancel" name="btnCancel">Cancel</button>
             </div>

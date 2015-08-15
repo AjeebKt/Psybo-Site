@@ -79,6 +79,10 @@ section {
 .pad-left {
 	padding-left: 20px;
 }
+span {
+	margin-left: 5px;
+	float: left;
+}
 header
 {
 	width: 100%;
@@ -140,13 +144,13 @@ nav
 	-o-transition: background-color 0.2s ease;
 	transition: background-color 0.2s ease;
 }
-.side-links li:hover
+.side-links li:active
 {
 	background-color: #777;
 }
-.side-links li.active {
+/*.side-links li:focus {
 	background-color: #555;
-}
+}*/
 .side-links li a
 {
 	width: 150px;
@@ -282,6 +286,10 @@ nav
 	float: left;
 	background-color: #fff;
 	border-radius: 3px;
+	transition: border 0.4s ease ;
+}
+.group input:focus {
+	border: 1px solid #008a67;
 }
 .group textarea {
 	width: 330px;
@@ -291,6 +299,10 @@ nav
 	float: left;
 	background-color: #fff;
 	border-radius: 3px;
+	transition: border 0.4s ease ;
+}
+.group textarea:focus {
+	border: 1px solid #008a67;
 }
 input[type="file"] {
 	width: 100%;
@@ -299,13 +311,14 @@ input[type="file"] {
 	height: 35px;
 	padding: 10px 0 20px;
 }
+
 .add-service button {
 	width: 100px;
 	height: 35px;
 	padding: 5px;
 	color: #fff;
 	border: 0;
-	margin-right: 10px;
+	margin: 20px 10px 0 0;
 	background-color: #008a67;
 	border-radius: 3px;
 	-webkit-transition: background-color 0.3s ease;

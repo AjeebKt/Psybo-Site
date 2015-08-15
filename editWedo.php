@@ -32,7 +32,7 @@
 					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5"></textarea>
 				</div>
 				<div class="group">
-					<label for="uploadWedo">Select Image</label>
+					<label for="uploadWedo">Select Image</label><br>
 					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>
 			</div>
