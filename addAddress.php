@@ -14,7 +14,7 @@
 				<h3>Add Address</h3>
 				<div class="group">
 					<label for="footerAddress">Address</label><br>
-					<textarea type="text" id="footerAddress" cols="30" rows="10"></textarea>
+					<textarea type="text" id="footerAddress" cols="30" rows="5"></textarea>
 				</div>
 				<div class="group">
 					<label for="txtPhoneNo">Phone Number</label><br>
@@ -24,6 +24,8 @@
 					<label for="txtEmail">Email</label><br>
 					<input name="txtEmail" id="txtEmail">
 				</div>
+			</div>
+			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>

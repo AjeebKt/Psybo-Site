@@ -164,9 +164,9 @@
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
-		<div id="tabPortfolio" class="first-content">
-			<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
-			<h3>ADD PORTFLIOS</h3>
+		<form id="formPortfolio" name="formPortfolio" method="POST" action="" enctype="multipart/form-data">
+			<div id="tabPortfolio" class="first-content">
+				<h3>ADD PORTFLIOS</h3>
 				<div class="group">
 					<label>Title</label><br>
 					<input name="txtTitle" type="text" required>
@@ -177,16 +177,18 @@
 				</div>
 				<div class="group left">
 					<label>Description</label><br>
-					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="10" optional></textarea><br>
+					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" optional></textarea><br>
 				</div>
 				<div class="group">
 					<label>Portfolio Image</label><br>
 					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
 				</div>
-				<button class="submit" name="btnPortfolioSubmit">Add</button>
-				<button name="btnReset" class="reset">Cancel</button>
-			</form>
-		</div>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</div>
+		</form>
 	</section>
 	<?php echo $message; ?>
 </body>

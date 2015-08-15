@@ -18,13 +18,15 @@
 				</div>
 				<div class="group">
 					<label for="txtService">First Description</label><br>
-					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
+					<textarea name="txtService" id="txtService" cols="30" rows="5"></textarea>
 				</div>
 				<div class="group">
 					<label for="txtService">Second Description</label><br>
-					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
+					<textarea name="txtService" id="txtService" cols="30" rows="5"></textarea>
 				</div>
-				<button id="btnUpdate" name="btnUpdate">Update</button>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>

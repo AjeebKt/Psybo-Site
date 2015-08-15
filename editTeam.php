@@ -311,9 +311,9 @@
 <body>
 	<?php include 'dash.php';?>
  	<section class="add-service">
-		<div id="tabTeam" class="first-content">
-			<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
-			<h3>EDIT TEAM MEMBERS</h3>
+		<form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">	
+			<div id="tabTeam" class="first-content">
+				<h3>EDIT TEAM MEMBERS</h3>
 				<div class="group">
 					<label for="txtName">Name</label><br>
 					<input id="txtName" name="txtName" <?php foreach ($result_add[0] as $key => $value) {
@@ -329,7 +329,7 @@
 					} ?> ><br>
 				</div>
 				<div class="group">
-                    <label for="txtDesignation">Gender</label>
+                    <label for="txtDesignation">Gender</label><br>
                      <select class="selection">
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
@@ -363,14 +363,12 @@
 							echo "value=\"".$value."\"";
 					} ?>  ><br>
 				</div>
-				<div class="group">
-					<label for="uploadTeam">Employee Image</label><br>
-					<input id="uploadTeam" name="uploadTeam" type="file" ><br>
-				</div>
-				<button name="btnTeamSubmit" class="submit">Update</button>
-				<button name="btnReset" class="reset">Cancel</button>
-			</form>
-		</div>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</div>
+		</form>
 	</section>
 	<?php echo $message; ?>
 </body>

@@ -75,10 +75,12 @@ if (isset($_POST['btnCancel']))
 				</div>
 				<div class="group">
 					<label for="txtService">Description</label><br>
-					<textarea name="txtService" id="txtService" cols="30" rows="10"></textarea>
+					<textarea name="txtService" id="txtService" cols="30" rows="5"></textarea>
 				</div>
-				<button name="btnAdd">Add</button>
-				<button name="btnCancel">Cancel</button>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
 	</section>

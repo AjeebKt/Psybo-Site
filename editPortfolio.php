@@ -250,7 +250,7 @@
 				</div>
 				<div class="group">
 					<label for="portfolioDescription">Description</label><br>
-					<textarea name="portfolioDescription" optional id="portfolioDescription" cols="30" rows="10"><?php foreach ($result[0] as $key => $value) {
+					<textarea name="portfolioDescription" optional id="portfolioDescription" cols="30" rows="5"><?php foreach ($result[0] as $key => $value) {
 					if (is_string($key) and $key == 'about') {
 							echo $value;	
 						}	
@@ -260,8 +260,10 @@
 					<label for="uploadPortfolio">Portfolio Image</label><br>
 					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" ><br>
 				</div>
-				<button class="submit" name="btnPortfolioSubmit">Update</button>
-				<button name="btnReset" class="reset">Cancel</button>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
 	</section>

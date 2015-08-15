@@ -74,8 +74,10 @@ if (isset($_POST['btnAdd']))
 				</div>
 				<div class="group">
 					<label for="txtAbout">Description</label><br>
-					<textarea name="txtAbout" id="txtAbout" cols="30" rows="10"></textarea>
+					<textarea name="txtAbout" id="txtAbout" cols="30" rows="5"></textarea>
 				</div>
+			</div>
+			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>

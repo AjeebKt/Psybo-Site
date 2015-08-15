@@ -28,7 +28,9 @@
 					<label for="txtGp">Google Plus</label><br>
 					<input name="txtGp" id="txtGp">
 				</div>
-				<button id="btnAdd" name="btnAdd">Update</button>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>

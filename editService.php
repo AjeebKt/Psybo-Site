@@ -18,10 +18,15 @@
 				</div>
 				<div class="group">
 					<label for="serviceDescription">Description</label><br>
-					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="10"></textarea>
+					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="5"></textarea>
+				</div>
+				<div class="group">
+					<label for="serviceImg">Select Image</label>
 					<input type="file" id="serviceImg">
 				</div>
-				<button id="btnUpdate" name="btnUpdate">Update</button>
+			</div>
+			<div class="group pad-left">
+				<button id="btnAdd" name="btnAdd">Add</button>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>

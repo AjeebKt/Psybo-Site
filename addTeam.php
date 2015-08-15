@@ -307,7 +307,7 @@
                     <input id="txtDesignation" name="txtDesignation" type="text" required><br>
                 </div>
                 <div class="group">
-                    <label for="txtDesignation">Gender</label>
+                    <label for="txtDesignation">Gender</label><br>
                      <select class="selection">
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
@@ -333,9 +333,11 @@
                     <input id="uploadTeam" name="uploadTeam" type="file" ><br>
                     <span>Image Must be in W:200px X H:200px</span>
                 </div>
-                <button name="btnTeamSubmit" class="submit">Add</button>
-                <button name="btnCancel" class="reset">Cancel</button>
             </form>
+            <div class="group pad-left">
+                <button id="btnAdd" name="btnAdd">Add</button>
+                <button id="btnCancel" name="btnCancel">Cancel</button>
+            </div>
         </div>
     </section>
     <?php echo $message; ?>
