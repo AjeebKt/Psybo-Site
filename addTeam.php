@@ -6,7 +6,6 @@
     $num_ptf=$objdb->num_row_ptf();
     $count_ptf=count($num_ptf);
     $actdir="/upload-image/";
-    // error_reporting(0);
     function reduce_image_size($img , $source , $dest , $maxw , $maxh ,$file_type)
     {
         $jpg = $source.$img;
@@ -42,7 +41,8 @@
         imagedestroy($thumb);
         imagedestroy($source);
     }
-    if (isset($_POST['btnTeamSubmit'])) 
+
+    if (isset($_POST['btnAdd'])) 
     {   
         $name=$_POST['txtName'];
         // $name=filter_var($_POST['txtName'],FILTER_SANITIZE_ENCODED);
@@ -153,7 +153,7 @@
 
             if (!empty($_POST['txtTwitter']) and $error == 1) 
             {
-                $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+                $preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\@]*)?$/";
                 if (preg_match($preg, $_POST['txtTwitter']) != FALSE ) 
                 {
                     $valid_url=$_POST['txtTwitter'];
@@ -179,7 +179,7 @@
             }
             if (!empty($_POST['txtGplus']) and $error == 1) 
             {
-                $preg = "/^((http(s?):\/\/)|www\.\.?)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\+]*)?$/";
+                $preg = "/^((http(s?):\/\/)|www\.\.?)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\+]*)?$/";
                 if (preg_match($preg, $_POST['txtGplus']) != FALSE ) 
                 {
                     $valid_url=$_POST['txtGplus'];
@@ -281,7 +281,9 @@
                     alert('Please enter valid name and designation!');
                 </script>"; 
         }
-    }       
+    } 
+    if (isset($_POST['btnCancel'])) 
+        header('location:tabTeam.php');      
 ?> 
  <!DOCTYPE html>
  <html lang="en">
@@ -334,11 +336,13 @@
                     <span>&nbsp;(Image Must be in W:200px X H:200px)</span>
                     <input id="uploadTeam" name="uploadTeam" type="file" ><br>
                 </div>
-            </form>
             <div class="group width-100">
                 <button id="btnAdd" name="btnAdd">Add</button>
-                <button id="btnCancel" name="btnCancel">Cancel</button>
             </div>
+            </form>
+            <form action="tabTeam.php" method="post">
+                <button id="btnCancel" name="btnCancel" >Cancel</button>
+            </form>
         </div>
     </section>
     <?php echo $message; ?>

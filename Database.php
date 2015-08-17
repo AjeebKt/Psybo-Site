@@ -356,6 +356,17 @@ class Database
 		$this->insert("portfolio",$fields_ptf,$values_ptf);
 	}
 
+	public function insert_mul_cmpDtls($values_address,$fields_address,$values_cmp_details)
+	{	
+		$values_cmp_details = array();
+		$this->insert("address",$fields_address,$values_address);
+		$last_id_fl=mysqli_insert_id($this->condb);
+		array_push($values_cmp_details,$last_id_fl);
+		$fields_cmp_details = array();
+		array_push($fields_cmp_details, 'address_id');		
+		$this->insert("company_details",$fields_cmp_details,$values_cmp_details);
+	}
+
 	public function insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add) // 3 tables
 	{
 		
