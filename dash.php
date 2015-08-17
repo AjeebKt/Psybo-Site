@@ -17,6 +17,7 @@ error_reporting(0);
 </header>
 <nav>
 	<ul class="side-links">
+		<li><a href="dashboard.php">Dashboard</a></li>
 		<li><a href="tabHome.php">Home</a></li>
 		<li><a href="tabPortfolio.php">Portfolio</a></li>
 		<li><a href="tabService.php">Service</a></li>
