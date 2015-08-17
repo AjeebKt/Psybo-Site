@@ -8,14 +8,11 @@
 	<link rel="stylesheet" href="css/admin-style.css">
 </head>
 <body>
-	<header>
-
-	</header>
-	<aside>
-
-	</aside>
+	<?php include 'dash.php' ?>
 	<section>
-		
+		<div class="show-table">
+			<h2>Welcome to ooty nice to meet you</h2>
+		</div>		
 	</section>
 </body>
 </html>

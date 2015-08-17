@@ -55,16 +55,13 @@ if (isset($_POST['buttonmail']) )
 				center:new google.maps.LatLng(11.120228, 76.120368),
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
 				scrollwheel: false,
-				flat:true
+				flat:true,
 			};
 			
 			map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
-			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.120228, 76.120368)
+			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.120228, 76.120368),
 			});
-			marker.setIcon('./img/icon.png');
-			//google.maps.event.addListener(marker, "rightclick", function(){
-			//	marker.setIcon('http://psybotechnologies.com/img/logo.png');
-			//});
+			marker.setIcon('./img/123.png');
 		}
 			google.maps.event.addDomListener(window, 'load', init_map);
 	</script>

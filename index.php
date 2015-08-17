@@ -98,24 +98,6 @@
 				   	</div>
 	   			</li>
 	   			<?php } ?>
-	   			<!-- <li class="list-wedo">
-			   		<div class="grid">
-		   				<a href="about.php">
-		   					<img src="img/Conference-100.png" alt=""> 
-			   				<h3>What Make Us Different</h3>
-			   				<p>We are a close-knit team of experienced strategists, designers and builders with complementary, often overlapping skill sets.</p>
-		   				</a>
-				   	</div>
-	   			</li>
-	   			<li class="list-wedo">
-			   		<div class="grid">
-		   				<a href="contact.php">
-		   					<img src="img/Conference-100.png" alt="">
-			   				<h3>Get Connected</h3>
-			   				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
-		   				</a>
-				   	</div>
-	   			</li> -->
 	   		</ul>
 		</div>
 	</section>

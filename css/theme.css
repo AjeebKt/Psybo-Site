@@ -593,20 +593,24 @@ footer
 	word-spacing: 5px;
 }
 .our-vision {
-	width: 100%;
-	float: left;
+	width: 95%;
+	list-style: none;
 	box-sizing: border-box;
 	padding: 0 40px;
+	margin: 0 auto;
 }
-.our-vision h3 {
-	font-weight: bold;
+.our-vision li {
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+	padding: 20px;
 }
-.lr-padding {
+/*.lr-padding {
 	padding: 10px 100px 10px 80px;
 }
 .cut-l-pad {
 	padding-left: 40px;
-}
+}*/
 
 
 /*-- Contact --*/

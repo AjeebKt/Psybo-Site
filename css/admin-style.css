@@ -275,7 +275,7 @@ nav
 }
 .group input {
 	width: 330px;
-	height: 20px;
+	height: 25px;
 	padding: 5px;
 	border: 1px solid #333;
 	margin: 10px 0;
@@ -289,6 +289,7 @@ nav
 }
 .group textarea {
 	width: 330px;
+	/*height: 25px;*/
 	padding: 5px;
 	border: 1px solid #333;
 	margin: 10px 0;
@@ -313,6 +314,7 @@ input[type="file"] {
 	height: 35px;
 	padding: 5px;
 	color: #fff;
+	/*float: left;*/
 	border: 0;
 	margin: 20px 10px 0 0;
 	background-color: #008a67;
