@@ -363,6 +363,10 @@
 							echo "value=\"".$value."\"";
 					} ?>  ><br>
 				</div>
+				<div class="group">
+					<label for="uploadTeam">Select Image</label><br>
+					<input type="file" id="uploadTeam" name="uploadTeam">
+				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>

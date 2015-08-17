@@ -181,7 +181,7 @@
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5"></textarea>
 				</div>
-				<div class="group">
+				<div class="group bottom-0">
 					<label for="uploadWedo">Select Image</label>
 					<input type="file" id="uploadWedo" name="homeWedoImg">
 				</div>

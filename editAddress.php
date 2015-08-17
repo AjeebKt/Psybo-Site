@@ -13,16 +13,32 @@
 			<div class="first-content">
 				<h3>Edit Address</h3>
 				<div class="group">
-					<label for="footerAddress">Address</label><br>
-					<textarea type="text" id="footerAddress" cols="30" rows="5"></textarea>
-				</div>
-				<div class="group">
 					<label for="txtPhoneNo">Phone Number</label><br>
 					<input name="txtPhoneNo" id="txtPhoneNo">
 				</div>
 				<div class="group">
 					<label for="txtEmail">Email</label><br>
 					<input name="txtEmail" id="txtEmail">
+				</div>
+				<div class="group">
+					<label for="fbLink">Facebook</label><br>
+					<input type="text" id="fbLink">
+				</div>
+				<div class="group">
+					<label for="txtTwitter">Twitter</label><br>
+					<input name="txtTwitter" id="txtTwitter">
+				</div>
+				<div class="group">
+					<label for="txtLn">Linked In</label><br>
+					<input name="txtLn" id="txtLn">
+				</div>
+				<div class="group">
+					<label for="txtGp">Google Plus</label><br>
+					<input name="txtGp" id="txtGp">
+				</div>
+				<div class="group">
+					<label for="footerAddress">Address</label><br>
+					<textarea type="text" id="footerAddress" cols="30" rows="5"></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">

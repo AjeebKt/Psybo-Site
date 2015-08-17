@@ -616,14 +616,10 @@ footer
 	height: 420px;
 	overflow: hidden;
 }
-.map-box {
-	overflow:hidden;
-	height:420px;
-	width:1550px;
-}
 .map-canvas {
 	height:420px;
-	width:1550px;
+	width:100%;
+	overflow:hidden;
 }
 #gmap-canvas img {
 	max-width:none!important;
