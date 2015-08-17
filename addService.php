@@ -151,12 +151,12 @@ if (isset($_POST['btnCancel']))
 				</div>
 				<div class="group">
 					<label for="serviceImg">Select Image</label><br>
+					<span>(Image Must be in W:72px X H:72px)</span>
 					<input type="file" id="serviceImg" name="serviceImg">
 				</div>
 			</div>
-			<div class="group pad-left">
+			<div class="group width-100 pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<span>(Image Must be in W:72px X H:72px)</span>
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
