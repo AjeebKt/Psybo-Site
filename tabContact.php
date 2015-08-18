@@ -23,6 +23,27 @@
 					</script>";
 		}
 	}	
+	if (isset($_GET['deleteid'])) 
+	{
+		$cmp_id = $_GET['deleteid'];
+		$resultDel = $objdb->select('company_details', array(), array('id',$cmp_id));
+		var_dump($resultDel);
+		foreach ($resultDel as $key => $value) 
+		{
+			if ($key == 'address_id' and is_string($key)) 
+			{
+				$dele_address_id = $value;
+			}
+		}
+		$objdb->delete('company_details', array('id', $cmp_id));
+		$objdb->delete('address', array('id', $dele_address_id));
+		if ($objdb == true) 
+		{
+			$message = "<script type='text/javascript'>
+						window.location.replace('tabAbout.php');
+					</script>";
+		}
+	}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -187,8 +208,16 @@
 								</p>
 							</td>
 							<td>
-								<a href="editAddress.php" class="edit"></a>
-								<a href="" class="delete" onclick="DeleteCheck()"></a>
+								<!-- <a href="editAddress.php" class="edit"></a> -->
+								<a href=<?php  
+											foreach ($resulcmp[0] as $key => $value) 
+											{
+												if ($key == 'id' and is_string($key)) 
+												{
+													echo "\"?deleteid=".$value."\"";
+												}
+											}
+								?> class="delete" onclick="DeleteCheck()"></a>
 							</td>
 						</tr>
 					</tbody>

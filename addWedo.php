@@ -17,7 +17,7 @@
 		$valueSrv = array('wedo');
 		$fieldFiles = array($file_name, $file_type);
 
-		if (!empty($heading) and !empty($description) and !empty($file_name) )
+		if (!empty($heading) and !empty($description) )#and !empty($file_name) )
 		{
 			if (preg_match('/^[A-Za-z0-9., _\'-]*$/',$heading) )
 			{
