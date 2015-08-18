@@ -173,8 +173,8 @@
 	    {
             if (preg_match('/^[A-Za-z0-9.$, ()_-]*$/', $Address) )
             {
-                $values_address=array($address);
-                $fields_address=array('address');
+                array_push($values_address, $address );
+	            array_push($fields_address, "address");
             }	
             else
             {
@@ -184,7 +184,16 @@
                     </script>";
             }
         }
+        // var_dump($values_address);
+        // var_dump($fields_address);
 	    $objdb-> insert_mul_cmpDtls($values_address,$fields_address);
+	    if ($objdb == true) 
+	    {
+	    	 $message= "<script type='text/javascript'>
+                                alert('Adding succesfull');
+                                window.location.replace('tabContact.php');
+                        </script>";
+	    }
   	}
 	if (isset($_POST['btnCancel'])) 
 		header('location:tabService.php');

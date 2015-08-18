@@ -20,9 +20,10 @@ if (isset($_POST['btnAdd']))
 					</script>";
 		if (!empty($description) and $error == 1) 
 		{
-			if (preg_match('/^[A-Za-z0-9., \'_-]*$/', $description) )
+			if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\r\n]*$/', $description) )
 			{
-				array_push($values, $_POST['txtService']);
+				$description = str_replace("\r\n", "<br />", $description);
+				array_push($values, $description);
 			}
 		}
 		else

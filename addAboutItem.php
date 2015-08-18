@@ -25,9 +25,10 @@ if (isset($_POST['btnAdd']))
 							alert(' please re-enter Heading!');
 						</script>";
 		}
-		if (preg_match_all('/^[A-Za-z0-9.:,\'()-_?\n]*$/',$description) and $error == 1)
+		if (preg_match_all('/^[A-Za-z0-9\.\:\,\'\(\)\-\_\?\r\n]*$/',$description) and $error == 1)
 		{
 			$error = 1;
+			$description = str_replace("\r\n", "<br />", $description);
 			array_push($fieldAbout, 'description');
 			array_push($valueAbout, $description);
 		}
