@@ -161,10 +161,10 @@ header
 	}
 .container
 {
-	width: 1280px;
+	position: relative;
+	/*width: 1280px;*/
+	max-width: 90%;
 	margin: 0 auto;
-	/*overflow: hidden;*/
-	/*position: relative;*/
 }
 .picture
 {
