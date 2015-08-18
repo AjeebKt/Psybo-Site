@@ -94,7 +94,7 @@ if (isset($_GET['subHeadDeleteid']))
 							</td>
 							<td>
 								<p><?php  foreach ($value as $key	 => $val) {
-									if ($key == 'title' and is_string($key) ) {
+									if ($key == 'secDescription' and is_string($key) ) {
 									echo $val;
 									} }?>
 								</p>

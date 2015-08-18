@@ -25,10 +25,11 @@
 			}
 			if (!empty($description) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9., \'()"_-?]*$/', $description) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \'\(\)\"\_\-\?\r\n]*$/', $description) )
 				{
 					$error =1;
-					array_push($values, $_POST['firstTxtAbout']);
+					$description = str_replace("\r\n", "<br />", $description);
+					array_push($values, $description);
 				}
 				else
 				{
@@ -40,9 +41,11 @@
 			}
 			if (!empty($secDescription) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9., \'?()"_-]*$/', $secDescription) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \'\?\(\)\"\_\-\r\n]*$/', $secDescription) )
 				{
 					$error =1;
+					$secDescription = str_replace("\r\n", "<br />", $secDescription);
+					echo $secDescription;
 					array_push($values, $secDescription);
 				}
 				else

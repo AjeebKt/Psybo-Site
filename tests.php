@@ -298,25 +298,7 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 
 // echo "</div>";
 
-/////////////////////////////////////////////////////////////////
-// https://plus.google.com/+AjeebKTajb/about
-// $preg2 = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
-// $preg1 = "/^(http(s?):\/\/(www.?))+[a-zA-Z0-9\.\-\_]+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\+\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=])+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
-// $preg = "/^((http(s?):\/\/)|www\.\.?)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/\+[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\+]*)?$/";
-// "         (((https?)\:\/\/?)|www\.)"
- // $preg = "/^(http(s?):\/\/)?(www\.)+([a-zA-Z0-9\.\-\_]*)?$/";
-// if(preg_match($preg, 'https://google.com/+AjeebKTajb/about') !=False )
-// if(preg_match($preg, 'www.ihbjhn.linkedin.com/in/noushid') !=False )
-// {
-// 	echo "match";
-// }
-// else
-// 	echo "canot match";
-	// print_r($matches);
 
-// var_dump(phpinfo());
-//////////////////////////////////////////////////////////////////////////////
-// echo 'hollow world<br>';
 
 // echo 'test';
 /////////////////////////////compress image///////////////////////////
@@ -379,42 +361,5 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // 	} 
 // } 
 
-//////////////////////////////////
-
-// $info = array('coffee',  'caffeine');
-
-// // Listing all the variables
-// list($drink, $color, $power) = $info;
-// echo "$drink is $color and $power makes it special.\n";
-// var_dump($info);
-// var_dump($power);
-// Listing some of them
-// list($drink, , $power) = $info;
-// echo "$drink has $power.\n";
-
-// // Or let's skip to only the third one
-// list( , , $power) = $info;
-// echo "I need $power!\n";
-
-// // list() doesn't work with strings
-// list($bar) = "abcde";
-// var_dump($bar); // is_null(var)
-
-
-///////////////////////////SELECT BY RANDOM/////////////////////
-
-$link = 'https://twitter.com/@psybotech';
- $preg = "/^(http(s?):\/\/)|(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=\@]*)?$/";
- if (preg_match($preg, $link) != False) {
- 	# code...
- 	echo "success";
- 	if (filter_var($link,FILTER_SANITIZE_URL)) 
- 	{
- 		echo $link;
- 	}
- }
-
-
 ?>
  
-

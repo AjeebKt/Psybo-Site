@@ -45,6 +45,7 @@
     if (isset($_POST['btnAdd'])) 
     {   
         $name=$_POST['txtName'];
+        $gender = $_POST['selection'];
         // $name=filter_var($_POST['txtName'],FILTER_SANITIZE_ENCODED);
         // $name=str_replace("%20", " ", $name);
         // $name=strip_tags($_POST['txtName']);
@@ -95,6 +96,12 @@
                             alert(' please enter Correct Designation!');
                         </script>";
                 }
+            }
+
+            if (!empty($gender)) 
+            {
+                array_push($values_emp_add, $gender );
+                array_push($fields_emp_add, "gender");
             }
 
             if (!empty($_POST['txtLinkedin']) and $error == 1) 
@@ -310,7 +317,7 @@
                 </div>
                 <div class="group">
                     <label for="txtDesignation">Gender</label><br>
-                     <select class="selection">
+                     <select class="selection" name="selection">
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                     </select> 

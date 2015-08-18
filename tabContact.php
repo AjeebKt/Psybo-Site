@@ -3,6 +3,15 @@
 	include_once 'Database.php';
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'contact',));
+	$resulcmp = $objdb->select('company_details', array(),array());
+	foreach ($resulcmp[0] as $key => $value) 
+	{
+		if ($key == 'address_id' and is_string($key)) 
+		{
+			$cmp_addr_id = $value;
+			$resultadd = $objdb->select('address', array(), array('id', $cmp_addr_id));
+		}
+	}
 	if (isset($_GET['hdeleteid']) )
 	{
 		$headId = $_GET['hdeleteid']; 
@@ -55,7 +64,7 @@
 							<td>
 								<p>
 									<?php  foreach ($value as $key	 => $val) {
-										if ($key == 'title' and is_string($key) ) {
+										if ($key == 'description' and is_string($key) ) {
 										echo $val;
 									} }?>
 								</p>
@@ -89,25 +98,93 @@
 						</tr>
 						<tr>
 							<td>
-								<p>Jaba jaba jaba</p>
+								<p>
+									<?php 
+										foreach ($resultadd[0] as $key => $value) 
+										{
+											if ($key == 'address' and is_string($key)) 
+											{
+												echo $value;
+											}
+										}
+									 ?>
+								</p>
 							</td>
 							<td>
-								<p>+919633909701</p>
+								<p>
+									<?php 
+										foreach ($resultadd[0] as $key => $value) 
+										{
+											if ($key == 'mobile' and is_string($key)) 
+											{
+												echo $value;
+											}
+										}
+									 ?>
+								</p>
 							</td>
 							<td>
-								<p>asd@asd.com</p>
+								<p>
+									<?php 
+										foreach ($resultadd[0] as $key => $value) 
+										{
+											if ($key == 'email' and is_string($key)) 
+											{
+												echo $value;
+											}
+										}
+									 ?>
+								</p>
 							</td>
 							<td>
-								<p>fb.me/ajeebkt</p>
+								<p><?php 
+										foreach ($resultadd[0] as $key => $value) 
+										{
+											if ($key == 'fb' and is_string($key)) 
+											{
+												echo $value;
+											}
+										}
+									 ?></p>
 							</td>
 							<td>
-								<p>twittwer.com/ajeebkt</p>
+								<p>
+									<?php 
+										foreach ($resultadd[0] as $key => $value) 
+										{
+											if ($key == 'fb' and is_string($key)) 
+											{
+												echo $value;
+											}
+										}
+									 ?>
+								</p>
 							</td>
 							<td>
-								<p>linkedin.com/ajeebkt</p>
+								<p>
+									<?php 
+										foreach ($resultadd[0] as $key => $value) 
+										{
+											if ($key == 'linkedin' and is_string($key)) 
+											{
+												echo $value;
+											}
+										}
+									 ?>
+								</p>
 							</td>
 							<td>
-								<p>plus.google.com/ajeebkt</p>
+								<p>
+									<?php 
+										foreach ($resultadd[0] as $key => $value) 
+										{
+											if ($key == 'google_plus' and is_string($key)) 
+											{
+												echo $value;
+											}
+										}
+									 ?>
+								</p>
 							</td>
 							<td>
 								<a href="editAddress.php" class="edit"></a>
