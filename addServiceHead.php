@@ -73,16 +73,20 @@ if (isset($_POST['btnCancel']))
 					<label for="serviceHeadding">Headding</label><br>
 					<input type="text" name="serviceHeadding" id="serviceHeadding">
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="txtService">Description</label><br>
 					<textarea name="txtService" id="txtService" cols="30" rows="5"></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">	
+			<form action="tabService.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 	<?php echo $message; ?>
 </body>

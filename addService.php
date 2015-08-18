@@ -139,27 +139,31 @@ if (isset($_POST['btnCancel']))
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="secondServiceForm" name="secondServiceForm" enctype="multipart/form-data">
-			<div class="service">
+			<div class="first-content">
 				<h3>Add Service</h3>
 				<div class="group">
 					<label for="serviceItem">Service</label><br>
-					<input id="serviceItem" name="serviceItem" type="text">
+					<input id="serviceItem" name="serviceItem" type="text" required>
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="serviceDescription">Description</label><br>
-					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="5"></textarea>
+					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="5" required></textarea>
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="serviceImg">Select Image</label><br>
 					<span>(Image Must be in W:72px X H:72px)</span>
 					<input type="file" id="serviceImg" name="serviceImg">
 				</div>
 			</div>
-			<div class="group width-100 pad-left">
+			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">
+			<form action="tabService.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 	<?php echo $message; ?>
 </body>

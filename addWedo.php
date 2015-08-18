@@ -160,11 +160,11 @@
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="secondServiceForm" enctype="multipart/form-data">
-			<div class="service">
+			<div class="first-content">
 				<h3>Add We do Item</h3>
 				<div class="group">
 					<label for="mainHead">Haedding</label><br>
-					<input id="mainHead" type="text" name="homeWedo">
+					<input id="mainHead" type="text" name="homeWedo" required>
 				</div>
 				<div class="group">
 					<label for="wedoLink">Link</label><br>
@@ -177,20 +177,24 @@
 						<option value="contact.php">Contact</option>
 					</select>
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
-					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5"></textarea>
+					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5" required></textarea>
 				</div>
-				<div class="group bottom-0">
+				<!-- <div class="group">
 					<label for="uploadWedo">Select Image</label>
 					<input type="file" id="uploadWedo" name="homeWedoImg">
-				</div>
+				</div> -->
 			</div>
-			<div class="group pad-left width-100">
+			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">
+			<form action="tabHome.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 	<?php echo $message; ?>
 </body>

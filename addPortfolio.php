@@ -174,22 +174,26 @@
 				</div>
 				<div class="group">
 					<label>Link</label><br>
-					<input name="txtLink" type="text" >
+					<input name="txtLink" type="text" required>
 				</div>
-				<div class="group left">
+				<div class="group width-80">
 					<label>Description</label><br>
 					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" optional></textarea><br>
 				</div>
 				<div class="group">
 					<label>Select Portfolio Image</label><br>
-					<input name="uploadPortfolio" type="file" class="up" required= "required"><br>
+					<input name="uploadPortfolio" type="file" class="up" required><br>
 				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">
+			<form action="tabPortfolio.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 	<?php echo $message; ?>
 </body>

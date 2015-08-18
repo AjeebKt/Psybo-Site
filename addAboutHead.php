@@ -93,22 +93,26 @@
 				<h3>Add Head</h3>
 				<div class="group">
 					<label for="aboutHeadding">Headding</label><br>
-					<input type="text" id="aboutHeadding" name="headAbout">
+					<input type="text" id="aboutHeadding" name="headAbout" required>
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="firstTxtAbout">First Description</label><br>
-					<textarea name="firstTxtAbout" id="firstTxtAbout" cols="30" rows="5"></textarea>
+					<textarea name="firstTxtAbout" id="firstTxtAbout" cols="30" rows="5" required></textarea>
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="SecondTxtAbout">Second Description</label><br>
-					<textarea name="SecondTxtAbout" id="SecondTxtAbout" cols="30" rows="5"></textarea>
+					<textarea name="SecondTxtAbout" id="SecondTxtAbout" cols="30" rows="5" required></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group width-80">
+			<form action="tabAbout.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 	<?php echo $message; ?>
 </body>

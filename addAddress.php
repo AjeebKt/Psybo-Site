@@ -205,11 +205,11 @@
 				<h3>Add Address</h3>
 				<div class="group">
 					<label for="txtPhoneNo">Phone Number</label><br>
-					<input name="txtPhoneNo" id="txtPhoneNo">
+					<input type="text" name="txtPhoneNo" id="txtPhoneNo" required>
 				</div>
 				<div class="group">
 					<label for="txtEmail">Email</label><br>
-					<input name="txtEmail" id="txtEmail">
+					<input type="text" name="txtEmail" id="txtEmail" required>
 				</div>
 				<div class="group">
 					<label for="fbLink">Facebook</label><br>
@@ -217,26 +217,30 @@
 				</div>
 				<div class="group">
 					<label for="txtTwitter">Twitter</label><br>
-					<input name="txtTwitter" id="txtTwitter">
+					<input type="text" name="txtTwitter" id="txtTwitter">
 				</div>
 				<div class="group">
 					<label for="txtLn">Linked In</label><br>
-					<input name="txtLn" id="txtLn">
+					<input type="text" name="txtLn" id="txtLn">
 				</div>
 				<div class="group">
 					<label for="txtGp">Google Plus</label><br>
-					<input name="txtGp" id="txtGp">
+					<input type="text" name="txtGp" id="txtGp">
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="footerAddress">Address</label><br>
-					<textarea type="text" id="footerAddress" name="footerAddress" cols="30" rows="5"></textarea>
+					<textarea type="text" id="footerAddress" name="footerAddress" cols="30" rows="5" required></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">
+			<form action="tabContact.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 		<?php echo $message; ?>
 	</section>
 </body>
