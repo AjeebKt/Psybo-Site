@@ -75,6 +75,7 @@
 						<tr>
 							<th>Name</th>
 							<th>Desigination</th>
+							<th>Gender</th>
 							<th>Facebook ID</th>
 							<th>Twitter ID</th>
 							<th>LinkedIn</th>
@@ -98,6 +99,7 @@
 									echo $value;
 								}
 							} ?></td>
+							<td>Male</td>
 							<td><?php foreach ($result as $key => $value) {
 								if (is_string($key) and $key=="fb") {
 									echo $value;
