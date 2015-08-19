@@ -14,12 +14,12 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 // var_dump($resultCmpAdd);
 ?>
 <footer>
-	<div class="container">
+	<div class="container overflow-hd">
 			<div class="company-adress">
 				<ul>
 					<li>
 						<!-- <p>V2 Tower, Opposit Old Bus Stand, Pandikkad Road, Manjeri</p> -->
-						<p>address :
+						<p>Address :
 							<?php foreach ($resultCmpAdd[0] as $key => $value) 
 								{
 									 if ($key == 'address' and is_string($key)) 
@@ -29,10 +29,11 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 								} 
 							?>
 						</p>
+						<p>Place : Manjeri</p>
 					</li>
 					<li>
 						<!-- <p>Phone: +04932-222222</p> -->
-						<p>mobile :
+						<p>Mobile :
 							<?php 
 								foreach ($resultCmpAdd[0] as $key => $value) 
 								{
