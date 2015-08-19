@@ -36,13 +36,17 @@
 					<label for="txtGp">Google Plus</label><br>
 					<input name="txtGp" id="txtGp" type="url">
 				</div>
+				<div class="group">
+					<label for="txtPlace">Place</label><br>
+					<input name="txtPlace" id="txtPlace" type="url">
+				</div>
 				<div class="group width-80">
 					<label for="footerAddress">Address</label><br>
 					<textarea type="text" id="footerAddress" cols="30" rows="5" required></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
-				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnAdd" name="btnAdd">Update</button>
 			</div>
 		</form>
 		<div class="group">

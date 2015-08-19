@@ -70,7 +70,7 @@
 						}
 					} ?> </h4>
 
-					<div class="center-ul">
+					<!-- <div class="center-ul">
 						<ul class="personal-links" >
 
 						<?php foreach ($result as $key => $value) {
@@ -113,7 +113,7 @@
 							</li>
 							<?php }}}  ?>		
 						</ul>
-					</div>
+					</div> -->
 				</li>
 				<?php } ?>
 			</ul>

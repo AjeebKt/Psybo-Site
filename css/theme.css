@@ -603,11 +603,11 @@ footer
 	word-spacing: 5px;
 }
 .our-vision {
-	width: 95%;
+	width: 100%;
 	list-style: none;
 	box-sizing: border-box;
 	padding: 0 40px;
-	margin: 0 auto;
+	overflow: hidden;
 }
 .our-vision li {
 	float: left;
@@ -615,13 +615,6 @@ footer
 	box-sizing: border-box;
 	padding: 20px;
 }
-/*.lr-padding {
-	padding: 10px 100px 10px 80px;
-}
-.cut-l-pad {
-	padding-left: 40px;
-}*/
-
 
 /*-- Contact --*/
 
