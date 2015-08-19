@@ -3,8 +3,9 @@ error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 $resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'service',));
-$resultService = $objdb->select('subHeadings', array('title', 'description', 'id'), array('name', 'service'));
-$actdir = getcwd().'/upload-image/';
+$resultService = $objdb->select('subHeadings', array(), array('name', 'service'));
+
+$actdir = '/upload-image/';
 if (isset($_GET['deleteid'])) 
 {
 	$serviceId=$_GET['deleteid'];
@@ -135,7 +136,20 @@ if (isset($_GET['hdeleteid']) )
 								} ?>
 							</td>
 							<td>
-								<img src="" alt="">
+								<img src= <?php
+										foreach ($value as $key	 => $val) {
+										if ($key == 'files_id' and is_string($key) ) {
+											$imag_id = $val;
+											} 
+										}
+										$resultImg = $objdb->select('files', array(), array('id', $imag_id));
+										foreach ($resultImg[0] as $key => $value1) {
+											if ($key == 'file_name' and is_string($key)) {
+												echo "\"".$actdir.$value1."\"";
+											}
+										}			
+									?>
+								alt="">
 							</td>
 							<td>
 								<a href=<?php foreach ($value as $key => $val) {

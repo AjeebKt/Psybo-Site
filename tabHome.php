@@ -2,9 +2,9 @@
 error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
-$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'home',));
-$resultWedo = $objdb->select('subHeadings', array('title', 'description', 'id', 'link'), array('name', 'wedo'));
-$actdir = getcwd().'/upload-image/';
+$resultHead = $objdb->select('headings', array(), array('name', 'home',));
+$resultWedo = $objdb->select('subHeadings', array(), array('name', 'wedo'));
+$actdir = '/upload-image/';
 
 
 if (isset($_GET['deleteid'])) 
@@ -130,7 +130,20 @@ if (isset($_GET['hdeleteid']) )
 							} }?></p>
 						</td>
 						<td>
-							<img src="" alt="">
+							<img src=<?php
+										foreach ($value as $key	 => $val) {
+										if ($key == 'files_id' and is_string($key) ) {
+											$imag_id = $val;
+											} 
+										}
+										$resultImg = $objdb->select('files', array(), array('id', $imag_id));
+										foreach ($resultImg[0] as $key => $value1) {
+											if ($key == 'file_name' and is_string($key)) {
+												echo "\"".$actdir.$value1."\"";
+											}
+										}			
+									?>
+										  alt="">
 						</td>
 						<td>
 							<a href="#">link</a>
@@ -140,7 +153,7 @@ if (isset($_GET['hdeleteid']) )
 							} }?></p>
 						</td>
 						<td>
-							<a href="editWedo.php" class="edit"></a>
+							<a href= class="edit"></a>
 							<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
 										echo "\"?deleteid=".$val."\"";
