@@ -76,24 +76,38 @@ if (isset($_POST['cancel']) )
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/admin-style.css">
 	<title>Change Password</title>
 </head>
 <body>
-	<div class="change-pwrd">
-		<h3>Change Password</h3>
-		<form action="" method="POST">
-			<label for="currentPwrd">Current Password</label>
-			<input id="currentPwrd" name="currentPwrd" type="password">
-			<label for="newPwrd">New Password</label>
-			<input id="newPwrd" name="newPwrd" type="password">
-			<label for="confirmPwrd">Confirm Password</label>
-			<input id="confirmPwrd" name="confirmPwrd" type="password">
-			<button name="changeSubmit">Update</button>
-			<button name="cancel">Cancel</button>
-
-		</form>
-	</div>
+	<?php include 'dash.php'; ?>
+	<section class="change-pwrd">
+		<div class="first-content">
+			<h3>Change Password</h3>
+			<form action="" method="POST">
+				<div class="group">
+					<label for="currentPwrd">Current Password</label>
+					<input id="currentPwrd" name="currentPwrd" type="password" required>
+				</div>
+				<div class="group">
+					<label for="newPwrd">New Password</label>
+					<input id="newPwrd" name="newPwrd" type="password" required>
+				</div>
+				<div class="group">
+					<label for="confirmPwrd">Confirm Password</label>
+					<input id="confirmPwrd" name="confirmPwrd" type="password" required>
+				</div>
+				<div class="group">
+					<button name="changeSubmit">Update</button>
+				</div>
+			</form>
+			<div class="group">
+				<form action="tabDashboard.php">
+					<button name="cancel">Cancel</button>
+				</form>
+			</div>
+		</div>
+	</section>
 	<?php echo $message; ?>
 </body>
 </html>

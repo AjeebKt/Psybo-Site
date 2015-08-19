@@ -340,16 +340,18 @@
                 </div>
                 <div class="group">
                     <label for="uploadTeam">Select Image</label>
-                    <span>&nbsp;(Image Must be in W:200px X H:200px)</span>
+                    <span>(Image Must be in W:200px X H:200px)</span>
                     <input id="uploadTeam" name="uploadTeam" type="file" ><br>
                 </div>
-            <div class="group width-100">
+            <div class="group">
                 <button id="btnAdd" name="btnAdd">Add</button>
             </div>
             </form>
-            <form action="tabTeam.php" method="post">
-                <button id="btnCancel" name="btnCancel" >Cancel</button>
-            </form>
+            <div class="group">
+                <form action="tabTeam.php" method="post">
+                    <button id="btnCancel" name="btnCancel" >Cancel</button>
+                </form>
+            </div>
         </div>
     </section>
     <?php echo $message; ?>

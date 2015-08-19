@@ -254,6 +254,7 @@ header
 	width: 90%;
 	border: 1px solid #ccc;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .grid h3 {
 	margin: 40px 0 0;

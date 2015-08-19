@@ -14,18 +14,22 @@
 				<h3>Edit Item</h3>
 				<div class="group">
 					<label for="aboutHeadding">Headding</label><br>
-					<input type="text" id="aboutHeadding">
+					<input type="text" id="aboutHeadding" required>
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="txtAbout">Description</label><br>
-					<textarea name="txtAbout" id="txtAbout" cols="30" rows="5"></textarea>
+					<textarea name="txtAbout" id="txtAbout" cols="30" rows="5" required></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">
+			<form action="tabAbout.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 </body>
 </html>

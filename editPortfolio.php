@@ -246,11 +246,11 @@
 					if (is_string($key) and $key == 'link') {
 							echo "value=\"".$value."\"";
 						}	
-					}?> >
+					}?> required>
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="portfolioDescription">Description</label><br>
-					<textarea name="portfolioDescription" optional id="portfolioDescription" cols="30" rows="5"><?php foreach ($result[0] as $key => $value) {
+					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" required><?php foreach ($result[0] as $key => $value) {
 					if (is_string($key) and $key == 'about') {
 							echo $value;	
 						}	
@@ -258,14 +258,18 @@
 				</div>
 				<div class="group">
 					<label for="uploadPortfolio">Portfolio Image</label><br>
-					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" ><br>
+					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" required><br>
 				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">
+			<form action="tabPortfolio.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 	<?php echo $errormsg; ?>
 </body>

@@ -14,38 +14,42 @@
 				<h3>Edit Address</h3>
 				<div class="group">
 					<label for="txtPhoneNo">Phone Number</label><br>
-					<input name="txtPhoneNo" id="txtPhoneNo">
+					<input name="txtPhoneNo" id="txtPhoneNo" type="tel" required>
 				</div>
 				<div class="group">
 					<label for="txtEmail">Email</label><br>
-					<input name="txtEmail" id="txtEmail">
+					<input name="txtEmail" id="txtEmail" type="email" required>
 				</div>
 				<div class="group">
 					<label for="fbLink">Facebook</label><br>
-					<input type="text" id="fbLink">
+					<input type="text" id="fbLink" type="url">
 				</div>
 				<div class="group">
 					<label for="txtTwitter">Twitter</label><br>
-					<input name="txtTwitter" id="txtTwitter">
+					<input name="txtTwitter" id="txtTwitter" type="url">
 				</div>
 				<div class="group">
 					<label for="txtLn">Linked In</label><br>
-					<input name="txtLn" id="txtLn">
+					<input name="txtLn" id="txtLn" type="url">
 				</div>
 				<div class="group">
 					<label for="txtGp">Google Plus</label><br>
-					<input name="txtGp" id="txtGp">
+					<input name="txtGp" id="txtGp" type="url">
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="footerAddress">Address</label><br>
-					<textarea type="text" id="footerAddress" cols="30" rows="5"></textarea>
+					<textarea type="text" id="footerAddress" cols="30" rows="5" required></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">
+			<form action="tabContact.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 </body>
 </html>
