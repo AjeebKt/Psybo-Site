@@ -244,6 +244,7 @@ nav
 }
 .show-item p {
 	margin: 5px 0;
+	word-break: break-all;
 }
 
 .add-service {
@@ -259,7 +260,7 @@ nav
 	width: 90%;
 	float: left;
 	padding-left: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 .group {
 	float: left;

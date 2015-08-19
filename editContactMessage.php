@@ -14,18 +14,22 @@
 				<h3>Edit in Message</h3>
 				<div class="group">
 					<label for="MsgContactHeadding">Headding</label><br>
-					<input type="text" id="MsgContactHeadding">
+					<input type="text" id="MsgContactHeadding" required>
 				</div>
-				<div class="group">
+				<div class="group width-80">
 					<label for="txtMsgContact">Description</label><br>
-					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="5"></textarea>
+					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="5" required></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</div>
 		</form>
+		<div class="group">
+			<form action="tabContact.php">
+				<button id="btnCancel" name="btnCancel">Cancel</button>
+			</form>
+		</div>
 	</section>
 </body>
 </html>
