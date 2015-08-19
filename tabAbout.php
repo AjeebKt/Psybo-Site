@@ -100,7 +100,7 @@ if (isset($_GET['subHeadDeleteid']))
 								</p>
 							</td>
 							<td>
-								<a href="" class="edit"></a>
+								<a href= class="edit"></a>
 							 	<a href=<?php foreach ($value as $key => $val) {
 							 		if ($key == 'id' and is_string($key)) {
 							 			echo "\"?hDeleteid=".$val."\"";
@@ -136,7 +136,7 @@ if (isset($_GET['subHeadDeleteid']))
 							} }?></p>
 							</td>
 							<td>
-								<a href="editaboutItem.php" class="edit"></a>
+								<a href= class="edit"></a>
 								<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
 										echo "\"?subHeadDeleteid=".$val."\"";

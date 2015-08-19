@@ -27,7 +27,6 @@
 	{
 		$cmp_id = $_GET['deleteid'];
 		$resultDel = $objdb->select('company_details', array(), array('id',$cmp_id));
-		var_dump($resultDel);
 		foreach ($resultDel as $key => $value) 
 		{
 			if ($key == 'address_id' and is_string($key)) 
@@ -91,7 +90,7 @@
 								</p>
 							</td>
 							<td>
-								<a href="editContactMessage.php" class="edit"></a>
+								<a href= class="edit"></a>
 								<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
 										echo "\"?hdeleteid=".$val."\"";
@@ -208,7 +207,15 @@
 								</p>
 							</td>
 							<td>
-								<!-- <a href="editAddress.php" class="edit"></a> -->
+								<a href=<?php  
+											foreach ($resulcmp[0] as $key => $value) 
+											{
+												if ($key == 'id' and is_string($key)) 
+												{
+													echo "\"editAddress.php?editId=".$value."\"";
+												}
+											}
+								?>  class="edit"></a>
 								<a href=<?php  
 											foreach ($resulcmp[0] as $key => $value) 
 											{
@@ -217,7 +224,7 @@
 													echo "\"?deleteid=".$value."\"";
 												}
 											}
-								?> class="delete" onclick="DeleteCheck()"></a>
+								?> class="delete" onclick="return DeleteCheck()"></a>
 							</td>
 						</tr>
 					</tbody>

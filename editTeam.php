@@ -338,16 +338,16 @@
 				<div class="group">
 					<label for="txtFacebook">Facebook</label><br>
 					<input id="txtFacebook" name="txtFacebook" <?php foreach ($result_add[0] as $key => $value) {
-						if (is_string($key) and $key == 'fb')
-							echo "value=\"".$value."\"";
-					} ?>><br>
+																	if (is_string($key) and $key == 'fb')
+																		echo "value=\"".$value."\"";
+																} ?> ><br>
 				</div>					
 				<div class="group">
 					<label for="txtTwitter">Twitter</label><br>
 					<input id="txtTwitter" name="txtTwitter" <?php foreach ($result_add[0] as $key => $value) {
-						if (is_string($key) and $key == 'twiter')
-							echo "value=\"".$value."\"";
-					} ?> ><br>
+																if (is_string($key) and $key == 'twiter')
+																	echo "value=\"".$value."\"";
+															} ?> ><br>
 				</div>
 				<div class="group">
 					<label for="txtLinkedin">LinkedIn</label><br>

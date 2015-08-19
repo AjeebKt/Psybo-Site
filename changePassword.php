@@ -1,22 +1,24 @@
 <?php 
 error_reporting(0);
 include 'Database.php';
-// $objdb=new Database("localhost","root","asd","psybo-db");
-$objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+$objdb=new Database("localhost","root","asd","psybo-db");
+// $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 $message="";
 session_start();
-session_destroy();
+// session_destroy();
 if (isset($_POST['changeSubmit']))
 {
 	if (!empty($_POST['newPwrd']) and !empty($_POST['confirmPwrd'])) 
 	{
-	
 		if( $_POST['newPwrd'] == $_POST['confirmPwrd'] ) 
 		{
+			echo "string";
 			$currentPwd=md5($_POST['currentPwrd']);
+			var_dump($currentPwd);
 			// $query="SELECT password FROM admin WHERE password = '".$currentPwd."'";
 			// $select=mysqli_query($condb,$query);
 			$result=$objdb->select("admin",array("password"),array("password",$currentPwd));
+			var_dump($result);
 			// if ($select == FALSE) 
 			// {
 			// 	"<script type='text/javascript'>
@@ -102,7 +104,7 @@ if (isset($_POST['cancel']) )
 				</div>
 			</form>
 			<div class="group">
-				<form action="tabDashboard.php">
+				<form action="tabDashboard.php" method="POST">
 					<button name="cancel">Cancel</button>
 				</form>
 			</div>

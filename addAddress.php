@@ -17,8 +17,7 @@
 		if ( !empty($phoneNo) )#and !empty($phoneNo) and !empty($email) and !empty($facebook) and !empty($twitter) and !empty($linkedin) and !empty($google_plus)) 
 		{
 
-			$error = 1;
-			if (preg_match('/^[A-Za-z0-9+]*$/',$phoneNo) )
+			if (preg_match('/^[A-Za-z0-9\+]*$/',$phoneNo) )
 			{
 				$error = 1;
 				array_push($fields_address, 'mobile');
@@ -33,10 +32,10 @@
 			}
 		}
 			
-		if (!empty($email)) 
+		if (!empty($email) and $error == 1) 
 		{
 		
-			if (filter_var($email ,FILTER_VALIDATE_EMAIL) and $error == 1) 
+			if (filter_var($email ,FILTER_VALIDATE_EMAIL) ) 
 			{
 				array_push($fields_address, 'email');
 				array_push($values_address, $email);
@@ -50,7 +49,7 @@
 			}
 		}	
 
-		if (!empty($facebook)) 
+		if (!empty($facebook) and $error ==1) 
 		{
 			$preg = "/^(http(s?):\/\/)?(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
      		if (preg_match($preg, $facebook) != FALSE  and $error == 1) 

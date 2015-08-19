@@ -93,7 +93,7 @@ if (isset($_GET['hdeleteid']) )
 							} }?></p>
 						</td>
 						<td>
-							<a href="" class="edit"></a>
+							<a href= class="edit"></a>
 							<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
 										echo "\"?hdeleteid=".$val."\"";
