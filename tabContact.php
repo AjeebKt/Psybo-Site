@@ -109,6 +109,7 @@
 							<th>Address</th>
 							<th>Phone</th>
 							<th>Email</th>
+							<th>Place</th>
 							<th>Facebook</th>
 							<th>Twitter</th>
 							<th>LinkedIn</th>
@@ -156,6 +157,9 @@
 										}
 									 ?>
 								</p>
+							</td>
+							<td>
+								<p>Manjeri</p>
 							</td>
 							<td>
 								<p><?php 

@@ -236,6 +236,10 @@
 					<label for="txtGp">Google Plus</label><br>
 					<input type="text" name="txtGp" id="txtGp">
 				</div>
+				<div class="group">
+					<label for="txtPlace">Place</label><br>
+					<input type="text" name="txtPlace" id="txtPlace" required>
+				</div>
 				<div class="group width-80">
 					<label for="footerAddress">Address</label><br>
 					<textarea type="text" id="footerAddress" name="footerAddress" cols="30" rows="5" required></textarea>
