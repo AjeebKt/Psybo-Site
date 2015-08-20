@@ -13,6 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<title>PSYBO Technologies</title>
 </head>
 <body>
@@ -40,10 +41,10 @@
 					<h2>We Will Either Find a Way or Make One</h2>
 					<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 				</div>
-			</div>
-			<div class="div-span">
 				<div class="node">
-					<img src="img/design.png" alt="">
+					<p>
+						<img src="img/design.png" alt="">
+					</p>
 				</div>
 			</div>
 			<div class="link-page">
