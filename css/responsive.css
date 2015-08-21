@@ -1,3 +1,67 @@
+
+@media screen and (max-width: 1140px) {
+	.node h2 {
+		font-size: 28pt;
+	}
+}
+@media screen and (max-width: 980px) {
+	.node h2 {
+		font-size: 22pt;
+	}
+	.node p {
+		font-size: 12pt;
+	}
+	.node {
+		padding: 30px;
+	}
+}
+@media (max-width: 991px){
+	.logo {
+		float: none;
+		margin: 10px auto 0;
+	}
+	.nav-menu {
+		float: none;
+		width: 371px;
+		margin: 0 auto;
+	}
+	.navigation-links {
+		margin: 0 auto;
+	}
+	.navigation-links li a {
+		height: 40px;
+		line-height: 40px;
+	}
+}
+@media (min-width: 480px) and (max-width: 767px){
+	.navigation-links li a {
+		height: 40px;
+		line-height: 40px;
+	}
+	.node {
+		padding: 10px;
+	}
+	.node h2 {
+		font-size: 14pt;
+	}
+	.node p {
+		font-size: 10pt;
+		line-height: 1.5;
+	}
+	.node img {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 360px){
+	.link-page {
+		width: 70px;
+	}
+	.link-button {
+		padding: 5px;
+		font-size: 6pt;
+	}
+}
 @media (min-width: 320px) and (max-width: 479px) {
 	.logo {
 		float: none;
@@ -20,7 +84,7 @@
 		font-size: 13px;
 	}
 	.node {
-		width: 90%;
+		width: 70%;
 		padding: 5px;
 		float: none;
 		margin: 0 auto;
@@ -36,108 +100,16 @@
 		max-width: 50%;
 	}
 }
-@media screen and (max-width: 1140px) {
-	.node h2 {
-		font-size: 28pt;
-	}
-}
-@media screen and (max-width: 980px) {
-	.node h2 {
-		font-size: 22pt;
-	}
-	.node p {
-		font-size: 12pt;
-	}
-	.node {
-		padding: 30px;
-	}
-}
-@media screen and (max-width: 800px) {
-	.node {
-		padding: 25px;
-	}
-	.link-page {
-		width: 115px;
-	}
-	.link-button {
-		padding: 8px;
-		font-size: 10pt;
-	}
-}
-@media screen and (max-width: 767px) {
-	.node {
-		padding: 20px 10px;
-	}
-	.node h2 {
-		font-size: 16pt;
-	}
-	.node p {
-		font-size: 8pt;
-	}
-	.node img {
-		max-width: 80%;
-	}
-	.link-page {
-		width: 80px;
-	}
-	.link-button {
-		padding: 5px;
-		font-size: 8pt;
-	}
-}
-@media (max-width: 480px){
-	.node {
-		padding: 10px;
-	}
-	.node h2 {
-		font-size: 10pt;
-	}
-	.node p {
-		font-size: 8pt;
-		line-height: 1.5;
-	}
-}
-@media (max-width: 360px){
-	.logo {
-		float: none;
-		margin: 0 auto;
-	}
+@media (max-width: 319px) {
 	.nav-menu {
 		float: none;
-		width: 100%;
-	}
-	.navigation-links {
-		margin: 0;
-	}
-	.navigation-links li {
-		padding: 0 5px;
-	}
-	.navigation-links li a {
-		height: 40px;
-		line-height: 40px;
-		font-size: 15px;
-	}
-	.node {
-		width: 90%;
-		padding: 10px;
-		float: none;
+		width: 371px;
 		margin: 0 auto;
 	}
-	.node h2 {
-		font-size: 14pt;
+	.navigation-links {
+		margin: 0 auto;
 	}
-	.node p {
-		font-size: 8pt;
-		line-height: 1.5;
-	}
-	.node img {
-		max-width: 65%;
-	}
-	.link-page {
-		width: 70px;
-	}
-	.link-button {
-		padding: 5px;
-		font-size: 6pt;
+	.navigation-links li a {
+		font-size: 70%;
 	}
 }
