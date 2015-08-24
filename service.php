@@ -15,13 +15,13 @@
 	}
  ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<title>Our Service</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
 	</header>
 	<section class="we-do">
 		<div class="container">
-			<!-- <div class="service-title"> -->
+			<div class="service-title">
 				<!-- <h2>Our Services</h2> -->
 				<h2>
 					<?php foreach ($resulthead[0] as $key => $value) 
@@ -110,7 +110,7 @@
 					</p>
 				</li>
 				<?php } ?>
-				<!-- <li class="features move-up">
+				<li class="features move-up">
 					<img src="img/html-coding.png" alt="">
 					<h3>Web Development</h3>
 					<p>We make your web vision a reality. we create traditional, ecommerce, static , dynamic ,responsive web site.</p>
@@ -134,7 +134,7 @@
 					<img src="img/academic-project.png" alt="">
 					<h3>Live Academic Project Training</h3>
 					<p>We provide assistance and guidance to students in doing their academic projects. Training division also renders the service of campus training where our technology experts handle training sessions for students inside our company.</p>
-				</li> -->
+				</li>
 			</ul>
 		</div>
 	</section>

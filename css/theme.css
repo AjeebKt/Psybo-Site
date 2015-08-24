@@ -78,7 +78,7 @@ p
 {
 	font-family: Lato-light;
 	font-size: 14pt;
-	line-height: 18pt;
+	line-height: 1.5;
 	font-weight: 300;
 	color: #333;
 }
@@ -149,7 +149,7 @@ header
 		font-family: Lato;
 		padding-top: 0 10px;
 		padding-bottom: 5px;
-		font-size: 15px;
+		font-size: 18px;
 		text-decoration: none;
 		color: #008a67;
 		height: 80px;
@@ -288,19 +288,38 @@ footer
 	background-color: #333;
 	margin-top: 50px;
 }
-.footer-details
-{
-	float: left;
-	width: 100%;
-	margin: 0;
+.company-adress {
+	float: right;
+	width: 250px;
+	padding: 0;
 	margin-bottom: 20px;
+	list-style: none;
+	text-align: right;
+}
+.company-adress ul {
+	width: 100%;
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.company-adress ul li {
+	/*float: left;*/
+	margin-top: 10px;
+	display: inline-block;
+}
+.company-adress p{
+	/*float: right;*/
+	font-size: 14px;
+	margin: 0;
+	color: #fff;
+}
+.social-box {
+	float: right;
 }
 .social-links
 {
-	/*float: left;*/
-	position: absolute;
-	bottom: 20px;
-	right: 0;
+	float: left;
 	display: inline-block;
 	list-style: none;
 	margin: 0;
@@ -345,14 +364,13 @@ footer
 			.social-links li a:hover {
 				background-color: #008a67;
 			}
-/*		@media screen and (max-width: 500px) {
-			.social-links li a {
-				width:20px;
-				height: 20px;
-				transition: all 0.5s ease;
-			}
-			
-		}*/
+.footer-details
+{
+	float: left;
+	width: 50%;
+	margin-top: 85px;
+}
+
 .site-details
 {
 	float: left;
@@ -523,7 +541,7 @@ footer
 	padding-top: 5%;
 	text-align: center;
 	box-sizing: border-box;
-	padding: 40px 40px 0;
+	padding: 25px 25px 0;
 }
 .move-up
 {
@@ -737,29 +755,7 @@ footer
 	float: left;
 	/*margin: 0 auto;*/
 }
-.company-adress {
-	float: right;
-	width: 250px;
-	padding: 0;
-	list-style: none;
-	text-align: right;
-}
-.company-adress ul {
-	width: 100%;
-	list-style: none;
-	float: left;
-	margin: 0;
-	padding: 0;
-}
-.company-adress ul li {
-	float: right;
-	margin: 10px 0;
-}
-.company-adress p{
-	font-size: 14px;
-	margin: 0;
-	color: #fff;
-}
+
 .change-pwrd{
 	width: 400px;
 	height: 400px;
