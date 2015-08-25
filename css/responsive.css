@@ -83,6 +83,37 @@
 	.team-member li {
 		width: 33.33%;
 	}
+	.about-us	{
+		padding: 10px;
+	}
+	.about-us	h1{
+		margin: 20px 0;
+		font-size: 26pt;
+		padding: 0;
+	}
+	.title-box {
+		width: 50%;
+		padding: 10px;
+		text-align: center;
+	}
+	.title-box p{
+		font-size: 12pt;
+	}
+	.our-vision {
+		margin-top: 30px;
+		padding: 10px;
+		text-align: center;
+	}
+	.our-vision li{
+		width: 50%;
+		padding: 10px;
+	}
+	.our-vision li h3{
+		font-size: 16pt;
+	}
+	.our-vision li p{
+		font-size: 12pt;
+	}
 }
 @media (min-width: 480px) and (max-width: 767px){
 	.navigation-links li a {
@@ -149,6 +180,37 @@
 	}
 	.team-member li {
 		width: 50%;
+	}
+	.about-us	{
+		padding: 0;
+	}
+	.about-us	h1{
+		margin: 20px 0;
+		font-size: 26pt;
+		padding: 10px;
+	}
+	.title-box {
+		width: 50%;
+		padding: 0px;
+		text-align: center;
+	}
+	.title-box p{
+		font-size: 12pt;
+	}
+	.our-vision {
+		margin-top: 30px;
+		padding: 0;
+		text-align: center;
+	}
+	.our-vision li{
+		width: 100%;
+		padding: 0;
+	}
+	.our-vision li h3{
+		font-size: 16pt;
+	}
+	.our-vision li p{
+		font-size: 12pt;
 	}
 }
 
@@ -244,6 +306,37 @@
 	}
 	.team-member li {
 		width: 90%;
+	}
+	.about-us	{
+		padding: 0;
+	}
+	.about-us	h1{
+		margin: 20px 0;
+		font-size: 20pt;
+		padding: 0;
+	}
+	.title-box {
+		width: 100%;
+		padding: 0px;
+		text-align: center;
+	}
+	.title-box p{
+		font-size: 11pt;
+	}
+	.our-vision {
+		margin-top: 30px;
+		padding: 0;
+		text-align: center;
+	}
+	.our-vision li{
+		width: 100%;
+		padding: 0;
+	}
+	.our-vision li h3{
+		font-size: 14pt;
+	}
+	.our-vision li p{
+		font-size: 10pt;
 	}
 }
 @media (max-width: 319px) {
@@ -352,5 +445,36 @@
 	}
 	.team-member li img {
 		max-width: 150px;
+	}
+	.about-us	{
+		padding: 0;
+	}
+	.about-us	h1{
+		margin: 20px 0;
+		font-size: 18pt;
+		padding: 0;
+	}
+	.title-box {
+		width: 100%;
+		padding: 0px;
+		text-align: center;
+	}
+	.title-box p{
+		font-size: 10pt;
+	}
+	.our-vision {
+		margin-top: 30px;
+		padding: 0;
+		text-align: center;
+	}
+	.our-vision li{
+		width: 100%;
+		padding: 0;
+	}
+	.our-vision li h3{
+		font-size: 14pt;
+	}
+	.our-vision li p{
+		font-size: 9pt;
 	}
 }

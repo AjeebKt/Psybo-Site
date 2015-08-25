@@ -11,6 +11,7 @@ $resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<title>About PSYBO Technologies</title>
 </head>
 <body>
@@ -34,25 +35,26 @@ $resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
 	</header>
 	<section>
 		<div class="container">
-			<h1>
-				<?php foreach ($resulthead[0] as $key => $value) {
-				if ($key == 'title' and is_string($key)) {
-					echo $value;
-				}
-			} ?>
-			</h1>
 			<div class="about-us">
-				<div class="left">
+				<h1>About Us</h1>
+				<!-- <h1>
+					<?php foreach ($resulthead[0] as $key => $value) {
+					if ($key == 'title' and is_string($key)) {
+						echo $value;
+					}
+				} ?>
+				</h1> -->
+				<div class="title-box">
 					<p class="p-bold">
-						<!-- Psybo technologies is a technology wise creative company doing extensive projects in the field of Website Designing, Website Development and Software Development. -->
-						<?php foreach ($resulthead[0] as $key => $value) {
-							if (is_string($key) and $key == 'description') {
-								echo $value;
-							}
-						} ?>
+						Psybo technologies is a technology wise creative company doing extensive projects in the field of Website Designing, Website Development and Software Development.
+						<?php //foreach ($resulthead[0] as $key => $value) {
+							//if (is_string($key) and $key == 'description') {
+							//	echo $value;
+							//}
+					//	} ?>
 					</p>
 				</div>
-				<div class="right">
+				<div class="title-box">
 					<p>
 						Our goal is simple, to create excellent websites that make your business shine. Our team has been delivering innovative, cost effective and timely solutions that drive the growth of small and medium-sized businesses worldwide.
 					</p>

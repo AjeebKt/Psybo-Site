@@ -619,13 +619,13 @@ footer
 	float: left;
 	width: 100%;	
 	box-sizing: border-box;
-	padding: 0 40px 0px;
+	padding: 0 20px;
 }
-.left, .right {
+.title-box {
 	width: 50%;
 	float: left;
 	box-sizing: border-box;
-	padding: 40px;
+	padding: 20px;
 }
 .p-bold {
 	font-family: Lato;
@@ -634,14 +634,16 @@ footer
 }
 .our-vision {
 	width: 100%;
+	float: left;
 	list-style: none;
 	box-sizing: border-box;
-	padding: 0 40px;
+	padding: 0 20px;
 	overflow: hidden;
 }
 .our-vision li {
-	float: left;
 	width: 50%;
+	display: block;
+	float: left;
 	box-sizing: border-box;
 	padding: 20px;
 }

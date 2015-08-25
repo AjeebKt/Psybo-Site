@@ -110,7 +110,7 @@
 					</p>
 				</li>
 				<?php } ?>
-				<li class="features move-up">
+				<!-- <li class="features move-up">
 					<img src="img/html-coding.png" alt="">
 					<h3>Web Development</h3>
 					<p>We make your web vision a reality. we create traditional, ecommerce, static , dynamic ,responsive web site.</p>
@@ -134,7 +134,7 @@
 					<img src="img/academic-project.png" alt="">
 					<h3>Live Academic Project Training</h3>
 					<p>We provide assistance and guidance to students in doing their academic projects. Training division also renders the service of campus training where our technology experts handle training sessions for students inside our company.</p>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</section>
