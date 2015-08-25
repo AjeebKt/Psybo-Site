@@ -41,11 +41,10 @@
 			}
 			if (!empty($secDescription) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\,\ \'\?\(\)\"\_\-\r\n]*$/', $secDescription) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \'\?\(\)\"\_\’\‘\’\-\r\n]*$/', $secDescription) )
 				{
 					$error =1;
 					$secDescription = str_replace("\r\n", "<br />", $secDescription);
-					echo $secDescription;
 					array_push($values, $secDescription);
 				}
 				else

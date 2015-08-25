@@ -98,7 +98,7 @@ if (isset($_GET['hdeleteid']) )
 							} ?> class="delete" onclick="return DeleteCheck()"></a>
 							<a href=<?php foreach ($value as $key => $val) {
 										if ($key == 'id' and is_string($key)) {
-											// echo "\"editServiceHead.php?id=".$val."\"";
+											echo "\"editServiceHead.php?id=".$val."\"";
 										}
 							} ?> class="edit"></a>
 						</td>
@@ -159,7 +159,7 @@ if (isset($_GET['hdeleteid']) )
 								} ?>  class="delete" onclick="return DeleteCheck()"></a>
 								<a href=<?php foreach ($value as $key => $val) {
 											if ($key == 'id' and is_string($key)) {
-												// echo "\"editServiceHead.php?id=".$val."\"";
+													echo "\"editService.php?id=".$val."\"";
 											}
 								} ?> class="edit"></a>
 							</td>

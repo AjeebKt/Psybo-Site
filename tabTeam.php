@@ -41,7 +41,7 @@
 		// header("location:tabTeam.php");
 		if ($objdb == true ) 
 		{
-			$message ="<script type='text/javascript'>alert('Deleted!');
+			$message ="<script type='text/javascript'>//alert('Deleted!');
 							window.location.replace('tabTeam.php');
 						</script>";	
 			$objdb->delete("address",array("id",$address_id));

@@ -15,14 +15,17 @@
 				array_push($values,$heading); 
 			}
 			else
+			{
+				$error = 0;
 				$message = "<script type='text/javascript'>
 							alert('Please enter correct Heading!!');
 						</script>";
+			}
 			if (!empty($description) and $error == 1) 
 			{
 				// $description = nl2br($description);
 				// var_dump($description);
-				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\r\n]*$/', $description) and $error ==1)	
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\’\r\n]*$/', $description) and $error ==1)	
 				{
 					$description = str_replace("\r\n", "<br />", $description);
 					array_push($values, $description);

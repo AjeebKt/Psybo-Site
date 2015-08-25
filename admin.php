@@ -35,7 +35,7 @@
 					$_SESSION['login']='YES';
 					$_SESSION['username']=$_POST['txtusername'];
 					$_SESSION['password']=md5($_POST['txtpassword']);
-					header("location:tabHome.php");
+					header("location:tabDashboard.php");
 				}
 				else
 				{

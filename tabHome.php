@@ -93,7 +93,11 @@ if (isset($_GET['hdeleteid']) )
 							} }?></p>
 						</td>
 						<td>
-							<a href= class="edit"></a>
+							<a href=<?php foreach ($value as $key => $val) {
+									if ($key == 'id' and is_string($key)) {
+										echo "\"editHome.php?editid=".$val."\"";
+									}
+							} ?> class="edit"></a>
 							<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
 										echo "\"?hdeleteid=".$val."\"";
@@ -146,19 +150,23 @@ if (isset($_GET['hdeleteid']) )
 										  alt="">
 						</td>
 						<td>
-							<a href="#">link</a>
 							<p><?php  foreach ($value as $key	 => $val) {
 							if ($key == 'link' and is_string($key) ) {
 								echo $val;
 							} }?></p>
 						</td>
 						<td>
-							<a href= class="edit"></a>
 							<a href=<?php foreach ($value as $key => $val) {
-									if ($key == 'id' and is_string($key)) {
-										echo "\"?deleteid=".$val."\"";
-									}
-							} ?> class="delete" onclick="return DeleteCheck()"></a>
+											if ($key == 'id' and is_string($key)) {
+												echo "\"editWedo.php?editid=".$val."\"";
+											}
+										} 
+									?> class="edit"></a>
+							<a href=<?php foreach ($value as $key => $val) {
+											if ($key == 'id' and is_string($key)) {
+												echo "\"?deleteid=".$val."\"";
+											}
+										} ?> class="delete" onclick="return DeleteCheck()"></a>
 						</td>
 					</tr>
 					<?php } ?>

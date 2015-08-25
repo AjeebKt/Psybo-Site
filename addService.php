@@ -11,10 +11,11 @@ if (isset($_POST['btnAdd']) )
 	$target_dir=getcwd()."/upload-image/";
 	$file_name=basename($_FILES["serviceImg"]["name"]);
 	$file_type=pathinfo(basename($_FILES["serviceImg"]["name"]),PATHINFO_EXTENSION);
+	// var_dump($file_type);
 
 	$fieldSrv = array('name');
 	$valueSrv = array('service');
-	$fieldFiles = array($file_name, $file_type);
+	// $fieldFiles = array($file_name, $file_type);
 
 	if (!empty($heading) and !empty($description) and !empty($file_name) )
 	{
@@ -33,7 +34,7 @@ if (isset($_POST['btnAdd']) )
 		}
 		if (!empty($description) and $error == 1) 
 		{
-			if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\r\n]*$/',$description) )
+			if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\/\’\‘\’\r\n]*$/',$description) )
 			{
 				$error = 1;
 				$description = str_replace("\r\n", "<br />", $description);
@@ -47,7 +48,8 @@ if (isset($_POST['btnAdd']) )
 								alert(' please enter Correct Description!');
 							</script>";
 			}
-			if ($error == 1) 
+		}	
+			if ($error == 1 and !empty($file_name) ) 
 			{
 				$uploadok=1;
 	            $check=getimagesize($_FILES["serviceImg"]["tmp_name"]);
@@ -70,7 +72,7 @@ if (isset($_POST['btnAdd']) )
 	                        </script>"; 
 	               $uploadok=0;
 	            }
-	            if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg" and $uploadok == 1) 
+	            if ($file_type != "jpg" and $file_type !="png" and $file_type != "jpeg" and $uploadok == 1) 
 	            {
 	               $message= "<script type='text/javascript'>
                            alert('PLease select jpg or png or jpeg file!');
@@ -89,6 +91,7 @@ if (isset($_POST['btnAdd']) )
 					if ($upload == TRUE) 
 					{
 						$valueFiles=array($rand.".".$file_type,$file_type);
+						var_dump($valueFiles);
 						$objdb->insert_mul_srvc($valueFiles,$fieldSrv,$valueSrv);
 						
 						if ($upload == TRUE and $objdb == TRUE) 
@@ -119,8 +122,26 @@ if (isset($_POST['btnAdd']) )
 			// 			alert('Adding failed try again later!');
 			// 		</script>";
 			// }
-		}
 	}
+	else if (empty($file_name)) 
+	{
+		$message = "<script type='text/javascript'>
+						alert('Please select image.');
+					</script>";
+	}
+	else if (empty($heading)) 
+	{
+		$message = "<script type='text/javascript'>
+						alert('Please enter title.');
+					</script>";
+	}
+	else if (empty($description)) 
+	{
+		$message = "<script type='text/javascript'>
+						alert('Please select image.');
+					</script>";
+	}
+
 }	
 if (isset($_POST['btnCancel'])) 
 {
@@ -166,6 +187,6 @@ if (isset($_POST['btnCancel']))
 			</form>
 		</div>
 	</section>
-	<?php echo $message; ?>
+	<?php echo $message;?>
 </body>
 </html>

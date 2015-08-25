@@ -27,7 +27,7 @@
 	{
 		$cmp_id = $_GET['deleteid'];
 		$resultDel = $objdb->select('company_details', array(), array('id',$cmp_id));
-		foreach ($resultDel as $key => $value) 
+		foreach ($resultDel[0] as $key => $value) 
 		{
 			if ($key == 'address_id' and is_string($key)) 
 			{
@@ -35,11 +35,12 @@
 			}
 		}
 		$objdb->delete('company_details', array('id', $cmp_id));
+		var_dump($dele_address_id);
 		$objdb->delete('address', array('id', $dele_address_id));
 		if ($objdb == true) 
 		{
 			$message = "<script type='text/javascript'>
-						window.location.replace('tabAbout.php');
+						window.location.replace('tabContact.php');
 					</script>";
 		}
 	}
@@ -158,7 +159,17 @@
 								</p>
 							</td>
 							<td>
-								<p>Manjeri</p>
+								<p>
+									<?php 
+										foreach ($resultadd[0] as $key => $value) 
+										{
+											if ($key == 'place' and is_string($key)) 
+											{
+												echo $value;
+											}
+										}
+									 ?>
+								</p>
 							</td>
 							<td>
 								<p><?php 
@@ -176,7 +187,7 @@
 									<?php 
 										foreach ($resultadd[0] as $key => $value) 
 										{
-											if ($key == 'fb' and is_string($key)) 
+											if ($key == 'twiter' and is_string($key)) 
 											{
 												echo $value;
 											}

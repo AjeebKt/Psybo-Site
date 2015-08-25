@@ -11,6 +11,7 @@
 		$linkedin = $_POST['txtLn'];
 		$google_plus = $_POST['txtGp'];
 		$address = $_POST['footerAddress'];
+		$place = $_POST['txtPlace'];
 		$error = 1;
 		$fields_address = array();
 		$values_address = array();
@@ -168,9 +169,24 @@
 	            }
 	        }
 	    }
+	    if (!empty($place)) 
+	    {
+	    	if (preg_match('/^[A-Za-z0-9.$, ()_-]*$/', $place) )
+            {
+                array_push($values_address, $place );
+	            array_push($fields_address, "place");
+            }	
+            else
+            {
+                $error=0;
+                $message= "<script type='text/javascript'>
+                        alert(' please enter Correct place!');
+                    </script>";
+            }
+	    }
 	    if (!empty($address) and $error ==1) 
 	    {
-            if (preg_match('/^[A-Za-z0-9.$, ()_-]*$/', $Address) )
+            if (preg_match('/^[A-Za-z0-9\.\&\,\ \(\)\_\-\:]*$/', $Address) )
             {
                 array_push($values_address, $address );
 	            array_push($fields_address, "address");
@@ -185,14 +201,17 @@
         }
         // var_dump($values_address);
         // var_dump($fields_address);
-	    $objdb-> insert_mul_cmpDtls($values_address,$fields_address);
-	    if ($objdb == true) 
-	    {
-	    	 $message= "<script type='text/javascript'>
-                                alert('Adding succesfull');
-                                window.location.replace('tabContact.php');
-                        </script>";
-	    }
+        if ($error == 1) 
+        {
+		    $objdb-> insert_mul_cmpDtls($values_address,$fields_address);
+		    if ($objdb == true) 
+		    {
+		    	 $message= "<script type='text/javascript'>
+	                                alert('Adding succesfull');
+	                                window.location.replace('tabContact.php');
+	                        </script>";
+		    }
+        }
   	}
 	if (isset($_POST['btnCancel'])) 
 		header('location:tabService.php');

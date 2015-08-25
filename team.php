@@ -51,10 +51,14 @@
 						<!-- <img src="upload-image/default-pic.png" alt=""> -->
 						<img <?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key == "file_name") {
-								if (!empty($value)) 
+								if (!empty($value) ) 
 									echo "src=\"".$actdir.$value."\"";
-								else
+								elseif ($result['gender'] == 'Male') {
 									echo "src=\"".$actdir."default-pic.png\"";
+								}
+								elseif ($result['gender'] == 'Female') {
+									echo "src=\"".$actdir."default-pic.png\"";
+								}
 							}
 						} ?> alt="">
 					</a>
