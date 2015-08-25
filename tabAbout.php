@@ -2,8 +2,8 @@
 error_reporting(1);
 include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
-$resultHead = $objdb->select('subHeadings', array('title', 'description','id'), array('name', 'about',));
-$resultMainHead = $objdb->select('headings', array('title', 'description', 'secDescription', 'id'), array('name', 'about',));
+$resultHead = $objdb->select('subHeadings', array(), array('name', 'about'));
+$resultMainHead = $objdb->select('headings', array(), array('name', 'about'));
 // var_dump($resultMainHead);
 if (isset($_GET['hDeleteid']) )
 {
@@ -143,7 +143,7 @@ if (isset($_GET['subHeadDeleteid']))
 							<td>
 								<a href=<?php foreach ($value as $key => $val) {
 										if ($key == 'id' and is_string($key)) 
-											echo "\"?itemid=".$val."\"";
+											echo "\"editaboutItem.php?itemid=".$val."\"";
 										}?> class="edit">
 								</a>
 								<a href=<?php foreach ($value as $key => $val) {

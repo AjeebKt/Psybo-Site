@@ -1,3 +1,55 @@
+<?php 
+	error_reporting(1);
+	include_once 'Database.php';
+	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$hId = $_GET['itemid'];
+	$resultHead = $objdb->select('subHeadings', array(), array('id', $hId));
+	if (isset($_POST['btnAdd'])) 
+	{
+		$headding = $_POST['aboutHeadding'];
+		$description = $_POST['txtAbout'];
+		if (!empty($headding) and !empty($description)) 
+		{
+			if (preg_match('/^[A-Za-z0-9., \'()-_?]*$/',$headding) )
+			{
+				$error = 1;
+				$fields =['title'];
+				$values = [$headding];
+			}	
+			else
+			{
+				$error = 0;
+				$message ="<script type='text/javascript'>
+							alert(' please re-enter Heading!');
+						</script>";
+			}
+			if ($error == 1) 
+			{
+				if (preg_match('/^[A-Za-z0-9\.\:\,\'\(\)\-\_\ \"\“\“\’\‘\’\?\r\n]*$/',$description) )
+				{
+					$error = 1;
+					array_push($fields, 'description');
+					array_push($values, $description);
+				}
+				else
+				{
+					$error = 0;
+					$message ="<script type='text/javascript'>
+								alert(' please re-enter Description!');
+							</script>";
+				}
+				$objdb->update('subHeadings', $fields, $values, array('id', $hId));
+				if ($objdb == true) 
+				{
+					$message = "<script type='text/javascript'>
+									alert('Update succesfull');
+									window.location.replace('tabAbout.php');
+								</script>";
+				}
+			}
+		}
+	}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +66,25 @@
 				<h3>Edit Item</h3>
 				<div class="group">
 					<label for="aboutHeadding">Headding</label><br>
-					<input type="text" id="aboutHeadding" required>
+					<input type="text" id="aboutHeadding" name="aboutHeadding" required value=<?php 
+																								foreach ($resultHead[0] as $key => $value) {
+																									if (is_string($key) and $key == 'title') {
+																										echo "\"".$value."\"";
+																									}
+																								}
+					 																			?>>
 				</div>
 				<div class="group width-80">
 					<label for="txtAbout">Description</label><br>
-					<textarea name="txtAbout" id="txtAbout" cols="30" rows="5" required></textarea>
+					<textarea name="txtAbout" id="txtAbout" cols="30" rows="5" required>
+						<?php 
+							foreach ($resultHead[0] as $key => $value) {
+								if (is_string($key) and $key == 'description') {
+									echo $value;
+								}
+							}
+						?>
+					</textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
@@ -31,5 +97,6 @@
 			</form>
 		</div>
 	</section>
+	<?php echo $message; ?>
 </body>
 </html>

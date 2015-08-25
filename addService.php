@@ -49,73 +49,73 @@ if (isset($_POST['btnAdd']) )
 							</script>";
 			}
 		}	
-			if ($error == 1 and !empty($file_name) ) 
-			{
-				$uploadok=1;
-            $check=getimagesize($_FILES["serviceImg"]["tmp_name"]);
-            if ($check !== FALSE) 
-            {
-            	 // echo "File is an image :" .$check["mime"].".";
-               $uploadok=1;
-            }
-            else
-            {
-               $message="<script type='text/javascript'>
-                           alert('Please select onother image!');  
-                        </script>"; 
-               $uploadok=0;
-            }
-            if ($_FILES["serviceImg"]["size"] > 10000000 and $uploadok == 1)
-            {
-               $message="<script type='text/javascript'>
-                           alert('Sorry file to be large .please select onether file!');
-                        </script>"; 
-               $uploadok=0;
-            }
-            if ($file_type != "jpg" and $file_type !="png" and $file_type != "jpeg" and $uploadok == 1) 
-            {
-               $message= "<script type='text/javascript'>
-                        alert('PLease select jpg or png or jpeg file!');
-                     </script>";
-                $uploadok=0;
-            }
-            if ($uploadok == 0) 
-            {
-            	$message= "<script type='text/javascript'>
-						alert('Upload failed try again later!');
-					</script>";
-            }
-            else
-            {
-					$upload=move_uploaded_file($_FILES["serviceImg"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
-					if ($upload == TRUE) 
+		if ($error == 1 and !empty($file_name) ) 
+		{
+			$uploadok=1;
+         $check=getimagesize($_FILES["serviceImg"]["tmp_name"]);
+         if ($check !== FALSE) 
+         {
+         	 // echo "File is an image :" .$check["mime"].".";
+            $uploadok=1;
+         }
+         else
+         {
+            $message="<script type='text/javascript'>
+                        alert('Please select onother image!');  
+                     </script>"; 
+            $uploadok=0;
+         }
+         if ($_FILES["serviceImg"]["size"] > 10000000 and $uploadok == 1)
+         {
+            $message="<script type='text/javascript'>
+                        alert('Sorry file to be large .please select onether file!');
+                     </script>"; 
+            $uploadok=0;
+         }
+         if ($file_type != "jpg" and $file_type !="png" and $file_type != "jpeg" and $uploadok == 1) 
+         {
+            $message= "<script type='text/javascript'>
+                     alert('PLease select jpg or png or jpeg file!');
+                  </script>";
+             $uploadok=0;
+         }
+         if ($uploadok == 0) 
+         {
+         	$message= "<script type='text/javascript'>
+					alert('Upload failed try again later!');
+				</script>";
+         }
+         else
+         {
+				$upload=move_uploaded_file($_FILES["serviceImg"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
+				if ($upload == TRUE) 
+				{
+					$valueFiles=array($rand.".".$file_type,$file_type);
+					var_dump($valueFiles);
+					$objdb->insert_mul_srvc($valueFiles,$fieldSrv,$valueSrv);
+					
+					if ($upload == TRUE and $objdb == TRUE) 
 					{
-						$valueFiles=array($rand.".".$file_type,$file_type);
-						var_dump($valueFiles);
-						$objdb->insert_mul_srvc($valueFiles,$fieldSrv,$valueSrv);
-						
-						if ($upload == TRUE and $objdb == TRUE) 
-						{
-							$message = "<script type='text/javascript'>
-									alert('Adding succesfull');
-									window.location.replace('/tabService.php');
-								</script>";
-						}	
-						else	
-						{
-							$message = "<script type='text/javascript'>
-									alert('Adding failed! please try again.');
-								</script>";
-						}
-					}
-					else
+						$message = "<script type='text/javascript'>
+								alert('Adding succesfull');
+								window.location.replace('/tabService.php');
+							</script>";
+					}	
+					else	
 					{
-						$message= "<script type='text/javascript'>
-							alert('Upload failed try again later!');
-						</script>";
+						$message = "<script type='text/javascript'>
+								alert('Adding failed! please try again.');
+							</script>";
 					}
 				}
+				else
+				{
+					$message= "<script type='text/javascript'>
+						alert('Upload failed try again later!');
+					</script>";
+				}
 			}
+		}
 			// else
 			// {
 			// 	$message= "<script type='text/javascript'>
