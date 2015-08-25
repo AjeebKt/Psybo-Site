@@ -22,6 +22,7 @@
 				</div>
 				<div class="group">
 					<label for="serviceImg">Select Image</label>
+					<span>(Image Must be in 100X100 px)</span>
 					<input type="file" id="serviceImg">
 				</div>
 			</div>

@@ -42,6 +42,7 @@ if (isset($_POST['buttonmail']) )
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<script>
 			var marker = new google.maps.Marker ({
 				position: center,
@@ -86,6 +87,7 @@ if (isset($_POST['buttonmail']) )
 		</div>
 	</header>
 	<section class="map">
+		<img src="img/map.png" alt="">
 		<div id="gmap-canvas" class="map-canvas"></div>
 	</section>
 	<section class="contact">

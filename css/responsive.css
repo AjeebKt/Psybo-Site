@@ -1,3 +1,11 @@
+* {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
 @media screen and (min-width: 1141px) {
 	.team-title {
 		width: 80%;
@@ -16,7 +24,6 @@
 @media screen and (max-width: 1140px) {
 	.node h2 {
 		font-size: 30pt;
-
 	}
 }
 @media screen and (max-width: 980px) {
@@ -113,6 +120,29 @@
 	}
 	.our-vision li p{
 		font-size: 12pt;
+	}
+	.map {
+		height: 300px;
+	}
+	.contact {
+	margin: 0px;
+	}
+	.message {
+		position: unset;
+		width: 80%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.message-box {
+		width: 100%;
+		margin-top: 30px;
+	}
+	.message-box h3{
+		font-size: 20pt;
+	}
+	.message-box p{
+		font-size: 12pt;
+		text-align: center;
 	}
 }
 @media (min-width: 480px) and (max-width: 767px){
@@ -211,6 +241,25 @@
 	}
 	.our-vision li p{
 		font-size: 12pt;
+	}
+	.map {
+		height: 180px;
+	}
+	.contact {
+	margin: 0px;
+	}
+	.message {
+		position: unset;
+		width: 90%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.message-box {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.message-box h3{
+		font-size: 18pt;
 	}
 }
 
@@ -336,6 +385,28 @@
 		font-size: 14pt;
 	}
 	.our-vision li p{
+		font-size: 10pt;
+	}
+	.map {
+		height: 150px;
+	}
+	.contact {
+	margin: 0px;
+	}
+	.message {
+		position: unset;
+		width: 90%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.message-box {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.message-box h3{
+		font-size: 16pt;
+	}
+	.message-box p{
 		font-size: 10pt;
 	}
 }
@@ -476,5 +547,26 @@
 	}
 	.our-vision li p{
 		font-size: 9pt;
+	}
+	.map {
+		height: 150px;
+	}
+	.contact {
+	margin: 0px;
+	}
+	.message {
+		position: unset;
+		width: 100%;
+		padding: 0;
+	}
+	.message-box {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.message-box h3{
+		font-size: 14pt;
+	}
+	.message-box p{
+		font-size: 10pt;
 	}
 }
