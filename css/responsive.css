@@ -1,4 +1,18 @@
-
+@media screen and (min-width: 1141px) {
+	.team-title {
+		width: 80%;
+		float: none;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.team-title p{
+		font-size: 18pt;
+	}
+ 	.team-member li {
+ 		padding: 30px;
+ 		width: 20%;
+ 	}
+}
 @media screen and (max-width: 1140px) {
 	.node h2 {
 		font-size: 30pt;
@@ -58,13 +72,16 @@
 	}
 	.site-details {
 		float: none;
-		margin:  0 auto;
-		width: 350px;
-		margin: 0 auto;
 		text-align: center;
 	}
 	.features {
 		width: 50%;
+	}
+	.team {
+		padding: 0 15px;
+	}
+	.team-member li {
+		width: 33.33%;
 	}
 }
 @media (min-width: 480px) and (max-width: 767px){
@@ -124,6 +141,15 @@
 		width: 100%;
 		padding: 10px;
 	}
+	.team {
+		padding: 0 10px;
+	}
+	.team-title h2{
+		font-size: 30pt;
+	}
+	.team-member li {
+		width: 50%;
+	}
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
@@ -178,8 +204,12 @@
 		font-size: 8pt;
 	}
 	.service-title {
-		padding: 10px 10px 0;
+		padding: 5px 5px 0;
 		margin-bottom: 30px;
+	}
+	.service-title h2{
+		margin: 10px;
+		font-size: 28pt;
 	}
 	.service-title p{
 		font-size: 12pt;
@@ -199,6 +229,22 @@
 	.features p {
 		font-size: 12pt;
 	}
+	.company-adress {
+		width: 90%;
+	}
+	.team {
+		padding: 0 10px;
+	}
+	.team-title h2{
+		margin: 20px 0;
+		font-size: 26pt;
+	}
+	.team-title p{
+		font-size: 14pt;
+	}
+	.team-member li {
+		width: 90%;
+	}
 }
 @media (max-width: 319px) {
 	.logo {
@@ -209,10 +255,11 @@
 	}
 	.nav-menu {
 		float: none;
-		width: 200px;
-		margin: 0 auto;
+		width: 100%;
 	}
 	.navigation-links {
+		width: 70%;
+		float: none;
 		margin: 0 auto;
 	}
 	.navigation-links li {
@@ -257,5 +304,53 @@
 		color: #fff;
 		padding: 5px;
 		font-size: 6pt;
+	}
+	.service-title {
+		float: none;
+		padding: 5px 5px 0;
+	}
+	.service-title h2{
+
+		font-size: 14pt;
+		margin: 10px;
+	}
+	.service-title p{
+		font-size: 10pt;
+	}
+	.features {
+		width: 100%;
+		padding: 10px;
+	}
+	.features h3{
+		font-size: 14pt;
+	}
+	.features p{
+		font-size: 12pt;
+	}
+	.features img{
+		max-width: 60px;
+	}
+	.company-adress {
+		width: 100%;
+	}
+	.social-box {
+		width: 100%;
+	}
+
+	.team {
+		padding: 0 10px;
+	}
+	.team-title h2{
+		margin: 15px 0;
+		font-size: 18pt;
+	}
+	.team-title p{
+		font-size: 10pt;
+	}
+	.team-member li {
+		width: 100%;
+	}
+	.team-member li img {
+		max-width: 150px;
 	}
 }

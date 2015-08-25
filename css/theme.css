@@ -41,7 +41,7 @@ h2
 	color: #333;
 	font-size: 36pt;
 	/*font-weight: normal;*/
-	margin-top: 2%;
+	margin-top: 25px;
 	padding: 0;
 }
 h3
@@ -438,6 +438,10 @@ footer
 	box-sizing: border-box;
 	padding: 0px 30px;
 }
+.team-title {
+	width: 100%;
+	float: left;
+}
 .team-member
 {
 	width: 100%;
@@ -457,7 +461,7 @@ footer
 		display: inline-block;
 		margin-bottom: 20px;
 	}
-	.team-member li img:first-child
+	.team-member li img
 	{
 		max-width: 200px;
 		border-radius: 50%;
