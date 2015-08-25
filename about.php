@@ -53,30 +53,40 @@ $resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
 					</p>
 				</div>
 				<div class="right">
-					<p>
+					<!-- <p>
 						Our goal is simple, to create excellent websites that make your business shine. Our team has been delivering innovative, cost effective and timely solutions that drive the growth of small and medium-sized businesses worldwide.
+					</p> -->
+					<p>
+						<?php foreach ($resulthead[0] as $key => $value) {
+							if (is_string($key) and $key == 'secDescription') {
+								echo $value;
+							}
+						} ?>
 					</p>
 				</div>
 			</div>
 			<ul class="our-vision">
-				<li>
+				<!-- <li>
 					<h3>Our Vision</h3>
 					<p>Our team has been delivering innovative, cost effective and timely solutions that drive the growth of small and medium-sized businesses worldwide. Engineered by high quality professionals and managed by matured processes, we help forward-thinking companies achieve and surpass their business goals.</p>
-				</li>
-				<li>
-					<h3>Our Mission</h3>
-					<p>With mission to develop the clients performance in their business, our company is sincerely working harder for showing profit oriented results to their clients all over the World.“Together we build lasting relationships with the power of technology and our passion for extreme quality“.</p>
-				</li>
-				<li>
-					<h3>Our Quality Policy</h3>
-					<p>We treasure our client value and satisfaction. We strive for excellence and we are committed to deliver enhanced value to our customers with commitment and credibility.Psybo technologies is committed to continually improve the effectiveness of quality through team work, better tools and better technology.</p>
-				</li>
-				<li>
-					<h3>Our Methodology</h3>
-					<p><b>Customer is First :</b>Total commitment to our customers. To ensure that we achieve their business objectives and surpass their quality and service expectations fulfilled.<br><b>Personality:</b>
-We think that great design is a mix of beautiful visuals, an engaging story and an authentic personality.<br><b>Relationships:</b>
-Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients,</p>
-				</li>
+				< /li>-->
+				<?php foreach ($resultitem as $key => $value) {
+				 ?>
+					<li>
+						<h3><?php foreach ($value as $key => $val) {
+								if (is_string($key) and $key == 'title') {
+									echo $val;
+								}
+							} ?></h3>
+						<p>
+							<?php foreach ($value as $key => $val) {
+								if (is_string($key) and $key == 'description') {
+									echo $val;
+								}
+							} ?>
+						</p>	
+					</li>
+					<?php } ?>
 			</ul>
 		</div>
 	</section>
