@@ -7,7 +7,7 @@
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
 	
-	if (isset($_POST['btnPortfolioSubmit']) ) 
+	if (isset($_POST['btnAdd']) ) 
 	{	
 		$title=$_POST['txtTitle'];
 		$description=$_POST['portfolioDescription'];

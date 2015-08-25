@@ -30,18 +30,12 @@
 	}
 	$files_id=(int)$files_id;
 
-	if (isset($_POST["btnPortfolioSubmit"])) 
+	if (isset($_POST["btnAdd"])) 
 	{
 		$title=$_POST['txtTitle'];
-		// $title=filter_var($title,FILTER_SANITIZE_STRING);
-		// $title=str_replace("%20", " ", $title);
-		// $title=strip_tags($title);
 		$description=$_POST['portfolioDescription'];
-		// $description=filter_var($description,FILTER_SANITIZE_STRING);
-		// $description=strip_tags($description);
-
+		
 		$rand=rand();
-
 		$target_dir=getcwd()."/upload-image/";
 		$file_name=basename($_FILES["uploadPortfolio"]["name"]);
 		$file_type=pathinfo(basename($_FILES["uploadPortfolio"]["name"]),PATHINFO_EXTENSION);
@@ -56,7 +50,7 @@
 
 		if( !empty($title) and (strpos($title, '%') == FALSE) )
 		{
-			if (preg_match('/^[A-Za-z0-9., _-&]*$/', $title))
+			if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\&]*$/', $title))
 			{
 				$error=1;
 				$values_ptf=array($title);
@@ -75,8 +69,9 @@
 			{
 				// if (strpos($description, '%') == FALSE) 
 				$error=1;
-				if (preg_match('/^[A-Za-z0-9., _-]*$/', $description))
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\/\’\‘\’\r\n]*$/', $description))
 				{
+					$description = str_replace("\r\n", "<br />", $description);
 					array_push($values_ptf, $description);
 					array_push($fields_ptf, "about");
 				}
@@ -169,7 +164,7 @@
 					</script>";				
 					$uploadok=0;
 			}
-			if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg" and $uploadok == 1) 
+			if ($file_type != "jpg" and $file_type !="png" and $file_type =! "jpeg" and $uploadok == 1) 
 			{
 				$errormsg = "<script type='text/javascript'>
 						alert('Please select jpg or png or jpeg files!');
