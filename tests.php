@@ -361,5 +361,8 @@ $str=".lorumips omis .dummi.text.it mostu sage for webdevelpors ";
 // 	} 
 // } 
 
+$a =['hjtkj'=>'hjvgfrkhj',2,3,3,3];
+var_dump($a);
+
 ?>
  

@@ -100,12 +100,17 @@ if (isset($_GET['subHeadDeleteid']))
 								</p>
 							</td>
 							<td>
-								<a href= class="edit"></a>
+								<a href=<?php foreach ($value as $key => $val) {
+							 				if ($key == 'id' and is_string($key)) {
+							 					echo "\"editAboutHead.php?HeditId=".$val."\"";
+							 				}
+							 			} ?> class="edit"></a>
 							 	<a href=<?php foreach ($value as $key => $val) {
-							 		if ($key == 'id' and is_string($key)) {
-							 			echo "\"?hDeleteid=".$val."\"";
-							 		}
-							 } ?> class="delete" onclick="return DeleteCheck()"></a>
+							 				if ($key == 'id' and is_string($key)) {
+							 					echo "\"?hDeleteid=".$val."\"";
+							 				}
+							 			} ?> class="delete" onclick="return DeleteCheck()">
+							 	</a>
 							</td>
 						</tr>
 						<?php }	 ?>
@@ -136,12 +141,17 @@ if (isset($_GET['subHeadDeleteid']))
 							} }?></p>
 							</td>
 							<td>
-								<a href= class="edit"></a>
+								<a href=<?php foreach ($value as $key => $val) {
+										if ($key == 'id' and is_string($key)) 
+											echo "\"?itemid=".$val."\"";
+										}?> class="edit">
+								</a>
 								<a href=<?php foreach ($value as $key => $val) {
 									if ($key == 'id' and is_string($key)) {
 										echo "\"?subHeadDeleteid=".$val."\"";
-									}
-							} ?> class="delete" onclick="return DeleteCheck()"></a>
+										}
+									} ?> class="delete" onclick="return DeleteCheck()">
+								</a>
 							</td>
 						</tr>
 						<?php } ?>

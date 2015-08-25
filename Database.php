@@ -191,10 +191,7 @@ class Database
 		if ($query===FALSE)
 			return trigger_error($this->condb->error);
 		
-		
-		
 		$recset = array();
-
 		while ($rec=mysqli_fetch_array($query))
 			array_push($recset, $rec);
 		return $recset;
