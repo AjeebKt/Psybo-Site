@@ -1,11 +1,12 @@
 
 <?php 
 error_reporting(0);
-
+include 'Database.php';
+// $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+$objdb=new Database('localhost','root','asd','psybo-db');
+$resultContact = $objdb->select('headings', [], ['name', 'contact']);
 if (isset($_POST['buttonmail']) )
-	// and isset($_POST['msgName']) and isset($_POST['msgEmail']) and isset($_POST['comments']))
 {
-
 	if ( filter_var($_POST['msgEmail'] , FILTER_VALIDATE_EMAIL))
 	{
 		$to="psybotechnologies@gmail.com";
@@ -94,8 +95,20 @@ if (isset($_POST['buttonmail']) )
 		<div class="container">
 			<div class="message">
 				<div class="message-box">
-					<h3>Get In Touch</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, quae. Ad facere provident molestias. Ducimus quasi labore, quas obcaecati vero ea ab saepe perspiciatis soluta? Maiores minima aut pariatur iste!</p>
+					<h3>
+						<?php foreach ($resultContact[0] as $key => $value) {
+							if (is_string($key) and $key == 'title') {
+								echo $value;
+							}
+						} ?>
+					</h3>
+					<p>
+						<?php foreach ($resultContact[0] as $key => $value) {
+							if (is_string($key) and $key == 'description') {
+								echo $value;
+							}
+						} ?>
+					</p>
 					<form id="message-form" class="msg-form" method="POST" action="">
 						<br>
 						<input id="msgName" name="msgName" type="text" placeholder="Name" required>
