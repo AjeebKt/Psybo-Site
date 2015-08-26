@@ -63,27 +63,24 @@ $resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
 				</div>
 			</div>
 			<ul class="our-vision">
-				<!-- <li>
-					<h3>Our Vision</h3>
-					<p>Our team has been delivering innovative, cost effective and timely solutions that drive the growth of small and medium-sized businesses worldwide. Engineered by high quality professionals and managed by matured processes, we help forward-thinking companies achieve and surpass their business goals.</p>
-				< /li>-->
-				<?php foreach ($resultitem as $key => $value) {
-				 ?>
-					<li>
-						<h3><?php foreach ($value as $key => $val) {
-								if (is_string($key) and $key == 'title') {
-									echo $val;
-								}
-							} ?></h3>
-						<p>
-							<?php foreach ($value as $key => $val) {
-								if (is_string($key) and $key == 'description') {
-									echo $val;
-								}
-							} ?>
-						</p>	
-					</li>
-					<?php } ?>
+			<?php foreach ($resultitem as $key => $value) {
+			 ?>
+				<li>
+					<h3><?php foreach ($value as $key => $val) {
+							if (is_string($key) and $key == 'title') {
+								echo $val;
+							}
+						} ?>
+					</h3>
+					<p>
+						<?php foreach ($value as $key => $val) {
+							if (is_string($key) and $key == 'description') {
+								echo $val;
+							}
+						} ?>
+					</p>	
+				</li>
+			<?php } ?>
 			</ul>
 		</div>
 	</section>

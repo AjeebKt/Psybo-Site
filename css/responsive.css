@@ -37,6 +37,11 @@
 		padding: 30px;
 	}
 }
+@media screen and (min-width: 992px) {
+	.container {
+		overflow: unset;
+	}
+}
 @media (max-width: 991px){
 	* {
 		-webkit-transition: all 0.4s ease;
