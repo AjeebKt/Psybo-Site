@@ -63,23 +63,24 @@ $resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
 				</div>
 			</div>
 			<ul class="our-vision">
-				<?php foreach ($resultitem as $key => $value) {
-				 ?>
-					<li>
-						<h3><?php foreach ($value as $key => $val) {
-								if (is_string($key) and $key == 'title') {
-									echo $val;
-								}
-							} ?></h3>
-						<p>
-							<?php foreach ($value as $key => $val) {
-								if (is_string($key) and $key == 'description') {
-									echo $val;
-								}
-							} ?>
-						</p>	
-					</li>
-					<?php } ?>
+			<?php foreach ($resultitem as $key => $value) {
+			 ?>
+				<li>
+					<h3><?php foreach ($value as $key => $val) {
+							if (is_string($key) and $key == 'title') {
+								echo $val;
+							}
+						} ?>
+					</h3>
+					<p>
+						<?php foreach ($value as $key => $val) {
+							if (is_string($key) and $key == 'description') {
+								echo $val;
+							}
+						} ?>
+					</p>	
+				</li>
+			<?php } ?>
 			</ul>
 		</div>
 	</section>

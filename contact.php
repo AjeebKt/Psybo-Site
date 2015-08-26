@@ -87,7 +87,7 @@ if (isset($_POST['buttonmail']) )
 		</div>
 	</header>
 	<section class="map">
-		<img src="img/map.png" alt="">
+		<!-- <img src="img/map.png" alt=""> -->
 		<div id="gmap-canvas" class="map-canvas"></div>
 	</section>
 	<section class="contact">
