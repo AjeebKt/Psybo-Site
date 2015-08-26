@@ -101,7 +101,7 @@
 	   			</li>
 	   			<?php } ?>
 	   		</ul>
-	   		<!-- <ul class="what-wedo">
+	   		<ul class="what-wedo">
 	   			<li class="list-wedo">
 	   					<div class="grid">
 	   						<div class="word-box">
@@ -126,7 +126,7 @@
 	   						</div>
    						</div>
 	   			</li>
-	   		</ul> -->
+	   		</ul>
 		</div>
 	</section>
 		<!-- <section class="testimonial">
