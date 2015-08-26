@@ -66,16 +66,16 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Add Service</title>
+	<title>Edit title - Contact</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h2>Edit in Message</h3>
+				<h3>Edit Message title</h3>
 				<div class="group">
-					<label for="MsgContactHeadding">Headding</label><br>
+					<label for="MsgContactHeadding">Heading</label><br>
 					<input type="text" id="MsgContactHeadding" name="MsgContactHeadding" required value=<?php 
 																											foreach ($resultcontact[0] as $key => $value) {
 																												if ($key == 'title' and is_string($key)) {
@@ -96,7 +96,7 @@
 				</div>
 			</div>
 			<div class="group pad-left">
-				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnAdd" name="btnAdd">Update</button>
 			</div>
 		</form>
 		<div class="group">

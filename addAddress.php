@@ -222,7 +222,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Add Service</title>
+	<title>Add Address</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>

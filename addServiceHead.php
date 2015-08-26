@@ -62,14 +62,14 @@ if (isset($_POST['btnCancel']))
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Add Service</title>
+	<title>Add Service Description</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="firstServiceForm" name="firstServiceForm">
 			<div class="first-content">
-				<h3>Add Head</h3>
+				<h3>Add Heading</h3>
 				<div class="group">
 					<label for="serviceHeadding">Headding</label><br>
 					<input type="text" name="serviceHeadding" id="serviceHeadding">

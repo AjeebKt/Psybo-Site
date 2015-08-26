@@ -52,7 +52,7 @@
 				else
 				{
 					$message = "<script type='text/javascript'>
-									alert('Adding failed! please try again.);
+									alert('Adding failed! please try again.');
 								</script>";
 				}
 			}
@@ -73,14 +73,14 @@ if (isset($_POST['btnCancel']))
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>PSYBO Technologies Home</title>
+	<title>Add Title - Home</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="secondServiceForm">
 			<div class="first-content">
-				<h3>Add Home Head</h3>
+				<h3>Add Home Title</h3>
 				<div class="group">
 					<label for="mainHead">Haedding</label><br>
 					<input id="mainHead" type="text" name="homeHead" required>

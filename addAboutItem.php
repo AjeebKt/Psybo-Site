@@ -66,14 +66,14 @@ if (isset($_POST['btnAdd']))
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Add Service</title>
+	<title>Add about Item</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h3>Add Item</h3>
+				<h3>Add Items</h3>
 				<div class="group">
 					<label for="aboutHeadding">Headding</label><br>
 					<input type="text" id="aboutHeadding" name="aboutHeadding" required>

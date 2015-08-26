@@ -1,3 +1,4 @@
+
 <?php 
 	error_reporting(1);
 	include_once 'Database.php';
@@ -163,7 +164,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>PSYBO Technologies Home</title>
+	<title>Add We-do -PSYBO Technologies</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
@@ -172,7 +173,7 @@
 			<div class="first-content">
 				<h3>Add We do Item</h3>
 				<div class="group">
-					<label for="mainHead">Haedding</label><br>
+					<label for="mainHead">Heading</label><br>
 					<input id="mainHead" type="text" name="homeWedo" required>
 				</div>
 				<div class="group">

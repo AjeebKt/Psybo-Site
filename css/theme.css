@@ -345,7 +345,7 @@ footer
 			background-repeat: no-repeat;
 			-webkit-background-size: 100%;
 			background-size: 100%;
-			background-color: #fff;
+			background-color: #777;
 			transition: background-color 0.3s ease-in-out;
 		}
 		.social-links li a.facebook

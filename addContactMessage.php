@@ -73,14 +73,14 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Add Service</title>
+	<title>Add title - Contact</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm" name="firstForm">
 			<div class="first-content">
-				<h3>Add in Message</h3>
+				<h3>Add Message title</h3>
 				<div class="group">
 					<label for="MsgContactHeadding">Headding</label><br>
 					<input type="text" id="MsgContactHeadding" name="MsgContactHeadding" required>

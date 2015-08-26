@@ -30,9 +30,9 @@
 		unlink(getcwd().$actdir.$file_name);
 		if ($objdb == true) 
 		{
-			$message="<script type='text/javascript'>;
+			$message="<script type='text/javascript'>
 							window.location.replace('tabPortfolio.php');
-						</script>";	
+						</script>";
 			$objdb->delete("files",array("id",$files_id));
 		}
 	}

@@ -64,12 +64,12 @@ if (isset($_GET['hdeleteid']) )
 	<?php include 'dash.php'; ?>
 	<section>
 		<div class="show-table">
-			<h3>Main Head</h3>
+			<h3>Main Heading</h3>
 			<form id="formShowService" name="formShowService" action="" method="POST">
 				<table class="show-item">
 					<tbody>
 						<tr>
-							<th>Main Head</th>
+							<th>Main Heading</th>
 							<th>Description</th>
 							<th>
 								<a href="addServiceHead.php" class="page-button">+ Add</a>

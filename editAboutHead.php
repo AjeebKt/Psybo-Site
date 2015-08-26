@@ -84,16 +84,16 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>About PSYBO Technologies</title>
+	<title>Edit about title</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="firstForm">
 			<div class="first-content">
-				<h3>Edit Head</h3>
+				<h3>Edit Title</h3>
 				<div class="group">
-					<label for="serviceHeadding">Headding</label><br>
+					<label for="serviceHeadding">Heading</label><br>
 					<input type="text" id="serviceHeadding" name="headAbout" required value=<?php
 																								foreach ($resultHead[0] as $key => $value) {
 																									if ($key == 'title' and is_string($key)) {
@@ -128,7 +128,7 @@
 				</div>
 			</div>
 			<div class="group pad-left">
-				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnAdd" name="btnAdd">Update</button>
 			</div>
 		</form>
 		<div class="group">

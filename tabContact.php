@@ -67,7 +67,7 @@
 				<table class="show-item">
 					<tbody>
 						<tr>
-							<th>Message Headding</th>
+							<th>Message Heading</th>
 							<th>Description</th>
 							<th>
 								<a href="addContactMessage.php" class="page-button">+ Add</a>

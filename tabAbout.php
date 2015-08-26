@@ -65,11 +65,11 @@ if (isset($_GET['subHeadDeleteid']))
 	<section>
 		<div class="show-table">
 			<form id="formShowAbout" name="formShowAbout" action="" method="POST">
-				<h3>Main Head</h3>
+				<h3>Main Heading</h3>
 				<table class="show-item">
 					<tbody>
 						<tr>
-							<th>Mian Head</th>
+							<th>Heading</th>
 							<th>First Column Des.</th>
 							<th>Second Column Des.</th>
 							<th>
@@ -120,7 +120,7 @@ if (isset($_GET['subHeadDeleteid']))
 				<table class="show-item">
 					<tbody>
 						<tr>
-							<th>Headding</th>
+							<th>Heading</th>
 							<th>Description</th>
 							<th>
 								<a href="addAboutItem.php" class="page-button">+ Add</a>

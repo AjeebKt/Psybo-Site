@@ -67,11 +67,11 @@ if (isset($_GET['hdeleteid']) )
 	<section>
 	<div class="show-table">
 		<form id="formShowHome" name="formShowHome" action="" method="POST">
-			<h3>Main Head</h3>
+			<h3>Main Title</h3>
 			<table class="show-item">
 				<tbody>
 					<tr>
-						<th>Head</th>
+						<th>Heading</th>
 						<th>Description</th>
 						<th>
 							<a href="addHome.php" class="page-button">+ Add</a>
@@ -112,7 +112,7 @@ if (isset($_GET['hdeleteid']) )
 			<table class="show-item">
 				<tbody>
 					<tr>
-						<th>Sub Head</th>
+						<th>Sub Heading</th>
 						<th>Description</th>
 						<th>Image</th>
 						<th>Link</th>

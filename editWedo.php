@@ -71,7 +71,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>PSYBO Technologies Home</title>
+	<title>Edit We-do Item</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
@@ -80,7 +80,7 @@
 			<div class="first-content">
 				<h3>Edit We do Item</h3>
 				<div class="group">
-					<label for="mainHead">Haedding</label><br>
+					<label for="mainHead">Heading</label><br>
 					<input id="mainHead" type="text" name="homeWedo" required value=<?php foreach ($resultwedo[0] as $key => $value) {
 																							if ($key == 'title'  and is_string($key)) {
 																								echo "\"".$value."\"";

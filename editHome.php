@@ -62,14 +62,14 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>PSYBO Technologies Home</title>
+	<title>Edit Title - Home</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="secondForm">
 			<div class="first-content">
-				<h3>Edit Home Head</h3>
+				<h3>Edit Home Title</h3>
 				<div class="group">
 					<label for="mainHead">Headding</label><br>
 					<input id="mainHead" type="text" name="homeHead" required value=<?php 
@@ -94,7 +94,7 @@
 				</div>
 			</div>
 			<div class="group pad-left">
-				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnAdd" name="btnAdd">Update</button>
 			</div>
 		</form>
 		<div class="group">

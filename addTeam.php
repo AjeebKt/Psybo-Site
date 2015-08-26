@@ -304,9 +304,9 @@
 
 <?php include 'dash.php';  ?>
     <section class="add-service">
-        <div id="tabTeam" class="first-content">
-            <form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">  
-            <h3>ADD TEAM MEMBERS</h3>
+        <form id="formTeam" name="formTeam" method="POST" action="" enctype="multipart/form-data">  
+            <div id="tabTeam" class="first-content">
+                <h3>ADD TEAM MEMBERS</h3>
                 <div class="group">
                     <label for="txtName">Name</label><br>
                     <input id="txtName" name="txtName" type="name" required><br>
@@ -338,21 +338,21 @@
                     <label for="txtGplus">Google+</label><br>
                     <input id="txtGplus" name="txtGplus" type="text" optional><br>
                 </div>
-                <div class="group">
+                <div class="group width-80">
                     <label for="uploadTeam">Select Image</label>
                     <span>(Image Must be in W:200px X H:200px)</span>
                     <input id="uploadTeam" name="uploadTeam" type="file" ><br>
                 </div>
-            <div class="group">
+            </div>
+            <div class="group pad-left">
                 <button id="btnAdd" name="btnAdd">Add</button>
             </div>
-            </form>
+        </form>
             <div class="group">
                 <form action="tabTeam.php" method="post">
                     <button id="btnCancel" name="btnCancel" >Cancel</button>
                 </form>
             </div>
-        </div>
     </section>
     <?php echo $message; ?>
 </body>

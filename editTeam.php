@@ -364,7 +364,8 @@
 					} ?>  ><br>
 				</div>
 				<div class="group">
-					<label for="uploadTeam">Select Image</label><br>
+					<label for="uploadTeam">Select Image</label>
+					<span>(Image must be in (200X200)px)</span>
 					<input type="file" id="uploadTeam" name="uploadTeam">
 				</div>
 			</div>

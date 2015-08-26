@@ -1,11 +1,17 @@
-/** {
+* {
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-}*/
-
+}
+	.navigation-links li a {
+	-webkit-transition: unset;
+	-moz-transition: unset;
+	-ms-transition: unset;
+	-o-transition: unset;
+	transition: unset;
+	}
 @media screen and (min-width: 1141px) {
 	.team-title {
 		width: 80%;
@@ -23,6 +29,9 @@
 }
 @media screen and (max-width: 1140px) {
 	.node h2 {
+		font-size: 30pt;
+	}
+	.team-title h2{
 		font-size: 30pt;
 	}
 }
@@ -43,13 +52,6 @@
 	}
 }
 @media (max-width: 991px){
-	* {
-		-webkit-transition: all 0.4s ease;
-		-moz-transition: all 0.4s ease;
-		-ms-transition: all 0.4s ease;
-		-o-transition: all 0.4s ease;
-		transition: all 0.4s ease;
-	}
 	.logo {
 		float: none;
 		margin: 10px auto 0;
@@ -61,15 +63,6 @@
 	}
 	.navigation-links {
 		margin: 0 auto;
-	}
-	.navigation-links li a {
-		height: 40px;
-		line-height: 40px;
-		-webkit-transition: unset;
-		-moz-transition: unset;
-		-ms-transition: unset;
-		-o-transition: unset;
-		transition: unset;
 	}
 	.who-we-are {
 		width: 80%;
@@ -493,10 +486,10 @@
 	}
 	.team-title h2{
 		margin: 20px 0;
-		font-size: 26pt;
+		font-size: 24pt;
 	}
 	.team-title p{
-		font-size: 14pt;
+		font-size: 12pt;
 	}
 	.team-member li {
 		width: 90%;

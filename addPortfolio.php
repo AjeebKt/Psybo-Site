@@ -176,13 +176,13 @@
 					<label>Link</label><br>
 					<input name="txtLink" type="text" required>
 				</div>
-				<div class="group width-80">
-					<label>Description</label><br>
-					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" optional></textarea><br>
-				</div>
 				<div class="group">
 					<label>Select Portfolio Image</label><br>
 					<input name="uploadPortfolio" type="file" class="up" required><br>
+				</div>
+				<div class="group width-80">
+					<label>Description</label><br>
+					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" optional></textarea><br>
 				</div>
 			</div>
 			<div class="group pad-left">
