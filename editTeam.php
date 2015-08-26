@@ -1,8 +1,8 @@
 <?php 
 	error_reporting(0);
 	include 'Database.php';
-    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    // $objdb=new Database('localhost','root','asd','psybo-db');
+    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    $objdb=new Database('localhost','root','asd','psybo-db');
 	$emp_id=(int)$_GET['editid'];
 	$result_emp=$objdb->select("employee",array(),array("id",$emp_id));
 	foreach ($result_emp[0] as $key => $value) 
@@ -28,7 +28,7 @@
 	}
 
 
-	if (isset($_POST['btnTeamSubmit'])) 
+	if (isset($_POST['btnAdd'])) 
 	{
 		//upload file details
 		if ($_FILES['uploadTeam']['tmp_name']) 
