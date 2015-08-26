@@ -25,8 +25,8 @@
 			}
 			if ($error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\’\r\n]*$/', $description) )	
-				// if (preg_match('/^[A-Za-z0-9\.\,\ \_\’\'\"\-\r\n]*$/', $description) )
+				// if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\’\r\n]*$/', $description) )	
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\’\'\"\-\r\n]*$/', $description) )
 				{
 					$description = str_replace("\r\n", "<br />", $description);
 					array_push($values, $description);
@@ -80,7 +80,7 @@
 	<title>Add Service</title>
 </head>
 <body>
-	<?php include 'dash.php'; ?>
+	<?php //include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="firstServiceForm">
 			<div class="first-content">
