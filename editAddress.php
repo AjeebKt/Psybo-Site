@@ -307,6 +307,10 @@
 																					}			
 																				} ?>>
 				</div>
+				<div class="group">
+					<label for="txtPlace">Place</label><br>
+					<input name="txtPlace" id="txtPlace" type="url">
+				</div>
 				<div class="group width-80">
 					<label for="footerAddress">Address</label><br>
 					<textarea type="text" id="footerAddress" name="footerAddress" cols="30" rows="5" required ><?php foreach ($resultAddress[0] as $key => $value) {

@@ -1,10 +1,10 @@
 <?php 
 	error_reporting(0);
-	require_once("Database.php");
+	require_once('Database.php');
 	// $condb=new mysqli("psybotechnologies.com","psyboysg_test","psybotest","psyboysg_psybo-db");
     // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 	$condb = new mysqli('localhost', 'root', 'asd', 'psybo-db');
-	// $condb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$condb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$message="";
 	session_start();
 	if (isset($_SESSION['username']))
@@ -60,30 +60,24 @@
 	<meta charset="UTF-8">
 	<title>Admin Login</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/css.css">
-	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<link rel="stylesheet" href="css/admin-style.css">
 </head>
-<body style="background-color: #095936;">
+<body>
 	<form id="loginForm" method="POST">
 		<div class="login">
-			<div class="container">
+			<div class="log-box">
 				<h3>Login</h3>
 				<div >
-					<div>
-						<a class="user"></a>
 						<input id="txtusername" name="txtusername" placeholder="User Name" value="" type="text" required aria-required="true" pattern="[A-Za-z-0-9]+">
-					</div>
-					<div>
-						<a class="lock"></a>
 						<input id="Password" name="txtpassword" placeholder="Password" required type="password">
-					</div>
 					<div class="remember-me">
 						<input id="checkBox" type="checkbox">
 						<label for="checkBox">Remember Me</label>
 					</div>
+					<button class="login-button" name="loginButton">Login</button>
 				</div>
 			</div>
-		<button class="login-button" name="loginButton">Login</button>
 		</div>
 	</form>
 	<?php echo $message; ?>

@@ -12,7 +12,7 @@
 		header("location:admin.php");
 	}
  ?>
-<header class="header-fix">
+<header>
 	<img src="img/logo-admin.png" alt="">
 </header>
 <nav>

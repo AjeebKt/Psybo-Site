@@ -91,13 +91,85 @@ header
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 999;F
+	z-index: 999;
 }
 header img:first-child
 {
 	float: left;
 	margin-left: 5%;
 }
+
+/*  LogIn  */
+
+
+.login
+{
+ 	width: 456px;
+ 	position: relative;
+	margin: 50px auto 0;
+}
+.log-box
+{
+	width: 95%;
+	margin: 20px auto 0;
+	overflow: hidden;
+}
+.login input
+{
+	width: 100%;
+	border: 1px	solid #333;
+	border-radius: 3px;
+	height: 40px;
+	margin: 10px 0;
+	background-color: #fff;
+	box-sizing: border-box;
+	padding-left: 5px;
+	-webkit-transition: border 0.35s ease;
+	-moz-transition: border 0.35s ease;
+	-ms-transition: border 0.35s ease;
+	-o-transition: border 0.35s ease;
+	transition: border 0.35s ease;
+	
+}
+.login input:focus {
+	border: 1px	solid #008a67;
+}
+.login-button
+{
+	width: 100%;
+	background-color: #008a67;
+	color: #fff;
+	border: 0;
+	font-family: Lato;
+	font-size: 16pt;
+	height: 40px;
+	border-radius: 3px;
+	transition: background-color 0.4s ease, color 0.4s ease;
+}
+.login-button:hover
+{
+	background-color: #24AE8B;
+}
+.remember-me
+{	
+	width: 100%;
+	float: left;
+	margin: 10px 0;
+}
+.remember-me input
+{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0;
+}
+.remember-me label
+{
+	float: left;
+	margin-left: 10px;
+}
+
+/* LogOut */
 .logout
 {
 	width: 190px;

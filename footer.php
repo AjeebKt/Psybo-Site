@@ -15,50 +15,50 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 ?>
 <footer>
 	<div class="container overflow-hd">
-			<div class="company-adress">
-				<ul>
-					<li>
-						<!-- <p>V2 Tower, Opposit Old Bus Stand, Pandikkad Road, Manjeri</p> -->
-						<p>Address :
-							<?php foreach ($resultCmpAdd[0] as $key => $value) 
-								{
-									 if ($key == 'address' and is_string($key)) 
-									 {
-										echo $value;
-									 }
-								} 
-							?>
-						</p>
-						<p>Place : Manjeri</p>
-					</li>
-					<li>
-						<!-- <p>Phone: +04932-222222</p> -->
-						<p>Mobile :
-							<?php 
-								foreach ($resultCmpAdd[0] as $key => $value) 
-								{
-									 if ($key == 'mobile' and is_string($key)) 
-									 {
-										echo $value;
-									 }
-								} 
-							 ?> 
-						</p>
-						<!-- <p>Email: info@psybotechnologies.com</p> -->
-						<p>Email: 
-							<?php 
-								foreach ($resultCmpAdd[0] as $key => $value) 
-								{
-									 if ($key == 'email' and is_string($key)) 
-									 {
-										echo $value;
-									 }
-								}
-							 ?>
-						</p>
-					</li>
-				</ul>
-			</div>
+		<div class="company-adress">
+			<ul>
+				<li>
+					<p>Address : V2 Tower, Opposit Old Bus Stand, Pandikkad Road, Manjeri</p>
+					<!-- <p>Address :
+						<?php foreach ($resultCmpAdd[0] as $key => $value) 
+							{
+								 if ($key == 'address' and is_string($key)) 
+								 {
+									echo $value;
+								 }
+							} 
+						?>
+					</p> -->
+					<p>Place : Manjeri</p>
+				</li>
+				<li>
+					<p>Phone: +04932-222222</p>
+					<!-- <p>Mobile :
+						<?php 
+							foreach ($resultCmpAdd[0] as $key => $value) 
+							{
+								 if ($key == 'mobile' and is_string($key)) 
+								 {
+									echo $value;
+								 }
+							} 
+						 ?> 
+					</p> -->
+					<p>Email: info@psybotechnologies.com</p>
+					<!-- <p>Email: 
+						<?php 
+							foreach ($resultCmpAdd[0] as $key => $value) 
+							{
+								 if ($key == 'email' and is_string($key)) 
+								 {
+									echo $value;
+								 }
+							}
+						 ?>
+					</p> -->
+				</li>
+			</ul>
+			<div class="social-box">
 				<ul class="social-links">
 					<li>
 						<!-- <a class="facebook" href="https://www.facebook.com/psybotechnologies" target="_blank"></a> -->
@@ -103,7 +103,9 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 										}
 									}?> target="_blank"></a>
 					</li>
-				</ul>	
+				</ul>
+			</div>	
+		</div>
 		<div class="footer-details">
 			<div class="site-details">
 				<p>All Rights Recieved @ PSYBO Technologies PVT.LTD</p>

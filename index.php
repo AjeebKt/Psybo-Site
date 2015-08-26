@@ -13,6 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<title>PSYBO Technologies</title>
 </head>
 <body>
@@ -40,10 +41,10 @@
 					<h2>We Will Either Find a Way or Make One</h2>
 					<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 				</div>
-			</div>
-			<div class="div-span">
 				<div class="node">
-					<img src="img/design.png" alt="">
+					<p>
+						<img src="img/design.png" alt="">
+					</p>
 				</div>
 			</div>
 			<div class="link-page">
@@ -99,6 +100,32 @@
 				   	</div>
 	   			</li>
 	   			<?php } ?>
+	   		</ul>
+	   		<ul class="what-wedo">
+	   			<li class="list-wedo">
+	   					<div class="grid">
+	   						<div class="word-box">
+	   							<h3>Head 1</h3>
+	   							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem incidunt sapiente provident expedita amet esse quia aliquam aspernatur eveniet magni vero, laboriosam magnam quae a ut molestiae, vitae error perferendis.</p>
+	   						</div>
+	   					</div>
+	   			</li>
+	   			<li class="list-wedo">
+	   					<div class="grid">
+	   						<div class="word-box">
+	   							<h3>Head 2</h3>
+	   							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat numquam maxime quia. Magnam nostrum suscipit sequi quis, voluptatum similique hic sint, quod magni soluta, incidunt nisi culpa aspernatur neque voluptatem.</p>
+	   						</div>
+   						</div>
+	   			</li>
+	   			<li class="list-wedo">
+	   					<div class="grid">
+	   						<div class="word-box">
+	   							<h3>Head 3</h3>
+	   							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum voluptas quod, consequuntur accusamus distinctio praesentium, quae, culpa ratione temporibus asperiores possimus veniam sed ut quo maxime, maiores beatae omnis modi.</p>
+	   						</div>
+   						</div>
+	   			</li>
 	   		</ul>
 		</div>
 	</section>

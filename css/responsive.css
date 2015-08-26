@@ -1,0 +1,752 @@
+/** {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}*/
+
+@media screen and (min-width: 1141px) {
+	.team-title {
+		width: 80%;
+		float: none;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.team-title p{
+		font-size: 18pt;
+	}
+ 	.team-member li {
+ 		padding: 30px;
+ 		width: 20%;
+ 	}
+}
+@media screen and (max-width: 1140px) {
+	.node h2 {
+		font-size: 30pt;
+	}
+}
+@media screen and (max-width: 980px) {
+	.node h2 {
+		font-size: 22pt;
+	}
+	.node p {
+		font-size: 12pt;
+	}
+	.node {
+		padding: 30px;
+	}
+}
+@media (max-width: 991px){
+	* {
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+	.logo {
+		float: none;
+		margin: 10px auto 0;
+	}
+	.nav-menu {
+		float: none;
+		width: 424px;
+		margin: 0 auto;
+	}
+	.navigation-links {
+		margin: 0 auto;
+	}
+	.navigation-links li a {
+		height: 40px;
+		line-height: 40px;
+		-webkit-transition: unset;
+		-moz-transition: unset;
+		-ms-transition: unset;
+		-o-transition: unset;
+		transition: unset;
+	}
+	.who-we-are {
+		width: 80%;
+		float: none;
+		margin: 0 auto;
+		padding: 5px;
+		text-align: center;
+	}
+	.who-we-are h2{
+		font-size: 26pt;
+		margin: 20px 0;
+	}
+	.who-we-are p{
+		font-size: 14pt;
+	}
+	.what-wedo {
+		padding: 5px;
+	}
+	.list-wedo {
+		width: 100%;
+		float: none;
+		padding: 10px 0;
+	}
+	.grid {
+		width: 60%;
+	}
+	.word-box {
+		height: unset;
+		padding: 40px;
+		margin: 0;
+	}
+	.word-box h3{
+		font-size: 20pt;
+		margin: 5px 0;
+	}
+	.word-box p{
+		font-size: 14pt;
+		margin: 5px 0;
+	}
+	.company-adress {
+		width: 50%;
+		overflow: hidden;
+		float: none;
+		margin: 10px auto;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #fff;
+		text-align: center;
+	}
+	.company-adress ul li {
+		float: none;
+		margin: 5px 0;
+	}
+	.social-box {
+		width: 155px;
+		float: none;
+		margin: 0 auto;
+	}
+	.footer-details {
+		width: 100%;
+		float: left;
+		margin: 10px auto;
+	}
+	.site-details {
+		float: none;
+		text-align: center;
+	}
+	.features {
+		width: 50%;
+	}
+	.team {
+		padding: 0 15px;
+	}
+	.team-member li {
+		width: 33.33%;
+	}
+	.about-us	{
+		padding: 10px;
+	}
+	.about-us	h1{
+		margin: 20px 0;
+		font-size: 26pt;
+		padding: 0;
+	}
+	.title-box {
+		width: 50%;
+		padding: 10px;
+		text-align: center;
+	}
+	.title-box p{
+		font-size: 12pt;
+	}
+	.our-vision {
+		margin-top: 30px;
+		padding: 10px;
+		text-align: center;
+	}
+	.our-vision li{
+		width: 50%;
+		padding: 10px;
+	}
+	.our-vision li h3{
+		font-size: 16pt;
+	}
+	.our-vision li p{
+		font-size: 12pt;
+	}
+	.map {
+		height: 300px;
+	}
+	.contact {
+	margin: 0px;
+	}
+	.message {
+		position: unset;
+		width: 80%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.message-box {
+		width: 100%;
+		margin-top: 30px;
+	}
+	.message-box h3{
+		font-size: 20pt;
+	}
+	.message-box p{
+		font-size: 12pt;
+		text-align: center;
+	}
+}
+@media (min-width: 480px) and (max-width: 767px){
+	.navigation-links li a {
+		height: 40px;
+		line-height: 40px;
+		-webkit-transition: unset;
+		-moz-transition: unset;
+		-ms-transition: unset;
+		-o-transition: unset;
+		transition: unset;
+	}
+	.node {
+		padding: 10px;
+	}
+	.node h2 {
+		font-size: 16pt;
+	}
+	.node p {
+		font-size: 10pt;
+		line-height: 1.5;
+	}
+	.node img {
+		max-width: 90%;
+	}
+	.link-page {
+		width: 40%;
+		text-align: center;
+	}
+	.link-button {
+		width: 100%;
+		background-color: #008a67;
+		color: #fff;
+		padding: 5px;
+		font-size: 12pt;
+	}
+	.who-we-are {
+		width: 80%;
+		float: none;
+		margin: 0 auto;
+		padding: 5px;
+		text-align: center;
+	}
+	.who-we-are h2{
+		font-size: 18pt;
+		margin: 10px 0;
+	}
+	.who-we-are p{
+		font-size: 12pt;
+	}
+	.what-wedo {
+		padding: 5px;
+	}
+	.list-wedo {
+		width: 100%;
+		float: none;
+		padding: 10px 0;
+	}
+	.grid {
+		width: 70%;
+	}
+	.word-box {
+		height: unset;
+		padding: 20px;
+		margin: 0;
+	}
+	.word-box h3{
+		font-size: 16pt;
+		margin: 5px 0;
+	}
+	.word-box p{
+		font-size: 12pt;
+		margin: 5px 0;
+	}
+	.company-adress {
+		width: 50%;
+		overflow: hidden;
+		margin: 20px auto;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #fff;
+	}
+	.service-title {
+		padding: 15px 20px 0;
+		margin-bottom: 20px;
+	}
+	.service-title h2 {
+		margin: 15px;
+		font-size: 30pt;
+	}
+	.service-title p{
+		font-size: 13pt;
+	}
+	.service-feature {
+		width: 90%;
+		float: none;
+		overflow: hidden;
+		margin: 20px auto 0;
+	}
+	.features {
+		width: 100%;
+		padding: 10px;
+	}
+	.team {
+		padding: 0 10px;
+	}
+	.team-title h2{
+		font-size: 30pt;
+	}
+	.team-member li {
+		width: 50%;
+	}
+	.about-us	{
+		padding: 0;
+	}
+	.about-us	h1{
+		margin: 20px 0;
+		font-size: 26pt;
+		padding: 10px;
+	}
+	.title-box {
+		width: 50%;
+		padding: 0px;
+		text-align: center;
+	}
+	.title-box p{
+		font-size: 12pt;
+	}
+	.our-vision {
+		margin-top: 30px;
+		padding: 0;
+		text-align: center;
+	}
+	.our-vision li{
+		width: 100%;
+		padding: 0;
+	}
+	.our-vision li h3{
+		font-size: 16pt;
+	}
+	.our-vision li p{
+		font-size: 12pt;
+	}
+	.map {
+		height: 180px;
+	}
+	.contact {
+	margin: 0px;
+	}
+	.message {
+		position: unset;
+		width: 90%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.message-box {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.message-box h3{
+		font-size: 18pt;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+	.logo {
+		float: none;
+		margin: 0 auto;
+	}
+	.logo img {
+		max-width: 100px;
+	}
+	.nav-menu {
+		float: none;
+		width: 303px;
+		margin: 0 auto;
+	}
+	.navigation-links {
+		margin: 0 auto;
+	}
+	.navigation-links li {
+		padding: 0 5px;
+	}
+	.navigation-links li:hover a {
+		-webkit-transition: unset;
+		-moz-transition: unset;
+		-ms-transition: unset;
+		-o-transition: unset;
+		transition: unset;
+		border-bottom: 2px solid #fff;
+	}
+	.navigation-links li a {
+		height: 40px;
+		line-height: 40px;
+		font-size: 13px;
+	}
+	.node {
+		width: 70%;
+		padding: 5px;
+		float: none;
+		margin: 0 auto;
+	}
+	.node h2 {
+		font-size: 14pt;
+	}
+	.node p {
+		font-size: 8pt;
+		line-height: 1.5;
+	}
+	.node img {
+		max-width: 50%;
+	}
+	.link-page {
+		width: 50%;
+		text-align: center;
+	}
+	.link-button {
+		width: 100%;
+		background-color: #008a67;
+		color: #fff;
+		padding: 5px;
+		font-size: 8pt;
+	}
+	.who-we-are {
+		float: none;
+		padding: 5px;
+		text-align: center;
+	}
+	.who-we-are h2{
+		font-size: 16pt;
+		margin: 10px 0;
+	}
+	.who-we-are p{
+		font-size: 10pt;
+	}
+	.what-wedo {
+		padding: 5px;
+	}
+	.list-wedo {
+		width: 100%;
+		float: none;
+		padding: 10px 0;
+	}
+	.grid {
+		width: 100%;
+	}
+	.word-box {
+		height: unset;
+		padding: 10px;
+		margin: 0;
+	}
+	.word-box h3{
+		font-size: 14pt;
+		margin: 5px 0;
+	}
+	.word-box p{
+		font-size: 10pt;
+		margin: 5px 0;
+	}
+	.service-title {
+		padding: 5px 5px 0;
+		margin-bottom: 30px;
+	}
+	.service-title h2{
+		margin: 10px;
+		font-size: 28pt;
+	}
+	.service-title p{
+		font-size: 12pt;
+	}
+	.service-feature {
+		width: 90%;
+		float: none;
+		margin: 0 auto;
+	}
+	.features {
+		width: 100%;
+		padding: 10px;
+	}
+	.features h3 {
+		font-size: 16pt;
+	}
+	.features p {
+		font-size: 12pt;
+	}
+	.company-adress {
+		width: 60%;
+	}
+	.company-adress p{
+		font-size: 12px;
+	}
+	.team {
+		padding: 0 10px;
+	}
+	.team-title h2{
+		margin: 20px 0;
+		font-size: 26pt;
+	}
+	.team-title p{
+		font-size: 14pt;
+	}
+	.team-member li {
+		width: 90%;
+	}
+	.about-us	{
+		padding: 0;
+	}
+	.about-us	h1{
+		margin: 20px 0;
+		font-size: 20pt;
+		padding: 0;
+	}
+	.title-box {
+		width: 100%;
+		padding: 0px;
+		text-align: center;
+	}
+	.title-box p{
+		font-size: 11pt;
+	}
+	.our-vision {
+		margin-top: 30px;
+		padding: 0;
+		text-align: center;
+	}
+	.our-vision li{
+		width: 100%;
+		padding: 0;
+	}
+	.our-vision li h3{
+		font-size: 14pt;
+	}
+	.our-vision li p{
+		font-size: 10pt;
+	}
+	.map {
+		height: 150px;
+	}
+	.contact {
+	margin: 0px;
+	}
+	.message {
+		position: unset;
+		width: 90%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.message-box {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.message-box h3{
+		font-size: 16pt;
+	}
+	.message-box p{
+		font-size: 10pt;
+	}
+}
+@media (max-width: 319px) {
+	.logo {
+		width: 70px;
+		margin: 0 auto;
+	}
+	.logo img {
+		max-width: 70px;
+	}
+	.nav-menu {
+		float: none;
+		width: 100%;
+	}
+	.navigation-links {
+		width: 70%;
+		float: none;
+		margin: 0 auto;
+	}
+	.navigation-links li {
+		padding: 0 5px;
+	}
+	.navigation-links li.active a{
+		border: none;
+	}
+	.navigation-links li a {
+		font-size: 8px;
+		height: 20px;
+		line-height: 20px;
+	}
+	.navigation-links li:hover a {
+		border: 0;
+	}
+	.navigation-links li a:hover {
+		border: 0;
+	}
+	.node {
+		width: 100%;
+		float: none;
+		padding: 10px;
+	}
+	.node h2 {
+		font-size: 10pt;
+	}
+	.node p {
+		font-size: 8pt;
+		line-height: 1.5;
+	}
+	.node img {
+		max-width: 60%;
+	} 
+	.link-page {
+		width: 60%;
+		text-align: center;
+	}
+	.link-button {
+		width: 100%;
+		background-color: #008a67;
+		color: #fff;
+		padding: 5px;
+		font-size: 6pt;
+	}
+	.who-we-are {
+		float: none;
+		padding: 5px;
+		text-align: center;
+	}
+	.who-we-are h2{
+		font-size: 14pt;
+		margin: 10px 0;
+	}
+	.who-we-are p{
+		font-size: 8pt;
+	}
+	.what-wedo {
+		padding: 5px;
+	}
+	.list-wedo {
+		width: 100%;
+		float: none;
+		padding: 10px 0;
+	}
+	.grid {
+		width: 100%;
+	}
+	.word-box {
+		height: unset;
+		padding: 10px;
+		margin: 0;
+	}
+	.word-box h3{
+		font-size: 14pt;
+		margin: 5px 0;
+	}
+	.word-box p{
+		font-size: 10pt;
+		margin: 5px 0;
+	}
+	.service-title {
+		float: none;
+		padding: 5px 5px 0;
+	}
+	.service-title h2{
+
+		font-size: 14pt;
+		margin: 10px;
+	}
+	.service-title p{
+		font-size: 10pt;
+	}
+	.features {
+		width: 100%;
+		padding: 10px;
+	}
+	.features h3{
+		font-size: 14pt;
+	}
+	.features p{
+		font-size: 12pt;
+	}
+	.features img{
+		max-width: 60px;
+	}
+	.company-adress {
+		width: 100%;
+	}
+	.company-adress p{
+		font-size: 12px;
+	}
+	.social-box {
+		width: 100%;
+	}
+
+	.team {
+		padding: 0 10px;
+	}
+	.team-title h2{
+		margin: 15px 0;
+		font-size: 18pt;
+	}
+	.team-title p{
+		font-size: 10pt;
+	}
+	.team-member li {
+		width: 100%;
+	}
+	.team-member li img {
+		max-width: 150px;
+	}
+	.about-us	{
+		padding: 0;
+	}
+	.about-us	h1{
+		margin: 20px 0;
+		font-size: 18pt;
+		padding: 0;
+	}
+	.title-box {
+		width: 100%;
+		padding: 0px;
+		text-align: center;
+	}
+	.title-box p{
+		font-size: 10pt;
+	}
+	.our-vision {
+		margin-top: 30px;
+		padding: 0;
+		text-align: center;
+	}
+	.our-vision li{
+		width: 100%;
+		padding: 0;
+	}
+	.our-vision li h3{
+		font-size: 14pt;
+	}
+	.our-vision li p{
+		font-size: 9pt;
+	}
+	.map {
+		height: 150px;
+	}
+	.contact {
+		margin: 0px;
+	}
+	.message {
+		position: unset;
+		width: 100%;
+		padding: 0;
+	}
+	.message-box {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.message-box h3{
+		font-size: 14pt;
+	}
+	.message-box p{
+		font-size: 10pt;
+	}
+}

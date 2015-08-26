@@ -16,8 +16,8 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
-	<!-- <link rel="stylesheet" href="css/css.css"> -->
 	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<title>Our Team</title>
 </head>
 <body>
@@ -41,8 +41,10 @@
 	</header>
 	<section class="team">
 		<div class="container">
-			<h2>Meet Our Team</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque consequuntur laudantium repellendus minus eius, dicta nam voluptates modi eveniet hic deserunt voluptate doloremque earum odit quasi expedita sit aliquid atque!</p>
+			<div class="team-title">
+				<h2>Meet Our Team</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque consequuntur laudantium repellendus minus eius, dicta nam voluptates modi eveniet hic deserunt voluptate doloremque earum odit quasi expedita sit aliquid atque!</p>
+			</div>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
@@ -74,7 +76,7 @@
 						}
 					} ?> </h4>
 
-					<div class="center-ul">
+					<!-- <div class="center-ul">
 						<ul class="personal-links" >
 
 						<?php foreach ($result as $key => $value) {
@@ -117,7 +119,7 @@
 							</li>
 							<?php }}}  ?>		
 						</ul>
-					</div>
+					</div> -->
 				</li>
 				<?php } ?>
 			</ul>

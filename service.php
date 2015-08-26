@@ -15,13 +15,13 @@
 	}
  ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<title>Our Service</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
 	</header>
 	<section class="we-do">
 		<div class="container">
-			<!-- <div class="service-title"> -->
+			<div class="service-title">
 				<!-- <h2>Our Services</h2> -->
 				<h2>
 					<?php foreach ($resulthead[0] as $key => $value) 

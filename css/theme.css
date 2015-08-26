@@ -41,7 +41,7 @@ h2
 	color: #333;
 	font-size: 36pt;
 	/*font-weight: normal;*/
-	margin-top: 2%;
+	margin-top: 25px;
 	padding: 0;
 }
 h3
@@ -78,7 +78,7 @@ p
 {
 	font-family: Lato-light;
 	font-size: 14pt;
-	line-height: 18pt;
+	line-height: 1.5;
 	font-weight: 300;
 	color: #333;
 }
@@ -88,6 +88,9 @@ section {
 	float: left;
 	/*border-bottom: 1px solid #eee;*/
 	padding-bottom: 20px;
+}
+.overflow-hd {
+	overflow: hidden;
 }
 
 /*------Index Page-----*/
@@ -99,9 +102,6 @@ header
 	border-bottom: 1px solid #eee;
 
 }
-.overflow-hd {
-	overflow: hidden;
-}
 .logo
 {
 	position: relative;
@@ -110,7 +110,7 @@ header
 	margin-top: 10px;
 }
 .logo a {
-	float: left;
+	display: block;
 }
 .div-menu
 {
@@ -122,8 +122,8 @@ header
 }
 .nav-menu
 {
-	margin: 0px auto;
 	float: right;
+	overflow: hidden;
 }
 .navigation-links
 {
@@ -149,7 +149,7 @@ header
 		font-family: Lato;
 		padding-top: 0 10px;
 		padding-bottom: 5px;
-		font-size: 15px;
+		font-size: 18px;
 		text-decoration: none;
 		color: #008a67;
 		height: 80px;
@@ -166,8 +166,9 @@ header
 .container
 {
 	position: relative;
-	/*width: 1280px;*/
+	width: 1280px;
 	max-width: 90%;
+	overflow: hidden;
 	margin: 0 auto;
 }
 .picture
@@ -178,20 +179,29 @@ header
 /*--Content---*/
 .display-frame {
 	width: 100%;
-	height: 450px;
+	padding-bottom: 2%;
 	background-color: #f4f2ed;
 	border-bottom: 1px solid #d9d9de;
 }
 .div-span {
-	width: 50%;
-	height: 375px;
+	width: 100%;
+	box-sizing: border-box;
 	float: left;
 }
 .node {
-	padding: 90px;
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+	padding: 40px;
 }
 .node img {
-	max-width: 470px;
+	max-width: 100%;
+}
+.node h2, .node p {
+	text-align: center;
+}
+.node p {
+	margin: 0;
 }
 .link-page {
 	width: 150px;
@@ -204,7 +214,6 @@ header
 	padding: 10px 15px;
 	background-color: transparent;
 	border: 1px solid #008a67;
-	/*transition: color 0.3s ease, background-color 0.3s ease;*/
 	font-weight: bold;
 	transition: all 0.3s ease;
 	border-radius: 2px;
@@ -216,7 +225,7 @@ header
 .who-we-are {
 	float: left;
 	box-sizing: border-box;
-	padding: 0 60px;
+	padding: 0 20px;
 } 
 .who-we-are p {
 	line-height: 1.5;
@@ -227,7 +236,7 @@ header
 	float: left;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 10px 40px;
+	padding: 10px 20px;
 }
 .list-wedo {
 	width: 33.33%;
@@ -236,13 +245,6 @@ header
 	display: inline-block;
 	box-sizing: border-box;
 	padding: 30px 0;
-}
-.list-wedo a {
-	height: 290px;
-	text-decoration: none;
-	padding: 10px 25px 0;
-	display: block;
-	color: #333;
 }
 .list-wedo a button {
 	border: 1px solid #008a67;
@@ -256,15 +258,24 @@ header
 }
 .grid {
 	width: 90%;
-	border: 1px solid #ccc;
 	margin: 0 auto;
+	border: 1px solid #ccc;
 	overflow: hidden;
 }
 .grid h3 {
-	margin: 40px 0 0;
+	margin: 20px 0 0;
 }
 .grid p {
 	margin: 40px 0 0;
+}
+.word-box {
+	height: 290px;
+	text-decoration: none;
+	padding: 10px 25px;
+	display: block;
+	color: #333;
+	margin-bottom: 20px;
+	overflow: hidden;
 }
 .testimonial p {
 	width: 70%;
@@ -280,19 +291,38 @@ footer
 	background-color: #333;
 	margin-top: 50px;
 }
-.footer-details
-{
-	float: left;
-	width: 100%;
-	margin: 0;
+.company-adress {
+	float: right;
+	width: 250px;
+	padding: 0;
 	margin-bottom: 20px;
+	list-style: none;
+	text-align: right;
+}
+.company-adress ul {
+	width: 100%;
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.company-adress ul li {
+	/*float: left;*/
+	margin-top: 10px;
+	display: inline-block;
+}
+.company-adress p{
+	/*float: right;*/
+	font-size: 14px;
+	margin: 0;
+	color: #fff;
+}
+.social-box {
+	float: right;
 }
 .social-links
 {
-	/*float: left;*/
-	position: absolute;
-	bottom: 20px;
-	right: 0;
+	float: left;
 	display: inline-block;
 	list-style: none;
 	margin: 0;
@@ -337,14 +367,13 @@ footer
 			.social-links li a:hover {
 				background-color: #008a67;
 			}
-/*		@media screen and (max-width: 500px) {
-			.social-links li a {
-				width:20px;
-				height: 20px;
-				transition: all 0.5s ease;
-			}
-			
-		}*/
+.footer-details
+{
+	float: left;
+	width: 50%;
+	margin-top: 85px;
+}
+
 .site-details
 {
 	float: left;
@@ -412,6 +441,10 @@ footer
 	box-sizing: border-box;
 	padding: 0px 30px;
 }
+.team-title {
+	width: 100%;
+	float: left;
+}
 .team-member
 {
 	width: 100%;
@@ -431,7 +464,7 @@ footer
 		display: inline-block;
 		margin-bottom: 20px;
 	}
-	.team-member li img:first-child
+	.team-member li img
 	{
 		max-width: 200px;
 		border-radius: 50%;
@@ -515,7 +548,7 @@ footer
 	padding-top: 5%;
 	text-align: center;
 	box-sizing: border-box;
-	padding: 40px 40px 0;
+	padding: 25px 25px 0;
 }
 .move-up
 {
@@ -589,13 +622,13 @@ footer
 	float: left;
 	width: 100%;	
 	box-sizing: border-box;
-	padding: 0 40px 0px;
+	padding: 0 20px;
 }
-.left, .right {
+.title-box {
 	width: 50%;
 	float: left;
 	box-sizing: border-box;
-	padding: 40px;
+	padding: 20px;
 }
 .p-bold {
 	font-family: Lato;
@@ -603,25 +636,20 @@ footer
 	word-spacing: 5px;
 }
 .our-vision {
-	width: 95%;
+	width: 100%;
+	float: left;
 	list-style: none;
 	box-sizing: border-box;
-	padding: 0 40px;
-	margin: 0 auto;
+	padding: 0 20px;
+	overflow: hidden;
 }
 .our-vision li {
-	float: left;
 	width: 50%;
+	display: block;
+	float: left;
 	box-sizing: border-box;
 	padding: 20px;
 }
-/*.lr-padding {
-	padding: 10px 100px 10px 80px;
-}
-.cut-l-pad {
-	padding-left: 40px;
-}*/
-
 
 /*-- Contact --*/
 
@@ -736,29 +764,7 @@ footer
 	float: left;
 	/*margin: 0 auto;*/
 }
-.company-adress {
-	float: right;
-	width: 250px;
-	padding: 0;
-	list-style: none;
-	text-align: right;
-}
-.company-adress ul {
-	width: 100%;
-	list-style: none;
-	float: left;
-	margin: 0;
-	padding: 0;
-}
-.company-adress ul li {
-	float: right;
-	margin: 10px 0;
-}
-.company-adress p{
-	font-size: 14px;
-	margin: 0;
-	color: #fff;
-}
+
 .change-pwrd{
 	width: 400px;
 	height: 400px;
