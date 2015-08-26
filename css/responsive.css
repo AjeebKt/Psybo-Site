@@ -1,10 +1,10 @@
-* {
+/** {
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-}
+}*/
 
 @media screen and (min-width: 1141px) {
 	.team-title {
@@ -38,6 +38,13 @@
 	}
 }
 @media (max-width: 991px){
+	* {
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
 	.logo {
 		float: none;
 		margin: 10px auto 0;
@@ -49,10 +56,15 @@
 	}
 	.navigation-links {
 		margin: 0 auto;
-	}
+	/*}*/
 	.navigation-links li a {
 		height: 40px;
 		line-height: 40px;
+		-webkit-transition: unset;
+		-moz-transition: unset;
+		-ms-transition: unset;
+		-o-transition: unset;
+		transition: unset;
 	}
 	.company-adress {
 		width: 50%;
@@ -149,6 +161,11 @@
 	.navigation-links li a {
 		height: 40px;
 		line-height: 40px;
+		-webkit-transition: unset;
+		-moz-transition: unset;
+		-ms-transition: unset;
+		-o-transition: unset;
+		transition: unset;
 	}
 	.node {
 		padding: 10px;
@@ -282,6 +299,14 @@
 	.navigation-links li {
 		padding: 0 5px;
 	}
+	.navigation-links li:hover a {
+		-webkit-transition: unset;
+		-moz-transition: unset;
+		-ms-transition: unset;
+		-o-transition: unset;
+		transition: unset;
+		border-bottom: 2px solid #fff;
+	}
 	.navigation-links li a {
 		height: 40px;
 		line-height: 40px;
@@ -412,10 +437,11 @@
 }
 @media (max-width: 319px) {
 	.logo {
+		width: 70px;
 		margin: 0 auto;
 	}
 	.logo img {
-		max-width: 100px;
+		max-width: 70px;
 	}
 	.nav-menu {
 		float: none;

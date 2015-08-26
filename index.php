@@ -101,6 +101,32 @@
 	   			</li>
 	   			<?php } ?>
 	   		</ul>
+	   		<!-- <ul class="what-wedo">
+	   			<li class="list-wedo">
+	   					<div class="grid">
+	   						<div class="word-box">
+	   							<h3>Head 1</h3>
+	   							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem incidunt sapiente provident expedita amet esse quia aliquam aspernatur eveniet magni vero, laboriosam magnam quae a ut molestiae, vitae error perferendis.</p>
+	   						</div>
+	   					</div>
+	   			</li>
+	   			<li class="list-wedo">
+	   					<div class="grid">
+	   						<div class="word-box">
+	   							<h3>Head 2</h3>
+	   							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat numquam maxime quia. Magnam nostrum suscipit sequi quis, voluptatum similique hic sint, quod magni soluta, incidunt nisi culpa aspernatur neque voluptatem.</p>
+	   						</div>
+   						</div>
+	   			</li>
+	   			<li class="list-wedo">
+	   					<div class="grid">
+	   						<div class="word-box">
+	   							<h3>Head 3</h3>
+	   							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum voluptas quod, consequuntur accusamus distinctio praesentium, quae, culpa ratione temporibus asperiores possimus veniam sed ut quo maxime, maiores beatae omnis modi.</p>
+	   						</div>
+   						</div>
+	   			</li>
+	   		</ul> -->
 		</div>
 	</section>
 		<!-- <section class="testimonial">
