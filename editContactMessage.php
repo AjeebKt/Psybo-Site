@@ -76,23 +76,22 @@
 				<h2>Edit in Message</h3>
 				<div class="group">
 					<label for="MsgContactHeadding">Headding</label><br>
-					<input type="text" id="MsgContactHeadding" name="MsgContactHeadding" required value=<?php 
-																											foreach ($resultcontact[0] as $key => $value) {
-																												if ($key == 'title' and is_string($key)) {
-																													echo "\"".$value."\"";
-																												}
-																											 } ?> >
+					<input type="text" id="MsgContactHeadding" name="MsgContactHeadding" required value=
+										<?php 
+											foreach ($resultcontact[0] as $key => $value) {
+												if ($key == 'title' and is_string($key)) {
+													echo "\"".$value."\"";
+												}
+										 } ?> >
 				</div>
 				<div class="group width-80">
 					<label for="txtMsgContact">Description</label><br>
-					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="5" required>
-						<?php 
+					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="5" required><?php 
 							foreach ($resultcontact[0] as $key => $value) {
 								if ($key == 'description' and is_string($key)) {
 									echo $value;
 								}
-						 	}  ?>
-					</textarea>
+						 	}  ?></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">

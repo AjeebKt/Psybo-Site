@@ -18,8 +18,8 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 		<div class="company-adress">
 			<ul>
 				<li>
-					<p>Address : V2 Tower, Opposit Old Bus Stand, Pandikkad Road, Manjeri</p>
-					<!-- <p>Address :
+					<!-- <p>Address : V2 Tower, Opposit Old Bus Stand, Pandikkad Road, Manjeri</p> -->
+					<p>Address :
 						<?php foreach ($resultCmpAdd[0] as $key => $value) 
 							{
 								 if ($key == 'address' and is_string($key)) 
@@ -28,12 +28,12 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 								 }
 							} 
 						?>
-					</p> -->
+					</p>oru
 					<p>Place : Manjeri</p>
 				</li>
 				<li>
-					<p>Phone: +04932-222222</p>
-					<!-- <p>Mobile :
+					<!-- <p>Phone: +04932-222222</p> -->
+					<p>Mobile :
 						<?php 
 							foreach ($resultCmpAdd[0] as $key => $value) 
 							{
@@ -43,9 +43,9 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 								 }
 							} 
 						 ?> 
-					</p> -->
-					<p>Email: info@psybotechnologies.com</p>
-					<!-- <p>Email: 
+					</p>
+					<!-- <p>Email: info@psybotechnologies.com</p> -->
+					<p>Email: 
 						<?php 
 							foreach ($resultCmpAdd[0] as $key => $value) 
 							{
@@ -55,7 +55,7 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 								 }
 							}
 						 ?>
-					</p> -->
+					</p>
 				</li>
 			</ul>
 			<div class="social-box">

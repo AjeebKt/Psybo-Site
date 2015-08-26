@@ -253,7 +253,7 @@
 				</div>
 				<div class="group">
 					<label for="uploadPortfolio">Portfolio Image</label><br>
-					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" required><br>
+					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" ><br>
 				</div>
 			</div>
 			<div class="group pad-left">

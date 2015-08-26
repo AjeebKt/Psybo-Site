@@ -104,27 +104,23 @@
 				</div>
 				<div class="group width-80">
 					<label for="txtService">First Description</label><br>
-					<textarea name="txtServiceF" id="txtService" cols="30" rows="5" required>
-						<?php
+					<textarea name="txtServiceF" id="txtService" cols="30" rows="5" required><?php
 							foreach ($resultHead[0] as $key => $value) {
 								if ($key == 'description' and is_string($key)) {
 									echo $value;
 								}
 							}
-						?>
-					</textarea>
+						?></textarea>
 				</div>
 				<div class="group width-80">
 					<label for="txtService">Second Description</label><br>
-					<textarea name="txtServiceS" id="txtService" cols="30" rows="5" required>
-						<?php
+					<textarea name="txtServiceS" id="txtService" cols="30" rows="5" required><?php
 							foreach ($resultHead[0] as $key => $value) {
 								if ($key == 'secDescription' and is_string($key)) {
 									echo $value;
 								}
 							}
-						?>
-					</textarea>
+						?></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
