@@ -63,10 +63,6 @@ $resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
 				</div>
 			</div>
 			<ul class="our-vision">
-				<!-- <li>
-					<h3>Our Vision</h3>
-					<p>Our team has been delivering innovative, cost effective and timely solutions that drive the growth of small and medium-sized businesses worldwide. Engineered by high quality professionals and managed by matured processes, we help forward-thinking companies achieve and surpass their business goals.</p>
-				< /li>-->
 				<?php foreach ($resultitem as $key => $value) {
 				 ?>
 					<li>
