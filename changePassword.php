@@ -69,7 +69,7 @@ if (isset($_POST['changeSubmit']))
 }
 if (isset($_POST['cancel']) )
 {
-	header("location:admin.php");
+	// header('Location: ' . $_SERVER['HTTP_REFERER']) ;
 }
 ?>
 
@@ -104,7 +104,7 @@ if (isset($_POST['cancel']) )
 				</div>
 			</form>
 			<div class="group">
-				<form action="tabDashboard.php" method="POST">
+				<form action=<?php echo "\"".$_SERVER['HTTP_REFERER']."\"" ?> method="POST">
 					<button name="cancel">Cancel</button>
 				</form>
 			</div>
