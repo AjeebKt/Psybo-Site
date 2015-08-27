@@ -95,19 +95,17 @@
 						<option value="service.php">Service</option>
 						<option value="team.php">Team</option>
 						<option value="about.php">About</option>
-						<option value="contact.php">Contact</option>
+						<option selected="" value="contact.php">Contact</option>
 					</select>
 				</div>
 				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
-					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5" requierd>
-						<?php foreach ($resultwedo[0] as $key => $value) {
+					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5" requierd><?php foreach ($resultwedo[0] as $key => $value) {
 								if ($key == 'description'  and is_string($key)) {
 									echo $value;
 								}
 							} 
-						?>
-					</textarea>
+						?></textarea>
 				</div>
 				<!-- <div class="group">
 					<label for="uploadWedo">Select Image</label><br>

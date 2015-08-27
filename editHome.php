@@ -40,13 +40,16 @@
 							</script>";
 				}
 			}
-			$objdb->update('headings', $fields, $values,array('id', $headId));
-			if ($objdb == true) 
+			if ($error ==1) 
 			{
-				$message = "<script type='text/javascript'>
-								alert('update succesfull!');
-								window.location.replace('tabHome.php');
-							</script>";
+				$objdb->update('headings', $fields, $values,array('id', $headId));
+				if ($objdb == true) 
+				{
+					$message = "<script type='text/javascript'>
+									alert('update succesfull!');
+									window.location.replace('tabHome.php');
+								</script>";
+				}
 			}
 		}
 	}
@@ -82,15 +85,13 @@
 				</div>
 				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
-					<textarea name="homeDescription" id="mainDescription" cols="30" rows="5" required>
-						<?php 
+					<textarea name="homeDescription" id="mainDescription" cols="30" rows="5" required><?php 
 							foreach ($resultHead[0] as $key => $value) {
 								if ($key == 'description' and is_string($key)) {
 									echo $value;
 								}
 							}
-						 ?>	
-					</textarea>
+						 ?></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
