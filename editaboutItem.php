@@ -25,9 +25,12 @@
 			}
 			if ($error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\:\,\'\(\)\-\_\ \"\“\“\’\‘\’\?\r\n]*$/',$description) )
+				if (preg_match('/^[A-Za-z0-9\.\:\,\'\(\)\-\_\ \"\“\“\’\‘\’\?\`\/\r\n]*$/',$description) )
 				{
 					$error = 1;
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
+					$description = str_replace("\r\n", "<br />", $description);
 					array_push($fields, 'description');
 					array_push($values, $description);
 				}
@@ -67,18 +70,20 @@
 				<div class="group">
 					<label for="aboutHeadding">Heading</label><br>
 					<input type="text" id="aboutHeadding" name="aboutHeadding" required value=<?php 
-																								foreach ($resultHead[0] as $key => $value) {
-																									if (is_string($key) and $key == 'title') {
-																										echo "\"".$value."\"";
-																									}
-																								}
-					 																			?>>
+								foreach ($resultHead[0] as $key => $value) {
+									if (is_string($key) and $key == 'title') {
+										echo "\"".$value."\"";
+									}
+								}
+							?>>
 				</div>
 				<div class="group width-80">
 					<label for="txtAbout">Description</label><br>
 					<textarea name="txtAbout" id="txtAbout" cols="30" rows="5" required><?php 
 							foreach ($resultHead[0] as $key => $value) {
 								if (is_string($key) and $key == 'description') {
+									$value = str_replace( "<b>","`", $value);
+									$value = str_replace("</b>","/`", $value);
 									echo $value;
 								}
 							}

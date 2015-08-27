@@ -24,9 +24,12 @@
 							alert('Please enter correct Heading!!');
 						</script>";
 			}
-			if (preg_match('/^[A-Za-z0-9\.\:\,\'\(\)\-\_\ \"\“\“\’\‘\’\?\r\n]*$/', $description))	
+			if (preg_match('/^[A-Za-z0-9\.\:\,\'\(\)\-\_\ \"\“\“\’\‘\’\?\`\/\r\n]*$/', $description))	
 			{
 				$error = 1;
+				$description = str_replace("/`", "</b>", $description);
+				$description = str_replace("`", "<b>", $description);
+				$description = str_replace("\r\n", "<br />", $description);
 				array_push($values, $description);
 				array_push($fields, 'description');
 			}
@@ -62,6 +65,10 @@
 				}
 			}
 		}
+	}
+	if (isset($_POST['btnCancel']) ) 
+	{
+		header('location: tabHome.php');
 	}
 
 ?>	
@@ -102,6 +109,8 @@
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5" requierd><?php foreach ($resultwedo[0] as $key => $value) {
 								if ($key == 'description'  and is_string($key)) {
+									$value = str_replace( "<b>","`", $value);
+									$value = str_replace("</b>","/`", $value);
 									echo $value;
 								}
 							} 
@@ -117,7 +126,7 @@
 			</div>
 		</form>
 		<div class="group">
-			<form action="tabHome.php">
+			<form action="" id="form2" name="form2" method="POST">
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</form>
 		</div>

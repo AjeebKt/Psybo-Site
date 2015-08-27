@@ -20,18 +20,20 @@ if (isset($_POST['btnAdd']))
 					</script>";
 		if (!empty($description) and $error == 1) 
 		{
-			if (preg_match('/^[A-Za-z0-9\.\,\ \_\’\'\-\r\n]*$/', $description) )
+			if (preg_match('/^[A-Za-z0-9\.\,\ \_\’\'\-\`\/\r\n]*$/', $description) )
 			{
+				$description = str_replace("/`", "</b>", $description);
+				$description = str_replace("`", "<b>", $description);
 				$description = str_replace("\r\n", "<br />", $description);
 				array_push($values, $description);
 			}
-		}
-		else
-		{
-			$error = 0;
-			$message = "<script type='text/javascript'>
-						alert('Please re-enter!');
-					</script>";
+			else
+			{
+				$error = 0;
+				$message = "<script type='text/javascript'>
+							alert('Please re-enter description!');
+						</script>";
+			}
 		}
 		if ($error == 1) 
 		{

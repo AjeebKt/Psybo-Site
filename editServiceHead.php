@@ -26,9 +26,11 @@
 			if ($error == 1) 
 			{
 				// if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\’\r\n]*$/', $description) )	
-				if (preg_match('/^[A-Za-z0-9\.\,\ \_\’\'\"\-\r\n]*$/', $description) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\’\'\"\-\`\/\r\n]*$/', $description) )
 				{
 					$description = str_replace("\r\n", "<br />", $description);
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					array_push($values, $description);
 					array_push($fields, 'description');
 				}
@@ -71,7 +73,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Add Service Title</title>
+	<title>Edit Service Title</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>
@@ -94,6 +96,8 @@
 					<textarea name="txtService" id="txtService" cols="30" rows="5" required><?php 
 							foreach ($resultHead[0] as $key => $value) {
 										if ($key == 'description' and is_string($key)) {
+											$value = str_replace( "<b>","`", $value);
+											$value = str_replace("</b>","/`", $value);
 											echo $value;
 										}
 									}

@@ -6,7 +6,7 @@ $objdb=new Database("localhost","root","asd","psybo-db");
 $message="";
 session_start();
 // session_destroy();
-if (isset($_POST['changeSubmit']))
+if (isset($_POST['changeSubmit']) and isset($_POST['changePassWord']))
 {
 	if (!empty($_POST['newPwrd']) and !empty($_POST['confirmPwrd'])) 
 	{
@@ -80,31 +80,29 @@ if (isset($_POST['changeSubmit']))
 </head>
 <body>
 	<?php include 'dash.php'; ?>
-	<section class="change-pwrd">
-		<div class="first-content">
+	<section>
+		<div class="change-pwrd">
 			<h3>Change Password</h3>
-			<form action="" method="POST">
-				<div class="group">
-					<label for="currentPwrd">Current Password</label>
+			<form id="changePassWord" name="changePassWord" action="" method="POST">
+			<ul class="password-box">
+				<li>
+					<label for="currentPwrd">Current Password</label><br>
 					<input id="currentPwrd" name="currentPwrd" type="password" required>
-				</div>
-				<div class="group">
-					<label for="newPwrd">New Password</label>
+				</li>
+				<li>
+					<label for="newPwrd">New Password</label><br>
 					<input id="newPwrd" name="newPwrd" type="password" required>
-				</div>
-				<div class="group">
-					<label for="confirmPwrd">Confirm Password</label>
+				</li>
+				<li>
+					<label for="confirmPwrd">Confirm Password</label><br>
 					<input id="confirmPwrd" name="confirmPwrd" type="password" required>
-				</div>
-				<div class="group">
-					<button name="changeSubmit">Update</button>
-				</div>
+				</li>
+			</ul>
+				<button name="changeSubmit">Update</button>
 			</form>
-			<div class="group">
-				<form action=<?php echo "\"".$_SERVER['HTTP_REFERER']."\"" ?> method="POST">
-					<button name="cancel">Cancel</button>
-				</form>
-			</div>
+			<form id="formCancel" name="formCancel" action=<?php echo "\"".$_SERVER['HTTP_REFERER']."\"" ?> method="POST">
+				<button name="cancel">Cancel</button>
+			</form>
 		</div>
 	</section>
 	<?php echo $message; ?>

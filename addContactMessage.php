@@ -28,9 +28,11 @@
 			}
 			if (!empty($description) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\r\n]*$/',$description) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\`\/\r\n]*$/',$description) )
 				{
 					$error = 1;
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					$description = str_replace("\r\n", "<br />", $description);
 					array_push($valueSrv, $description);
 					array_push($fieldSrv, 'description');
