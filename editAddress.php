@@ -309,7 +309,11 @@
 				</div>
 				<div class="group">
 					<label for="txtPlace">Place</label><br>
-					<input name="txtPlace" id="txtPlace" type="url">
+					<input name="txtPlace" id="txtPlace" type="text" value=<?php foreach ($resultAddress[0] as $key => $value) {
+																					if (is_string($key) and $key == 'place') {
+																						echo "\"".$value."\"";
+																					}			
+																				} ?>>
 				</div>
 				<div class="group width-80">
 					<label for="footerAddress">Address</label><br>

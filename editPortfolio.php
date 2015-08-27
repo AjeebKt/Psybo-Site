@@ -243,10 +243,6 @@
 						}	
 					}?> required>
 				</div>
-				<div class="group">
-					<label for="uploadPortfolio">Portfolio Image</label><br>
-					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" required><br>
-				</div>
 				<div class="group width-80">
 					<label for="portfolioDescription">Description</label><br>
 					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" required><?php foreach ($result[0] as $key => $value) {
@@ -254,6 +250,10 @@
 							echo $value;	
 						}	
 					}?></textarea><br>
+				</div>
+				<div class="group">
+					<label for="uploadPortfolio">Portfolio Image</label><br>
+					<input id="uploadPortfolio" name="uploadPortfolio" type="file" class="up" ><br>
 				</div>
 			</div>
 			<div class="group pad-left">

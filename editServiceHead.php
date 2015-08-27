@@ -52,12 +52,6 @@
 								</script>";
 				}
 			}
-			// else
-			// {
-			// 	$message = "<script type='text/javascript'>
-			// 						alert('Please try again later!');
-			// 					</script>";
-			// }
 		}
 		else
 		{
@@ -80,7 +74,7 @@
 	<title>Add Service Title</title>
 </head>
 <body>
-	<?php //include 'dash.php'; ?>
+	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="firstServiceForm">
 			<div class="first-content">
@@ -97,15 +91,13 @@
 				</div>
 				<div class="group width-80">
 					<label for="txtService">Description</label><br>
-					<textarea name="txtService" id="txtService" cols="30" rows="5" required>
-						<?php 
+					<textarea name="txtService" id="txtService" cols="30" rows="5" required><?php 
 							foreach ($resultHead[0] as $key => $value) {
 										if ($key == 'description' and is_string($key)) {
 											echo $value;
 										}
 									}
-						?>
-					</textarea>
+						?></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">

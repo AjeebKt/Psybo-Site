@@ -163,15 +163,13 @@
 				</div>
 				<div class="group width-80">
 					<label for="serviceDescription">Description</label><br>
-					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="5" required>
-						<?php 
+					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="5" required><?php 
 							foreach ($resultService[0] as $key => $value) {
 								if ($key == 'description' and is_string($key)) {
 									echo $value;
 								}
 							}
-						?>						
-					</textarea>
+						?></textarea>
 				</div>
 				<div class="group">
 					<label for="serviceImg">Select Image</label>

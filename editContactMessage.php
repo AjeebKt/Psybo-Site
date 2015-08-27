@@ -85,14 +85,12 @@
 				</div>
 				<div class="group width-80">
 					<label for="txtMsgContact">Description</label><br>
-					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="5" required>
-						<?php 
+					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="5" required><?php 
 							foreach ($resultcontact[0] as $key => $value) {
 								if ($key == 'description' and is_string($key)) {
 									echo $value;
 								}
-						 	}  ?>
-					</textarea>
+						 	}  ?></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">
