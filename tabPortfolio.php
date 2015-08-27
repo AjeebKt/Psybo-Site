@@ -60,7 +60,7 @@
 			<table class="show-item">
 				<tbody>
 					<tr>
-						<th>Name</th>
+						<th>Title</th>
 						<th>Description</th>
 						<th>Link</th>
 						<th>Image</th>

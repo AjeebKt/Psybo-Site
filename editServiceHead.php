@@ -71,7 +71,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/admin-style.css">
-	<title>Add Service Title</title>
+	<title>Edit Service Title</title>
 </head>
 <body>
 	<?php include 'dash.php'; ?>

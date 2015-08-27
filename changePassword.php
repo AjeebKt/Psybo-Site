@@ -83,31 +83,29 @@ if (isset($_POST['cancel']) )
 </head>
 <body>
 	<?php include 'dash.php'; ?>
-	<section class="change-pwrd">
-		<div class="first-content">
+	<section>
+		<div class="change-pwrd">
 			<h3>Change Password</h3>
 			<form action="" method="POST">
-				<div class="group">
-					<label for="currentPwrd">Current Password</label>
+			<ul class="password-box">
+				<li>
+					<label for="currentPwrd">Current Password</label><br>
 					<input id="currentPwrd" name="currentPwrd" type="password" required>
-				</div>
-				<div class="group">
-					<label for="newPwrd">New Password</label>
+				</li>
+				<li>
+					<label for="newPwrd">New Password</label><br>
 					<input id="newPwrd" name="newPwrd" type="password" required>
-				</div>
-				<div class="group">
-					<label for="confirmPwrd">Confirm Password</label>
+				</li>
+				<li>
+					<label for="confirmPwrd">Confirm Password</label><br>
 					<input id="confirmPwrd" name="confirmPwrd" type="password" required>
-				</div>
-				<div class="group">
-					<button name="changeSubmit">Update</button>
-				</div>
-			</form>
-			<div class="group">
+				</li>
+			</ul>
+				<button name="changeSubmit">Update</button>
 				<form action="tabDashboard.php" method="POST">
 					<button name="cancel">Cancel</button>
 				</form>
-			</div>
+			</form>
 		</div>
 	</section>
 	<?php echo $message; ?>
