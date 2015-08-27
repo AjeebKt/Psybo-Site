@@ -6,7 +6,7 @@ $objdb=new Database("localhost","root","asd","psybo-db");
 $message="";
 session_start();
 // session_destroy();
-if (isset($_POST['changeSubmit']))
+if (isset($_POST['changeSubmit']) and isset($_POST['changePassWord']))
 {
 	if (!empty($_POST['newPwrd']) and !empty($_POST['confirmPwrd'])) 
 	{
@@ -67,9 +67,9 @@ if (isset($_POST['changeSubmit']))
 				</script>";	
 	}	
 }
-if (isset($_POST['cancel']) )
+if (isset($_POST['cancel']))
 {
-	header("location:admin.php");
+	header('Location: ' . $_SERVER['HTTP_REFERER']) ;
 }
 ?>
 
@@ -86,7 +86,7 @@ if (isset($_POST['cancel']) )
 	<section>
 		<div class="change-pwrd">
 			<h3>Change Password</h3>
-			<form action="" method="POST">
+			<form id="changePassWord" name="changePassWord" action="" method="POST">
 			<ul class="password-box">
 				<li>
 					<label for="currentPwrd">Current Password</label><br>
@@ -102,9 +102,9 @@ if (isset($_POST['cancel']) )
 				</li>
 			</ul>
 				<button name="changeSubmit">Update</button>
-				<form action="tabDashboard.php" method="POST">
-					<button name="cancel">Cancel</button>
-				</form>
+			</form>
+			<form id="formCancel" name="formCancel" action=<?php echo "\"".$_SERVER['HTTP_REFERER']."\"" ?> method="POST">
+				<button name="cancel">Cancel</button>
 			</form>
 		</div>
 	</section>

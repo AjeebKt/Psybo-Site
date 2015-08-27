@@ -110,7 +110,7 @@
 				<button id="btnAdd" name="btnAdd">Add</button>
 			</div>
 		</form>
-		<div class="group width-80">
+		<div class="group">
 			<form action="tabAbout.php">
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</form>
