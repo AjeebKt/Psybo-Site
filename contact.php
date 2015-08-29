@@ -64,7 +64,7 @@ if (isset($_POST['buttonmail']) )
 			map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
 			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.120228, 76.120368),
 			});
-			marker.setIcon('./img/123.png');
+			marker.setIcon('./img/icon.png');
 		}
 			google.maps.event.addDomListener(window, 'load', init_map);
 	</script>
