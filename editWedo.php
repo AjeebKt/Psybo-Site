@@ -116,6 +116,7 @@
 								}
 							} 
 						?></textarea>
+				<span>Use `example/` for Bold</span>
 				</div>
 				<!-- <div class="group">
 					<label for="uploadWedo">Select Image</label><br>

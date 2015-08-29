@@ -186,6 +186,7 @@
 				<div class="group width-80">
 					<label>Description</label><br>
 					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" optional></textarea><br>
+					<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

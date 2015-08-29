@@ -105,10 +105,12 @@
 				<div class="group width-80">
 					<label for="firstTxtAbout">First Description</label><br>
 					<textarea name="firstTxtAbout" id="firstTxtAbout" cols="30" rows="5" required></textarea>
+					<span>Use `example/` for Bold</span>
 				</div>
 				<div class="group width-80">
 					<label for="SecondTxtAbout">Second Description</label><br>
 					<textarea name="SecondTxtAbout" id="SecondTxtAbout" cols="30" rows="5" required></textarea>
+					<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

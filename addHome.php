@@ -91,7 +91,7 @@ if (isset($_POST['btnCancel']) )
 				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeDescription" id="mainDescription" cols="30" rows="5" required></textarea>
-					<p> if bold some word use "`" and "/`"</p>
+					<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

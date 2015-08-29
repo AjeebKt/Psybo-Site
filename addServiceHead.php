@@ -80,6 +80,7 @@ if (isset($_POST['btnCancel']))
 				<div class="group width-80">
 					<label for="txtService">Description</label><br>
 					<textarea name="txtService" id="txtService" cols="30" rows="5"></textarea>
+					<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

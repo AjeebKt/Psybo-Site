@@ -90,6 +90,7 @@
 				<div class="group width-80">
 					<label for="txtMsgContact">Description</label><br>
 					<textarea name="txtMsgContact" id="txtMsgContact" cols="30" rows="5"></textarea>
+					<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

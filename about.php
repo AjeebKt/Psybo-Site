@@ -36,13 +36,13 @@ $resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
 	<section>
 		<div class="container">
 			<div class="about-us">
-				<h1>
+				<h2>
 						<?php foreach ($resulthead[0] as $key => $value) {
 						if ($key == 'title' and is_string($key)) {
 							echo $value;
 						}
 					} ?>
-				</h1>
+				</h2>
 				<div class="title-box">
 					<p class="p-bold">
 						<?php foreach ($resulthead[0] as $key => $value) {
@@ -87,3 +87,4 @@ $resultitem = $objdb->select('subHeadings', array(), array('name', 'about'));
 	<?php include 'footer.php'; ?>
 </body>
 </html>
+

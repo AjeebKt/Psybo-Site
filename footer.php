@@ -28,7 +28,7 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 								 }
 							} 
 						?>
-					</p>oru
+					</p>
 					<p>Place : Manjeri</p>
 				</li>
 				<li>

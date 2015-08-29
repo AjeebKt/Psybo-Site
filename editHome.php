@@ -75,7 +75,7 @@
 	<title>Edit Title - Home</title>
 </head>
 <body>
-	<?php //include 'dash.php'; ?>
+	<?php include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="secondForm">
 			<div class="first-content">
@@ -101,7 +101,7 @@
 								}
 							}
 						 ?></textarea>
-						 <p> if bold some word use "`" and "/`"</p>
+				<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

@@ -84,6 +84,7 @@ if (isset($_POST['btnAdd']))
 				<div class="group width-80">
 					<label for="txtAbout">Description</label><br>
 					<textarea name="txtAbout" id="txtAbout" cols="30" rows="5" required></textarea>
+					<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

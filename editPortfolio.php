@@ -251,6 +251,7 @@
 							echo $value;	
 						}	
 					}?></textarea><br>
+				<span>Use `example/` for Bold</span>
 				</div>
 				<div class="group">
 					<label for="uploadPortfolio">Portfolio Image</label><br>
