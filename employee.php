@@ -1,5 +1,5 @@
 <?php
-	error_reporting(0); 
+	error_reporting(E_ALL); 
 	include "file.php";
     require_once 'Database.php';
 	

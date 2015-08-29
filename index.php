@@ -1,10 +1,9 @@
 <?php 
-	error_reporting(1);
+	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$result = $objdb->select('headings',array(),array('name', 'home'));
 	$resultWedo = $objdb->select('subHeadings', array(), array('name', 'wedo'));
-	// var_dump($resultWedo);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,6 +85,7 @@
 									 	echo $val;
 									 }
 								}?>
+		   				</a>
 			   				</h3>
 			   				<!-- <p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p> -->
 			   				<p>
@@ -96,12 +96,11 @@
 									}
 								}?>
 			   				</p>
-		   				</a>
 				   	</div>
 	   			</li>
 	   			<?php } ?>
 	   		</ul>
-	   		<ul class="what-wedo">
+	   		<!-- <ul class="what-wedo">
 	   			<li class="list-wedo">
 	   					<div class="grid">
 	   						<div class="word-box">
@@ -126,7 +125,7 @@
 	   						</div>
    						</div>
 	   			</li>
-	   		</ul>
+	   		</ul> -->
 		</div>
 	</section>
 		<!-- <section class="testimonial">

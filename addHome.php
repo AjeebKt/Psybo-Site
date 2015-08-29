@@ -1,9 +1,5 @@
-
-
-                                                                                                                                                                              
-
-                                                                                                                                                                              <?php 
-	error_reporting(1);
+<?php 
+	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
 	if (isset($_POST['btnAdd'])) 
@@ -94,6 +90,7 @@ if (isset($_POST['btnCancel']) )
 				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeDescription" id="mainDescription" cols="30" rows="5" required></textarea>
+					<p> if bold some word use "`" and "/`"</p>
 				</div>
 			</div>
 			<div class="group pad-left">

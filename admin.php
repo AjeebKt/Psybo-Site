@@ -1,5 +1,5 @@
 <?php 
-	error_reporting(0);
+	error_reporting(E_ALL);
 	require_once('Database.php');
 	// $condb=new mysqli("psybotechnologies.com","psyboysg_test","psybotest","psyboysg_psybo-db");
     // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');

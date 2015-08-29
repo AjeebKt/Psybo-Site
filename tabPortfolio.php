@@ -1,5 +1,5 @@
 <?php 
-	error_reporting(0);
+	error_reporting(E_ALL);
 	include 'Database.php';
 	include 'file.php';
     // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');

@@ -1,5 +1,5 @@
 <?php 
-	error_reporting(1);
+	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$headId = $_GET['editid'];
@@ -96,6 +96,7 @@
 								}
 							}
 						 ?></textarea>
+						 <p> if bold some word use "`" and "/`"</p>
 				</div>
 			</div>
 			<div class="group pad-left">

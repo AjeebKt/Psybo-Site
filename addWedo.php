@@ -1,6 +1,5 @@
-
 <?php 
-	error_reporting(1);
+	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
 	if (isset($_POST['btnAdd']) )
@@ -192,6 +191,7 @@
 				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5" required></textarea>
+					<p> if bold some charector use "`" and "/`"</p>
 				</div>
 				<!-- <div class="group">
 					<label for="uploadWedo">Select Image</label>

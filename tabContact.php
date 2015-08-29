@@ -1,5 +1,5 @@
 <?php 
-	error_reporting(1);
+	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'contact',));

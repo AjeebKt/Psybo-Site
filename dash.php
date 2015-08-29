@@ -1,6 +1,6 @@
 
 <?php 
-	error_reporting(0);
+	error_reporting(E_ALL);
 	session_start();
 	if ( empty(isset($_SESSION['username'])) ) 
 	{
