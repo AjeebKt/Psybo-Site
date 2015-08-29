@@ -115,6 +115,7 @@
 								}
 							} 
 						?></textarea>
+				<span>Use `example/` for Bold</span>
 				</div>
 				<!-- <div class="group">
 					<label for="uploadWedo">Select Image</label><br>
@@ -122,7 +123,7 @@
 				</div> -->
 			</div>
 			<div class="group pad-left">
-				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnAdd" name="btnAdd">Update</button>
 			</div>
 		</form>
 		<div class="group">

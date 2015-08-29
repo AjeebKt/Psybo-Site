@@ -68,7 +68,7 @@
 		font-size: 16px;
 	}
 	.who-we-are {
-		width: 80%;
+		width: 95%;
 		float: none;
 		margin: 0 auto;
 		padding: 5px;
@@ -79,7 +79,7 @@
 		margin: 20px 0;
 	}
 	.who-we-are p{
-		font-size: 14pt;
+		font-size: 12pt;
 	}
 	.what-wedo {
 		padding: 5px;
@@ -99,10 +99,10 @@
 	}
 	.word-box h3{
 		font-size: 20pt;
-		margin: 5px 0;
+		margin: 20px 0;
 	}
 	.word-box p{
-		font-size: 14pt;
+		font-size: 12pt;
 		margin: 5px 0;
 	}
 	.company-adress {
@@ -132,8 +132,17 @@
 		float: none;
 		text-align: center;
 	}
+	.service-title h2{
+		font-size: 28pt;
+	}
+	.service-title p{
+		font-size: 12pt;
+	}
 	.features {
 		width: 50%;
+	}
+	.features p{
+		font-size: 12pt;
 	}
 	.team {
 		padding: 0 15px;
@@ -144,13 +153,13 @@
 	.about-us	{
 		padding: 10px;
 	}
-	.about-us	h1{
+	.about-us	h2{
 		margin: 20px 0;
 		font-size: 26pt;
 		padding: 0;
 	}
 	.title-box {
-		width: 50%;
+		width: 100%;
 		padding: 10px;
 		text-align: center;
 	}
@@ -172,7 +181,7 @@
 	.our-vision li p{
 		font-size: 12pt;
 	}
-	.map {
+	.map, .map-canvas{
 		height: 300px;
 	}
 	.contact {
@@ -231,7 +240,6 @@
 		font-size: 12pt;
 	}
 	.who-we-are {
-		width: 80%;
 		float: none;
 		margin: 0 auto;
 		padding: 5px;
@@ -276,25 +284,25 @@
 		border-bottom: 1px solid #fff;
 	}
 	.service-title {
-		padding: 15px 20px 0;
+		padding: 10px 5px 0px;
 		margin-bottom: 20px;
 	}
 	.service-title h2 {
 		margin: 15px;
-		font-size: 30pt;
+		font-size: 20pt;
 	}
 	.service-title p{
-		font-size: 13pt;
+		font-size: 12pt;
 	}
 	.service-feature {
-		width: 90%;
+		width: 95%;
 		float: none;
 		overflow: hidden;
 		margin: 20px auto 0;
 	}
 	.features {
 		width: 100%;
-		padding: 10px;
+		padding: 5px;
 	}
 	.team {
 		padding: 0 10px;
@@ -314,9 +322,7 @@
 		padding: 10px;
 	}
 	.title-box {
-		width: 50%;
 		padding: 0px;
-		text-align: center;
 	}
 	.title-box p{
 		font-size: 12pt;
@@ -336,7 +342,7 @@
 	.our-vision li p{
 		font-size: 12pt;
 	}
-	.map {
+	.map, .map-canvas{
 		height: 180px;
 	}
 	.contact {
@@ -399,7 +405,7 @@
 		font-size: 14pt;
 	}
 	.node p {
-		font-size: 8pt;
+		font-size: 10pt;
 		line-height: 1.5;
 	}
 	.node img {
@@ -440,7 +446,6 @@
 		width: 100%;
 	}
 	.word-box {
-		height: unset;
 		padding: 10px;
 		margin: 0;
 	}
@@ -458,25 +463,23 @@
 	}
 	.service-title h2{
 		margin: 10px;
-		font-size: 28pt;
+		font-size: 16pt;
 	}
 	.service-title p{
-		font-size: 12pt;
-	}
-	.service-feature {
-		width: 90%;
-		float: none;
-		margin: 0 auto;
+		font-size: 10pt;
 	}
 	.features {
 		width: 100%;
 		padding: 10px;
 	}
+	.features img{
+		max-width: 60px;
+	}
 	.features h3 {
 		font-size: 16pt;
 	}
 	.features p {
-		font-size: 12pt;
+		font-size: 10pt;
 	}
 	.company-adress {
 		width: 60%;
@@ -508,7 +511,6 @@
 	.title-box {
 		width: 100%;
 		padding: 0px;
-		text-align: center;
 	}
 	.title-box p{
 		font-size: 11pt;
@@ -528,7 +530,7 @@
 	.our-vision li p{
 		font-size: 10pt;
 	}
-	.map {
+	.map, .map-canvas{
 		height: 150px;
 	}
 	.contact {
@@ -564,7 +566,7 @@
 		width: 100%;
 	}
 	.navigation-links {
-		width: 70%;
+		width: 84%;
 		float: none;
 		margin: 0 auto;
 	}
@@ -575,7 +577,7 @@
 		border: none;
 	}
 	.navigation-links li a {
-		font-size: 8px;
+		font-size: 10px;
 		height: 20px;
 		line-height: 20px;
 	}
@@ -617,11 +619,11 @@
 		text-align: center;
 	}
 	.who-we-are h2{
-		font-size: 14pt;
+		font-size: 16pt;
 		margin: 10px 0;
 	}
 	.who-we-are p{
-		font-size: 8pt;
+		font-size: 10pt;
 	}
 	.what-wedo {
 		padding: 5px;
@@ -644,7 +646,7 @@
 		margin: 5px 0;
 	}
 	.word-box p{
-		font-size: 10pt;
+		font-size: 9pt;
 		margin: 5px 0;
 	}
 	.service-title {
@@ -661,16 +663,16 @@
 	}
 	.features {
 		width: 100%;
-		padding: 10px;
+		padding: 5px;
+	}
+	.features img{
+		max-width: 60px;
 	}
 	.features h3{
 		font-size: 14pt;
 	}
 	.features p{
-		font-size: 12pt;
-	}
-	.features img{
-		max-width: 60px;
+		font-size: 8pt;
 	}
 	.company-adress {
 		width: 100%;

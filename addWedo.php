@@ -192,11 +192,8 @@
 				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeWedoDescription" id="mainDescription" cols="30" rows="5" required></textarea>
+					<span>Use `example/` for Bold</span>
 				</div>
-				<!-- <div class="group">
-					<label for="uploadWedo">Select Image</label>
-					<input type="file" id="uploadWedo" name="homeWedoImg">
-				</div> -->
 			</div>
 			<div class="group pad-left">
 				<button id="btnAdd" name="btnAdd">Add</button>

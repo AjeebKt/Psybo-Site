@@ -174,6 +174,7 @@
 								}
 							}
 						?></textarea>
+				<span>Use `example/` for Bold</span>
 				</div>
 				<div class="group">
 					<label for="serviceImg">Select Image</label>

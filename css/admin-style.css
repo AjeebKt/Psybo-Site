@@ -406,7 +406,7 @@ input[type="file"] {
 .selection {
 	/*width: 110px;*/
 	float: left;
-	height: 30px;
+	height: 35px;
 	margin: 10px 0px;
 	border: 1px solid #333;
 	border-radius: 3px;

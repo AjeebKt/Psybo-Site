@@ -1,8 +1,4 @@
-
-
-                                                                                                                                                                              
-
-                                                                                                                                                                              <?php 
+<?php 
 	error_reporting(1);
 	include_once 'Database.php';
 	$objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
@@ -94,6 +90,7 @@ if (isset($_POST['btnCancel']) )
 				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
 					<textarea name="homeDescription" id="mainDescription" cols="30" rows="5" required></textarea>
+					<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

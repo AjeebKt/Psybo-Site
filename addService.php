@@ -172,6 +172,7 @@ if (isset($_POST['btnCancel']))
 				<div class="group width-80">
 					<label for="serviceDescription">Description</label><br>
 					<textarea name="serviceDescription" id="serviceDescription" cols="30" rows="5" required></textarea>
+					<span>Use `example/` for Bold</span>
 				</div>
 				<div class="group width-80">
 					<label for="serviceImg">Select Image</label>

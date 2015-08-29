@@ -102,6 +102,7 @@
 										}
 									}
 						?></textarea>
+				<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">

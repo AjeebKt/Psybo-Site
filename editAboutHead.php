@@ -115,6 +115,7 @@
 								}
 							}
 						?></textarea>
+				<span>Use `example/` for Bold</span>
 				</div>
 				<div class="group width-80">
 					<label for="txtService">Second Description</label><br>
@@ -127,6 +128,7 @@
 								}
 							}
 						?></textarea>
+				<span>Use `example/` for Bold</span>
 				</div>
 			</div>
 			<div class="group pad-left">
