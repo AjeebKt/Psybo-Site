@@ -46,15 +46,8 @@
     {   
         $name=$_POST['txtName'];
         $gender = $_POST['selection'];
-        // $name=filter_var($_POST['txtName'],FILTER_SANITIZE_ENCODED);
-        // $name=str_replace("%20", " ", $name);
-        // $name=strip_tags($_POST['txtName']);
 
         $designation=$_POST['txtDesignation'];
-        // $designation=strip_tags($_POST['txtDesignation']);
-        // $designation=filter_var($_POST['txtDesignation'],FILTER_SANITIZE_ENCODED);
-        // $designation=str_replace("%20", " ", $designation);
-
         
         $target_dir=getcwd()."/upload-image/";
         $file_name=basename($_FILES["uploadTeam"]["name"]);

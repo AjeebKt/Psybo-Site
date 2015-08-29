@@ -26,9 +26,11 @@
 			}
 			if ($error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\,\ \'\(\)\"\_\-\?\r\n]*$/', $description) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \'\(\)\"\_\-\?\`\/\r\n]*$/', $description) )
 				{
 					$error = 1;
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					$description = str_replace("\r\n", "<br />", $description);
 					array_push($values, $description);
 					array_push($feilds, 'description');
@@ -43,7 +45,7 @@
 			}
 			if ($error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\,\ \'\?\(\)\"\_\’\‘\’\-\r\n]*$/', $secDescription) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \'\?\(\)\"\_\’\‘\’\-\`\/\r\n]*$/', $secDescription) )
 				{
 					$error = 1;
 					$secDescription = str_replace("\r\n", "<br />", $secDescription);
@@ -107,6 +109,8 @@
 					<textarea name="txtServiceF" id="txtService" cols="30" rows="5" required><?php
 							foreach ($resultHead[0] as $key => $value) {
 								if ($key == 'description' and is_string($key)) {
+									$value = str_replace( "<b>","`", $value);
+									$value = str_replace("</b>","/`", $value);
 									echo $value;
 								}
 							}
@@ -117,6 +121,8 @@
 					<textarea name="txtServiceS" id="txtService" cols="30" rows="5" required><?php
 							foreach ($resultHead[0] as $key => $value) {
 								if ($key == 'secDescription' and is_string($key)) {
+									$value = str_replace( "<b>","`", $value);
+									$value = str_replace("</b>","/`", $value);
 									echo $value;
 								}
 							}

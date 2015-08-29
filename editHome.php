@@ -2,8 +2,8 @@
 	error_reporting(1);
 	include_once 'Database.php';
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
-	$resultHead = $objdb->select('headings', array(), array('name', 'home',));
 	$headId = $_GET['editid'];
+	$resultHead = $objdb->select('headings', array(), ['id', $headId]);
 	$headding = $_POST['homeHead'];
 	$description = $_POST['homeDescription'];
 
@@ -26,9 +26,11 @@
 			}
 			if ($error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\’\r\n]*$/', $description))	
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\’\`\/\r\n]*$/', $description))	
 				{
 					$description = str_replace("\r\n", "<br />", $description);
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					array_push($values, $description);
 					array_push($fields, 'description');
 				}
@@ -40,13 +42,16 @@
 							</script>";
 				}
 			}
-			$objdb->update('headings', $fields, $values,array('id', $headId));
-			if ($objdb == true) 
+			if ($error ==1) 
 			{
-				$message = "<script type='text/javascript'>
-								alert('update succesfull!');
-								window.location.replace('tabHome.php');
-							</script>";
+				$objdb->update('headings', $fields, $values,array('id', $headId));
+				if ($objdb == true) 
+				{
+					$message = "<script type='text/javascript'>
+									alert('update succesfull!');
+									window.location.replace('tabHome.php');
+								</script>";
+				}
 			}
 		}
 	}
@@ -82,15 +87,15 @@
 				</div>
 				<div class="group width-80">
 					<label for="mainDescription">Description</label><br>
-					<textarea name="homeDescription" id="mainDescription" cols="30" rows="5" required>
-						<?php 
+					<textarea name="homeDescription" id="mainDescription" cols="30" rows="5" required><?php 
 							foreach ($resultHead[0] as $key => $value) {
 								if ($key == 'description' and is_string($key)) {
+									$value = str_replace( "<b>","`", $value);
+									$value = str_replace("</b>","/`", $value);
 									echo $value;
 								}
 							}
-						 ?>	
-					</textarea>
+						 ?></textarea>
 				</div>
 			</div>
 			<div class="group pad-left">

@@ -41,9 +41,11 @@
 			if (!empty($description) and $error == 1) 
 			{
 				// if(strpos($description,'%') == FALSE)# or strpos($title,'%') !== FALSE)
-				if (preg_match('/^[A-Za-z0-9., _-]*$/', $description))
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\`\/]*$/', $description))
 				{
 					$error = 1;
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					array_push($values_ptf, $description);
 					array_push($fields_ptf, "about");
 				}

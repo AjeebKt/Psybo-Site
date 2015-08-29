@@ -1,4 +1,8 @@
-<?php 
+
+
+                                                                                                                                                                              
+
+                                                                                                                                                                              <?php 
 	error_reporting(1);
 	include_once 'Database.php';
 	$objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
@@ -25,9 +29,11 @@
 			{
 				// $description = nl2br($description);
 				// var_dump($description);
-				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\’\r\n]*$/', $description) and $error ==1)	
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\’\/\`\r\n]*$/', $description) and $error ==1)	
 				{
 					$description = str_replace("\r\n", "<br />", $description);
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					array_push($values, $description);
 				}
 				else
@@ -62,7 +68,7 @@
 							alert('Please enter full information!');
 						</script>";
 }
-if (isset($_POST['btnCancel'])) 
+if (isset($_POST['btnCancel']) ) 
 {
 	header('location:tabHome.php');
 }
@@ -82,7 +88,7 @@ if (isset($_POST['btnCancel']))
 			<div class="first-content">
 				<h3>Add Home Title</h3>
 				<div class="group">
-					<label for="mainHead">Haedding</label><br>
+					<label for="mainHead">Headding</label><br>
 					<input id="mainHead" type="text" name="homeHead" required>
 				</div>
 				<div class="group width-80">
@@ -95,7 +101,7 @@ if (isset($_POST['btnCancel']))
 			</div>
 		</form>
 		<div class="group">
-			<form action="tabHome.php">
+			<form action="" id="form2" name="form2" method="POST">
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</form>
 		</div>

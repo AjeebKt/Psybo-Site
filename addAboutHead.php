@@ -25,10 +25,12 @@
 			}
 			if (!empty($description) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\,\ \'\(\)\"\_\-\?\r\n]*$/', $description) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \'\(\)\"\_\-\?\`\/\r\n]*$/', $description) )
 				{
 					$error =1;
 					$description = str_replace("\r\n", "<br />", $description);
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					array_push($values, $description);
 				}
 				else
@@ -41,17 +43,19 @@
 			}
 			if (!empty($secDescription) and $error == 1) 
 			{
-				if (preg_match('/^[A-Za-z0-9\.\,\ \'\?\(\)\"\_\’\‘\’\-\r\n]*$/', $secDescription) )
+				if (preg_match('/^[A-Za-z0-9\.\,\ \'\?\(\)\"\_\’\‘\’\-\`\/\r\n]*$/', $secDescription) )
 				{
 					$error =1;
 					$secDescription = str_replace("\r\n", "<br />", $secDescription);
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					array_push($values, $secDescription);
 				}
 				else
 				{
 					$error = 0;
 					$message = "<script type='text/javascript'>
-								alert('Please re-enter!');
+								alert('Please re-enter second description!');
 							</script>";
 				}
 			}

@@ -67,10 +67,7 @@ if (isset($_POST['changeSubmit']) and isset($_POST['changePassWord']))
 				</script>";	
 	}	
 }
-if (isset($_POST['cancel']))
-{
-	header('Location: ' . $_SERVER['HTTP_REFERER']) ;
-}
+
 ?>
 
 <!DOCTYPE html>

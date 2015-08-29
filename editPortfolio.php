@@ -69,9 +69,11 @@
 			{
 				// if (strpos($description, '%') == FALSE) 
 				$error=1;
-				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\/\’\‘\’\r\n]*$/', $description))
+				if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\/\’\‘\’\`\/\r\n]*$/', $description))
 				{
 					$description = str_replace("\r\n", "<br />", $description);
+					$description = str_replace("/`", "</b>", $description);
+					$description = str_replace("`", "<b>", $description);
 					array_push($values_ptf, $description);
 					array_push($fields_ptf, "about");
 				}
@@ -247,6 +249,8 @@
 					<label for="portfolioDescription">Description</label><br>
 					<textarea name="portfolioDescription" id="portfolioDescription" cols="30" rows="5" required><?php foreach ($result[0] as $key => $value) {
 					if (is_string($key) and $key == 'about') {
+							$value = str_replace( "<b>","`", $value);
+							$value = str_replace("</b>","/`", $value);
 							echo $value;	
 						}	
 					}?></textarea><br>
