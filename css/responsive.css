@@ -131,6 +131,9 @@
 		float: none;
 		text-align: center;
 	}
+	.site-details p{
+		font-size: 10pt;
+	}
 	.service-title h2{
 		font-size: 28pt;
 	}
@@ -281,6 +284,9 @@
 		margin: 20px auto;
 		padding-bottom: 10px;
 		border-bottom: 1px solid #fff;
+	}
+	.site-details p{
+		font-size: 9pt;
 	}
 	.service-title {
 		padding: 10px 5px 0px;
@@ -486,6 +492,9 @@
 	.company-adress p{
 		font-size: 12px;
 	}
+	.site-details p{
+		font-size: 12px;
+	}
 	.team {
 		padding: 0 10px;
 	}
@@ -512,7 +521,7 @@
 		padding: 0px;
 	}
 	.title-box p{
-		font-size: 11pt;
+		font-size: 10pt;
 	}
 	.our-vision {
 		margin-top: 30px;
@@ -678,6 +687,9 @@
 	}
 	.company-adress p{
 		font-size: 12px;
+	}
+	.site-details p{
+		font-size: 10px;
 	}
 	.social-box {
 		width: 100%;
