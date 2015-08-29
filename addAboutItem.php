@@ -78,7 +78,7 @@ if (isset($_POST['btnAdd']))
 			<div class="first-content">
 				<h3>Add Items</h3>
 				<div class="group">
-					<label for="aboutHeadding">Headding</label><br>
+					<label for="aboutHeadding">Heading</label><br>
 					<input type="text" id="aboutHeadding" name="aboutHeadding" required>
 				</div>
 				<div class="group width-80">

@@ -20,7 +20,7 @@
 		overflow: hidden;
 	}
 	.team-title p{
-		font-size: 18pt;
+		font-size: 14pt;
 	}
  	.team-member li {
  		padding: 30px;
@@ -58,11 +58,14 @@
 	}
 	.nav-menu {
 		float: none;
-		width: 424px;
+		width: 390px;
 		margin: 0 auto;
 	}
 	.navigation-links {
 		margin: 0 auto;
+	}
+	.navigation-links li a{
+		font-size: 16px;
 	}
 	.who-we-are {
 		width: 80%;
