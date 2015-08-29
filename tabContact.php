@@ -2,7 +2,8 @@
 	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$message = "";
-	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	// $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$objdb = new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 	$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'contact',));
 	$resulcmp = $objdb->select('company_details', array(),array());
 	foreach ($resulcmp[0] as $key => $value) 

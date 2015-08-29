@@ -1,8 +1,8 @@
 <?php 
 	error_reporting(E_ALL);
 	include 'Database.php' ;
-    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    $objdb=new Database('localhost','root','asd','psybo-db');
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    // $objdb=new Database('localhost','root','asd','psybo-db');
 	$ptf_id=$_GET['edit_id'];
 	$ptf_id=(int)$ptf_id;
 	$fields=array();

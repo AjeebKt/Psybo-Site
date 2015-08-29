@@ -1,10 +1,10 @@
 <?php 
 	error_reporting(E_ALL);
 	require_once('Database.php');
-	// $condb=new mysqli("psybotechnologies.com","psyboysg_test","psybotest","psyboysg_psybo-db");
-    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-	$condb = new mysqli('localhost', 'root', 'asd', 'psybo-db');
-	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$condb=new mysqli("psybotechnologies.com","psyboysg_test","psybotest","psyboysg_psybo-db");
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+	// $condb = new mysqli('localhost', 'root', 'asd', 'psybo-db');
+	// $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$message="";
 	session_start();
 	if (isset($_SESSION['username']))

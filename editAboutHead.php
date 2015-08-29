@@ -1,7 +1,8 @@
 <?php 
 	error_reporting(E_ALL);
 	include_once 'Database.php';
-	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	// $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$objdb = new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 	$hId = $_GET['HeditId'];
 	$resultHead = $objdb->select('headings', array(''), array('id', $hId) );
 	if (isset($_POST['btnAdd'])) 

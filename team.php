@@ -1,10 +1,10 @@
 <?php 
-	error_reporting(E_ALL);
+	error_reporting(0);
 	include "file.php";
     require_once 'Database.php';
 	// use app\Database;
-    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    $objdb=new Database('localhost','root','asd','psybo-db');
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    // $objdb=new Database('localhost','root','asd','psybo-db');
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
     $count_emp=count($emp_id);
@@ -43,7 +43,7 @@
 		<div class="container">
 			<div class="team-title">
 				<h2>Meet Our Team</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque consequuntur laudantium repellendus minus eius, dicta nam voluptates modi eveniet hic deserunt voluptate doloremque earum odit quasi expedita sit aliquid atque!</p>
+				<p>The best people formula for great websites</p>
 			</div>
 			<ul class="team-member">
 			<?php for ($j=0; $j<$count_emp ;$j++)

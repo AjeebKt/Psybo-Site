@@ -1,7 +1,8 @@
 <?php 
 error_reporting(E_ALL);
 include_once 'Database.php';
-$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+// $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+$objdb = new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 $resultHead = $objdb->select('subHeadings', array(), array('name', 'about'));
 $resultMainHead = $objdb->select('headings', array(), array('name', 'about'));
 $message ="";

@@ -2,6 +2,7 @@
 	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$objdb = new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 	$headId = $_GET['id'];
 	$resultHead = $objdb->select('headings', array(), array('id', $headId));
 	$message = "";

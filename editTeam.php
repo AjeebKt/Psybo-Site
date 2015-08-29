@@ -1,8 +1,8 @@
 <?php 
 	error_reporting(E_ALL);
 	include 'Database.php';
-    // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-    $objdb=new Database('localhost','root','asd','psybo-db');
+    $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+    // $objdb=new Database('localhost','root','asd','psybo-db');
 	$emp_id=(int)$_GET['editid'];
 	$message = "";
 	$result_emp=$objdb->select("employee",array(),array("id",$emp_id));
