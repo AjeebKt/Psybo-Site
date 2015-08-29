@@ -4,6 +4,7 @@
     // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
     $objdb=new Database('localhost','root','asd','psybo-db');
 	$emp_id=(int)$_GET['editid'];
+	$message = "";
 	$result_emp=$objdb->select("employee",array(),array("id",$emp_id));
 	foreach ($result_emp[0] as $key => $value) 
 	{
@@ -49,7 +50,7 @@
 
 		if ( !empty($name) and !empty($designation) )
 		{
-	    	if (preg_match('/^[A-Za-z0-9., _-&]*$/', $name))
+	    	if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\&]*$/', $name))
 	      	{
 	      		$error=1;
 				$values_emp_add=array($name);
@@ -236,7 +237,7 @@
 							</script>";
 					$uploadok=0;
 				}
-				if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg" and $uploadok == 1) 
+				if ($file_type != "jpg" and $file_type=="png" and $file_type != "jpeg" and $uploadok == 1) 
 				{
 					$message="<script type='text/javascript'>
 							alert('Please select jpg or png or jpeg files!');
@@ -249,7 +250,7 @@
 							alert('Canot upload photo at this time .please try again later !');
 						</script>";
 				}
-				else if ($uploadok == 1) 
+				else if ($uploadok == 1 and $error == 1) 
 				{
 					// chmod($target_dir, "a+rwxt");
 					$upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_dir .$rand.".".$file_type ); 
@@ -297,6 +298,10 @@
 				}
 			}
 		}
+	}
+	if (isset($_POST['btnCancel'])) 
+	{
+		header('location: tabTeam.php');
 	}
 ?>
 
@@ -370,9 +375,11 @@
 				</div>
 			</div>
 			<div class="group pad-left">
-				<button id="btnAdd" name="btnAdd">Add</button>
-				<button id="btnCancel" name="btnCancel">Cancel</button>
+				<button id="btnAdd" name="btnAdd">Update</button>
 			</div>
+		</form>
+		<form id="form2" name="form2" method="POST">
+			<button id="btnCancel" name="btnCancel">Cancel</button>
 		</form>
 	</section>
 	<?php echo $message; ?>

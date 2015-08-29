@@ -5,7 +5,7 @@ $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 $resultHead = $objdb->select('headings', array(), array('name', 'home',));
 $resultWedo = $objdb->select('subHeadings', array(), array('name', 'wedo'));
 $actdir = '/upload-image/';
-
+$message = "";
 
 if (isset($_GET['deleteid'])) 
 {

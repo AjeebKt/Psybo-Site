@@ -4,17 +4,18 @@
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$headId = $_GET['id'];
 	$resultHead = $objdb->select('headings', array(), array('id', $headId));
-	$heading = $_POST['serviceHeadding'];
-	$description = $_POST['txtService'];
+	$message = "";
 	if (isset($_POST['btnAdd'])) 
 	{
+		$heading = $_POST['serviceHeadding'];
+		$description = $_POST['txtService'];
 		if (!empty($heading) and !empty($description))
 		{
 			if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$heading) )
 				{
 					$error = 1;
-					$fields = 'title';
-					$values = $Headding;
+					$fields = ['title'];
+					$values = [$heading];
 				}
 			else
 			{

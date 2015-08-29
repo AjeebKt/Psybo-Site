@@ -8,7 +8,7 @@
     $objfile=new File();
     $emp_id=$objdb->num_row_emp();// number of values of employee
     $count_emp=count($emp_id);
-    // var_dump($count_emp);
+    $message = "";
  	$actdir="/upload-image/";
 
 	if (isset($_GET['deleteid'])) 
@@ -36,7 +36,10 @@
 				$file_name=$value;
 			}
 		}
-	 	unlink(getcwd().$actdir.$file_name);
+		if (!empty($file_name) ) 
+		{
+		 	unlink(getcwd().$actdir.$file_name);
+		}
 		$objdb->delete_team($_GET['deleteid']);
 		// header("location:tabTeam.php");
 		if ($objdb == true ) 

@@ -2,6 +2,7 @@
 	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
+	$message = "";
 	if (isset($_POST['btnAdd'])) 
 	{
 		$heading = $_POST['headAbout'];
@@ -47,8 +48,8 @@
 				{
 					$error =1;
 					$secDescription = str_replace("\r\n", "<br />", $secDescription);
-					$description = str_replace("/`", "</b>", $description);
-					$description = str_replace("`", "<b>", $description);
+					$secDescription = str_replace("/`", "</b>", $secDescription);
+					$secDescription = str_replace("`", "<b>", $secDescription);
 					array_push($values, $secDescription);
 				}
 				else

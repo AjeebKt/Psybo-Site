@@ -4,7 +4,7 @@ include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 $resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'service',));
 $resultService = $objdb->select('subHeadings', array(), array('name', 'service'));
-
+$message = "";
 $actdir = '/upload-image/';
 if (isset($_GET['deleteid'])) 
 {

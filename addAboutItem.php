@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 include_once 'Database.php';
 $objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
+$message = "";
 if (isset($_POST['btnAdd'])) 
 {
 	$headding = $_POST['aboutHeadding'];

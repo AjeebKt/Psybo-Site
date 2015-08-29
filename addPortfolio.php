@@ -6,6 +6,7 @@
 	$num_ptf=$objdb->num_row_ptf();
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
+	$message = "";
 	
 	if (isset($_POST['btnAdd']) ) 
 	{	
@@ -176,7 +177,7 @@
 				</div>
 				<div class="group">
 					<label>Link</label><br>
-					<input name="txtLink" type="text" required>
+					<input name="txtLink" type="text" >
 				</div>
 				<div class="group">
 					<label>Select Portfolio Image</label><br>

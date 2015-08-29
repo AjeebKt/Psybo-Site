@@ -6,7 +6,11 @@
     $num_ptf=$objdb->num_row_ptf();
     $count_ptf=count($num_ptf);
     $actdir="/upload-image/";
-    function reduce_image_size($img , $source , $dest , $maxw , $maxh ,$file_type)
+    $message1 = "";
+    $message = "";
+    $rand=rand();
+    
+    function reduce_image_size($img , $source , $dest , $maxw , $maxh ,$file_type,$rand)
     {
         $jpg = $source.$img;
         if ($jpg) 
@@ -14,7 +18,7 @@
             list($width , $height ) = getimagesize($jpg);//$type will return the type of the image
             // var_dump($widkjoth);
             $source = imagecreatefromjpeg($jpg);
-            if ( $maxw >= $width and $mxh >= $height) 
+            if ( $maxw >= $width and $maxh >= $height) 
             {
                 $ratio = 1;
             } 
@@ -34,8 +38,7 @@
 
             $thumb = imagecreatetruecolor($thumb_width, $thumb_height );
             imagecopyresampled($thumb, $source, 0, 0, 0, 0, $thumb_width, $thumb_height, $width, $height);
-
-            $path = $dest.$img.$rand.".".$file_type;
+            $path = $dest.$img.".".$file_type;
             imagejpeg($thumb , $path ,35);
         }
         imagedestroy($thumb);
@@ -227,35 +230,31 @@
                             </script>"; 
                     $uploadok=0;
                 }
-                if ($file_type != "jpg" and $file_type=="png" and $file_type =! "jpeg" and $uploadok == 1) 
+                if ($file_type != "jpg" and $file_type == "png" and $file_type != "jpeg" and $uploadok == 1) 
                 {
-                    $message= "<script type='text/javascript'>
+                    $message1= "<script type='text/javascript'>
                                 alert('PLease select jpg or png or jpeg file!');
                             </script>";
                     $uploadok=0;
                 }
-            }
-            else
-                $uploadok=0;
-
-            if ($uploadok == 1 and $error == 1) 
-            {
-                $rand=rand();
-                // $rand.=".";
-                $upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_dir .$rand );
-                if ($upload == true) 
+                if ($uploadok == 1 and $error == 1) 
                 {
-                    reduce_image_size($rand ,$target_dir ,$target_dir ,200 ,200 ,$file_type  );
-                    unlink($target_dir.$rand);
-                } 
-                $values_emp_file=array($rand.".".$file_type,$file_type);
-                $objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
-                if ($objdb == TRUE) 
-                {
-                    $message= "<script type='text/javascript'>
-                                alert('Adding succesfull');
-                                window.location.replace('tabTeam.php');
-                        </script>";
+                    // $rand.=".";
+                    $upload=move_uploaded_file($_FILES["uploadTeam"]["tmp_name"], $target_dir .$rand );
+                    if ($upload == true) 
+                    {
+                        reduce_image_size($rand ,$target_dir ,$target_dir ,200 ,200 ,$file_type, $rand );
+                        unlink($target_dir.$rand);
+                    } 
+                    $values_emp_file=array($rand.".".$file_type,$file_type);
+                    $objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
+                    if ($objdb == TRUE) 
+                    {
+                        $message= "<script type='text/javascript'>
+                                    alert('Adding succesfull');
+                                    window.location.replace('tabTeam.php');
+                            </script>";
+                    }
                 }
             }
             else if ($error == 1) 
@@ -270,6 +269,8 @@
                         </script>";
                 } 
             }
+
+            
             // else
             // $message= "<script type='text/javascript'>
             //         alert('Please Enter Correct Information!');
@@ -342,12 +343,13 @@
             </div>
         </form>
             <div class="group">
-                <form action="tabTeam.php" method="post">
+                <form action="" method="post">
                     <button id="btnCancel" name="btnCancel" >Cancel</button>
                 </form>
             </div>
     </section>
-    <?php echo $message; ?>
+    <?php echo $message;
+    echo $message1; ?>
 </body>
 </html>
 

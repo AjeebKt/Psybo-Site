@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 include_once 'Database.php';
 $objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
+$message = "";
 if (isset($_POST['btnAdd']) )
 {
 	$heading = $_POST['serviceItem'];	
@@ -11,11 +12,9 @@ if (isset($_POST['btnAdd']) )
 	$target_dir=getcwd()."/upload-image/";
 	$file_name=basename($_FILES["serviceImg"]["name"]);
 	$file_type=pathinfo(basename($_FILES["serviceImg"]["name"]),PATHINFO_EXTENSION);
-	// var_dump($file_type);
 
 	$fieldSrv = array('name');
 	$valueSrv = array('service');
-	// $fieldFiles = array($file_name, $file_type);
 
 	if (!empty($heading) and !empty($description) and !empty($file_name) )
 	{
@@ -93,7 +92,6 @@ if (isset($_POST['btnAdd']) )
 				if ($upload == TRUE) 
 				{
 					$valueFiles=array($rand.".".$file_type,$file_type);
-					var_dump($valueFiles);
 					$objdb->insert_mul_srvc($valueFiles,$fieldSrv,$valueSrv);
 					
 					if ($upload == TRUE and $objdb == TRUE) 

@@ -4,17 +4,17 @@
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$headId = $_GET['editid'];
 	$resultHead = $objdb->select('headings', array(), ['id', $headId]);
-	$headding = $_POST['homeHead'];
-	$description = $_POST['homeDescription'];
-
+	$message = "";
 	if (isset($_POST['btnAdd'])) 
 	{
-		if (!empty($headding) and !empty($description)) 
+		$heading = $_POST['homeHead'];
+		$description = $_POST['homeDescription'];
+		if (!empty($heading) and !empty($description)) 
 		{
 			if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$heading) )
 			{
 				$error = 1;
-				$values = array($headding);
+				$values = array($heading);
 				$fields = array('title');
 			}
 			else
@@ -54,6 +54,11 @@
 				}
 			}
 		}
+		else
+			$message = "<script type='text/javascript'>
+							alert('Please fill complete');
+						</script>";
+
 	}
 
 	if (isset($_POST['btnCancel'])) 
@@ -70,7 +75,7 @@
 	<title>Edit Title - Home</title>
 </head>
 <body>
-	<?php include 'dash.php'; ?>
+	<?php //include 'dash.php'; ?>
 	<section class="add-service">
 		<form action="" method="POST" id="secondForm">
 			<div class="first-content">

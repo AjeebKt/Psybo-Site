@@ -4,14 +4,15 @@
 	$objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$wedoId = $_GET['editid'];
 	$resultwedo = $objdb->select('subHeadings', array(), array('id', $wedoId) );
-	$headding = $_POST['homeWedo'];
-	$description = $_POST['homeWedoDescription'];
-	$link = $_POST['wedoLink'];
+	$message = "";
 	if (isset($_POST['btnAdd'])) 
 	{
+		$link = $_POST['wedoLink'];
+		$headding = $_POST['homeWedo'];
+		$description = $_POST['homeWedoDescription'];
 		if (!empty($headding) and !empty($description) and !empty($link)) 
 		{
-			if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$heading) )
+			if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$headding) )
 			{
 				$error = 1;
 				$values = array($headding);
@@ -122,7 +123,7 @@
 				</div> -->
 			</div>
 			<div class="group pad-left">
-				<button id="btnAdd" name="btnAdd">Add</button>
+				<button id="btnAdd" name="btnAdd">Update</button>
 			</div>
 		</form>
 		<div class="group">

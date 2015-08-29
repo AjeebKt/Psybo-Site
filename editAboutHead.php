@@ -66,7 +66,7 @@
 				if ($objdb == true) 
 				{
 					$message = "<script type='text/javascript'>
-									alert('Adding succefull');
+									alert('Update succefull');
 									window.location.replace('tabAbout.php');
 								</script>";
 				}

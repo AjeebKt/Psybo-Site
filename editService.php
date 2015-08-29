@@ -2,6 +2,7 @@
 	error_reporting(E_ALL);
 	include_once 'Database.php';
 	$objdb = new Database('localhost' , 'root' , 'asd' , 'psybo-db');
+	$message = "";
 	$serviceId = (int)$_GET['id'];
 	$resultService = $objdb->Select('subHeadings', array(), array('id', $serviceId));
 	foreach ($resultService[0] as $key => $value) 
@@ -32,7 +33,7 @@
 
 		if (!empty($headdings) and !empty($description)) 
 		{
-			if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$heading) )
+			if (preg_match('/^[A-Za-z0-9., \'_-]*$/',$headdings) )
 			{
 				$error = 1;
 				$fields = array('title');

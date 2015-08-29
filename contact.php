@@ -5,6 +5,7 @@ include 'Database.php';
 // $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 $objdb=new Database('localhost','root','asd','psybo-db');
 $resultContact = $objdb->select('headings', [], ['name', 'contact']);
+$message = "";
 if (isset($_POST['buttonmail']) )
 {
 	if ( filter_var($_POST['msgEmail'] , FILTER_VALIDATE_EMAIL))

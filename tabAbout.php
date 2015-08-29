@@ -4,7 +4,7 @@ include_once 'Database.php';
 $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 $resultHead = $objdb->select('subHeadings', array(), array('name', 'about'));
 $resultMainHead = $objdb->select('headings', array(), array('name', 'about'));
-// var_dump($resultMainHead);
+$message ="";
 if (isset($_GET['hDeleteid']) )
 {
 	$headId = $_GET['hDeleteid']; 

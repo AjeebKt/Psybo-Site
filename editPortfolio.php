@@ -5,13 +5,10 @@
     $objdb=new Database('localhost','root','asd','psybo-db');
 	$ptf_id=$_GET['edit_id'];
 	$ptf_id=(int)$ptf_id;
-	// echo $ptf_id;
 	$fields=array();
-	// var_dump($fields);
 	$where=array("id",$ptf_id);
-	// var_dump($where);
+	$errormsg ="";
 	$result=$objdb->select("portfolio",$fields,$where);
-	// ini_set('display_errors', 1);
 	foreach ($result[0] as $key => $value) 
 	{
 		if (is_string($key) and $key=='files_id') 
@@ -243,7 +240,7 @@
 					if (is_string($key) and $key == 'link') {
 							echo "value=\"".$value."\"";
 						}	
-					}?> required>
+					}?> >
 				</div>
 				<div class="group width-80">
 					<label for="portfolioDescription">Description</label><br>

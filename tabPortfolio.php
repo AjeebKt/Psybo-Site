@@ -7,6 +7,7 @@
 	$num_ptf=$objdb->num_row_ptf();
 	$count_ptf=count($num_ptf);
 	$actdir="/upload-image/";
+	$message = "";
 	if (isset($_GET['delete_id'])) 
 	{
 		$ptf_id=$_GET['delete_id'];
