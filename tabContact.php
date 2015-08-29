@@ -1,17 +1,20 @@
 <?php 
-	error_reporting(E_ALL);
+	error_reporting(0);
 	include_once 'Database.php';
 	$message = "";
 	// $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$objdb = new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
 	$resultHead = $objdb->select('headings', array('title', 'description','id'), array('name', 'contact',));
 	$resulcmp = $objdb->select('company_details', array(),array());
-	foreach ($resulcmp[0] as $key => $value) 
+	if (!empty($resulcmp)) 
 	{
-		if ($key == 'address_id' and is_string($key)) 
+	foreach ($resulcmp[0] as $key => $value) 
 		{
-			$cmp_addr_id = $value;
-			$resultadd = $objdb->select('address', array(), array('id', $cmp_addr_id));
+			if ($key == 'address_id' and is_string($key)) 
+			{
+				$cmp_addr_id = $value;
+				$resultadd = $objdb->select('address', array(), array('id', $cmp_addr_id));
+			}
 		}
 	}
 	if (isset($_GET['hdeleteid']) )

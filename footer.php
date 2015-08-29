@@ -1,5 +1,5 @@
 <?php 
-	error_reporting(E_ALL);
+	error_reporting(0);
 	include_once 'Database.php';
 	// $objdb = new Database('localhost', 'root', 'asd', 'psybo-db');
 	$objdb = new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
@@ -92,7 +92,7 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 									 {
 										echo "\"".$value."\"";
 									 }
-								}?>target="_blank"></a>
+								}?> target="_blank"></a>
 					</li>
 					<li>
 						<!-- <a class="gplus" href="https://plus.google.com/u/0/" target="_blank"></a> -->

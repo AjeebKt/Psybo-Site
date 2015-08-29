@@ -79,45 +79,45 @@
 					<!-- <div class="center-ul">
 						<ul class="personal-links" >
 
-						<?php foreach ($result as $key => $value) {
-							if (is_string($key) and $key=="fb") {
-							if (!empty($value)) { ?>
+						<?php //foreach ($result as $key => $value) {
+							// if (is_string($key) and $key=="fb") {
+							// if (!empty($value)) { ?>
 
 							<li>
 								<a class="facebook" target="_blank" <?php 
-								echo ("href=\"".$value."\"");?> ></a>
+								//echo ("href=\"".$value."\"");?> ></a>
 							</li>
-							<?php }}}  ?>
+							<?php //}}}  ?>
 
-							<?php foreach ($result as $key => $value) {
-							if (is_string($key) and $key=="twiter") {
-								if (!empty($value)) {?>
+							<?php //foreach ($result as $key => $value) {
+							// if (is_string($key) and $key=="twiter") {
+							// 	if (!empty($value)) {?>
 							<li>
 								<a class="twitter" <?php 
-								echo ("href=\"".$value."\"");?> ></a>
+								//echo ("href=\"".$value."\"");?> ></a>
 							</li>
-							<?php }}}  ?>
+							<?php //}}}  ?>
 
-							<?php foreach ($result as $key => $value) {
-									if (is_string($key) and $key=="linkedin") {
-										if (!empty($value)){?>
+							<?php //foreach ($result as $key => $value) {
+									// if (is_string($key) and $key=="linkedin") {
+										// if (!empty($value)){?>
 							<li>
 								<a class="linkedin" 
 								<?php 
-										echo ("href=\"".$value."\"");
+										//echo ("href=\"".$value."\"");
 								?>> </a>
 							</li>
-							<?php }}}  ?>		
+							<?php //}}}  ?>		
 
-							 <?php foreach ($result as $key => $value) {
-									if (is_string($key) and $key=="google_plus") {
-										if (!empty($value)) { ?>
+							 <?php //foreach ($result as $key => $value) {
+									//if (is_string($key) and $key=="google_plus") {
+									//	if (!empty($value)) { ?>
 							<li>
 								<a class="gplus"
-										<?php echo ("href=\"".$value."\"");
+										<?php //echo ("href=\"".$value."\"");
 								 ?> ></a>
 							</li>
-							<?php }}}  ?>		
+							<?php //}}}  ?>		
 						</ul>
 					</div> -->
 				</li>
