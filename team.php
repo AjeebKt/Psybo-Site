@@ -56,10 +56,10 @@
 								if (!empty($value) ) 
 									echo "src=\"".$actdir.$value."\"";
 								elseif ($result['gender'] == 'Male') {
-									echo "src=\"".$actdir."default-pic.png\"";
+									echo "src=\"/img/default-pic.png\"";
 								}
 								elseif ($result['gender'] == 'Female') {
-									echo "src=\"".$actdir."default-pic.png\"";
+									echo "src=\"/img/default-pic.png\"";
 								}
 							}
 						} ?> alt="">

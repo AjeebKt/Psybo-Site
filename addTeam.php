@@ -39,7 +39,7 @@
             $thumb = imagecreatetruecolor($thumb_width, $thumb_height );
             imagecopyresampled($thumb, $source, 0, 0, 0, 0, $thumb_width, $thumb_height, $width, $height);
             $path = $dest.$img.".".$file_type;
-            imagejpeg($thumb , $path ,35);
+            imagejpeg($thumb , $path ,50);
         }
         imagedestroy($thumb);
         imagedestroy($source);
