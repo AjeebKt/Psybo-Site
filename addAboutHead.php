@@ -94,7 +94,7 @@
 			<div class="first-content">
 				<h3>Add title</h3>
 				<div class="group">
-					<label for="aboutHeadding">Headding</label><br>
+					<label for="aboutHeadding">Heading</label><br>
 					<input type="text" id="aboutHeadding" name="headAbout" required>
 				</div>
 				<div class="group width-80">
