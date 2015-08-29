@@ -85,7 +85,6 @@
 									 	echo $val;
 									 }
 								}?>
-		   				</a>
 			   				</h3>
 			   				<p>
 			   					<?php  foreach ($value as $key => $val) {
@@ -95,6 +94,7 @@
 									}
 								}?>
 			   				</p>
+		   				</a>
 				   	</div>
 	   			</li>
 	   			<?php } ?>
