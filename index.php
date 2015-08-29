@@ -47,9 +47,9 @@
 					</p>
 				</div>
 			</div>
-			<div class="link-page">
+			<!-- <div class="link-page">
 				<a href="portfolio.php" class="link-button">View Portfolio</a>
-			</div>
+			</div> -->
 		</div>
 	</section>
 	<section>
@@ -77,7 +77,7 @@
 	   		?>
 	   			<li class="list-wedo">
 			   		<div class="grid">
-		   				<a href="service.php">
+		   				<a href="service.php" class="word-box">
 		   					<!-- <img src="img/Conference-100.png" alt=""> -->
 			   				<h3>
 			   					<?php  foreach ($value as $key => $val) {
@@ -87,7 +87,6 @@
 									 }
 								}?>
 			   				</h3>
-			   				<!-- <p>Design and code only makes up one part of a great company. The rest is down to the close relationships we form with our clients</p> -->
 			   				<p>
 			   					<?php  foreach ($value as $key => $val) {
 									if ($key == 'description' and is_string($key)) 
@@ -101,7 +100,7 @@
 	   			</li>
 	   			<?php } ?>
 	   		</ul>
-	   		<ul class="what-wedo">
+	   		<!-- <ul class="what-wedo">
 	   			<li class="list-wedo">
 	   					<div class="grid">
 	   						<div class="word-box">
@@ -126,7 +125,7 @@
 	   						</div>
    						</div>
 	   			</li>
-	   		</ul>
+	   		</ul> -->
 		</div>
 	</section>
 		<!-- <section class="testimonial">

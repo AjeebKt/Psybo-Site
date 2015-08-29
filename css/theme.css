@@ -79,8 +79,8 @@ p
 	font-family: Lato-light;
 	font-size: 14pt;
 	line-height: 1.5;
-	font-weight: 300;
-	color: #333;
+	font-weight: 600;
+	color: #666;
 }
 section {
 	position: relative;
@@ -180,7 +180,7 @@ header
 .display-frame {
 	width: 100%;
 	padding-bottom: 2%;
-	background-color: #f4f2ed;
+	background-color: #FAFAFA;
 	border-bottom: 1px solid #d9d9de;
 }
 .div-span {
@@ -267,6 +267,7 @@ header
 }
 .grid p {
 	margin: 40px 0 0;
+	font-size: 12pt;
 }
 .word-box {
 	height: 290px;
