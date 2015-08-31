@@ -23,14 +23,14 @@ if (isset($_POST['buttonmail']) )
 		if ($mail==true)
 		{
 			$message="<script type='text/javascript'>	
-						alert('comment has been sent');
+						alert('Message send');
 						</script>";
 		}
 
 		else
 		{
 			$message= "<script type='text/javascript'>
-					alert('Comments are not send at this time!.thanks');
+					alert('Message not send at this time..!');
 				</script>";
 		}
 	}
@@ -40,11 +40,12 @@ if (isset($_POST['buttonmail']) )
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>CONTACT US</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
 	<link rel="stylesheet" href="css/responsive.css">
+	<title>CONTACT US</title>
 	<script>
 			var marker = new google.maps.Marker ({
 				position: center,
@@ -93,7 +94,7 @@ if (isset($_POST['buttonmail']) )
 		<div id="gmap-canvas" class="map-canvas"></div>
 	</section>
 	<section class="contact">
-		<div class="container">
+		<div class="container overflow-unset">
 			<div class="message">
 				<div class="message-box">
 					<h3>
