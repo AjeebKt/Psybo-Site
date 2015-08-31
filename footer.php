@@ -30,10 +30,17 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 							} 
 						?>
 					</p>
-					<p>Place : Manjeri</p>
+					<p><?php 
+							foreach ($resultCmpAdd[0] as $key => $value) 
+							{
+								 if ($key == 'place' and is_string($key)) 
+								 {
+									echo $value;
+								 }
+							}
+						 ?></p>
 				</li>
 				<li>
-					<!-- <p>Phone: +04932-222222</p> -->
 					<p>Mobile :
 						<?php 
 							foreach ($resultCmpAdd[0] as $key => $value) 
@@ -45,7 +52,6 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 							} 
 						 ?> 
 					</p>
-					<!-- <p>Email: info@psybotechnologies.com</p> -->
 					<p>Email: 
 						<?php 
 							foreach ($resultCmpAdd[0] as $key => $value) 
@@ -62,7 +68,6 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 			<div class="social-box">
 				<ul class="social-links">
 					<li>
-						<!-- <a class="facebook" href="https://www.facebook.com/psybotechnologies" target="_blank"></a> -->
 						<a class="facebook" href=<?php foreach ($resultCmpAdd[0] as $key => $value) 
 								{
 									 if ($key == 'fb' and is_string($key)) 
@@ -73,7 +78,6 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 						</a>
 					</li>
 					<li>
-						<!-- <a class="twitter" href="https://twitter.com/psybotech" target="_blank"></a> -->
 						<a class="twitter" href=<?php foreach ($resultCmpAdd[0] as $key => $value) 
 								{
 									if ($key == 'twiter' and is_string($key)) 
@@ -85,7 +89,6 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 						</a>
 					</li>
 					<li>
-						<!-- <a class="linkedin" href="https://www.linkedin.com" target="_blank"></a> -->
 						<a class="linkedin" href= <?php foreach ($resultCmpAdd[0] as $key => $value) 
 								{
 									 if ($key == 'linkedin' and is_string($key)) 
@@ -95,7 +98,6 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 								}?> target="_blank"></a>
 					</li>
 					<li>
-						<!-- <a class="gplus" href="https://plus.google.com/u/0/" target="_blank"></a> -->
 						<a class="gplus" href=<?php foreach ($resultCmpAdd[0] as $key => $value) 
 								{
 									 if ($key == 'google_plus' and is_string($key)) 

@@ -3,6 +3,7 @@
 	include_once 'Database.php';
 	// $objdb = new Database ('localhost', 'root', 'asd', 'psybo-db');
 	$objdb = new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+	$message = "";
 	if (isset($_POST['btnAdd'])) 
 	{
 		$phoneNo = $_POST['txtPhoneNo'];
@@ -200,8 +201,6 @@
                     </script>";
             }
         }
-        // var_dump($values_address);
-        // var_dump($fields_address);
         if ($error == 1) 
         {
 		    $objdb-> insert_mul_cmpDtls($values_address,$fields_address);
@@ -215,7 +214,7 @@
         }
   	}
 	if (isset($_POST['btnCancel'])) 
-		header('location:tabService.php');
+		header('location:tabTeam.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -269,7 +268,7 @@
 			</div>
 		</form>
 		<div class="group">
-			<form action="tabContact.php">
+			<form action="" id="form2" name="form2" method="post">
 				<button id="btnCancel" name="btnCancel">Cancel</button>
 			</form>
 		</div>

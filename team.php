@@ -60,7 +60,7 @@
 									echo "src=\"".$actdir."default-pic.png\"";
 								}
 								elseif ($result['gender'] == 'Female') {
-									echo "src=\"".$actdir."default-pic.png\"";
+									echo "src=\"".$actdir."female-staff.jpg\"";
 								}
 							}
 						} ?> alt="">
