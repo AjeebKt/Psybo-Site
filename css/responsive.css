@@ -1,17 +1,3 @@
-* {
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
-	.navigation-links li a {
-	-webkit-transition: unset;
-	-moz-transition: unset;
-	-ms-transition: unset;
-	-o-transition: unset;
-	transition: unset;
-	}
 @media screen and (min-width: 1141px) {
 	.team-title {
 		width: 80%;
@@ -35,7 +21,7 @@
 		font-size: 30pt;
 	}
 }
-@media screen and (max-width: 980px) {
+/*@media screen and (max-width: 980px) {
 	.node h2 {
 		font-size: 22pt;
 	}
@@ -45,12 +31,12 @@
 	.node {
 		padding: 30px;
 	}
-}
-@media screen and (min-width: 992px) {
+}*/
+/*@media screen and (min-width: 992px) {
 	.container {
 		overflow: unset;
 	}
-}
+}*/
 @media (max-width: 991px){
 	.logo {
 		float: none;
@@ -208,15 +194,6 @@
 	}
 }
 @media (min-width: 480px) and (max-width: 767px){
-	.navigation-links li a {
-		height: 40px;
-		line-height: 40px;
-		-webkit-transition: unset;
-		-moz-transition: unset;
-		-ms-transition: unset;
-		-o-transition: unset;
-		transition: unset;
-	}
 	.node {
 		padding: 10px;
 	}
@@ -321,7 +298,7 @@
 	.about-us	{
 		padding: 0;
 	}
-	.about-us	h1{
+	.about-us h1{
 		margin: 20px 0;
 		font-size: 26pt;
 		padding: 10px;
@@ -386,14 +363,6 @@
 	}
 	.navigation-links li {
 		padding: 0 5px;
-	}
-	.navigation-links li:hover a {
-		-webkit-transition: unset;
-		-moz-transition: unset;
-		-ms-transition: unset;
-		-o-transition: unset;
-		transition: unset;
-		border-bottom: 2px solid #fff;
 	}
 	.navigation-links li a {
 		height: 40px;
@@ -542,7 +511,7 @@
 		height: 150px;
 	}
 	.contact {
-	margin: 0px;
+		margin: 0px;
 	}
 	.message {
 		position: unset;
