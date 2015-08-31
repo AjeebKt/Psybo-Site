@@ -80,7 +80,7 @@
             if (!empty($designation) and $error == 1) 
             {
             
-                if (preg_match('/^[A-Za-z0-9.$, _-]*$/', $designation) and $error == 1)
+                if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\&]*$/', $designation) and $error == 1)
                 {
                     $values_emp=array($designation);
                     $fields_emp=array("designation");
