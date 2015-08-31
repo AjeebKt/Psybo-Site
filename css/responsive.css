@@ -6,12 +6,8 @@
 		overflow: hidden;
 	}
 	.team-title p{
-		font-size: 14pt;
+		font-size: 16pt;
 	}
- 	.team-member li {
- 		padding: 30px;
- 		width: 20%;
- 	}
 }
 @media screen and (max-width: 1140px) {
 	.node h2 {
