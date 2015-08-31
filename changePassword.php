@@ -6,7 +6,7 @@ $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboys
 $message="";
 session_start();
 // session_destroy();
-if (isset($_POST['changeSubmit']) and isset($_POST['changePassWord']))
+if (isset($_POST['changeSubmit']) )
 {
 	if (!empty($_POST['newPwrd']) and !empty($_POST['confirmPwrd'])) 
 	{

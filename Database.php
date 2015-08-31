@@ -257,7 +257,6 @@ class Database
 
 	public function delete($table,$where)
 	{
-		$fields=implode(',', $fields);
 		$delete="DELETE FROM ".$table." WHERE ".$where[0]." = ".$where[1];
 		$query=mysqli_query($this->condb,$delete) or die(mysqli_error());
 		if ($query == true) 

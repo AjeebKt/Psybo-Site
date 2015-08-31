@@ -1,5 +1,5 @@
 <?php 
-    error_reporting(0);
+    error_reporting(1);
     include 'Database.php';
     $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
     // $objdb= new Database ('localhost','root','asd','psybo-db');
@@ -259,7 +259,7 @@
             }
             else if ($error == 1) 
             {
-                $values_emp_file=array($rand.$file_type,$file_type);
+                $values_emp_file = ['',''];
                 $objdb->insert_mul_emp($values_emp,$values_emp_file,$fields_emp_add,$values_emp_add);
                 if ($objdb == TRUE) 
                 {
