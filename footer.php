@@ -19,17 +19,14 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 		<div class="company-adress">
 			<ul>
 				<li>
-					<!-- <p>Address : V2 Tower, Opposit Old Bus Stand, Pandikkad Road, Manjeri</p> -->
-					<p>Address :
-						<?php foreach ($resultCmpAdd[0] as $key => $value) 
+					<p>Address :<?php foreach ($resultCmpAdd[0] as $key => $value) 
 							{
 								 if ($key == 'address' and is_string($key)) 
 								 {
 									echo $value;
 								 }
 							} 
-						?>
-					</p>
+						?></p>
 					<p><?php 
 							foreach ($resultCmpAdd[0] as $key => $value) 
 							{
@@ -41,8 +38,7 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 						 ?></p>
 				</li>
 				<li>
-					<p>Mobile :
-						<?php 
+					<p>Mobile :<?php 
 							foreach ($resultCmpAdd[0] as $key => $value) 
 							{
 								 if ($key == 'mobile' and is_string($key)) 
@@ -50,10 +46,8 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 									echo $value;
 								 }
 							} 
-						 ?> 
-					</p>
-					<p>Email: 
-						<?php 
+						 ?></p>
+					<p>Email:<?php 
 							foreach ($resultCmpAdd[0] as $key => $value) 
 							{
 								 if ($key == 'email' and is_string($key)) 
@@ -61,8 +55,7 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 									echo $value;
 								 }
 							}
-						 ?>
-					</p>
+						 ?></p>
 				</li>
 			</ul>
 			<div class="social-box">
@@ -74,8 +67,7 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 									 {
 										echo "\"".$value."\"";
 									 }
-								} ?> target="_blank">
-						</a>
+								} ?> target="_blank"></a>
 					</li>
 					<li>
 						<a class="twitter" href=<?php foreach ($resultCmpAdd[0] as $key => $value) 
@@ -85,8 +77,7 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 										echo "\"".$value."\"";
 									}
 								} 
-									?> target="_blank">
-						</a>
+									?> target="_blank"></a>
 					</li>
 					<li>
 						<a class="linkedin" href= <?php foreach ($resultCmpAdd[0] as $key => $value) 

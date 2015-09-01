@@ -51,7 +51,6 @@
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
 					<a class="team-dp">
-						<!-- <img src="upload-image/default-pic.png" alt=""> -->
 						<img <?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key == "file_name") {
 								if (!empty($value) ) 
