@@ -38,7 +38,7 @@ $resultCmpAdd = $objdb->select('address', array(), array('id', $address_id));
 						 ?></p>
 				</li>
 				<li>
-					<p>Mobile :<?php 
+					<p>Phone :<?php 
 							foreach ($resultCmpAdd[0] as $key => $value) 
 							{
 								 if ($key == 'mobile' and is_string($key)) 

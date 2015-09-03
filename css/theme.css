@@ -466,21 +466,14 @@ footer
 	.team-member li img
 	{
 		max-width: 200px;
-		border-radius: 50%;
+		border-top-left-radius: 50%;
 	}
 .dev-small{
 	font-size: 12pt;
 }
-.display-img
-{
-	float: left;
-	max-width: 260px;
-	max-height: 320px;
-}
 .team-dp {
 	width: 100%;
 	float: left;
-	background-size: cover;
 }
 .personal-links
 {

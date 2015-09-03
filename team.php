@@ -50,7 +50,7 @@
 			<?php for ($j=0; $j<$count_emp ;$j++)
 			{ $result=$objdb->select_row_emp($emp_id[$j][0]);#var_dump($result);?>
 				<li>
-					<a class="team-dp">
+					<div class="team-dp">
 						<img <?php foreach ($result as $key => $value) {
 							if (is_string($key) and $key == "file_name") {
 								if (!empty($value) ) 
@@ -62,19 +62,17 @@
 									echo "src=\"".$actdir."female-staff.jpg\"";
 								}
 							}
-						} ?> alt="">
-					</a>
-					<h4> <?php foreach ($result as $key => $value) {
+						} ?> alt=""></div>
+					<h4><?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="name") {
 							echo $value;
 						}
-					} ?> </h4> 
-
-					<h4 class="dev-small"> <?php foreach ($result as $key => $value) {
+					} ?></h4>
+					<h4 class="dev-small"><?php foreach ($result as $key => $value) {
 						if (is_string($key) and $key=="designation") {
 							echo $value;
 						}
-					} ?> </h4>
+					} ?></h4>
 
 					<!-- <div class="center-ul">
 						<ul class="personal-links" >
