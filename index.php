@@ -73,7 +73,12 @@
 	   		?>
 	   			<li class="list-wedo">
 			   		<div class="grid">
-		   				<a href="" class="word-box">
+		   				<a href=<?php  foreach ($value as $key => $val) {
+									if ($key == 'link' and is_string($key)) 
+									 	{
+									 		echo "\"".$val."\"";
+									 	}
+								}?> class="word-box">
 		   					<!-- <img src="img/Conference-100.png" alt=""> -->
 			   				<h3><?php  foreach ($value as $key => $val) {
 									if ($key == 'title' and is_string($key)) 

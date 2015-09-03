@@ -42,8 +42,6 @@
 
 		$name=$_POST['txtName'];
 		$designation=$_POST['txtDesignation'];
-		// $designation=strip_tags($_POST['txtDesignation']);
-		// preg_replace('/[^A-Za-z0-9\s.]/', '', $designation);
 		$values_emp_add=array();
 		$fields_emp_add=array();
 
@@ -64,7 +62,7 @@
 	        	   			</script>";
 		    }
 
-		    if (preg_match('/^[A-Za-z0-9., _-]*$/', $designation) and $error == 1)
+		    if (preg_match('/^[A-Za-z0-9\.\,\ \_\-\&]*$/', $designation) and $error == 1)
 		    {
 		    	$error=1;
 		        $values_emp=array($designation);
