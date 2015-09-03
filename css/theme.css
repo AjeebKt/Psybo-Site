@@ -634,8 +634,9 @@ footer
 }
 .p-bold {
 	font-family: Lato;
-	font-size: 16pt;
+	font-size: 14pt;
 	word-spacing: 5px;
+	font-weight: bold;
 }
 .our-vision {
 	width: 100%;
