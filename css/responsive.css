@@ -490,7 +490,8 @@
 		font-size: 10pt;
 	}
 	.map, .map-canvas{
-		height: 150px;
+		/*height: 150px;*/
+		display: none;
 	}
 	.contact {
 		margin: 0px;
