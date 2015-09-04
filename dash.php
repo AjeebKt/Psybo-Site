@@ -16,7 +16,7 @@
 	<img src="img/logo-admin.png" alt="">
 </header>
 <nav>
-	<ul class="side-links">
+	<ul id="panelMenu" class="side-links">
 		<li><a href="tabDashboard.php">Dashboard</a></li>
 		<li><a href="tabHome.php">Home</a></li>
 		<li><a href="tabPortfolio.php">Portfolio</a></li>
