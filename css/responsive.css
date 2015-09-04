@@ -490,7 +490,6 @@
 		font-size: 10pt;
 	}
 	.map, .map-canvas{
-		/*height: 150px;*/
 		display: none;
 	}
 	.contact {
@@ -498,6 +497,9 @@
 	}
 	.message {
 		width: 90%;
+	}
+	.message input, .message textarea {
+		padding: 5px;
 	}
 	.message-box {
 		margin-top: 20px;
