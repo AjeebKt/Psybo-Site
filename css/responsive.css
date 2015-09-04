@@ -17,6 +17,11 @@
 		font-size: 30pt;
 	}
 }
+@media (min-width: 992px){
+	.container {
+		overflow: unset;
+	}
+}
 @media (max-width: 991px){
 	.logo {
 		float: none;
@@ -24,11 +29,15 @@
 	}
 	.nav-menu {
 		float: none;
-		width: 390px;
+		width: 100%;
 		margin: 0 auto;
+		text-align: center;
 	}
 	.navigation-links {
-		margin: 0 auto;
+		float: none;
+	}
+	.navigation-links li {
+		float: none;
 	}
 	.navigation-links li a{
 		height: 30px;
@@ -161,12 +170,11 @@
 		height: 300px;
 	}
 	.contact {
-	margin: 0px;
+		margin: 0px;
 	}
 	.message {
 		position: unset;
 		width: 80%;
-		margin: 0 auto;
 		padding: 0;
 	}
 	.message-box {
@@ -315,17 +323,10 @@
 	.map, .map-canvas{
 		height: 180px;
 	}
-	.contact {
-	margin: 0px;
-	}
 	.message {
-		position: unset;
 		width: 90%;
-		margin: 0 auto;
-		padding: 0;
 	}
 	.message-box {
-		width: 100%;
 		margin-top: 20px;
 	}
 	.message-box h3{
@@ -341,21 +342,14 @@
 	.logo img {
 		max-width: 100px;
 	}
-	.nav-menu {
-		float: none;
-		width: 303px;
-		margin: 0 auto;
-	}
-	.navigation-links {
-		margin: 0 auto;
-	}
+
 	.navigation-links li {
-		padding: 0 5px;
+		padding: 0 3px;
 	}
 	.navigation-links li a {
 		height: 40px;
 		line-height: 40px;
-		font-size: 13px;
+		font-size: 12px;
 	}
 	.node {
 		width: 70%;
@@ -444,7 +438,7 @@
 		font-size: 10pt;
 	}
 	.company-adress {
-		width: 60%;
+		width: 80%;
 	}
 	.company-adress p{
 		font-size: 12px;
@@ -502,13 +496,9 @@
 		margin: 0px;
 	}
 	.message {
-		position: unset;
 		width: 90%;
-		margin: 0 auto;
-		padding: 0;
 	}
 	.message-box {
-		width: 100%;
 		margin-top: 20px;
 	}
 	.message-box h3{
@@ -526,17 +516,8 @@
 	.logo img {
 		max-width: 70px;
 	}
-	.nav-menu {
-		float: none;
-		width: 100%;
-	}
-	.navigation-links {
-		width: 84%;
-		float: none;
-		margin: 0 auto;
-	}
 	.navigation-links li {
-		padding: 0 5px;
+		padding: 0 3px;
 	}
 	.navigation-links li.active a{
 		border: none;
