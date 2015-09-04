@@ -10,7 +10,7 @@ if (isset($_POST['buttonmail']) )
 {
 	if ( filter_var($_POST['msgEmail'] , FILTER_VALIDATE_EMAIL))
 	{
-		$to="psybotechnologies@gmail.com";
+		$to='comments@psybotechnologies.com';
 		$from = $_POST['msgEmail'];
 		$name = $_POST['msgName'];
 		$subject="comments from : ".$name;
@@ -23,7 +23,7 @@ if (isset($_POST['buttonmail']) )
 		if ($mail==true)
 		{
 			$message="<script type='text/javascript'>	
-						alert('Message send');
+						alert('Message sent');
 						</script>";
 		}
 
