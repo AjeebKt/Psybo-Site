@@ -646,6 +646,9 @@ footer
 	box-sizing: border-box;
 	padding: 20px;
 }
+.our-vision li h3{
+	font-family: Lato;
+}
 
 /*-- Contact --*/
 

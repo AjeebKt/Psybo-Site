@@ -94,7 +94,7 @@ if (isset($_POST['buttonmail']) )
 		<div id="gmap-canvas" class="map-canvas"></div>
 	</section>
 	<section class="contact">
-		<div class="container overflow-unset">
+		<div class="container">
 			<div class="message">
 				<div class="message-box">
 					<h3>
