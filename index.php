@@ -22,7 +22,7 @@
 		$(function() {
 		
 			$('#da-slider').cslider({
-				autoplay	: true,
+				autoplay	: false,
 			});
 		
 		});
@@ -52,7 +52,7 @@
 		<!-- Codrops top bar -->
 		<div id="da-slider" class="da-slider">
 			<div class="da-slide">
-				<h2>Athala puthala</h2>
+				<h2>We Will Either Find a Way or Make One</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, accusamus sit.</p>
 				<a href="donerForm.php" class="da-link">Donate</a>
 				<div class="da-img">
@@ -61,7 +61,7 @@
 			</div>
 			<div class="da-slide">
 				<h2>Athala puthala</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, accusamus sit.</p>
+				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 				<a href="donerForm.php" class="da-link">Donate</a>
 				<div class="da-img">
 					<img src="./img/002.jpg" alt="image01" />
@@ -81,24 +81,9 @@
 			</nav>
 		</div>
 	</section>
-	<!-- <section id="frame" class="display-frame">
-		<div class="container">
-			<div class="div-span">
-				<div class="node">
-					<h2>We Will Either Find a Way or Make One</h2>
-					<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
-				</div>
-				<div class="node">
-					<p>
-						<img src="img/design.png" alt="">
-					</p>
-				</div>
-			</div>
-			<!-- <div class="link-page">
-				<a href="portfolio.php" class="link-button">View Portfolio</a>
-			</div>
-		</div>
-	</section> --> -->
+		<!-- <div class="link-page">
+			<a href="portfolio.php" class="link-button">View Portfolio</a>
+		</div> -->
 	<section>
 		<div class="container">
 			<div class="who-we-are">
