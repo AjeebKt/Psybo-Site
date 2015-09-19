@@ -2,8 +2,8 @@
 <?php 
 error_reporting(0);
 include 'Database.php';
-$objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
-// $objdb=new Database('localhost','root','asd','psybo-db');
+// $objdb=new Database('psybotechnologies.com','psyboysg_test','psybotest','psyboysg_psybo-db');
+$objdb=new Database('localhost','root','asd','psybo-db');
 $resultContact = $objdb->select('headings', [], ['name', 'contact']);
 $message = "";
 if (isset($_POST['buttonmail']) )
@@ -90,6 +90,8 @@ if (isset($_POST['buttonmail']) )
 		</div>
 	</header>
 	<section class="map">
+		
+	</style>
 		<!-- <img src="img/map.png" alt=""> -->
 		<div id="gmap-canvas" class="map-canvas"></div>
 	</section>

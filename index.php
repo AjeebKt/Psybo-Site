@@ -13,6 +13,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/theme.css">
+	<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cslider.js"></script>
+	<script type="text/javascript">
+		$(function() {
+		
+			$('#da-slider').cslider({
+				autoplay	: true,
+			});
+		
+		});
+	</script>
 	<link rel="stylesheet" href="css/responsive.css">
 	<title>PSYBO Technologies</title>
 </head>
@@ -34,7 +48,40 @@
 			</nav>
 		</div>
 	</header>
-	<section id="frame" class="display-frame">
+	<section class="slider">
+		<!-- Codrops top bar -->
+		<div id="da-slider" class="da-slider">
+			<div class="da-slide">
+				<h2>Athala puthala</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, accusamus sit.</p>
+				<a href="donerForm.php" class="da-link">Donate</a>
+				<div class="da-img">
+					<img src="./img/002.jpg" alt="image01" />
+				</div>
+			</div>
+			<div class="da-slide">
+				<h2>Athala puthala</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, accusamus sit.</p>
+				<a href="donerForm.php" class="da-link">Donate</a>
+				<div class="da-img">
+					<img src="./img/002.jpg" alt="image01" />
+				</div>
+			</div>
+			<div class="da-slide">
+				<h2>Athala puthala</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, accusamus sit.</p>
+				<a href="donerForm.php" class="da-link">Donate</a>
+				<div class="da-img">
+					<img src="./img/002.jpg" alt="image01" />
+				</div>
+			</div>
+			<nav class="da-arrows">
+				<span class="da-arrows-prev"></span>
+				<span class="da-arrows-next"></span>
+			</nav>
+		</div>
+	</section>
+	<!-- <section id="frame" class="display-frame">
 		<div class="container">
 			<div class="div-span">
 				<div class="node">
@@ -49,9 +96,9 @@
 			</div>
 			<!-- <div class="link-page">
 				<a href="portfolio.php" class="link-button">View Portfolio</a>
-			</div> -->
+			</div>
 		</div>
-	</section>
+	</section> --> -->
 	<section>
 		<div class="container">
 			<div class="who-we-are">

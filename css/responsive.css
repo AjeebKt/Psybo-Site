@@ -683,8 +683,8 @@
 	.our-vision li p{
 		font-size: 9pt;
 	}
-	.map {
-		height: 150px;
+	.map, .map-canvas {
+		display: none;
 	}
 	.contact {
 		margin: 0px;
@@ -694,6 +694,9 @@
 		width: 100%;
 		padding: 0;
 	}
+	.message input, .message textarea {
+		padding: 3px;
+	}
 	.message-box {
 		width: 100%;
 		margin-top: 20px;
@@ -702,6 +705,12 @@
 		font-size: 14pt;
 	}
 	.message-box p{
-		font-size: 10pt;
+		font-size: 14px;
 	}
 }
+
+
+/* Use this for burger
+	http://codepen.io/CreativeJuiz/pen/oCBxz
+	http://codepen.io/MrBambule/pen/jIseg
+*/

@@ -2,7 +2,7 @@
 @font-face
 {
 	font-family: Lato-Light;
-	src: url('../fonts/Lato-Light.ttf');
+	src: url(../fonts/Lato-Light.ttf);
 }
 @font-face
 {
@@ -163,7 +163,7 @@ header
 .container
 {
 	position: relative;
-	width: 1280px;
+	/*width: 1280px;*/
 	max-width: 90%;
 	overflow: hidden;
 	margin: 0 auto;
@@ -614,7 +614,7 @@ footer
 	float: left;
 	width: 100%;	
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 0;
 }
 .about-us h2{
 	text-align: center;
@@ -623,7 +623,7 @@ footer
 	width: 50%;
 	float: left;
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 20px 0;
 }
 .p-bold {
 	font-family: Lato;
@@ -636,7 +636,7 @@ footer
 	float: left;
 	list-style: none;
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 0;
 	overflow: hidden;
 }
 .our-vision li {
@@ -644,7 +644,7 @@ footer
 	display: block;
 	float: left;
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 20px 0;
 }
 .our-vision li h3{
 	font-family: Lato;
