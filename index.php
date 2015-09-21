@@ -22,7 +22,7 @@
 		$(function() {
 		
 			$('#da-slider').cslider({
-				autoplay	: false,
+				autoplay	: true,
 			});
 		
 		});
@@ -52,25 +52,31 @@
 		<!-- Codrops top bar -->
 		<div id="da-slider" class="da-slider">
 			<div class="da-slide">
+			<div id="just">
 				<h2>We Will Either Find a Way or Make One</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, accusamus sit.</p>
 				<a href="donerForm.php" class="da-link">Donate</a>
+			</div>
 				<div class="da-img">
 					<img src="./img/002.jpg" alt="image01" />
 				</div>
 			</div>
 			<div class="da-slide">
+			<div id="just">
 				<h2>Athala puthala</h2>
 				<p>Our outstanding creativity brings you an effective, bespoke, perfectly-designed result.</p>
 				<a href="donerForm.php" class="da-link">Donate</a>
+			</div>
 				<div class="da-img">
 					<img src="./img/002.jpg" alt="image01" />
 				</div>
 			</div>
 			<div class="da-slide">
+			<div id="just">
 				<h2>Athala puthala</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, accusamus sit.</p>
 				<a href="donerForm.php" class="da-link">Donate</a>
+			</div>
 				<div class="da-img">
 					<img src="./img/002.jpg" alt="image01" />
 				</div>
