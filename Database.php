@@ -419,42 +419,4 @@ class Database
 	}
 }
 
-
-// $obj= new Database('localhost','root','asd','test');
-
-// $name="thengakola";
-// $obj->createdb($name);
-
-// $obj->deletedb($name);
-
-// $table_name="gruop";
-// $primary="id";
-// $attributes=array("id integer(10) primary key","userid integer(10)");
-// $obj->create_table($table_name,$attributes);
-
-// $obj->delete_table($table_name);         
-
-// $delete_colomn="";
-// $modify="";
-// $add_colomn="name varchar(25)";
-// $obj->alter_table($table_name,$add_colomn,$modify,$delete_colomn);   
-
-// $fields=array("username","password","email");
-// $values=array("sanoop","sanu","sanoop@gmail.com");
-// $obj->insert("users",$fields,$values);
-
-// $fields=array("username","password","email","name");
-// $fields=array("");
-// $where=array("name","noushid");
-// $result = $obj->select("users",$fields,$where);
-// var_dump($result);
-
-// $obj->delete("users",array("username"));
-
-// $fields=array("name","email");
-// $values=array("");
-// $where=array("id",11);
-// $new_values=array("sanoopa" ,"dummy@kjh.com"	);
-// $obj->update("users",$fields,$new_values,$where);
-
 ?>
